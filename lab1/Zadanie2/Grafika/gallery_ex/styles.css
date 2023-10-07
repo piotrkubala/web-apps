@@ -1,0 +1,58 @@
+body {
+    font-family: Tahoma, "Lucida Grande", Arial, sans-serif;
+}
+
+header {
+    border: 1px dashed grey;
+    border-right: none;
+    border-bottom: none;
+}
+
+header > div > * {
+    padding: 10px;
+    margin: 0;
+}
+
+header > div > h1 {
+    border-bottom: 1px dashed grey;
+    color: #14556B;
+    font-weight: normal;
+}
+
+.intro {
+    padding-left: 10px;
+}
+
+.figure {
+    float: left;
+    width: 250px;
+}
+
+.figure > p {
+    text-align: center;
+    display: block;
+    font-size: 0.8em;
+}
+
+.clear {
+    clear: both;
+}
+
+.photo {
+    width: 100%;
+    text-align: center;
+}
+
+.photo > img {
+    padding: 5px;
+    border: 1px solid grey;
+    box-shadow: 10px 5px 5px lightgray;
+}
+
+#content {
+    margin: 2%;
+}
+
+#gallery {
+    width: 600px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularz przelewu</title>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="accountNumber" placeholder="Numer konta" required pattern="[0-9]{2}( [0-9]{4}){6}"><br>
+            <input type="text" name="name" placeholder="Imię odbiorcy" required minlength="1"><br>
+            <input type="text" name="surname" placeholder="Nazwisko odbiorcy" required minlength="1"><br>
+            <input type="email" name="email" placeholder="Email odbiorcy" required><br>
+            <input type="text" name="adress" placeholder="Adres odbiorcy" required minlength="3"><br>
+            <input type="text" name="postalCode" placeholder="Kod pocztowy odbiorcy" required pattern="[0-9]{2}-[0-9]{3}" maxlength="6" minlength="6"><br>
+            <select name="city" placeholder="Miasto odbiorcy" required list="cities">
+                <option value="Warszawa">Warszawa</option>
+                <option value="Kraków">Kraków</option>
+                <option value="Łódź">Łódź</option>
+                <option value="Wrocław">Wrocław</option>
+                <option value="Poznań">Poznań</option>
+                <option value="Gdańsk">Gdańsk</option>
+                <option value="Szczecin">Szczecin</option>
+                <option value="Bydgoszcz">Bydgoszcz</option>
+                <option value="Lublin">Lublin</option>
+                <option value="Białystok">Białystok</option>
+            </select><br>
+            <input type="number" name="amount" placeholder="Kwota" required min="0" step="0.01"><br>
+            <input type="date" name="date" placeholder="Data" required><br>
+            <input type="submit" value="Wyślij przelew!">
+        </form>
+    </body>
+</html>

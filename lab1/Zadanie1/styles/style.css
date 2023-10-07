@@ -1,0 +1,168 @@
+p {
+    border: 3px solid black;
+    margin: 10px;
+    padding: 40px;
+}
+
+table {
+    width: 50%;
+}
+
+th, td {
+    padding-right: 100%;
+    height: 30px;
+}
+
+ul {
+    margin: 0;
+}
+
+p:nth-child(1) {
+    background-color: red;
+    color: white;
+    font-size: large;
+    font-style: italic;
+}
+
+p:nth-child(2) {
+    background-color: green;
+    color: blue;
+    font-size: small;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+p:nth-child(3) {
+    background-color: blue;
+    color: green;
+    font-size: x-large;
+    font-weight: bold;
+    width: 50%;
+    height: 100px;
+    overflow: auto;
+}
+
+p:nth-child(4) {
+    background-color: yellow;
+    color: black;
+    font-size: xx-large;
+    font-style: oblique;
+}
+
+p:nth-child(5) {
+    background-color: black;
+    color: white;
+    font-size: medium;
+    font-style: italic;
+}
+
+.table_header {
+    background-color: #5B9CD6;
+}
+
+.table_row_odd {
+    background-color: #D3DEF0;
+}
+
+.table_row_even {
+    background-color: #EAEEF7;
+}
+
+#second_table {
+    width: 50%;
+    padding: 0px;
+}
+
+#second_table {
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+#second_table > * > tr > * {
+    border: 2px solid black;
+}
+
+#second_table_head > tr > th {
+    background-color: #776F6D;
+}
+
+#second_table_body > tr > td {
+    background-color: #D9D9D9;
+}
+
+#parmenides_img {
+    float: left;
+}
+
+#spinoza_img {
+    float: right;
+}
+
+#philosophers_paragraph {
+    text-align: justify;
+    display: flex;
+}
+
+#philosophers_paragraph > div > div > img {
+    padding: 10px;
+    margin: 1px;
+    width: 100px;
+}
+
+.float_right {
+    float: right;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    shape-outside: inset(calc(100% - 130px) 0 0);
+}
+
+#reversed_images {
+    padding: 0;
+}
+
+#reversed_images > img {
+    width: 300px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+#reversed_images img:nth-child(2) {
+    position: relative;
+    left: 300px;
+}
+
+#reversed_images img:nth-child(3) {
+    position: relative;
+    left: -300px;
+}
+
+#countries_lists {
+    align-items: center;
+}
+
+#countries_lists > div {
+    margin: 0;
+    width: 100%;
+    padding-left: 50%;
+}
+
+#countries_lists > div > ul {
+    margin: 0;
+    width: 50%;
+}
+
+#european_countries {
+    background-color: blue;
+    position: relative;
+    top: 50px;
+}
+
+#asian_countries {
+    background-color: red;
+    position: relative;
+    top: -100px;
+}

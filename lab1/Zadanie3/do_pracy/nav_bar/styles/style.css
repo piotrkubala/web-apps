@@ -1,0 +1,85 @@
+body {
+    font: 62.5% Verdana, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+ul > li {
+    clear: both;
+    border-collapse: collapse;
+}
+
+ul > li:hover {
+    background-color: #B2F510;
+}
+
+ul > li > a > div {
+    text-align: left;
+}
+
+ul > li > a > div:nth-child(1) {
+    float: left;
+    width: 20%;
+}
+
+ul > li > a > div:nth-child(2) {
+    float: right;
+    width: 80%;
+    padding-top: 5px;
+    color: black;
+}
+
+ul > li > a > div:nth-child(3) {
+    clear: both;
+}
+
+ul > li > a:visited > div:nth-child(2) {
+    font-weight: bolder;
+
+}
+
+.horizontal_menu {
+    list-style-type: none;
+}
+
+.horizontal_menu > li {
+    display: inline-block;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+    margin: 0;
+    border: 1px dashed gray;
+    background-color: #E7E7E7;
+    width: 15%;
+}
+
+.vertical_menu {
+    list-style-type: none;
+    width: 15%;
+}
+
+.vertical_menu > li {
+    display: block;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+    margin: 0;
+    border: 1px dashed gray;
+    border-collapse: collapse;
+    background-color: #E7E7E7;
+    width: 100%;
+}
+
+#reversed_order_name {
+    float: left;
+    width: 60%;
+    padding-top: 5px;
+    padding-left: 20%;
+    color: black;
+}
+
+#reversed_order_img {
+    float: right;
+    width: 20%;
+    padding-top: 0;
+}
