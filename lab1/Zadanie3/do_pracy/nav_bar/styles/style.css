@@ -13,6 +13,10 @@ ul > li:hover {
     background-color: #B2F510;
 }
 
+ul > li:hover > a > div > img {
+    content: url("../images/go.png");
+}
+
 ul > li > a > div {
     text-align: left;
 }
@@ -53,6 +57,10 @@ ul > li > a:visited > div:nth-child(2) {
     width: 15%;
 }
 
+.horizontal_menu > li:nth-child(2):not(:hover) {
+    background-color: white;
+}
+
 .vertical_menu {
     list-style-type: none;
     width: 15%;
@@ -68,6 +76,10 @@ ul > li > a:visited > div:nth-child(2) {
     border-collapse: collapse;
     background-color: #E7E7E7;
     width: 100%;
+}
+
+.vertical_menu > li:nth-child(4):not(:hover) {
+    background-color: white;
 }
 
 #reversed_order_name {

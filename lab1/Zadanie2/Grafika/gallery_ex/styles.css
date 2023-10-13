@@ -25,13 +25,15 @@ header > div > h1 {
 
 .figure {
     float: left;
-    width: 250px;
+    width: 300px;
 }
 
 .figure > p {
     text-align: center;
     display: block;
     font-size: 0.8em;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .clear {
@@ -54,5 +56,5 @@ header > div > h1 {
 }
 
 #gallery {
-    width: 600px;
+    width: 800px;
 }

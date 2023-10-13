@@ -1,6 +1,5 @@
 body {
-	font-family: Tahoma, "Lucida Grande", Arial, sans-serif;
-	font-size: 62.5%;
+	font-family: 'Times New Roman', Times, serif;
 }
 h1 {
 	font-size: 2.4em;
@@ -17,7 +16,7 @@ p, ul, ol {
 }
 
 ul {
-	list-style: square;
+	list-style: disc;
 }
 
 header > div:nth-child(1) {
@@ -40,7 +39,7 @@ header > div:nth-child(2) {
 }
 
 .note_section > div {
-	width: 20%;
+	width: 30%;
 	float: right;
 	background-color: #FBEF99;
 	border: 1px solid #FDD041;
