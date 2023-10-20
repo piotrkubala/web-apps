@@ -1,0 +1,29 @@
+.box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box > div {
+    height: 30px;
+    margin: 5px;
+    border: solid 2px black;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.red {
+    width: calc(30% - 10px);
+    background-color: red;
+}
+
+.blue {
+    width: calc(70% - 10px);
+    background-color: blue;
+}
+
+.yellow {
+    width: calc(100% - 10px);
+    background-color: yellow;
+}
