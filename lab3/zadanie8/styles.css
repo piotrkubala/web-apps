@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 1.2em Helvetica, Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.521);
+}
+
+a {
+    text-decoration: none;
+    color: limegreen;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    color: limegreen;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    padding: 2rem;
+}
+
+main > div {
+    width: 50%;
+    padding: 2rem;
+}
+
+.images {
+    text-align: center;
+    position: relative;
+}
+
+.images img {
+    width: 20rem;
+}
+
+.images > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.images > div > div {
+    padding: 4rem;
+    box-sizing: border-box;
+}
+
+.images > div:first-child > div:first-child {
+    z-index: 1;
+    position: relative;
+    top: 2rem;
+    left: 6rem;
+}
+
+.images > div:first-child > div:last-child {
+    z-index: 2;
+    position: relative;
+    top: 7rem;
+    right: 6rem;
+}
+
+.images > div:last-child > div:first-child {
+    z-index: 3;
+    position: relative;
+    bottom: 8rem;
+}
+
+.images > div > div:hover {
+    padding: 3rem;
+    border: 1rem solid limegreen;
+    border-radius: 2rem;
+    z-index: 10;
+}
+
+.container .images > div > div:hover {
+     z-index: 10; 
+}
+
+
+@media screen and (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    main > div {
+        width: 100%;
+    }
+}
