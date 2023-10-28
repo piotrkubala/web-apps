@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 1.2em Helvetica, Arial, sans-serif;
+    background-color: white;
+}
+
+.container {
+    height: 300vh;
+    margin: 0;
+}
+
+.video-call {
+    position: relative;
+    background-color: antiquewhite;
+    padding: 0.4rem;
+}
+
+.main-image {
+    text-align: center;
+    background-color: rgb(27, 9, 94);
+    margin: 1rem 2rem;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.main-image > img {
+    height: 80rem;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -0.5rem;
+}
+
+.interface {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.interface > div:first-child {
+    margin: 4rem;
+    width: 10rem;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.interface > div:first-child > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.interface > div:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.interface > div:last-child > div:last-child {
+    background-color: red;
+}
+
+.interface > div:last-child > div {
+    margin: 1rem;
+    background-color: white;
+    border-radius: 100%;
+    padding: 2rem;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    aspect-ratio: 1/1;
+    text-align: center;
+}
+
+.interface input[type="checkbox"] {
+    display: none;
+}
+
+
+#mute:checked + label > img {
+    content: url("img/mic-off.svg")
+}
+
+#video:checked + label > img {
+    content: url("img/video-off.svg")
+}
+
+#share:active + label > img {
+    transform: scale(0.9);
+}

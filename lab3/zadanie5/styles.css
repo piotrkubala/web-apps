@@ -72,27 +72,42 @@ button {
     font-weight: bold;
 }
 
+.dropdown, .dropdown-right {
+    position: relative;
+}
+
+
+.dropdown > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-right > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
 .dropdown > div,
-.dropdown-right > div {
-    display: none;
+.dropdown-right > div:last-child {
     z-index: 1;
     position: absolute;
     background-color: white;
-    color: #0953f5;
+    color: rgb(9, 83, 245);
+    transition: height 0.5s ease-in-out;
 }
 
 .dropdown > div > *,
-.dropdown-right > div > * {
+.dropdown-right > div:last-child > * {
     padding: 0.5rem 1rem;
     width: 13rem;
     box-sizing: border-box;
-    border: 1px solid #0953f5;
+    border: 1px solid rgba(9, 83, 245, 0.5);
     border-bottom-width: 0;
 }
 
 .dropdown > div > *:last-child,
-.dropdown-right > div > *:last-child {
+.dropdown-right > div:last-child > *:last-child {
     border-bottom-width: 1px;
 }
 
@@ -101,27 +116,105 @@ button {
     margin-left: 0.5rem;
 }
 
-.dropdown:hover > div {
+.dropdown:hover > div {   
     display: flex;
     flex-direction: column;
 }
 
-.dropdown-right {
-    padding: inherit;
+.dropdown-right > div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dropdown-right > div:first-child > button {
+    padding: 0;
     margin: 0;
-    padding-left: 0.25rem;
 }
 
-.dropdown-right > button::after {
-    content: "▶";
-    margin-left: 0.5rem;
-}
-
-.dropdown-right > div {
+.dropdown-right:hover > div:last-child {
     left: 14rem;
+    top: 0rem;
     width: 13rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
+}
+
+.dropdown-right:hover > div:last-child > *:first-child::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-right: 1rem solid white;
+}
+
+
+.dropdown > div,
+.dropdown-right > div:last-child {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+
+    transition: opacity 1s ease-in-out, width 1s ease-in-out;
+    animation: delayed-overflow 1s;
+}
+
+.dropdown:hover > div,
+.dropdown-right:hover > div:last-child {
+    opacity: 1;
+    overflow: visible;
+    width: auto;
+}
+
+
+.dropdown > div > *,
+.dropdown-right > div:last-child > * {
+    animation: color-change-reverse 0.5s ease-in-out;
+    background-color: white;
+    color: rgb(9, 83, 245);
+    overflow: visible;
+}
+
+
+.dropdown > div > *:hover,
+.dropdown-right > div:last-child > *:hover {
+    animation: color-change 0.5s ease-in-out;
+    background-color: rgb(9, 83, 245);
+    color: white;
+}
+
+
+@keyframes delayed-overflow {
+    from {
+        overflow: visible;
+    }
+    to {
+        overflow: hidden;
+    }
+}
+
+
+@keyframes color-change {
+    from {
+        background-color: white;
+        color: rgb(9, 83, 245);
+    }
+    to {
+        background-color: rgb(9, 83, 245);
+        color: white;
+    }
+}
+
+@keyframes color-change-reverse {
+    from {
+        background-color: rgb(9, 83, 245);
+        color: white;
+    }
+    to {
+        background-color: white;
+        color: rgb(9, 83, 245);
+    }
 }
