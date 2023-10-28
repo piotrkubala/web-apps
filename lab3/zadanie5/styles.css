@@ -1,0 +1,127 @@
+body {
+    background-image: url("bg.jpg");
+    margin: 0;
+    padding: 0;
+    font: 1.2em Helvetica, Arial, sans-serif;
+    background-color: rgb(145, 199, 243);
+    background-blend-mode:hard-light;
+}
+
+a {
+    background-color: inherit;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+.container header {
+    background-color: #0953f5;
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.container header > div:first-child {
+    margin: 0 1rem;
+}
+
+.container header > div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container header > div:nth-child(2) > div {
+    margin: 0 1rem;
+}
+
+.container header > div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container header > div:nth-child(3) > a > div {
+    margin: 0 0.5rem;
+    border: 0.2rem solid white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    width: 5rem;
+    text-align: center;
+    background-color: #0953f5;
+}
+
+.container header > div:nth-child(3) > a:last-child > div {
+    background-color: white;
+    color: #0953f5;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+.dropdown > div,
+.dropdown-right > div {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    background-color: white;
+    color: #0953f5;
+}
+
+.dropdown > div > *,
+.dropdown-right > div > * {
+    padding: 0.5rem 1rem;
+    width: 13rem;
+    box-sizing: border-box;
+    border: 1px solid #0953f5;
+    border-bottom-width: 0;
+}
+
+.dropdown > div > *:last-child,
+.dropdown-right > div > *:last-child {
+    border-bottom-width: 1px;
+}
+
+.dropdown > button::after {
+    content: "▼";
+    margin-left: 0.5rem;
+}
+
+.dropdown:hover > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-right {
+    padding: inherit;
+    margin: 0;
+    padding-left: 0.25rem;
+}
+
+.dropdown-right > button::after {
+    content: "▶";
+    margin-left: 0.5rem;
+}
+
+.dropdown-right > div {
+    left: 14rem;
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+}
