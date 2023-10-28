@@ -1,0 +1,76 @@
+body {
+    font: 0.8em Helvetica, Arial, sans-serif;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 70%;
+    margin: auto;
+}
+
+.container img {
+    aspect-ratio: 16/9;
+    width: 100%;
+
+}
+
+.container > div {
+    width: 15rem;
+    box-shadow: 0 0 0.5rem grey;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.container .description > div:first-child {
+    overflow: hidden;
+    border-bottom: 1px solid grey;
+    aspect-ratio: 1/1;
+}
+
+.container .description > div {
+    padding: 1rem;
+}
+
+.container .description > div:nth-child(2) {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .title {
+    font-size: 2rem;
+}
+
+.container .subtitle {
+    font-size: 1.1rem;
+}
+
+.container .read-article {
+    background-color: red;
+    text-align: center;
+    padding: 0.5rem;
+    color: white;
+}
+
+.container .socials img {
+    width: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 0;
+        width: 100%;
+    }
+
+    .container > div {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+}
