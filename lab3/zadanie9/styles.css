@@ -1,0 +1,75 @@
+body {
+    font: 1.2em Helvetica, Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.521);
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.images {
+    width: 50rem;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.images > div {
+    width: 400%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.images img {
+    width: 50rem;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.interface {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.interface > label {
+    display: block;
+    margin: 0 0.5rem;
+}
+
+.interface > label:has(+ input) {
+    cursor: pointer;
+}
+
+.images > div {
+    transition: all 1s ease-in-out;
+}
+
+.container:has(#img1:checked) .images > div {
+    transform: translateX(0);
+}
+
+.container:has(#img2:checked) .images > div {
+    transform: translateX(-25%);
+}
+
+.container:has(#img3:checked) .images > div {
+    transform: translateX(-50%);
+}
+
+.container:has(#img4:checked) .images > div {
+    transform: translateX(-75%);
+}
+
+
