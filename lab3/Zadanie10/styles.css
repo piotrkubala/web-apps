@@ -1,0 +1,110 @@
+body {
+    font: 1.2em Helvetica, Arial, sans-serif;
+    background-color: rgb(216, 209, 107)
+}
+
+.container {
+    text-align: center;
+    display: flex;
+}
+
+.container input {
+    display: none;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(228, 18, 200);
+    margin: auto;
+    width: 50%;
+    text-align: left;
+    border-radius: 1rem;
+    overflow: hidden;
+    color: white;
+}
+
+.list > div {
+    margin: 0;
+    width: 100%;
+    transition: background-color 1s ease-in-out;
+}
+
+.list > div > label {
+    margin: 0;
+    padding: 0;
+}
+
+.list > div > label > div {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.container .list > div > label {
+    display: block;
+}
+
+.container .sublist {
+    overflow: hidden;
+    max-height: 14rem;
+    transition: max-height 1s ease-in-out;
+}
+
+.list input[type="radio"]:checked + label {
+    display: none;
+}
+
+.list input[type="radio"]:not(:checked) + label + label {
+    display: none;
+}
+
+.list input[type="radio"]:not(:checked) ~ .sublist {
+    max-height: 0;
+}
+
+.list > div:has(> input:checked) {
+    background-color: red;
+}
+
+#end-element {
+    background-color: inherit;
+}
+
+#end-element > label {
+    display: block;
+}
+
+.sublist {
+    padding: 0;
+    margin: 0;
+}
+
+.sublist > div {
+    background-color: blue;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sublist > div {
+    position: relative;
+    border: 1.75rem solid transparent;
+    transition: border-color 0.25s ease-in-out;
+}
+
+.sublist > div:hover {
+    border-right: 1.75rem solid rgb(216, 209, 107);
+    border-left: 1.75rem solid rgb(216, 209, 107);
+    border-bottom: 1.75rem solid rgba(18, 144, 228, 0.75);
+}
+
+.sublist > div > div {
+    position: absolute;
+    top: -0.75rem;
+    left: 0.5rem;
+}
