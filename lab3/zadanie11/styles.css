@@ -1,0 +1,219 @@
+body {
+    font: 1.2em Helvetica, Arial, sans-serif;
+    background-color: white;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 16rem 1fr 8rem;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header header header"
+        "sidebar navigation ads"
+        "sidebar main ads"
+        "footer footer footer";
+}
+
+.container > * {
+    border: 0.1rem solid orange;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+
+.container header {
+    text-align: center;
+    font-size: 3rem;
+    grid-area: header;
+}
+
+.container .card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5rem;
+    position: relative;
+    grid-area: sidebar;
+}
+
+.container .card > div {
+    position: fixed;
+}
+
+.container .ads {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    grid-area: ads;
+}
+
+.container .avatar {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .avatar > img {
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    height: 100%;
+}
+
+.container nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-area: navigation;
+}
+
+.container main {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 3;
+    padding: 0.5rem;
+    grid-area: main;
+}
+
+.container main > .post {
+    border: 0.15rem solid olivedrab;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.container footer {
+    grid-row: 4;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    text-align: center;
+    grid-area: footer;
+}
+
+.advert {
+    background-color: black;
+    width: 10rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.advert img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.container .post .avatar {
+    float: left;
+}
+
+.container .post .avatar {
+    width: 5rem;
+    height: 5rem;
+    shape-outside: circle();
+    margin: 1rem;
+}
+
+.container .post > div:last-child {
+    clear: both;
+}
+
+.container main > div:last-child {
+    background-image: url("img/bg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.container main > div:last-child > div {
+    clip-path: polygon(
+        0 0,
+        70% 0,
+        60% 100%,
+        0 100%
+    );
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 80%;
+}
+
+.form-last {
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0.5rem;
+}
+
+.form-last input {
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+}
+
+input:active {
+    border: none;
+}
+
+.form-last input[type="text"],
+.form-last input[type="email"] {
+    height: 3rem;
+    font-size: 2rem;
+    width: 60%;
+}
+
+.form-last input[type="submit"] {
+    cursor: pointer;
+    font-size: 2rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 960px) {
+    .container {
+        grid-template-columns: 16rem 1fr;
+        grid-template-areas: 
+            "header header"
+            "navigation navigation"
+            "sidebar main"
+            "ads footer";
+    }
+
+    .container .card > div {
+        width: inherit;
+    }
+
+    .container .ads {
+        flex-direction: row;
+    }
+
+    .container .ads .advert {
+        width: 100%;
+    }
+
+    .container .ads img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "navigation"
+            "main"
+            "sidebar"
+            "ads"
+            "footer";
+    }
+
+    .container .card > div {
+        position: inherit;
+    }
+}
+
