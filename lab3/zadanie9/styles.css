@@ -1,3 +1,12 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font: 1.2em Helvetica, Arial, sans-serif;
     background-color: rgba(255, 255, 255, 0.521);
@@ -7,10 +16,11 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .images {
-    width: 50rem;
+    width: 50vw;
     aspect-ratio: 16/9;
     overflow: hidden;
     text-align: center;
@@ -26,7 +36,7 @@ body {
 }
 
 .images img {
-    width: 50rem;
+    width: 50vw;
     aspect-ratio: 16/9;
     object-fit: cover;
 }
@@ -40,7 +50,8 @@ input[type="radio"] {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
+    margin: auto;
+    width: 100%;
 }
 
 .interface > label {
@@ -73,3 +84,8 @@ input[type="radio"] {
 }
 
 
+@media only screen and (max-width: 500px) {
+    body {
+        font-size: 0.8em;
+    }
+}

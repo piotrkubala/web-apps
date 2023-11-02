@@ -1,3 +1,12 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font: 1.2em Helvetica, Arial, sans-serif;
     background-color: white;

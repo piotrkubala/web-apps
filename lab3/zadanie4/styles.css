@@ -1,7 +1,23 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font: 1.2em Helvetica, Arial, sans-serif;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 button {
@@ -68,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
     border-radius: 0.2rem;
     font-size: inherit;
+    border-bottom: 1px solid gray;
 }
 
 .container form > input:last-child {
@@ -78,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     body {
         background-color: rgb(78, 157, 248);
     }

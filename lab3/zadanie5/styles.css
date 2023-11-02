@@ -1,10 +1,22 @@
-body {
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
     background-image: url("bg.jpg");
+}   
+
+body {
     margin: 0;
     padding: 0;
     font: 1.2em Helvetica, Arial, sans-serif;
-    background-color: rgb(145, 199, 243);
-    background-blend-mode:hard-light;
+    background-color: rgba(145, 163, 243, 0.5);
+    height: 100vh;
 }
 
 a {
@@ -256,5 +268,9 @@ button {
         box-sizing: border-box;
         margin: 0 1rem;
         padding: 0 1rem;
+    }
+
+    .container header > div:nth-child(2) > div {
+        margin: 0;
     }
 }
