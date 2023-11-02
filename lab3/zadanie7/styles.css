@@ -93,3 +93,18 @@ body {
 #share:active + label > img {
     transform: scale(0.9);
 }
+
+@media only screen and (max-width: 1000px) {
+    .main-image > img {
+        height: auto;
+        width: 100%;
+    }
+
+    .interface > div:first-child {
+        width: 5rem;
+    }
+
+    .interface > div:last-child > div {
+        padding: 1rem;
+    }
+}

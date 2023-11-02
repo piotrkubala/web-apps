@@ -108,3 +108,9 @@ body {
     top: -0.75rem;
     left: 0.5rem;
 }
+
+@media only screen and (max-width: 600px) {
+    .list {
+        width: 95%;
+    }
+}

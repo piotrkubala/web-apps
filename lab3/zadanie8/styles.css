@@ -93,6 +93,10 @@ main > div {
         padding: 2rem;
     }
 
+    .container {
+        width: 100%;
+    }
+
     main > div {
         width: 100%;
     }
