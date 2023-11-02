@@ -194,6 +194,11 @@ input:active {
 
 .card a > img {
     width: 4rem;
+    margin: 1rem;
+}
+
+.form-last h2 {
+    padding: 1.5rem;
 }
 
 @media only screen and (max-width: 1200px) {
