@@ -171,7 +171,7 @@ input:active {
 
 .form-last input[type="submit"] {
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1rem;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
