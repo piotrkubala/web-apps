@@ -192,6 +192,10 @@ input:active {
     flex-direction: row;
 }
 
+.card a > img {
+    width: 4rem;
+}
+
 @media only screen and (max-width: 1200px) {
     .form-last > form > div {
         flex-direction: column;
