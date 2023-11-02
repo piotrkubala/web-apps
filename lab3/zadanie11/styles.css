@@ -34,14 +34,14 @@ body {
     padding: 0.5rem;
     position: relative;
     grid-area: sidebar;
-    overflow: hidden;
-    z-index: inherit;
+    z-index: 0;
 }
 
 .container .card > div {
-    position: fixed;
+    position: sticky;
     overflow: hidden;
     z-index: -10;
+    top: 1rem;
 }
 
 .container .ads {
@@ -175,6 +175,18 @@ input:active {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.form-last > form > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 1200px) {
+    .form-last > form > div {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 960px) {
