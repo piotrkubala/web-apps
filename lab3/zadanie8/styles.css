@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -28,11 +32,15 @@ main {
 
 .container {
     padding: 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
 }
 
 main > div {
     width: 50%;
     padding: 2rem;
+    overflow: hidden;
 }
 
 .images {
@@ -75,7 +83,7 @@ main > div {
     bottom: 8rem;
 }
 
-.images > div > div:hover {
+.images > div > div:has(> img:hover) {
     padding: 3rem;
     border: 1rem solid limegreen;
     border-radius: 2rem;
@@ -87,17 +95,22 @@ main > div {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
     main {
         flex-direction: column;
         padding: 2rem;
-    }
-
-    .container {
-        width: 100%;
+        align-items: center;
     }
 
     main > div {
-        width: 100%;
+        width: 90%;
+    }
+
+    .images img {
+        width: 12rem;
+    }
+
+    .images > div:first-child > div:last-child {
+        top: 4rem;
     }
 }
