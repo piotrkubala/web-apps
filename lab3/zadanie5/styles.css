@@ -218,3 +218,43 @@ button {
         color: rgb(9, 83, 245);
     }
 }
+
+@media only screen and (max-width: 900px) {
+    .container header > div:last-child > a {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .container header > div:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container header > div:first-child {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container header > div:last-child > a > div,
+    .container header > div:last-child > a {    
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container header > div:last-child {
+        width: 90%;
+        box-sizing: border-box;
+        margin: 0 1rem;
+        padding: 0 1rem;
+    }
+}
