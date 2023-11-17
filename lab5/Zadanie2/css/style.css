@@ -1,0 +1,5 @@
+.container > img {
+    width: 30rem;
+    aspect-ratio: 4/3;
+    border: 1rem solid red;
+}

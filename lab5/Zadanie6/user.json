@@ -1,0 +1,35 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "Address": {
+      "Street": "123 Street",
+      "City": "Houston",
+      "Country": "USA"
+    },
+    "email": "john.doe@email.com",
+    "phone": "555-555-5555"
+  },
+  {
+    "firstName": "Ania",
+    "lastName": "Nowak",
+    "Address": {
+      "Street": "Czenowiejska 12",
+      "City": "Krakow",
+      "Country": "Polska"
+    },
+    "email": "ania.nowak@email.com",
+    "phone": "444-444-4444"
+  },
+  {
+    "firstName": "Uwe",
+    "lastName": "Ampler",
+    "Address": {
+      "Street": "Nachodstraße 134",
+      "City": "Berlin", 
+      "State": "Niemcy"
+    },
+    "email": "uwe.ampler@email.com",
+    "phone": "333-333-3333"
+  }
+]

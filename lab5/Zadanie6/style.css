@@ -1,0 +1,13 @@
+.container > div > div {
+    border: 0.2rem solid #000;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.container > div > div > div > div {
+    display: none;
+}
+
+.container > div > div > div > input:checked + div {
+    display: block;
+}

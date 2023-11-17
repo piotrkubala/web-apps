@@ -1,0 +1,15 @@
+* {
+  font-family: Lato;
+}
+ul {
+  margin: 25px;
+  padding: 0;
+}
+ul > li {
+  list-style: none;
+  padding: 10px 0;
+  border-top: 1px solid #e5e5e5;
+}
+ul > li:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
