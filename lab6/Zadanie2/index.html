@@ -9,13 +9,19 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-        <div class="container-fluid">
+        <div class="container-fluid p-4">
             <div id="people" class="container-fluid">
             </div>
-            <div class="p-3 m-2 row d-flex flex-row justify-content-around">
-                <input type="text" name="name" placeholder="Imię" class="form-control col-12 m-1 d-block w-25 col-lg-4" id="name">
-                <input type="text" name="phone-number" placeholder="Numer telefonu" class="form-control col-12 m-1 d-block w-25 col-lg-4" id="phone-number">
-                <input type="submit" value="Dodaj" class="col-12 w-25 m-1 col-lg-4" id="add-person">
+            <div class="p-3 m-2 row d-flex flex-row justify-content-around form-control">
+                <div class="col-12 col-md-4">
+                    <input type="text" name="name" placeholder="Imię" class="form-control col-12 m-1 d-block col-md-4" id="name">
+                </div>
+                <div class="col-12 col-md-4">
+                    <input type="text" name="phone-number" placeholder="Numer telefonu" class="form-control col-12 m-1 d-block col-md-4" id="phone-number">
+                </div>
+                <div class="col-12 col-md-4">
+                    <input type="submit" value="Dodaj" class="col-12 m-1 col-md-4 w-100" id="add-person">
+                </div>
             </div>
         </div>
     </body>

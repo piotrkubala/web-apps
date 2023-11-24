@@ -42,19 +42,24 @@ function addPerson() {
     const personId = "person" + idCounter;
 
     newElement.innerHTML = `
-        <div class="col-10">
+        <div class="col-11">
             <div class="name">${name}</div>
             <div class="phone-number">${phoneNumber}</div>
         </div>
         <div class="col-1">
-            <button onclick="removePerson('${personId}')" class="btn btn-danger">Usuń</button>
+            <button onclick="removePerson('${personId}')" class="btn btn-danger">
+                🗑
+            </button>
         </div>
     `;
 
     newElement.id = personId;
     newElement.classList.add("person");
     newElement.classList.add("row");
-    newElement.classList.add("p-2");
+    newElement.classList.add("p-4");
+
+    newElement.style.border = "1px solid black";
+    newElement.style.borderRadius = "5px";
 
     peopleElement.appendChild(newElement);
 
