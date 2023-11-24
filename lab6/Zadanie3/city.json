@@ -1,0 +1,7522 @@
+ [
+    {
+      "name": "Aleksandrów Kujawski",
+      "township": "aleksandrowski",
+      "province": "kujawsko-pomorskie",
+      "area": 7.23,
+      "people": 12270,
+      "density": 1697
+    },
+    {
+      "name": "Aleksandrów Łódzki",
+      "township": "zgierski",
+      "province": "łódzkie",
+      "area": 13.82,
+      "people": 21535,
+      "density": 1558
+    },
+    {
+      "name": "Alwernia",
+      "township": "chrzanowski",
+      "province": "małopolskie",
+      "area": 8.88,
+      "people": 3380,
+      "density": 381
+    },
+    {
+      "name": "Andrychów",
+      "township": "wadowicki",
+      "province": "małopolskie",
+      "area": 10.33,
+      "people": 20567,
+      "density": 1991
+    },
+    {
+      "name": "Annopol",
+      "township": "kraśnicki",
+      "province": "lubelskie",
+      "area": 7.73,
+      "people": 2572,
+      "density": 333
+    },
+    {
+      "name": "Augustów",
+      "township": "augustowski",
+      "province": "podlaskie",
+      "area": 80.9,
+      "people": 30270,
+      "density": 374
+    },
+    {
+      "name": "Babimost",
+      "township": "zielonogórski",
+      "province": "lubuskie",
+      "area": 3.65,
+      "people": 3923,
+      "density": 1075
+    },
+    {
+      "name": "Baborów",
+      "township": "głubczycki",
+      "province": "opolskie",
+      "area": 11.86,
+      "people": 2933,
+      "density": 247
+    },
+    {
+      "name": "Baranów Sandomierski",
+      "township": "tarnobrzeski",
+      "province": "podkarpackie",
+      "area": 9.15,
+      "people": 1477,
+      "density": 161
+    },
+    {
+      "name": "Barcin",
+      "township": "żniński",
+      "province": "kujawsko-pomorskie",
+      "area": 3.7,
+      "people": 7516,
+      "density": 2031
+    },
+    {
+      "name": "Barczewo",
+      "township": "olsztyński",
+      "province": "warmińsko-mazurskie",
+      "area": 4.58,
+      "people": 7472,
+      "density": 1631
+    },
+    {
+      "name": "Bardo",
+      "township": "ząbkowicki",
+      "province": "dolnośląskie",
+      "area": 4.71,
+      "people": 2603,
+      "density": 553
+    },
+    {
+      "name": "Barlinek",
+      "township": "myśliborski",
+      "province": "zachodniopomorskie",
+      "area": 17.55,
+      "people": 13853,
+      "density": 789
+    },
+    {
+      "name": "Bartoszyce",
+      "township": "bartoszycki",
+      "province": "warmińsko-mazurskie",
+      "area": 11.79,
+      "people": 23810,
+      "density": 2020
+    },
+    {
+      "name": "Barwice",
+      "township": "szczecinecki",
+      "province": "zachodniopomorskie",
+      "area": 7.52,
+      "people": 3742,
+      "density": 498
+    },
+    {
+      "name": "Bełchatów",
+      "township": "bełchatowski",
+      "province": "łódzkie",
+      "area": 34.64,
+      "people": 57964,
+      "density": 1673
+    },
+    {
+      "name": "Bełżyce",
+      "township": "lubelski",
+      "province": "lubelskie",
+      "area": 23.46,
+      "people": 6608,
+      "density": 282
+    },
+    {
+      "name": "Będzin",
+      "township": "będziński",
+      "province": "śląskie",
+      "area": 37.37,
+      "people": 57343,
+      "density": 1534
+    },
+    {
+      "name": "Biała",
+      "township": "prudnicki",
+      "province": "opolskie",
+      "area": 14.72,
+      "people": 2454,
+      "density": 167
+    },
+    {
+      "name": "Biała Piska",
+      "township": "piski",
+      "province": "warmińsko-mazurskie",
+      "area": 3.24,
+      "people": 4041,
+      "density": 1247
+    },
+    {
+      "name": "Biała Podlaska",
+      "township": "Biała Podlaska",
+      "province": "lubelskie",
+      "area": 49.4,
+      "people": 57545,
+      "density": 1165
+    },
+    {
+      "name": "Biała Rawska",
+      "township": "rawski",
+      "province": "łódzkie",
+      "area": 9.53,
+      "people": 3206,
+      "density": 336
+    },
+    {
+      "name": "Białobrzegi",
+      "township": "białobrzeski",
+      "province": "mazowieckie",
+      "area": 7.51,
+      "people": 7015,
+      "density": 934
+    },
+    {
+      "name": "Białogard",
+      "township": "białogardzki",
+      "province": "zachodniopomorskie",
+      "area": 25.73,
+      "people": 24368,
+      "density": 947
+    },
+    {
+      "name": "Biały Bór",
+      "township": "szczecinecki",
+      "province": "zachodniopomorskie",
+      "area": 12.82,
+      "people": 2171,
+      "density": 169
+    },
+    {
+      "name": "Białystok",
+      "township": "Białystok",
+      "province": "podlaskie",
+      "area": 102.13,
+      "people": 297288,
+      "density": 2911
+    },
+    {
+      "name": "Biecz",
+      "township": "gorlicki",
+      "province": "małopolskie",
+      "area": 17.71,
+      "people": 4629,
+      "density": 261
+    },
+    {
+      "name": "Bielawa",
+      "township": "dzierżoniowski",
+      "province": "dolnośląskie",
+      "area": 36.21,
+      "people": 30207,
+      "density": 834
+    },
+    {
+      "name": "Bielsk Podlaski",
+      "township": "bielski",
+      "province": "podlaskie",
+      "area": 27.01,
+      "people": 25611,
+      "density": 948
+    },
+    {
+      "name": "Bielsko-Biała",
+      "township": "Bielsko-Biała",
+      "province": "śląskie",
+      "area": 124.51,
+      "people": 171505,
+      "density": 1377
+    },
+    {
+      "name": "Bieruń",
+      "township": "bieruńsko-lędziński",
+      "province": "śląskie",
+      "area": 40.49,
+      "people": 19639,
+      "density": 485
+    },
+    {
+      "name": "Bierutów",
+      "township": "oleśnicki",
+      "province": "dolnośląskie",
+      "area": 8.36,
+      "people": 4935,
+      "density": 590
+    },
+    {
+      "name": "Bieżuń",
+      "township": "żuromiński",
+      "province": "mazowieckie",
+      "area": 12.07,
+      "people": 1875,
+      "density": 155
+    },
+    {
+      "name": "Biłgoraj",
+      "township": "biłgorajski",
+      "province": "lubelskie",
+      "area": 21.1,
+      "people": 26550,
+      "density": 1258
+    },
+    {
+      "name": "Biskupiec",
+      "township": "olsztyński",
+      "province": "warmińsko-mazurskie",
+      "area": 5.0,
+      "people": 10539,
+      "density": 2108
+    },
+    {
+      "name": "Bisztynek",
+      "township": "bartoszycki",
+      "province": "warmińsko-mazurskie",
+      "area": 2.16,
+      "people": 2417,
+      "density": 1119
+    },
+    {
+      "name": "Blachownia",
+      "township": "częstochowski",
+      "province": "śląskie",
+      "area": 36.66,
+      "people": 9676,
+      "density": 264
+    },
+    {
+      "name": "Błaszki",
+      "township": "sieradzki",
+      "province": "łódzkie",
+      "area": 1.62,
+      "people": 2158,
+      "density": 1332
+    },
+    {
+      "name": "Błażowa",
+      "township": "rzeszowski",
+      "province": "podkarpackie",
+      "area": 4.23,
+      "people": 2148,
+      "density": 508
+    },
+    {
+      "name": "Błonie",
+      "township": "warszawski zachodni",
+      "province": "mazowieckie",
+      "area": 9.09,
+      "people": 12354,
+      "density": 1359
+    },
+    {
+      "name": "Bobolice",
+      "township": "koszaliński",
+      "province": "zachodniopomorskie",
+      "area": 4.77,
+      "people": 4061,
+      "density": 851
+    },
+    {
+      "name": "Bobowa",
+      "township": "gorlicki",
+      "province": "małopolskie",
+      "area": 7.18,
+      "people": 3123,
+      "density": 435
+    },
+    {
+      "name": "Bochnia",
+      "township": "bocheński",
+      "province": "małopolskie",
+      "area": 29.87,
+      "people": 29992,
+      "density": 1004
+    },
+    {
+      "name": "Bodzentyn",
+      "township": "kielecki",
+      "province": "świętokrzyskie",
+      "area": 8.65,
+      "people": 2238,
+      "density": 259
+    },
+    {
+      "name": "Bogatynia",
+      "township": "zgorzelecki",
+      "province": "dolnośląskie",
+      "area": 59.88,
+      "people": 17762,
+      "density": 297
+    },
+    {
+      "name": "Boguchwała",
+      "township": "rzeszowski",
+      "province": "podkarpackie",
+      "area": 9.11,
+      "people": 6096,
+      "density": 669
+    },
+    {
+      "name": "Boguszów-Gorce",
+      "township": "wałbrzyski",
+      "province": "dolnośląskie",
+      "area": 27.02,
+      "people": 15566,
+      "density": 576
+    },
+    {
+      "name": "Bojanowo",
+      "township": "rawicki",
+      "province": "wielkopolskie",
+      "area": 2.34,
+      "people": 2940,
+      "density": 1256
+    },
+    {
+      "name": "Bolesławiec",
+      "township": "bolesławiecki",
+      "province": "dolnośląskie",
+      "area": 23.57,
+      "people": 39084,
+      "density": 1658
+    },
+    {
+      "name": "Bolków",
+      "township": "jaworski",
+      "province": "dolnośląskie",
+      "area": 7.68,
+      "people": 5047,
+      "density": 657
+    },
+    {
+      "name": "Borek Wielkopolski",
+      "township": "gostyński",
+      "province": "wielkopolskie",
+      "area": 6.29,
+      "people": 2523,
+      "density": 401
+    },
+    {
+      "name": "Borne Sulinowo",
+      "township": "szczecinecki",
+      "province": "zachodniopomorskie",
+      "area": 18.15,
+      "people": 4984,
+      "density": 275
+    },
+    {
+      "name": "Braniewo",
+      "township": "braniewski",
+      "province": "warmińsko-mazurskie",
+      "area": 12.41,
+      "people": 17074,
+      "density": 1376
+    },
+    {
+      "name": "Brańsk",
+      "township": "bielski",
+      "province": "podlaskie",
+      "area": 32.43,
+      "people": 3785,
+      "density": 117
+    },
+    {
+      "name": "Brodnica",
+      "township": "brodnicki",
+      "province": "kujawsko-pomorskie",
+      "area": 23.15,
+      "people": 28717,
+      "density": 1240
+    },
+    {
+      "name": "Brok",
+      "township": "ostrowski",
+      "province": "mazowieckie",
+      "area": 28.06,
+      "people": 1955,
+      "density": 70
+    },
+    {
+      "name": "Brusy",
+      "township": "chojnicki",
+      "province": "pomorskie",
+      "area": 5.2,
+      "people": 5209,
+      "density": 1002
+    },
+    {
+      "name": "Brwinów",
+      "township": "pruszkowski",
+      "province": "mazowieckie",
+      "area": 10.1,
+      "people": 13533,
+      "density": 1340
+    },
+    {
+      "name": "Brzeg",
+      "township": "brzeski",
+      "province": "opolskie",
+      "area": 14.61,
+      "people": 36110,
+      "density": 2472
+    },
+    {
+      "name": "Brzeg Dolny",
+      "township": "wołowski",
+      "province": "dolnośląskie",
+      "area": 17.2,
+      "people": 12486,
+      "density": 726
+    },
+    {
+      "name": "Brzesko",
+      "township": "brzeski",
+      "province": "małopolskie",
+      "area": 11.92,
+      "people": 16884,
+      "density": 1416
+    },
+    {
+      "name": "Brzeszcze",
+      "township": "oświęcimski",
+      "province": "małopolskie",
+      "area": 19.04,
+      "people": 11345,
+      "density": 596
+    },
+    {
+      "name": "Brześć Kujawski",
+      "township": "włocławski",
+      "province": "kujawsko-pomorskie",
+      "area": 7.04,
+      "people": 4660,
+      "density": 662
+    },
+    {
+      "name": "Brzeziny",
+      "township": "brzeziński",
+      "province": "łódzkie",
+      "area": 21.58,
+      "people": 12534,
+      "density": 581
+    },
+    {
+      "name": "Brzostek",
+      "township": "dębicki",
+      "province": "podkarpackie",
+      "area": 8.76,
+      "people": 2714,
+      "density": 310
+    },
+    {
+      "name": "Brzozów",
+      "township": "brzozowski",
+      "province": "podkarpackie",
+      "area": 11.46,
+      "people": 7471,
+      "density": 652
+    },
+    {
+      "name": "Buk",
+      "township": "poznański",
+      "province": "wielkopolskie",
+      "area": 2.96,
+      "people": 6096,
+      "density": 2059
+    },
+    {
+      "name": "Bukowno",
+      "township": "olkuski",
+      "province": "małopolskie",
+      "area": 64.59,
+      "people": 10297,
+      "density": 159
+    },
+    {
+      "name": "Busko-Zdrój",
+      "township": "buski",
+      "province": "świętokrzyskie",
+      "area": 12.28,
+      "people": 16092,
+      "density": 1310
+    },
+    {
+      "name": "Bychawa",
+      "township": "lubelski",
+      "province": "lubelskie",
+      "area": 6.69,
+      "people": 4976,
+      "density": 744
+    },
+    {
+      "name": "Byczyna",
+      "township": "kluczborski",
+      "province": "opolskie",
+      "area": 5.79,
+      "people": 3651,
+      "density": 631
+    },
+    {
+      "name": "Bydgoszcz",
+      "township": "Bydgoszcz",
+      "province": "kujawsko-pomorskie",
+      "area": 175.98,
+      "people": 352313,
+      "density": 2002
+    },
+    {
+      "name": "Bystrzyca Kłodzka",
+      "township": "kłodzki",
+      "province": "dolnośląskie",
+      "area": 10.74,
+      "people": 10239,
+      "density": 953
+    },
+    {
+      "name": "Bytom",
+      "township": "Bytom",
+      "province": "śląskie",
+      "area": 69.44,
+      "people": 168394,
+      "density": 2425
+    },
+    {
+      "name": "Bytom Odrzański",
+      "township": "nowosolski",
+      "province": "lubuskie",
+      "area": 2.3,
+      "people": 4365,
+      "density": 1898
+    },
+    {
+      "name": "Bytów",
+      "township": "bytowski",
+      "province": "pomorskie",
+      "area": 8.72,
+      "people": 16983,
+      "density": 1948
+    },
+    {
+      "name": "Cedynia",
+      "township": "gryfiński",
+      "province": "zachodniopomorskie",
+      "area": 1.67,
+      "people": 1625,
+      "density": 973
+    },
+    {
+      "name": "Chełm",
+      "township": "Chełm",
+      "province": "lubelskie",
+      "area": 35.28,
+      "people": 63333,
+      "density": 1795
+    },
+    {
+      "name": "Chełmek",
+      "township": "oświęcimski",
+      "province": "małopolskie",
+      "area": 8.27,
+      "people": 9090,
+      "density": 1099
+    },
+    {
+      "name": "Chełmno",
+      "township": "chełmiński",
+      "province": "kujawsko-pomorskie",
+      "area": 13.56,
+      "people": 19911,
+      "density": 1468
+    },
+    {
+      "name": "Chełmża",
+      "township": "toruński",
+      "province": "kujawsko-pomorskie",
+      "area": 7.84,
+      "people": 14645,
+      "density": 1868
+    },
+    {
+      "name": "Chęciny",
+      "township": "kielecki",
+      "province": "świętokrzyskie",
+      "area": 14.13,
+      "people": 4421,
+      "density": 313
+    },
+    {
+      "name": "Chmielnik",
+      "township": "kielecki",
+      "province": "świętokrzyskie",
+      "area": 7.8,
+      "people": 3752,
+      "density": 481
+    },
+    {
+      "name": "Chocianów",
+      "township": "polkowicki",
+      "province": "dolnośląskie",
+      "area": 9.0,
+      "people": 7996,
+      "density": 888
+    },
+    {
+      "name": "Chociwel",
+      "township": "stargardzki",
+      "province": "zachodniopomorskie",
+      "area": 3.67,
+      "people": 3183,
+      "density": 867
+    },
+    {
+      "name": "Chocz",
+      "township": "pleszewski",
+      "province": "wielkopolskie",
+      "area": 6.88,
+      "people": 1811,
+      "density": 263
+    },
+    {
+      "name": "Chodecz",
+      "township": "włocławski",
+      "province": "kujawsko-pomorskie",
+      "area": 1.39,
+      "people": 1885,
+      "density": 1356
+    },
+    {
+      "name": "Chodzież",
+      "township": "chodzieski",
+      "province": "wielkopolskie",
+      "area": 12.77,
+      "people": 18877,
+      "density": 1478
+    },
+    {
+      "name": "Chojna",
+      "township": "gryfiński",
+      "province": "zachodniopomorskie",
+      "area": 12.58,
+      "people": 7440,
+      "density": 591
+    },
+    {
+      "name": "Chojnice",
+      "township": "chojnicki",
+      "province": "pomorskie",
+      "area": 21.04,
+      "people": 39937,
+      "density": 1898
+    },
+    {
+      "name": "Chojnów",
+      "township": "legnicki",
+      "province": "dolnośląskie",
+      "area": 5.32,
+      "people": 13573,
+      "density": 2551
+    },
+    {
+      "name": "Choroszcz",
+      "township": "białostocki",
+      "province": "podlaskie",
+      "area": 16.79,
+      "people": 5834,
+      "density": 347
+    },
+    {
+      "name": "Chorzele",
+      "township": "przasnyski",
+      "province": "mazowieckie",
+      "area": 17.51,
+      "people": 3069,
+      "density": 175
+    },
+    {
+      "name": "Chorzów",
+      "township": "Chorzów",
+      "province": "śląskie",
+      "area": 33.24,
+      "people": 109021,
+      "density": 3280
+    },
+    {
+      "name": "Choszczno",
+      "township": "choszczeński",
+      "province": "zachodniopomorskie",
+      "area": 9.58,
+      "people": 15352,
+      "density": 1603
+    },
+    {
+      "name": "Chrzanów",
+      "township": "chrzanowski",
+      "province": "małopolskie",
+      "area": 38.32,
+      "people": 37123,
+      "density": 969
+    },
+    {
+      "name": "Ciechanowiec",
+      "township": "wysokomazowiecki",
+      "province": "podlaskie",
+      "area": 19.53,
+      "people": 4655,
+      "density": 238
+    },
+    {
+      "name": "Ciechanów",
+      "township": "ciechanowski",
+      "province": "mazowieckie",
+      "area": 32.78,
+      "people": 44303,
+      "density": 1352
+    },
+    {
+      "name": "Ciechocinek",
+      "township": "aleksandrowski",
+      "province": "kujawsko-pomorskie",
+      "area": 15.26,
+      "people": 10586,
+      "density": 694
+    },
+    {
+      "name": "Cieszanów",
+      "township": "lubaczowski",
+      "province": "podkarpackie",
+      "area": 15.06,
+      "people": 1940,
+      "density": 129
+    },
+    {
+      "name": "Cieszyn",
+      "township": "cieszyński",
+      "province": "śląskie",
+      "area": 28.61,
+      "people": 34876,
+      "density": 1219
+    },
+    {
+      "name": "Ciężkowice",
+      "township": "tarnowski",
+      "province": "małopolskie",
+      "area": 9.99,
+      "people": 2470,
+      "density": 247
+    },
+    {
+      "name": "Cybinka",
+      "township": "słubicki",
+      "province": "lubuskie",
+      "area": 5.29,
+      "people": 2755,
+      "density": 521
+    },
+    {
+      "name": "Czaplinek",
+      "township": "drawski",
+      "province": "zachodniopomorskie",
+      "area": 13.62,
+      "people": 7155,
+      "density": 525
+    },
+    {
+      "name": "Czarna Białostocka",
+      "township": "białostocki",
+      "province": "podlaskie",
+      "area": 14.28,
+      "people": 9402,
+      "density": 658
+    },
+    {
+      "name": "Czarna Woda",
+      "township": "starogardzki",
+      "province": "pomorskie",
+      "area": 9.94,
+      "people": 2841,
+      "density": 286
+    },
+    {
+      "name": "Czarne",
+      "township": "człuchowski",
+      "province": "pomorskie",
+      "area": 46.43,
+      "people": 5983,
+      "density": 129
+    },
+    {
+      "name": "Czarnków",
+      "township": "czarnkowsko-trzcianecki",
+      "province": "wielkopolskie",
+      "area": 10.17,
+      "people": 10784,
+      "density": 1060
+    },
+    {
+      "name": "Czchów",
+      "township": "brzeski",
+      "province": "małopolskie",
+      "area": 14.09,
+      "people": 2380,
+      "density": 169
+    },
+    {
+      "name": "Czechowice-Dziedzice",
+      "township": "bielski",
+      "province": "śląskie",
+      "area": 32.91,
+      "people": 35795,
+      "density": 1088
+    },
+    {
+      "name": "Czeladź",
+      "township": "będziński",
+      "province": "śląskie",
+      "area": 16.38,
+      "people": 31901,
+      "density": 1948
+    },
+    {
+      "name": "Czempiń",
+      "township": "kościański",
+      "province": "wielkopolskie",
+      "area": 3.32,
+      "people": 5296,
+      "density": 1595
+    },
+    {
+      "name": "Czerniejewo",
+      "township": "gnieźnieński",
+      "province": "wielkopolskie",
+      "area": 10.19,
+      "people": 2620,
+      "density": 257
+    },
+    {
+      "name": "Czersk",
+      "township": "chojnicki",
+      "province": "pomorskie",
+      "area": 9.73,
+      "people": 9909,
+      "density": 1018
+    },
+    {
+      "name": "Czerwieńsk",
+      "township": "zielonogórski",
+      "province": "lubuskie",
+      "area": 9.36,
+      "people": 4094,
+      "density": 437
+    },
+    {
+      "name": "Czerwionka-Leszczyny",
+      "township": "rybnicki",
+      "province": "śląskie",
+      "area": 37.63,
+      "people": 28329,
+      "density": 753
+    },
+    {
+      "name": "Częstochowa",
+      "township": "Częstochowa",
+      "province": "śląskie",
+      "area": 159.71,
+      "people": 224376,
+      "density": 1405
+    },
+    {
+      "name": "Człopa",
+      "township": "wałecki",
+      "province": "zachodniopomorskie",
+      "area": 6.27,
+      "people": 2326,
+      "density": 371
+    },
+    {
+      "name": "Człuchów",
+      "township": "człuchowski",
+      "province": "pomorskie",
+      "area": 12.78,
+      "people": 13869,
+      "density": 1085
+    },
+    {
+      "name": "Czyżew",
+      "township": "wysokomazowiecki",
+      "province": "podlaskie",
+      "area": 5.23,
+      "people": 2640,
+      "density": 505
+    },
+    {
+      "name": "Ćmielów",
+      "township": "ostrowiecki",
+      "province": "świętokrzyskie",
+      "area": 13.34,
+      "people": 3014,
+      "density": 226
+    },
+    {
+      "name": "Daleszyce",
+      "township": "kielecki",
+      "province": "świętokrzyskie",
+      "area": 15.5,
+      "people": 2914,
+      "density": 188
+    },
+    {
+      "name": "Darłowo",
+      "township": "sławieński",
+      "province": "zachodniopomorskie",
+      "area": 20.21,
+      "people": 13924,
+      "density": 689
+    },
+    {
+      "name": "Dąbie",
+      "township": "kolski",
+      "province": "wielkopolskie",
+      "area": 8.8,
+      "people": 2017,
+      "density": 229
+    },
+    {
+      "name": "Dąbrowa Białostocka",
+      "township": "sokólski",
+      "province": "podlaskie",
+      "area": 22.64,
+      "people": 5632,
+      "density": 249
+    },
+    {
+      "name": "Dąbrowa Górnicza",
+      "township": "Dąbrowa Górnicza",
+      "province": "śląskie",
+      "area": 188.73,
+      "people": 121121,
+      "density": 642
+    },
+    {
+      "name": "Dąbrowa Tarnowska",
+      "township": "dąbrowski",
+      "province": "małopolskie",
+      "area": 23.07,
+      "people": 11924,
+      "density": 517
+    },
+    {
+      "name": "Debrzno",
+      "township": "człuchowski",
+      "province": "pomorskie",
+      "area": 7.51,
+      "people": 5152,
+      "density": 686
+    },
+    {
+      "name": "Dębica",
+      "township": "dębicki",
+      "province": "podkarpackie",
+      "area": 33.83,
+      "people": 46063,
+      "density": 1362
+    },
+    {
+      "name": "Dęblin",
+      "township": "rycki",
+      "province": "lubelskie",
+      "area": 38.33,
+      "people": 16398,
+      "density": 428
+    },
+    {
+      "name": "Dębno",
+      "township": "myśliborski",
+      "province": "zachodniopomorskie",
+      "area": 19.51,
+      "people": 13931,
+      "density": 714
+    },
+    {
+      "name": "Dobczyce",
+      "township": "myślenicki",
+      "province": "małopolskie",
+      "area": 12.97,
+      "people": 6425,
+      "density": 495
+    },
+    {
+      "name": "Dobiegniew",
+      "township": "strzelecko-drezdenecki",
+      "province": "lubuskie",
+      "area": 5.69,
+      "people": 3087,
+      "density": 543
+    },
+    {
+      "name": "Dobra",
+      "township": "łobeski",
+      "province": "zachodniopomorskie",
+      "area": 2.37,
+      "people": 2353,
+      "density": 993
+    },
+    {
+      "name": "Dobra",
+      "township": "turecki",
+      "province": "wielkopolskie",
+      "area": 1.84,
+      "people": 1396,
+      "density": 759
+    },
+    {
+      "name": "Dobre Miasto",
+      "township": "olsztyński",
+      "province": "warmińsko-mazurskie",
+      "area": 4.86,
+      "people": 10293,
+      "density": 2118
+    },
+    {
+      "name": "Dobrodzień",
+      "township": "oleski",
+      "province": "opolskie",
+      "area": 19.53,
+      "people": 3749,
+      "density": 192
+    },
+    {
+      "name": "Dobrzany",
+      "township": "stargardzki",
+      "province": "zachodniopomorskie",
+      "area": 5.34,
+      "people": 2288,
+      "density": 428
+    },
+    {
+      "name": "Dobrzyca",
+      "township": "pleszewski",
+      "province": "wielkopolskie",
+      "area": 19.7,
+      "people": 3153,
+      "density": 160
+    },
+    {
+      "name": "Dobrzyń nad Wisłą",
+      "township": "lipnowski",
+      "province": "kujawsko-pomorskie",
+      "area": 5.41,
+      "people": 2161,
+      "density": 399
+    },
+    {
+      "name": "Dolsk",
+      "township": "śremski",
+      "province": "wielkopolskie",
+      "area": 6.2,
+      "people": 1569,
+      "density": 253
+    },
+    {
+      "name": "Drawno",
+      "township": "choszczeński",
+      "province": "zachodniopomorskie",
+      "area": 5.03,
+      "people": 2307,
+      "density": 459
+    },
+    {
+      "name": "Drawsko Pomorskie",
+      "township": "drawski",
+      "province": "zachodniopomorskie",
+      "area": 22.33,
+      "people": 11672,
+      "density": 523
+    },
+    {
+      "name": "Drezdenko",
+      "township": "strzelecko-drezdenecki",
+      "province": "lubuskie",
+      "area": 10.72,
+      "people": 10282,
+      "density": 959
+    },
+    {
+      "name": "Drobin",
+      "township": "płocki",
+      "province": "mazowieckie",
+      "area": 9.65,
+      "people": 2925,
+      "density": 303
+    },
+    {
+      "name": "Drohiczyn",
+      "township": "siemiatycki",
+      "province": "podlaskie",
+      "area": 15.69,
+      "people": 2011,
+      "density": 128
+    },
+    {
+      "name": "Drzewica",
+      "township": "opoczyński",
+      "province": "łódzkie",
+      "area": 4.81,
+      "people": 3865,
+      "density": 804
+    },
+    {
+      "name": "Dukla",
+      "township": "krośnieński",
+      "province": "podkarpackie",
+      "area": 5.48,
+      "people": 2098,
+      "density": 383
+    },
+    {
+      "name": "Duszniki-Zdrój",
+      "township": "kłodzki",
+      "province": "dolnośląskie",
+      "area": 22.28,
+      "people": 4728,
+      "density": 212
+    },
+    {
+      "name": "Dynów",
+      "township": "rzeszowski",
+      "province": "podkarpackie",
+      "area": 24.55,
+      "people": 6146,
+      "density": 250
+    },
+    {
+      "name": "Działdowo",
+      "township": "działdowski",
+      "province": "warmińsko-mazurskie",
+      "area": 11.47,
+      "people": 21370,
+      "density": 1863
+    },
+    {
+      "name": "Działoszyce",
+      "township": "pińczowski",
+      "province": "świętokrzyskie",
+      "area": 1.92,
+      "people": 913,
+      "density": 476
+    },
+    {
+      "name": "Działoszyn",
+      "township": "pajęczański",
+      "province": "łódzkie",
+      "area": 4.94,
+      "people": 5950,
+      "density": 1204
+    },
+    {
+      "name": "Dzierzgoń",
+      "township": "sztumski",
+      "province": "pomorskie",
+      "area": 3.9,
+      "people": 5413,
+      "density": 1388
+    },
+    {
+      "name": "Dzierżoniów",
+      "township": "dzierżoniowski",
+      "province": "dolnośląskie",
+      "area": 20.07,
+      "people": 33653,
+      "density": 1677
+    },
+    {
+      "name": "Dziwnów",
+      "township": "kamieński",
+      "province": "zachodniopomorskie",
+      "area": 6.14,
+      "people": 2707,
+      "density": 441
+    },
+    {
+      "name": "Elbląg",
+      "township": "Elbląg",
+      "province": "warmińsko-mazurskie",
+      "area": 79.82,
+      "people": 120895,
+      "density": 1515
+    },
+    {
+      "name": "Ełk",
+      "township": "ełcki",
+      "province": "warmińsko-mazurskie",
+      "area": 21.05,
+      "people": 61523,
+      "density": 2923
+    },
+    {
+      "name": "Frampol",
+      "township": "biłgorajski",
+      "province": "lubelskie",
+      "area": 4.67,
+      "people": 1433,
+      "density": 307
+    },
+    {
+      "name": "Frombork",
+      "township": "braniewski",
+      "province": "warmińsko-mazurskie",
+      "area": 7.59,
+      "people": 2389,
+      "density": 315
+    },
+    {
+      "name": "Garwolin",
+      "township": "garwoliński",
+      "province": "mazowieckie",
+      "area": 22.08,
+      "people": 17381,
+      "density": 787
+    },
+    {
+      "name": "Gąbin",
+      "township": "płocki",
+      "province": "mazowieckie",
+      "area": 27.95,
+      "people": 4127,
+      "density": 148
+    },
+    {
+      "name": "Gdańsk",
+      "township": "Gdańsk",
+      "province": "pomorskie",
+      "area": 261.96,
+      "people": 464254,
+      "density": 1772
+    },
+    {
+      "name": "Gdynia",
+      "township": "Gdynia",
+      "province": "pomorskie",
+      "area": 135.14,
+      "people": 246306,
+      "density": 1823
+    },
+    {
+      "name": "Giżycko",
+      "township": "giżycki",
+      "province": "warmińsko-mazurskie",
+      "area": 13.72,
+      "people": 29480,
+      "density": 2149
+    },
+    {
+      "name": "Glinojeck",
+      "township": "ciechanowski",
+      "province": "mazowieckie",
+      "area": 7.37,
+      "people": 3027,
+      "density": 411
+    },
+    {
+      "name": "Gliwice",
+      "township": "Gliwice",
+      "province": "śląskie",
+      "area": 133.88,
+      "people": 181309,
+      "density": 1354
+    },
+    {
+      "name": "Głogów",
+      "township": "głogowski",
+      "province": "dolnośląskie",
+      "area": 35.11,
+      "people": 68179,
+      "density": 1942
+    },
+    {
+      "name": "Głogów Małopolski",
+      "township": "rzeszowski",
+      "province": "podkarpackie",
+      "area": 13.71,
+      "people": 6431,
+      "density": 469
+    },
+    {
+      "name": "Głogówek",
+      "township": "prudnicki",
+      "province": "opolskie",
+      "area": 22.06,
+      "people": 5607,
+      "density": 254
+    },
+    {
+      "name": "Głowno",
+      "township": "zgierski",
+      "province": "łódzkie",
+      "area": 19.84,
+      "people": 14422,
+      "density": 727
+    },
+    {
+      "name": "Głubczyce",
+      "township": "głubczycki",
+      "province": "opolskie",
+      "area": 12.54,
+      "people": 12624,
+      "density": 1007
+    },
+    {
+      "name": "Głuchołazy",
+      "township": "nyski",
+      "province": "opolskie",
+      "area": 6.83,
+      "people": 13735,
+      "density": 2011
+    },
+    {
+      "name": "Głuszyca",
+      "township": "wałbrzyski",
+      "province": "dolnośląskie",
+      "area": 16.21,
+      "people": 6431,
+      "density": 397
+    },
+    {
+      "name": "Gniew",
+      "township": "tczewski",
+      "province": "pomorskie",
+      "area": 6.04,
+      "people": 6791,
+      "density": 1124
+    },
+    {
+      "name": "Gniewkowo",
+      "township": "inowrocławski",
+      "province": "kujawsko-pomorskie",
+      "area": 9.18,
+      "people": 7202,
+      "density": 785
+    },
+    {
+      "name": "Gniezno",
+      "township": "gnieźnieński",
+      "province": "wielkopolskie",
+      "area": 40.6,
+      "people": 68943,
+      "density": 1698
+    },
+    {
+      "name": "Gogolin",
+      "township": "krapkowicki",
+      "province": "opolskie",
+      "area": 20.35,
+      "people": 6640,
+      "density": 326
+    },
+    {
+      "name": "Golczewo",
+      "township": "kamieński",
+      "province": "zachodniopomorskie",
+      "area": 7.42,
+      "people": 2686,
+      "density": 362
+    },
+    {
+      "name": "Goleniów",
+      "township": "goleniowski",
+      "province": "zachodniopomorskie",
+      "area": 11.78,
+      "people": 22553,
+      "density": 1915
+    },
+    {
+      "name": "Golina",
+      "township": "koniński",
+      "province": "wielkopolskie",
+      "area": 3.52,
+      "people": 4493,
+      "density": 1276
+    },
+    {
+      "name": "Golub-Dobrzyń",
+      "township": "golubsko-dobrzyński",
+      "province": "kujawsko-pomorskie",
+      "area": 7.5,
+      "people": 12828,
+      "density": 1710
+    },
+    {
+      "name": "Gołańcz",
+      "township": "wągrowiecki",
+      "province": "wielkopolskie",
+      "area": 12.64,
+      "people": 3294,
+      "density": 261
+    },
+    {
+      "name": "Gołdap",
+      "township": "gołdapski",
+      "province": "warmińsko-mazurskie",
+      "area": 17.2,
+      "people": 13740,
+      "density": 799
+    },
+    {
+      "name": "Goniądz",
+      "township": "moniecki",
+      "province": "podlaskie",
+      "area": 4.28,
+      "people": 1827,
+      "density": 427
+    },
+    {
+      "name": "Gorlice",
+      "township": "gorlicki",
+      "province": "małopolskie",
+      "area": 23.53,
+      "people": 27781,
+      "density": 1181
+    },
+    {
+      "name": "Gorzów Śląski",
+      "township": "oleski",
+      "province": "opolskie",
+      "area": 18.54,
+      "people": 2451,
+      "density": 132
+    },
+    {
+      "name": "Gorzów Wielkopolski",
+      "township": "Gorzów Wielkopolski",
+      "province": "lubuskie",
+      "area": 85.72,
+      "people": 124295,
+      "density": 1450
+    },
+    {
+      "name": "Gostynin",
+      "township": "gostyniński",
+      "province": "mazowieckie",
+      "area": 32.4,
+      "people": 18720,
+      "density": 578
+    },
+    {
+      "name": "Gostyń",
+      "township": "gostyński",
+      "province": "wielkopolskie",
+      "area": 11.09,
+      "people": 20182,
+      "density": 1820
+    },
+    {
+      "name": "Gościno",
+      "township": "kołobrzeski",
+      "province": "zachodniopomorskie",
+      "area": 5.7,
+      "people": 2436,
+      "density": 427
+    },
+    {
+      "name": "Gozdnica",
+      "township": "żagański",
+      "province": "lubuskie",
+      "area": 23.92,
+      "people": 3100,
+      "density": 130
+    },
+    {
+      "name": "Góra",
+      "township": "górowski",
+      "province": "dolnośląskie",
+      "area": 13.65,
+      "people": 11994,
+      "density": 879
+    },
+    {
+      "name": "Góra Kalwaria",
+      "township": "piaseczyński",
+      "province": "mazowieckie",
+      "area": 13.67,
+      "people": 11942,
+      "density": 874
+    },
+    {
+      "name": "Górowo Iławeckie",
+      "township": "bartoszycki",
+      "province": "warmińsko-mazurskie",
+      "area": 3.32,
+      "people": 4021,
+      "density": 1211
+    },
+    {
+      "name": "Górzno",
+      "township": "brodnicki",
+      "province": "kujawsko-pomorskie",
+      "area": 3.43,
+      "people": 1403,
+      "density": 409
+    },
+    {
+      "name": "Grabów nad Prosną",
+      "township": "ostrzeszowski",
+      "province": "wielkopolskie",
+      "area": 2.58,
+      "people": 1941,
+      "density": 752
+    },
+    {
+      "name": "Grajewo",
+      "township": "grajewski",
+      "province": "podlaskie",
+      "area": 18.94,
+      "people": 22049,
+      "density": 1164
+    },
+    {
+      "name": "Grodków",
+      "township": "brzeski",
+      "province": "opolskie",
+      "area": 9.88,
+      "people": 8700,
+      "density": 881
+    },
+    {
+      "name": "Grodzisk Mazowiecki",
+      "township": "grodziski",
+      "province": "mazowieckie",
+      "area": 13.19,
+      "people": 30955,
+      "density": 2347
+    },
+    {
+      "name": "Grodzisk Wielkopolski",
+      "township": "grodziski",
+      "province": "wielkopolskie",
+      "area": 18.21,
+      "people": 14595,
+      "density": 801
+    },
+    {
+      "name": "Grójec",
+      "township": "grójecki",
+      "province": "mazowieckie",
+      "area": 8.57,
+      "people": 16674,
+      "density": 1946
+    },
+    {
+      "name": "Grudziądz",
+      "township": "Grudziądz",
+      "province": "kujawsko-pomorskie",
+      "area": 57.76,
+      "people": 95629,
+      "density": 1656
+    },
+    {
+      "name": "Grybów",
+      "township": "nowosądecki",
+      "province": "małopolskie",
+      "area": 16.95,
+      "people": 6089,
+      "density": 359
+    },
+    {
+      "name": "Gryfice",
+      "township": "gryficki",
+      "province": "zachodniopomorskie",
+      "area": 12.4,
+      "people": 16600,
+      "density": 1339
+    },
+    {
+      "name": "Gryfino",
+      "township": "gryfiński",
+      "province": "zachodniopomorskie",
+      "area": 9.58,
+      "people": 21393,
+      "density": 2233
+    },
+    {
+      "name": "Gryfów Śląski",
+      "township": "lwówecki",
+      "province": "dolnośląskie",
+      "area": 6.63,
+      "people": 6684,
+      "density": 1008
+    },
+    {
+      "name": "Gubin",
+      "township": "krośnieński",
+      "province": "lubuskie",
+      "area": 20.68,
+      "people": 16740,
+      "density": 809
+    },
+    {
+      "name": "Hajnówka",
+      "township": "hajnowski",
+      "province": "podlaskie",
+      "area": 21.29,
+      "people": 20919,
+      "density": 983
+    },
+    {
+      "name": "Halinów",
+      "township": "miński",
+      "province": "mazowieckie",
+      "area": 2.84,
+      "people": 3718,
+      "density": 1309
+    },
+    {
+      "name": "Hel",
+      "township": "pucki",
+      "province": "pomorskie",
+      "area": 22.95,
+      "people": 3373,
+      "density": 147
+    },
+    {
+      "name": "Hrubieszów",
+      "township": "hrubieszowski",
+      "province": "lubelskie",
+      "area": 33.03,
+      "people": 17903,
+      "density": 542
+    },
+    {
+      "name": "Iława",
+      "township": "iławski",
+      "province": "warmińsko-mazurskie",
+      "area": 21.88,
+      "people": 33132,
+      "density": 1514
+    },
+    {
+      "name": "Iłowa",
+      "township": "żagański",
+      "province": "lubuskie",
+      "area": 9.18,
+      "people": 3947,
+      "density": 430
+    },
+    {
+      "name": "Iłża",
+      "township": "radomski",
+      "province": "mazowieckie",
+      "area": 15.83,
+      "people": 4832,
+      "density": 305
+    },
+    {
+      "name": "Imielin",
+      "township": "bieruńsko-lędziński",
+      "province": "śląskie",
+      "area": 27.99,
+      "people": 9052,
+      "density": 323
+    },
+    {
+      "name": "Inowrocław",
+      "township": "inowrocławski",
+      "province": "kujawsko-pomorskie",
+      "area": 30.42,
+      "people": 73577,
+      "density": 2419
+    },
+    {
+      "name": "Ińsko",
+      "township": "stargardzki",
+      "province": "zachodniopomorskie",
+      "area": 7.48,
+      "people": 1965,
+      "density": 263
+    },
+    {
+      "name": "Iwonicz-Zdrój",
+      "township": "krośnieński",
+      "province": "podkarpackie",
+      "area": 5.89,
+      "people": 1798,
+      "density": 305
+    },
+    {
+      "name": "Izbica Kujawska",
+      "township": "włocławski",
+      "province": "kujawsko-pomorskie",
+      "area": 2.24,
+      "people": 2677,
+      "density": 1195
+    },
+    {
+      "name": "Jabłonowo Pomorskie",
+      "township": "brodnicki",
+      "province": "kujawsko-pomorskie",
+      "area": 3.35,
+      "people": 3782,
+      "density": 1129
+    },
+    {
+      "name": "Janikowo",
+      "township": "inowrocławski",
+      "province": "kujawsko-pomorskie",
+      "area": 9.51,
+      "people": 8844,
+      "density": 930
+    },
+    {
+      "name": "Janowiec Wielkopolski",
+      "township": "żniński",
+      "province": "kujawsko-pomorskie",
+      "area": 3.04,
+      "people": 4016,
+      "density": 1321
+    },
+    {
+      "name": "Janów Lubelski",
+      "township": "janowski",
+      "province": "lubelskie",
+      "area": 14.8,
+      "people": 11986,
+      "density": 810
+    },
+    {
+      "name": "Jaraczewo",
+      "township": "jarociński",
+      "province": "wielkopolskie",
+      "area": 10.07,
+      "people": 1467,
+      "density": 146
+    },
+    {
+      "name": "Jarocin",
+      "township": "jarociński",
+      "province": "wielkopolskie",
+      "area": 16.38,
+      "people": 26245,
+      "density": 1602
+    },
+    {
+      "name": "Jarosław",
+      "township": "jarosławski",
+      "province": "podkarpackie",
+      "area": 34.61,
+      "people": 37892,
+      "density": 1095
+    },
+    {
+      "name": "Jasień",
+      "township": "żarski",
+      "province": "lubuskie",
+      "area": 4.79,
+      "people": 4348,
+      "density": 908
+    },
+    {
+      "name": "Jasło",
+      "township": "jasielski",
+      "province": "podkarpackie",
+      "area": 36.52,
+      "people": 35445,
+      "density": 971
+    },
+    {
+      "name": "Jastarnia",
+      "township": "pucki",
+      "province": "pomorskie",
+      "area": 5.06,
+      "people": 2736,
+      "density": 541
+    },
+    {
+      "name": "Jastrowie",
+      "township": "złotowski",
+      "province": "wielkopolskie",
+      "area": 72.3,
+      "people": 8662,
+      "density": 120
+    },
+    {
+      "name": "Jastrzębie-Zdrój",
+      "township": "Jastrzębie-Zdrój",
+      "province": "śląskie",
+      "area": 85.33,
+      "people": 89590,
+      "density": 1050
+    },
+    {
+      "name": "Jawor",
+      "township": "jaworski",
+      "province": "dolnośląskie",
+      "area": 18.8,
+      "people": 23266,
+      "density": 1238
+    },
+    {
+      "name": "Jaworzno",
+      "township": "Jaworzno",
+      "province": "śląskie",
+      "area": 152.59,
+      "people": 92090,
+      "density": 604
+    },
+    {
+      "name": "Jaworzyna Śląska",
+      "township": "świdnicki",
+      "province": "dolnośląskie",
+      "area": 4.34,
+      "people": 5164,
+      "density": 1190
+    },
+    {
+      "name": "Jedlicze",
+      "township": "krośnieński",
+      "province": "podkarpackie",
+      "area": 10.6,
+      "people": 5761,
+      "density": 543
+    },
+    {
+      "name": "Jedlina-Zdrój",
+      "township": "wałbrzyski",
+      "province": "dolnośląskie",
+      "area": 17.45,
+      "people": 4887,
+      "density": 280
+    },
+    {
+      "name": "Jedwabne",
+      "township": "łomżyński",
+      "province": "podlaskie",
+      "area": 4.54,
+      "people": 1624,
+      "density": 358
+    },
+    {
+      "name": "Jelcz-Laskowice",
+      "township": "oławski",
+      "province": "dolnośląskie",
+      "area": 17.06,
+      "people": 15867,
+      "density": 930
+    },
+    {
+      "name": "Jelenia Góra",
+      "township": "Jelenia Góra",
+      "province": "dolnośląskie",
+      "area": 109.22,
+      "people": 80072,
+      "density": 733
+    },
+    {
+      "name": "Jeziorany",
+      "township": "olsztyński",
+      "province": "warmińsko-mazurskie",
+      "area": 3.41,
+      "people": 3258,
+      "density": 955
+    },
+    {
+      "name": "Jędrzejów",
+      "township": "jędrzejowski",
+      "province": "świętokrzyskie",
+      "area": 11.37,
+      "people": 15369,
+      "density": 1352
+    },
+    {
+      "name": "Jordanów",
+      "township": "suski",
+      "province": "małopolskie",
+      "area": 21.03,
+      "people": 5362,
+      "density": 255
+    },
+    {
+      "name": "Józefów",
+      "township": "biłgorajski",
+      "province": "lubelskie",
+      "area": 5.0,
+      "people": 2498,
+      "density": 500
+    },
+    {
+      "name": "Józefów",
+      "township": "otwocki",
+      "province": "mazowieckie",
+      "area": 23.91,
+      "people": 20488,
+      "density": 857
+    },
+    {
+      "name": "Józefów nad Wisłą",
+      "township": "opolski",
+      "province": "lubelskie",
+      "area": 3.65,
+      "people": 929,
+      "density": 255
+    },
+    {
+      "name": "Jutrosin",
+      "township": "rawicki",
+      "province": "wielkopolskie",
+      "area": 1.62,
+      "people": 1966,
+      "density": 1214
+    },
+    {
+      "name": "Kalety",
+      "township": "tarnogórski",
+      "province": "śląskie",
+      "area": 76.29,
+      "people": 8627,
+      "density": 113
+    },
+    {
+      "name": "Kalisz",
+      "township": "Kalisz",
+      "province": "wielkopolskie",
+      "area": 69.42,
+      "people": 101625,
+      "density": 1464
+    },
+    {
+      "name": "Kalisz Pomorski",
+      "township": "drawski",
+      "province": "zachodniopomorskie",
+      "area": 11.96,
+      "people": 4399,
+      "density": 368
+    },
+    {
+      "name": "Kalwaria Zebrzydowska",
+      "township": "wadowicki",
+      "province": "małopolskie",
+      "area": 5.5,
+      "people": 4551,
+      "density": 827
+    },
+    {
+      "name": "Kałuszyn",
+      "township": "miński",
+      "province": "mazowieckie",
+      "area": 12.3,
+      "people": 2927,
+      "density": 238
+    },
+    {
+      "name": "Kamienna Góra",
+      "township": "kamiennogórski",
+      "province": "dolnośląskie",
+      "area": 18.04,
+      "people": 19348,
+      "density": 1073
+    },
+    {
+      "name": "Kamień Krajeński",
+      "township": "sępoleński",
+      "province": "kujawsko-pomorskie",
+      "area": 3.65,
+      "people": 2394,
+      "density": 656
+    },
+    {
+      "name": "Kamień Pomorski",
+      "township": "kamieński",
+      "province": "zachodniopomorskie",
+      "area": 10.74,
+      "people": 8868,
+      "density": 826
+    },
+    {
+      "name": "Kamieńsk",
+      "township": "radomszczański",
+      "province": "łódzkie",
+      "area": 11.99,
+      "people": 2812,
+      "density": 235
+    },
+    {
+      "name": "Kańczuga",
+      "township": "przeworski",
+      "province": "podkarpackie",
+      "area": 7.6,
+      "people": 3182,
+      "density": 419
+    },
+    {
+      "name": "Karczew",
+      "township": "otwocki",
+      "province": "mazowieckie",
+      "area": 28.12,
+      "people": 9960,
+      "density": 354
+    },
+    {
+      "name": "Kargowa",
+      "township": "zielonogórski",
+      "province": "lubuskie",
+      "area": 4.55,
+      "people": 3766,
+      "density": 828
+    },
+    {
+      "name": "Karlino",
+      "township": "białogardzki",
+      "province": "zachodniopomorskie",
+      "area": 9.4,
+      "people": 5950,
+      "density": 633
+    },
+    {
+      "name": "Karpacz",
+      "township": "jeleniogórski",
+      "province": "dolnośląskie",
+      "area": 37.99,
+      "people": 4711,
+      "density": 124
+    },
+    {
+      "name": "Kartuzy",
+      "township": "kartuski",
+      "province": "pomorskie",
+      "area": 6.8,
+      "people": 14611,
+      "density": 2149
+    },
+    {
+      "name": "Katowice",
+      "township": "Katowice",
+      "province": "śląskie",
+      "area": 164.64,
+      "people": 296262,
+      "density": 1799
+    },
+    {
+      "name": "Kazimierz Dolny",
+      "township": "puławski",
+      "province": "lubelskie",
+      "area": 30.44,
+      "people": 2607,
+      "density": 86
+    },
+    {
+      "name": "Kazimierza Wielka",
+      "township": "kazimierski",
+      "province": "świętokrzyskie",
+      "area": 5.33,
+      "people": 5619,
+      "density": 1054
+    },
+    {
+      "name": "Kąty Wrocławskie",
+      "township": "wrocławski",
+      "province": "dolnośląskie",
+      "area": 8.61,
+      "people": 6846,
+      "density": 795
+    },
+    {
+      "name": "Kcynia",
+      "township": "nakielski",
+      "province": "kujawsko-pomorskie",
+      "area": 6.84,
+      "people": 4678,
+      "density": 684
+    },
+    {
+      "name": "Kędzierzyn-Koźle",
+      "township": "kędzierzyńsko-kozielski",
+      "province": "opolskie",
+      "area": 123.71,
+      "people": 61661,
+      "density": 498
+    },
+    {
+      "name": "Kępice",
+      "township": "słupski",
+      "province": "pomorskie",
+      "area": 6.11,
+      "people": 3646,
+      "density": 597
+    },
+    {
+      "name": "Kępno",
+      "township": "kępiński",
+      "province": "wielkopolskie",
+      "area": 7.79,
+      "people": 14190,
+      "density": 1822
+    },
+    {
+      "name": "Kętrzyn",
+      "township": "kętrzyński",
+      "province": "warmińsko-mazurskie",
+      "area": 10.35,
+      "people": 27478,
+      "density": 2655
+    },
+    {
+      "name": "Kęty",
+      "township": "oświęcimski",
+      "province": "małopolskie",
+      "area": 23.05,
+      "people": 18886,
+      "density": 819
+    },
+    {
+      "name": "Kielce",
+      "township": "Kielce",
+      "province": "świętokrzyskie",
+      "area": 109.65,
+      "people": 196804,
+      "density": 1795
+    },
+    {
+      "name": "Kietrz",
+      "township": "głubczycki",
+      "province": "opolskie",
+      "area": 18.74,
+      "people": 6061,
+      "density": 323
+    },
+    {
+      "name": "Kisielice",
+      "township": "iławski",
+      "province": "warmińsko-mazurskie",
+      "area": 3.37,
+      "people": 2135,
+      "density": 634
+    },
+    {
+      "name": "Kleczew",
+      "township": "koniński",
+      "province": "wielkopolskie",
+      "area": 7.8,
+      "people": 4212,
+      "density": 540
+    },
+    {
+      "name": "Kleszczele",
+      "township": "hajnowski",
+      "province": "podlaskie",
+      "area": 46.71,
+      "people": 1297,
+      "density": 28
+    },
+    {
+      "name": "Kluczbork",
+      "township": "kluczborski",
+      "province": "opolskie",
+      "area": 12.35,
+      "people": 23797,
+      "density": 1927
+    },
+    {
+      "name": "Kłecko",
+      "township": "gnieźnieński",
+      "province": "wielkopolskie",
+      "area": 9.62,
+      "people": 2631,
+      "density": 273
+    },
+    {
+      "name": "Kłobuck",
+      "township": "kłobucki",
+      "province": "śląskie",
+      "area": 47.46,
+      "people": 13014,
+      "density": 274
+    },
+    {
+      "name": "Kłodawa",
+      "township": "kolski",
+      "province": "wielkopolskie",
+      "area": 4.31,
+      "people": 6530,
+      "density": 1515
+    },
+    {
+      "name": "Kłodzko",
+      "township": "kłodzki",
+      "province": "dolnośląskie",
+      "area": 24.84,
+      "people": 27193,
+      "density": 1095
+    },
+    {
+      "name": "Knurów",
+      "township": "gliwicki",
+      "province": "śląskie",
+      "area": 33.95,
+      "people": 38594,
+      "density": 1137
+    },
+    {
+      "name": "Knyszyn",
+      "township": "moniecki",
+      "province": "podlaskie",
+      "area": 23.68,
+      "people": 2782,
+      "density": 117
+    },
+    {
+      "name": "Kobylin",
+      "township": "krotoszyński",
+      "province": "wielkopolskie",
+      "area": 4.87,
+      "people": 3256,
+      "density": 669
+    },
+    {
+      "name": "Kobyłka",
+      "township": "wołomiński",
+      "province": "mazowieckie",
+      "area": 19.64,
+      "people": 23120,
+      "density": 1177
+    },
+    {
+      "name": "Kock",
+      "township": "lubartowski",
+      "province": "lubelskie",
+      "area": 16.78,
+      "people": 3342,
+      "density": 199
+    },
+    {
+      "name": "Kolbuszowa",
+      "township": "kolbuszowski",
+      "province": "podkarpackie",
+      "area": 7.94,
+      "people": 9158,
+      "density": 1153
+    },
+    {
+      "name": "Kolno",
+      "township": "kolneński",
+      "province": "podlaskie",
+      "area": 25.07,
+      "people": 10372,
+      "density": 414
+    },
+    {
+      "name": "Kolonowskie",
+      "township": "strzelecki",
+      "province": "opolskie",
+      "area": 55.7,
+      "people": 3324,
+      "density": 60
+    },
+    {
+      "name": "Koluszki",
+      "township": "łódzki wschodni",
+      "province": "łódzkie",
+      "area": 9.9,
+      "people": 13148,
+      "density": 1328
+    },
+    {
+      "name": "Kołaczyce",
+      "township": "jasielski",
+      "province": "podkarpackie",
+      "area": 7.15,
+      "people": 1434,
+      "density": 201
+    },
+    {
+      "name": "Koło",
+      "township": "kolski",
+      "province": "wielkopolskie",
+      "area": 13.85,
+      "people": 22227,
+      "density": 1605
+    },
+    {
+      "name": "Kołobrzeg",
+      "township": "kołobrzeski",
+      "province": "zachodniopomorskie",
+      "area": 25.67,
+      "people": 46568,
+      "density": 1814
+    },
+    {
+      "name": "Koniecpol",
+      "township": "częstochowski",
+      "province": "śląskie",
+      "area": 36.92,
+      "people": 6002,
+      "density": 163
+    },
+    {
+      "name": "Konin",
+      "township": "Konin",
+      "province": "wielkopolskie",
+      "area": 82.16,
+      "people": 74834,
+      "density": 911
+    },
+    {
+      "name": "Konstancin-Jeziorna",
+      "township": "piaseczyński",
+      "province": "mazowieckie",
+      "area": 17.74,
+      "people": 17191,
+      "density": 969
+    },
+    {
+      "name": "Konstantynów Łódzki",
+      "township": "pabianicki",
+      "province": "łódzkie",
+      "area": 27.25,
+      "people": 18013,
+      "density": 661
+    },
+    {
+      "name": "Końskie",
+      "township": "konecki",
+      "province": "świętokrzyskie",
+      "area": 17.7,
+      "people": 19534,
+      "density": 1104
+    },
+    {
+      "name": "Koprzywnica",
+      "township": "sandomierski",
+      "province": "świętokrzyskie",
+      "area": 17.9,
+      "people": 2497,
+      "density": 139
+    },
+    {
+      "name": "Korfantów",
+      "township": "nyski",
+      "province": "opolskie",
+      "area": 10.23,
+      "people": 1842,
+      "density": 180
+    },
+    {
+      "name": "Koronowo",
+      "township": "bydgoski",
+      "province": "kujawsko-pomorskie",
+      "area": 28.15,
+      "people": 11230,
+      "density": 399
+    },
+    {
+      "name": "Korsze",
+      "township": "kętrzyński",
+      "province": "warmińsko-mazurskie",
+      "area": 4.03,
+      "people": 4346,
+      "density": 1078
+    },
+    {
+      "name": "Kosów Lacki",
+      "township": "sokołowski",
+      "province": "mazowieckie",
+      "area": 11.57,
+      "people": 2120,
+      "density": 183
+    },
+    {
+      "name": "Kostrzyn",
+      "township": "poznański",
+      "province": "wielkopolskie",
+      "area": 7.98,
+      "people": 9711,
+      "density": 1217
+    },
+    {
+      "name": "Kostrzyn nad Odrą",
+      "township": "gorzowski",
+      "province": "lubuskie",
+      "area": 46.14,
+      "people": 17918,
+      "density": 388
+    },
+    {
+      "name": "Koszalin",
+      "township": "Koszalin",
+      "province": "zachodniopomorskie",
+      "area": 98.34,
+      "people": 107670,
+      "density": 1095
+    },
+    {
+      "name": "Koszyce",
+      "township": "proszowicki",
+      "province": "małopolskie",
+      "area": 3.25,
+      "people": 786,
+      "density": 242
+    },
+    {
+      "name": "Kościan",
+      "township": "kościański",
+      "province": "wielkopolskie",
+      "area": 8.79,
+      "people": 23907,
+      "density": 2720
+    },
+    {
+      "name": "Kościerzyna",
+      "township": "kościerski",
+      "province": "pomorskie",
+      "area": 15.86,
+      "people": 23809,
+      "density": 1501
+    },
+    {
+      "name": "Kowal",
+      "township": "włocławski",
+      "province": "kujawsko-pomorskie",
+      "area": 4.68,
+      "people": 3544,
+      "density": 757
+    },
+    {
+      "name": "Kowalewo Pomorskie",
+      "township": "golubsko-dobrzyński",
+      "province": "kujawsko-pomorskie",
+      "area": 4.45,
+      "people": 4192,
+      "density": 942
+    },
+    {
+      "name": "Kowary",
+      "township": "jeleniogórski",
+      "province": "dolnośląskie",
+      "area": 37.39,
+      "people": 11090,
+      "density": 297
+    },
+    {
+      "name": "Koziegłowy",
+      "township": "myszkowski",
+      "province": "śląskie",
+      "area": 26.71,
+      "people": 2424,
+      "density": 91
+    },
+    {
+      "name": "Kozienice",
+      "township": "kozienicki",
+      "province": "mazowieckie",
+      "area": 10.45,
+      "people": 17518,
+      "density": 1676
+    },
+    {
+      "name": "Koźmin Wielkopolski",
+      "township": "krotoszyński",
+      "province": "wielkopolskie",
+      "area": 5.89,
+      "people": 6590,
+      "density": 1119
+    },
+    {
+      "name": "Kożuchów",
+      "township": "nowosolski",
+      "province": "lubuskie",
+      "area": 5.94,
+      "people": 9520,
+      "density": 1603
+    },
+    {
+      "name": "Kórnik",
+      "township": "poznański",
+      "province": "wielkopolskie",
+      "area": 5.99,
+      "people": 7793,
+      "density": 1301
+    },
+    {
+      "name": "Krajenka",
+      "township": "złotowski",
+      "province": "wielkopolskie",
+      "area": 3.76,
+      "people": 3678,
+      "density": 978
+    },
+    {
+      "name": "Kraków",
+      "township": "Kraków",
+      "province": "małopolskie",
+      "area": 326.85,
+      "people": 767348,
+      "density": 2348
+    },
+    {
+      "name": "Krapkowice",
+      "township": "krapkowicki",
+      "province": "opolskie",
+      "area": 21.01,
+      "people": 16500,
+      "density": 785
+    },
+    {
+      "name": "Krasnobród",
+      "township": "zamojski",
+      "province": "lubelskie",
+      "area": 6.99,
+      "people": 3138,
+      "density": 449
+    },
+    {
+      "name": "Krasnystaw",
+      "township": "krasnostawski",
+      "province": "lubelskie",
+      "area": 42.13,
+      "people": 18912,
+      "density": 449
+    },
+    {
+      "name": "Kraśnik",
+      "township": "kraśnicki",
+      "province": "lubelskie",
+      "area": 26.1,
+      "people": 34821,
+      "density": 1334
+    },
+    {
+      "name": "Krobia",
+      "township": "gostyński",
+      "province": "wielkopolskie",
+      "area": 7.05,
+      "people": 4304,
+      "density": 610
+    },
+    {
+      "name": "Krosno",
+      "township": "Krosno",
+      "province": "podkarpackie",
+      "area": 43.5,
+      "people": 46600,
+      "density": 1071
+    },
+    {
+      "name": "Krosno Odrzańskie",
+      "township": "krośnieński",
+      "province": "lubuskie",
+      "area": 8.15,
+      "people": 11524,
+      "density": 1414
+    },
+    {
+      "name": "Krośniewice",
+      "township": "kutnowski",
+      "province": "łódzkie",
+      "area": 4.18,
+      "people": 4426,
+      "density": 1059
+    },
+    {
+      "name": "Krotoszyn",
+      "township": "krotoszyński",
+      "province": "wielkopolskie",
+      "area": 22.54,
+      "people": 29109,
+      "density": 1291
+    },
+    {
+      "name": "Kruszwica",
+      "township": "inowrocławski",
+      "province": "kujawsko-pomorskie",
+      "area": 6.64,
+      "people": 8926,
+      "density": 1344
+    },
+    {
+      "name": "Krynica Morska",
+      "township": "nowodworski",
+      "province": "pomorskie",
+      "area": 116.01,
+      "people": 1302,
+      "density": 11
+    },
+    {
+      "name": "Krynica-Zdrój",
+      "township": "nowosądecki",
+      "province": "małopolskie",
+      "area": 39.68,
+      "people": 10757,
+      "density": 271
+    },
+    {
+      "name": "Krynki",
+      "township": "sokólski",
+      "province": "podlaskie",
+      "area": 3.83,
+      "people": 2424,
+      "density": 633
+    },
+    {
+      "name": "Krzanowice",
+      "township": "raciborski",
+      "province": "śląskie",
+      "area": 3.08,
+      "people": 2168,
+      "density": 704
+    },
+    {
+      "name": "Krzepice",
+      "township": "kłobucki",
+      "province": "śląskie",
+      "area": 27.66,
+      "people": 4488,
+      "density": 162
+    },
+    {
+      "name": "Krzeszowice",
+      "township": "krakowski",
+      "province": "małopolskie",
+      "area": 16.97,
+      "people": 10090,
+      "density": 595
+    },
+    {
+      "name": "Krzywiń",
+      "township": "kościański",
+      "province": "wielkopolskie",
+      "area": 2.27,
+      "people": 1714,
+      "density": 755
+    },
+    {
+      "name": "Krzyż Wielkopolski",
+      "township": "czarnkowsko-trzcianecki",
+      "province": "wielkopolskie",
+      "area": 5.81,
+      "people": 6222,
+      "density": 1071
+    },
+    {
+      "name": "Książ Wielkopolski",
+      "township": "śremski",
+      "province": "wielkopolskie",
+      "area": 1.96,
+      "people": 2749,
+      "density": 1403
+    },
+    {
+      "name": "Kudowa-Zdrój",
+      "township": "kłodzki",
+      "province": "dolnośląskie",
+      "area": 33.9,
+      "people": 10018,
+      "density": 296
+    },
+    {
+      "name": "Kunów",
+      "township": "ostrowiecki",
+      "province": "świętokrzyskie",
+      "area": 7.26,
+      "people": 2970,
+      "density": 409
+    },
+    {
+      "name": "Kutno",
+      "township": "kutnowski",
+      "province": "łódzkie",
+      "area": 33.59,
+      "people": 44513,
+      "density": 1325
+    },
+    {
+      "name": "Kuźnia Raciborska",
+      "township": "raciborski",
+      "province": "śląskie",
+      "area": 31.49,
+      "people": 5402,
+      "density": 172
+    },
+    {
+      "name": "Kwidzyn",
+      "township": "kwidzyński",
+      "province": "pomorskie",
+      "area": 21.54,
+      "people": 38553,
+      "density": 1790
+    },
+    {
+      "name": "Lądek-Zdrój",
+      "township": "kłodzki",
+      "province": "dolnośląskie",
+      "area": 20.32,
+      "people": 5685,
+      "density": 280
+    },
+    {
+      "name": "Legionowo",
+      "township": "legionowski",
+      "province": "mazowieckie",
+      "area": 13.54,
+      "people": 54041,
+      "density": 3991
+    },
+    {
+      "name": "Legnica",
+      "township": "Legnica",
+      "province": "dolnośląskie",
+      "area": 56.29,
+      "people": 100324,
+      "density": 1782
+    },
+    {
+      "name": "Lesko",
+      "township": "leski",
+      "province": "podkarpackie",
+      "area": 15.33,
+      "people": 5532,
+      "density": 361
+    },
+    {
+      "name": "Leszno",
+      "township": "Leszno",
+      "province": "wielkopolskie",
+      "area": 31.86,
+      "people": 64197,
+      "density": 2015
+    },
+    {
+      "name": "Leśna",
+      "township": "lubański",
+      "province": "dolnośląskie",
+      "area": 8.56,
+      "people": 4532,
+      "density": 529
+    },
+    {
+      "name": "Leśnica",
+      "township": "strzelecki",
+      "province": "opolskie",
+      "area": 14.5,
+      "people": 2668,
+      "density": 184
+    },
+    {
+      "name": "Lewin Brzeski",
+      "township": "brzeski",
+      "province": "opolskie",
+      "area": 11.64,
+      "people": 5774,
+      "density": 496
+    },
+    {
+      "name": "Leżajsk",
+      "township": "leżajski",
+      "province": "podkarpackie",
+      "area": 20.58,
+      "people": 13990,
+      "density": 680
+    },
+    {
+      "name": "Lębork",
+      "township": "lęborski",
+      "province": "pomorskie",
+      "area": 17.86,
+      "people": 35413,
+      "density": 1983
+    },
+    {
+      "name": "Lędziny",
+      "township": "bieruńsko-lędziński",
+      "province": "śląskie",
+      "area": 31.65,
+      "people": 16819,
+      "density": 531
+    },
+    {
+      "name": "Libiąż",
+      "township": "chrzanowski",
+      "province": "małopolskie",
+      "area": 35.85,
+      "people": 17135,
+      "density": 478
+    },
+    {
+      "name": "Lidzbark",
+      "township": "działdowski",
+      "province": "warmińsko-mazurskie",
+      "area": 5.68,
+      "people": 7900,
+      "density": 1391
+    },
+    {
+      "name": "Lidzbark Warmiński",
+      "township": "lidzbarski",
+      "province": "warmińsko-mazurskie",
+      "area": 14.35,
+      "people": 15877,
+      "density": 1106
+    },
+    {
+      "name": "Limanowa",
+      "township": "limanowski",
+      "province": "małopolskie",
+      "area": 18.7,
+      "people": 15103,
+      "density": 808
+    },
+    {
+      "name": "Lipiany",
+      "township": "pyrzycki",
+      "province": "zachodniopomorskie",
+      "area": 5.54,
+      "people": 3982,
+      "density": 719
+    },
+    {
+      "name": "Lipno",
+      "township": "lipnowski",
+      "province": "kujawsko-pomorskie",
+      "area": 10.99,
+      "people": 14592,
+      "density": 1328
+    },
+    {
+      "name": "Lipsk",
+      "township": "augustowski",
+      "province": "podlaskie",
+      "area": 4.98,
+      "people": 2376,
+      "density": 477
+    },
+    {
+      "name": "Lipsko",
+      "township": "lipski",
+      "province": "mazowieckie",
+      "area": 15.7,
+      "people": 5592,
+      "density": 356
+    },
+    {
+      "name": "Lubaczów",
+      "township": "lubaczowski",
+      "province": "podkarpackie",
+      "area": 25.73,
+      "people": 12101,
+      "density": 470
+    },
+    {
+      "name": "Lubań",
+      "township": "lubański",
+      "province": "dolnośląskie",
+      "area": 16.12,
+      "people": 21318,
+      "density": 1322
+    },
+    {
+      "name": "Lubartów",
+      "township": "lubartowski",
+      "province": "lubelskie",
+      "area": 13.91,
+      "people": 22138,
+      "density": 1592
+    },
+    {
+      "name": "Lubawa",
+      "township": "iławski",
+      "province": "warmińsko-mazurskie",
+      "area": 16.84,
+      "people": 10269,
+      "density": 610
+    },
+    {
+      "name": "Lubawka",
+      "township": "kamiennogórski",
+      "province": "dolnośląskie",
+      "area": 22.44,
+      "people": 6106,
+      "density": 272
+    },
+    {
+      "name": "Lubień Kujawski",
+      "township": "włocławski",
+      "province": "kujawsko-pomorskie",
+      "area": 2.31,
+      "people": 1391,
+      "density": 602
+    },
+    {
+      "name": "Lubin",
+      "township": "lubiński",
+      "province": "dolnośląskie",
+      "area": 40.77,
+      "people": 72892,
+      "density": 1788
+    },
+    {
+      "name": "Lublin",
+      "township": "Lublin",
+      "province": "lubelskie",
+      "area": 147.47,
+      "people": 339850,
+      "density": 2305
+    },
+    {
+      "name": "Lubliniec",
+      "township": "lubliniecki",
+      "province": "śląskie",
+      "area": 89.36,
+      "people": 23899,
+      "density": 267
+    },
+    {
+      "name": "Lubniewice",
+      "township": "sulęciński",
+      "province": "lubuskie",
+      "area": 12.11,
+      "people": 2019,
+      "density": 167
+    },
+    {
+      "name": "Lubomierz",
+      "township": "lwówecki",
+      "province": "dolnośląskie",
+      "area": 8.05,
+      "people": 2002,
+      "density": 249
+    },
+    {
+      "name": "Luboń",
+      "township": "poznański",
+      "province": "wielkopolskie",
+      "area": 13.51,
+      "people": 31653,
+      "density": 2343
+    },
+    {
+      "name": "Lubowidz",
+      "township": "żuromiński",
+      "province": "mazowieckie",
+      "area": 5.29,
+      "people": 1771,
+      "density": 335
+    },
+    {
+      "name": "Lubraniec",
+      "township": "włocławski",
+      "province": "kujawsko-pomorskie",
+      "area": 1.97,
+      "people": 3052,
+      "density": 1549
+    },
+    {
+      "name": "Lubsko",
+      "township": "żarski",
+      "province": "lubuskie",
+      "area": 12.51,
+      "people": 14182,
+      "density": 1134
+    },
+    {
+      "name": "Lubycza Królewska",
+      "township": "tomaszowski",
+      "province": "lubelskie",
+      "area": 3.92,
+      "people": 2469,
+      "density": 630
+    },
+    {
+      "name": "Lwówek",
+      "township": "nowotomyski",
+      "province": "wielkopolskie",
+      "area": 3.16,
+      "people": 2999,
+      "density": 949
+    },
+    {
+      "name": "Lwówek Śląski",
+      "township": "lwówecki",
+      "province": "dolnośląskie",
+      "area": 16.65,
+      "people": 8895,
+      "density": 534
+    },
+    {
+      "name": "Łabiszyn",
+      "township": "żniński",
+      "province": "kujawsko-pomorskie",
+      "area": 2.89,
+      "people": 4501,
+      "density": 1557
+    },
+    {
+      "name": "Łagów",
+      "township": "kielecki",
+      "province": "świętokrzyskie",
+      "area": 8.22,
+      "people": 1573,
+      "density": 191
+    },
+    {
+      "name": "Łańcut",
+      "township": "łańcucki",
+      "province": "podkarpackie",
+      "area": 19.42,
+      "people": 17777,
+      "density": 915
+    },
+    {
+      "name": "Łapy",
+      "township": "białostocki",
+      "province": "podlaskie",
+      "area": 12.14,
+      "people": 15689,
+      "density": 1292
+    },
+    {
+      "name": "Łasin",
+      "township": "grudziądzki",
+      "province": "kujawsko-pomorskie",
+      "area": 4.79,
+      "people": 3320,
+      "density": 693
+    },
+    {
+      "name": "Łask",
+      "township": "łaski",
+      "province": "łódzkie",
+      "area": 15.67,
+      "people": 17484,
+      "density": 1116
+    },
+    {
+      "name": "Łaskarzew",
+      "township": "garwoliński",
+      "province": "mazowieckie",
+      "area": 15.35,
+      "people": 4879,
+      "density": 318
+    },
+    {
+      "name": "Łaszczów",
+      "township": "tomaszowski",
+      "province": "lubelskie",
+      "area": 5.01,
+      "people": 2190,
+      "density": 437
+    },
+    {
+      "name": "Łaziska Górne",
+      "township": "mikołowski",
+      "province": "śląskie",
+      "area": 20.07,
+      "people": 22390,
+      "density": 1116
+    },
+    {
+      "name": "Łazy",
+      "township": "zawierciański",
+      "province": "śląskie",
+      "area": 8.6,
+      "people": 6882,
+      "density": 800
+    },
+    {
+      "name": "Łeba",
+      "township": "lęborski",
+      "province": "pomorskie",
+      "area": 14.81,
+      "people": 3694,
+      "density": 249
+    },
+    {
+      "name": "Łęczna",
+      "township": "łęczyński",
+      "province": "lubelskie",
+      "area": 19.0,
+      "people": 19167,
+      "density": 1009
+    },
+    {
+      "name": "Łęczyca",
+      "township": "łęczycki",
+      "province": "łódzkie",
+      "area": 8.95,
+      "people": 14252,
+      "density": 1592
+    },
+    {
+      "name": "Łęknica",
+      "township": "żarski",
+      "province": "lubuskie",
+      "area": 16.43,
+      "people": 2500,
+      "density": 152
+    },
+    {
+      "name": "Łobez",
+      "township": "łobeski",
+      "province": "zachodniopomorskie",
+      "area": 12.84,
+      "people": 10299,
+      "density": 802
+    },
+    {
+      "name": "Łobżenica",
+      "township": "pilski",
+      "province": "wielkopolskie",
+      "area": 3.25,
+      "people": 2971,
+      "density": 914
+    },
+    {
+      "name": "Łochów",
+      "township": "węgrowski",
+      "province": "mazowieckie",
+      "area": 13.39,
+      "people": 6848,
+      "density": 511
+    },
+    {
+      "name": "Łomianki",
+      "township": "warszawski zachodni",
+      "province": "mazowieckie",
+      "area": 8.4,
+      "people": 16875,
+      "density": 2009
+    },
+    {
+      "name": "Łomża",
+      "township": "Łomża",
+      "province": "podlaskie",
+      "area": 32.67,
+      "people": 63092,
+      "density": 1931
+    },
+    {
+      "name": "Łosice",
+      "township": "łosicki",
+      "province": "mazowieckie",
+      "area": 23.74,
+      "people": 7096,
+      "density": 299
+    },
+    {
+      "name": "Łowicz",
+      "township": "łowicki",
+      "province": "łódzkie",
+      "area": 23.42,
+      "people": 28704,
+      "density": 1226
+    },
+    {
+      "name": "Łódź",
+      "township": "Łódź",
+      "province": "łódzkie",
+      "area": 293.25,
+      "people": 690422,
+      "density": 2354
+    },
+    {
+      "name": "Łuków",
+      "township": "łukowski",
+      "province": "lubelskie",
+      "area": 35.75,
+      "people": 30310,
+      "density": 848
+    },
+    {
+      "name": "Maków Mazowiecki",
+      "township": "makowski",
+      "province": "mazowieckie",
+      "area": 10.28,
+      "people": 9860,
+      "density": 958
+    },
+    {
+      "name": "Maków Podhalański",
+      "township": "suski",
+      "province": "małopolskie",
+      "area": 20.12,
+      "people": 5919,
+      "density": 294
+    },
+    {
+      "name": "Malbork",
+      "township": "malborski",
+      "province": "pomorskie",
+      "area": 17.16,
+      "people": 38723,
+      "density": 2257
+    },
+    {
+      "name": "Małogoszcz",
+      "township": "jędrzejowski",
+      "province": "świętokrzyskie",
+      "area": 9.68,
+      "people": 3809,
+      "density": 393
+    },
+    {
+      "name": "Małomice",
+      "township": "żagański",
+      "province": "lubuskie",
+      "area": 5.37,
+      "people": 3512,
+      "density": 654
+    },
+    {
+      "name": "Margonin",
+      "township": "chodzieski",
+      "province": "wielkopolskie",
+      "area": 5.15,
+      "people": 3011,
+      "density": 585
+    },
+    {
+      "name": "Marki",
+      "township": "wołomiński",
+      "province": "mazowieckie",
+      "area": 26.15,
+      "people": 32686,
+      "density": 1250
+    },
+    {
+      "name": "Maszewo",
+      "township": "goleniowski",
+      "province": "zachodniopomorskie",
+      "area": 5.54,
+      "people": 3342,
+      "density": 603
+    },
+    {
+      "name": "Miasteczko Śląskie",
+      "township": "tarnogórski",
+      "province": "śląskie",
+      "area": 67.83,
+      "people": 7419,
+      "density": 109
+    },
+    {
+      "name": "Miastko",
+      "township": "bytowski",
+      "province": "pomorskie",
+      "area": 5.68,
+      "people": 10605,
+      "density": 1867
+    },
+    {
+      "name": "Michałowo",
+      "township": "białostocki",
+      "province": "podlaskie",
+      "area": 2.15,
+      "people": 3073,
+      "density": 1429
+    },
+    {
+      "name": "Miechów",
+      "township": "miechowski",
+      "province": "małopolskie",
+      "area": 15.49,
+      "people": 11696,
+      "density": 755
+    },
+    {
+      "name": "Miejska Górka",
+      "township": "rawicki",
+      "province": "wielkopolskie",
+      "area": 3.14,
+      "people": 3261,
+      "density": 1039
+    },
+    {
+      "name": "Mielec",
+      "township": "mielecki",
+      "province": "podkarpackie",
+      "area": 46.89,
+      "people": 60628,
+      "density": 1293
+    },
+    {
+      "name": "Mielno",
+      "township": "koszaliński",
+      "province": "zachodniopomorskie",
+      "area": 33.45,
+      "people": 3000,
+      "density": 90
+    },
+    {
+      "name": "Mieroszów",
+      "township": "wałbrzyski",
+      "province": "dolnośląskie",
+      "area": 10.31,
+      "people": 4147,
+      "density": 402
+    },
+    {
+      "name": "Mieszkowice",
+      "township": "gryfiński",
+      "province": "zachodniopomorskie",
+      "area": 5.25,
+      "people": 3681,
+      "density": 701
+    },
+    {
+      "name": "Międzybórz",
+      "township": "oleśnicki",
+      "province": "dolnośląskie",
+      "area": 6.41,
+      "people": 2362,
+      "density": 368
+    },
+    {
+      "name": "Międzychód",
+      "township": "międzychodzki",
+      "province": "wielkopolskie",
+      "area": 6.98,
+      "people": 10660,
+      "density": 1527
+    },
+    {
+      "name": "Międzylesie",
+      "township": "kłodzki",
+      "province": "dolnośląskie",
+      "area": 14.37,
+      "people": 2623,
+      "density": 183
+    },
+    {
+      "name": "Międzyrzec Podlaski",
+      "township": "bialski",
+      "province": "lubelskie",
+      "area": 20.03,
+      "people": 16925,
+      "density": 845
+    },
+    {
+      "name": "Międzyrzecz",
+      "township": "międzyrzecki",
+      "province": "lubuskie",
+      "area": 10.26,
+      "people": 18255,
+      "density": 1779
+    },
+    {
+      "name": "Międzyzdroje",
+      "township": "kamieński",
+      "province": "zachodniopomorskie",
+      "area": 4.5,
+      "people": 5422,
+      "density": 1205
+    },
+    {
+      "name": "Mikołajki",
+      "township": "mrągowski",
+      "province": "warmińsko-mazurskie",
+      "area": 9.32,
+      "people": 3852,
+      "density": 413
+    },
+    {
+      "name": "Mikołów",
+      "township": "mikołowski",
+      "province": "śląskie",
+      "area": 79.21,
+      "people": 40423,
+      "density": 510
+    },
+    {
+      "name": "Mikstat",
+      "township": "ostrzeszowski",
+      "province": "wielkopolskie",
+      "area": 2.52,
+      "people": 1866,
+      "density": 740
+    },
+    {
+      "name": "Milanówek",
+      "township": "grodziski",
+      "province": "mazowieckie",
+      "area": 13.44,
+      "people": 16398,
+      "density": 1220
+    },
+    {
+      "name": "Milicz",
+      "township": "milicki",
+      "province": "dolnośląskie",
+      "area": 13.5,
+      "people": 11482,
+      "density": 851
+    },
+    {
+      "name": "Miłakowo",
+      "township": "ostródzki",
+      "province": "warmińsko-mazurskie",
+      "area": 8.76,
+      "people": 2609,
+      "density": 298
+    },
+    {
+      "name": "Miłomłyn",
+      "township": "ostródzki",
+      "province": "warmińsko-mazurskie",
+      "area": 12.38,
+      "people": 2449,
+      "density": 198
+    },
+    {
+      "name": "Miłosław",
+      "township": "wrzesiński",
+      "province": "wielkopolskie",
+      "area": 4.07,
+      "people": 3589,
+      "density": 882
+    },
+    {
+      "name": "Mińsk Mazowiecki",
+      "township": "miński",
+      "province": "mazowieckie",
+      "area": 13.18,
+      "people": 40399,
+      "density": 3065
+    },
+    {
+      "name": "Mirosławiec",
+      "township": "wałecki",
+      "province": "zachodniopomorskie",
+      "area": 2.41,
+      "people": 3065,
+      "density": 1325
+    },
+    {
+      "name": "Mirsk",
+      "township": "lwówecki",
+      "province": "dolnośląskie",
+      "area": 14.66,
+      "people": 3938,
+      "density": 269
+    },
+    {
+      "name": "Mława",
+      "township": "mławski",
+      "province": "mazowieckie",
+      "area": 34.8,
+      "people": 31243,
+      "density": 898
+    },
+    {
+      "name": "Młynary",
+      "township": "elbląski",
+      "province": "warmińsko-mazurskie",
+      "area": 2.76,
+      "people": 1792,
+      "density": 649
+    },
+    {
+      "name": "Modliborzyce",
+      "township": "janowski",
+      "province": "lubelskie",
+      "area": 7.89,
+      "people": 1469,
+      "density": 186
+    },
+    {
+      "name": "Mogielnica",
+      "township": "grójecki",
+      "province": "mazowieckie",
+      "area": 12.98,
+      "people": 2294,
+      "density": 177
+    },
+    {
+      "name": "Mogilno",
+      "township": "mogileński",
+      "province": "kujawsko-pomorskie",
+      "area": 8.32,
+      "people": 11995,
+      "density": 1442
+    },
+    {
+      "name": "Mońki",
+      "township": "moniecki",
+      "province": "podlaskie",
+      "area": 7.66,
+      "people": 10042,
+      "density": 1310
+    },
+    {
+      "name": "Morawica",
+      "township": "kielecki",
+      "province": "świętokrzyskie",
+      "area": 4.38,
+      "people": 1730,
+      "density": 395
+    },
+    {
+      "name": "Morąg",
+      "township": "ostródzki",
+      "province": "warmińsko-mazurskie",
+      "area": 6.11,
+      "people": 13994,
+      "density": 2290
+    },
+    {
+      "name": "Mordy",
+      "township": "siedlecki",
+      "province": "mazowieckie",
+      "area": 4.54,
+      "people": 1780,
+      "density": 392
+    },
+    {
+      "name": "Moryń",
+      "township": "gryfiński",
+      "province": "zachodniopomorskie",
+      "area": 5.54,
+      "people": 1620,
+      "density": 292
+    },
+    {
+      "name": "Mosina",
+      "township": "poznański",
+      "province": "wielkopolskie",
+      "area": 13.5,
+      "people": 13762,
+      "density": 1019
+    },
+    {
+      "name": "Mrągowo",
+      "township": "mrągowski",
+      "province": "warmińsko-mazurskie",
+      "area": 14.81,
+      "people": 21889,
+      "density": 1478
+    },
+    {
+      "name": "Mrocza",
+      "township": "nakielski",
+      "province": "kujawsko-pomorskie",
+      "area": 5.01,
+      "people": 4395,
+      "density": 877
+    },
+    {
+      "name": "Mrozy",
+      "township": "miński",
+      "province": "mazowieckie",
+      "area": 7.73,
+      "people": 3576,
+      "density": 463
+    },
+    {
+      "name": "Mszana Dolna",
+      "township": "limanowski",
+      "province": "małopolskie",
+      "area": 27.1,
+      "people": 7982,
+      "density": 295
+    },
+    {
+      "name": "Mszczonów",
+      "township": "żyrardowski",
+      "province": "mazowieckie",
+      "area": 8.56,
+      "people": 6433,
+      "density": 752
+    },
+    {
+      "name": "Murowana Goślina",
+      "township": "poznański",
+      "province": "wielkopolskie",
+      "area": 8.62,
+      "people": 10391,
+      "density": 1205
+    },
+    {
+      "name": "Muszyna",
+      "township": "nowosądecki",
+      "province": "małopolskie",
+      "area": 24.43,
+      "people": 4909,
+      "density": 201
+    },
+    {
+      "name": "Mysłowice",
+      "township": "Mysłowice",
+      "province": "śląskie",
+      "area": 65.62,
+      "people": 74647,
+      "density": 1138
+    },
+    {
+      "name": "Myszków",
+      "township": "myszkowski",
+      "province": "śląskie",
+      "area": 73.59,
+      "people": 31974,
+      "density": 434
+    },
+    {
+      "name": "Myszyniec",
+      "township": "ostrołęcki",
+      "province": "mazowieckie",
+      "area": 11.22,
+      "people": 3397,
+      "density": 303
+    },
+    {
+      "name": "Myślenice",
+      "township": "myślenicki",
+      "province": "małopolskie",
+      "area": 30.22,
+      "people": 18415,
+      "density": 609
+    },
+    {
+      "name": "Myślibórz",
+      "township": "myśliborski",
+      "province": "zachodniopomorskie",
+      "area": 15.04,
+      "people": 11328,
+      "density": 753
+    },
+    {
+      "name": "Nakło nad Notecią",
+      "township": "nakielski",
+      "province": "kujawsko-pomorskie",
+      "area": 10.82,
+      "people": 18531,
+      "density": 1713
+    },
+    {
+      "name": "Nałęczów",
+      "township": "puławski",
+      "province": "lubelskie",
+      "area": 13.82,
+      "people": 3750,
+      "density": 271
+    },
+    {
+      "name": "Namysłów",
+      "township": "namysłowski",
+      "province": "opolskie",
+      "area": 22.61,
+      "people": 16360,
+      "density": 724
+    },
+    {
+      "name": "Narol",
+      "township": "lubaczowski",
+      "province": "podkarpackie",
+      "area": 12.42,
+      "people": 2102,
+      "density": 169
+    },
+    {
+      "name": "Nasielsk",
+      "township": "nowodworski",
+      "province": "mazowieckie",
+      "area": 12.57,
+      "people": 7701,
+      "density": 613
+    },
+    {
+      "name": "Nekla",
+      "township": "wrzesiński",
+      "province": "wielkopolskie",
+      "area": 19.79,
+      "people": 3719,
+      "density": 188
+    },
+    {
+      "name": "Nidzica",
+      "township": "nidzicki",
+      "province": "warmińsko-mazurskie",
+      "area": 6.86,
+      "people": 13872,
+      "density": 2022
+    },
+    {
+      "name": "Niemcza",
+      "township": "dzierżoniowski",
+      "province": "dolnośląskie",
+      "area": 19.81,
+      "people": 2981,
+      "density": 150
+    },
+    {
+      "name": "Niemodlin",
+      "township": "opolski",
+      "province": "opolskie",
+      "area": 13.11,
+      "people": 6431,
+      "density": 491
+    },
+    {
+      "name": "Niepołomice",
+      "township": "wielicki",
+      "province": "małopolskie",
+      "area": 27.4,
+      "people": 12507,
+      "density": 456
+    },
+    {
+      "name": "Nieszawa",
+      "township": "aleksandrowski",
+      "province": "kujawsko-pomorskie",
+      "area": 9.79,
+      "people": 1914,
+      "density": 196
+    },
+    {
+      "name": "Nisko",
+      "township": "niżański",
+      "province": "podkarpackie",
+      "area": 60.96,
+      "people": 15355,
+      "density": 252
+    },
+    {
+      "name": "Nowa Dęba",
+      "township": "tarnobrzeski",
+      "province": "podkarpackie",
+      "area": 16.7,
+      "people": 11215,
+      "density": 672
+    },
+    {
+      "name": "Nowa Ruda",
+      "township": "kłodzki",
+      "province": "dolnośląskie",
+      "area": 37.05,
+      "people": 22455,
+      "density": 606
+    },
+    {
+      "name": "Nowa Sarzyna",
+      "township": "leżajski",
+      "province": "podkarpackie",
+      "area": 9.15,
+      "people": 5970,
+      "density": 652
+    },
+    {
+      "name": "Nowa Słupia",
+      "township": "kielecki",
+      "province": "świętokrzyskie",
+      "area": 13.97,
+      "people": 1375,
+      "density": 98
+    },
+    {
+      "name": "Nowa Sól",
+      "township": "nowosolski",
+      "province": "lubuskie",
+      "area": 21.8,
+      "people": 39098,
+      "density": 1793
+    },
+    {
+      "name": "Nowe",
+      "township": "świecki",
+      "province": "kujawsko-pomorskie",
+      "area": 3.57,
+      "people": 5913,
+      "density": 1656
+    },
+    {
+      "name": "Nowe Brzesko",
+      "township": "proszowicki",
+      "province": "małopolskie",
+      "area": 7.26,
+      "people": 1674,
+      "density": 231
+    },
+    {
+      "name": "Nowe Miasteczko",
+      "township": "nowosolski",
+      "province": "lubuskie",
+      "area": 3.29,
+      "people": 2816,
+      "density": 856
+    },
+    {
+      "name": "Nowe Miasto Lubawskie",
+      "township": "nowomiejski",
+      "province": "warmińsko-mazurskie",
+      "area": 11.37,
+      "people": 10997,
+      "density": 967
+    },
+    {
+      "name": "Nowe Miasto nad Pilicą",
+      "township": "grójecki",
+      "province": "mazowieckie",
+      "area": 11.25,
+      "people": 3830,
+      "density": 340
+    },
+    {
+      "name": "Nowe Skalmierzyce",
+      "township": "ostrowski",
+      "province": "wielkopolskie",
+      "area": 1.58,
+      "people": 4798,
+      "density": 3037
+    },
+    {
+      "name": "Nowe Warpno",
+      "township": "policki",
+      "province": "zachodniopomorskie",
+      "area": 24.51,
+      "people": 1196,
+      "density": 49
+    },
+    {
+      "name": "Nowogard",
+      "township": "goleniowski",
+      "province": "zachodniopomorskie",
+      "area": 12.57,
+      "people": 16756,
+      "density": 1333
+    },
+    {
+      "name": "Nowogrodziec",
+      "township": "bolesławiecki",
+      "province": "dolnośląskie",
+      "area": 16.1,
+      "people": 4244,
+      "density": 264
+    },
+    {
+      "name": "Nowogród",
+      "township": "łomżyński",
+      "province": "podlaskie",
+      "area": 20.55,
+      "people": 2173,
+      "density": 106
+    },
+    {
+      "name": "Nowogród Bobrzański",
+      "township": "zielonogórski",
+      "province": "lubuskie",
+      "area": 14.63,
+      "people": 5172,
+      "density": 354
+    },
+    {
+      "name": "Nowy Dwór Gdański",
+      "township": "nowodworski",
+      "province": "pomorskie",
+      "area": 5.07,
+      "people": 9964,
+      "density": 1965
+    },
+    {
+      "name": "Nowy Dwór Mazowiecki",
+      "township": "nowodworski",
+      "province": "mazowieckie",
+      "area": 28.21,
+      "people": 28637,
+      "density": 1015
+    },
+    {
+      "name": "Nowy Korczyn",
+      "township": "buski",
+      "province": "świętokrzyskie",
+      "area": 7.52,
+      "people": 1031,
+      "density": 137
+    },
+    {
+      "name": "Nowy Sącz",
+      "township": "Nowy Sącz",
+      "province": "małopolskie",
+      "area": 57.58,
+      "people": 84041,
+      "density": 1460
+    },
+    {
+      "name": "Nowy Staw",
+      "township": "malborski",
+      "province": "pomorskie",
+      "area": 4.67,
+      "people": 4196,
+      "density": 899
+    },
+    {
+      "name": "Nowy Targ",
+      "township": "nowotarski",
+      "province": "małopolskie",
+      "area": 51.07,
+      "people": 33361,
+      "density": 653
+    },
+    {
+      "name": "Nowy Tomyśl",
+      "township": "nowotomyski",
+      "province": "wielkopolskie",
+      "area": 5.2,
+      "people": 14702,
+      "density": 2827
+    },
+    {
+      "name": "Nowy Wiśnicz",
+      "township": "bocheński",
+      "province": "małopolskie",
+      "area": 4.97,
+      "people": 2728,
+      "density": 549
+    },
+    {
+      "name": "Nysa",
+      "township": "nyski",
+      "province": "opolskie",
+      "area": 27.51,
+      "people": 44397,
+      "density": 1614
+    },
+    {
+      "name": "Oborniki",
+      "township": "obornicki",
+      "province": "wielkopolskie",
+      "area": 14.08,
+      "people": 18341,
+      "density": 1303
+    },
+    {
+      "name": "Oborniki Śląskie",
+      "township": "trzebnicki",
+      "province": "dolnośląskie",
+      "area": 14.46,
+      "people": 9118,
+      "density": 631
+    },
+    {
+      "name": "Obrzycko",
+      "township": "szamotulski",
+      "province": "wielkopolskie",
+      "area": 3.74,
+      "people": 2378,
+      "density": 636
+    },
+    {
+      "name": "Odolanów",
+      "township": "ostrowski",
+      "province": "wielkopolskie",
+      "area": 4.76,
+      "people": 5155,
+      "density": 1083
+    },
+    {
+      "name": "Ogrodzieniec",
+      "township": "zawierciański",
+      "province": "śląskie",
+      "area": 28.56,
+      "people": 4313,
+      "density": 151
+    },
+    {
+      "name": "Okonek",
+      "township": "złotowski",
+      "province": "wielkopolskie",
+      "area": 6.01,
+      "people": 3929,
+      "density": 654
+    },
+    {
+      "name": "Olecko",
+      "township": "olecki",
+      "province": "warmińsko-mazurskie",
+      "area": 11.54,
+      "people": 16508,
+      "density": 1431
+    },
+    {
+      "name": "Olesno",
+      "township": "oleski",
+      "province": "opolskie",
+      "area": 15.08,
+      "people": 9400,
+      "density": 623
+    },
+    {
+      "name": "Oleszyce",
+      "township": "lubaczowski",
+      "province": "podkarpackie",
+      "area": 5.08,
+      "people": 3041,
+      "density": 599
+    },
+    {
+      "name": "Oleśnica",
+      "township": "oleśnicki",
+      "province": "dolnośląskie",
+      "area": 20.96,
+      "people": 37300,
+      "density": 1780
+    },
+    {
+      "name": "Oleśnica",
+      "township": "staszowski",
+      "province": "świętokrzyskie",
+      "area": 10.04,
+      "people": 1902,
+      "density": 189
+    },
+    {
+      "name": "Olkusz",
+      "township": "olkuski",
+      "province": "małopolskie",
+      "area": 25.65,
+      "people": 35921,
+      "density": 1400
+    },
+    {
+      "name": "Olsztyn",
+      "township": "Olsztyn",
+      "province": "warmińsko-mazurskie",
+      "area": 88.33,
+      "people": 173070,
+      "density": 1959
+    },
+    {
+      "name": "Olsztynek",
+      "township": "olsztyński",
+      "province": "warmińsko-mazurskie",
+      "area": 7.69,
+      "people": 7677,
+      "density": 998
+    },
+    {
+      "name": "Olszyna",
+      "township": "lubański",
+      "province": "dolnośląskie",
+      "area": 20.26,
+      "people": 4347,
+      "density": 215
+    },
+    {
+      "name": "Oława",
+      "township": "oławski",
+      "province": "dolnośląskie",
+      "area": 27.36,
+      "people": 32883,
+      "density": 1202
+    },
+    {
+      "name": "Opalenica",
+      "township": "nowotomyski",
+      "province": "wielkopolskie",
+      "area": 6.42,
+      "people": 9664,
+      "density": 1505
+    },
+    {
+      "name": "Opatowiec",
+      "township": "kazimierski",
+      "province": "świętokrzyskie",
+      "area": 5.47,
+      "people": 338,
+      "density": 62
+    },
+    {
+      "name": "Opatów",
+      "township": "opatowski",
+      "province": "świętokrzyskie",
+      "area": 9.36,
+      "people": 6516,
+      "density": 696
+    },
+    {
+      "name": "Opatówek",
+      "township": "kaliski",
+      "province": "wielkopolskie",
+      "area": 8.68,
+      "people": 3723,
+      "density": 429
+    },
+    {
+      "name": "Opoczno",
+      "township": "opoczyński",
+      "province": "łódzkie",
+      "area": 24.75,
+      "people": 21534,
+      "density": 870
+    },
+    {
+      "name": "Opole",
+      "township": "Opole",
+      "province": "opolskie",
+      "area": 148.88,
+      "people": 128140,
+      "density": 861
+    },
+    {
+      "name": "Opole Lubelskie",
+      "township": "opolski",
+      "province": "lubelskie",
+      "area": 15.12,
+      "people": 8605,
+      "density": 569
+    },
+    {
+      "name": "Orneta",
+      "township": "lidzbarski",
+      "province": "warmińsko-mazurskie",
+      "area": 9.63,
+      "people": 8924,
+      "density": 927
+    },
+    {
+      "name": "Orzesze",
+      "township": "mikołowski",
+      "province": "śląskie",
+      "area": 83.75,
+      "people": 20773,
+      "density": 248
+    },
+    {
+      "name": "Orzysz",
+      "township": "piski",
+      "province": "warmińsko-mazurskie",
+      "area": 8.17,
+      "people": 5615,
+      "density": 687
+    },
+    {
+      "name": "Osieczna",
+      "township": "leszczyński",
+      "province": "wielkopolskie",
+      "area": 4.76,
+      "people": 2322,
+      "density": 488
+    },
+    {
+      "name": "Osiek",
+      "township": "staszowski",
+      "province": "świętokrzyskie",
+      "area": 17.43,
+      "people": 2004,
+      "density": 115
+    },
+    {
+      "name": "Ostrołęka",
+      "township": "Ostrołęka",
+      "province": "mazowieckie",
+      "area": 33.46,
+      "people": 52451,
+      "density": 1568
+    },
+    {
+      "name": "Ostroróg",
+      "township": "szamotulski",
+      "province": "wielkopolskie",
+      "area": 1.25,
+      "people": 1941,
+      "density": 1553
+    },
+    {
+      "name": "Ostrowiec Świętokrzyski",
+      "township": "ostrowiecki",
+      "province": "świętokrzyskie",
+      "area": 46.43,
+      "people": 69852,
+      "density": 1504
+    },
+    {
+      "name": "Ostróda",
+      "township": "ostródzki",
+      "province": "warmińsko-mazurskie",
+      "area": 14.15,
+      "people": 33243,
+      "density": 2349
+    },
+    {
+      "name": "Ostrów Lubelski",
+      "township": "lubartowski",
+      "province": "lubelskie",
+      "area": 29.77,
+      "people": 2095,
+      "density": 70
+    },
+    {
+      "name": "Ostrów Mazowiecka",
+      "township": "ostrowski",
+      "province": "mazowieckie",
+      "area": 22.27,
+      "people": 22656,
+      "density": 1017
+    },
+    {
+      "name": "Ostrów Wielkopolski",
+      "township": "ostrowski",
+      "province": "wielkopolskie",
+      "area": 41.9,
+      "people": 72364,
+      "density": 1727
+    },
+    {
+      "name": "Ostrzeszów",
+      "township": "ostrzeszowski",
+      "province": "wielkopolskie",
+      "area": 12.13,
+      "people": 14325,
+      "density": 1181
+    },
+    {
+      "name": "Ośno Lubuskie",
+      "township": "słubicki",
+      "province": "lubuskie",
+      "area": 8.01,
+      "people": 3911,
+      "density": 488
+    },
+    {
+      "name": "Oświęcim",
+      "township": "oświęcimski",
+      "province": "małopolskie",
+      "area": 30.0,
+      "people": 38678,
+      "density": 1289
+    },
+    {
+      "name": "Otmuchów",
+      "township": "nyski",
+      "province": "opolskie",
+      "area": 49.54,
+      "people": 6647,
+      "density": 134
+    },
+    {
+      "name": "Otwock",
+      "township": "otwocki",
+      "province": "mazowieckie",
+      "area": 47.31,
+      "people": 44873,
+      "density": 948
+    },
+    {
+      "name": "Otyń",
+      "township": "nowosolski",
+      "province": "lubuskie",
+      "area": 7.86,
+      "people": 1589,
+      "density": 202
+    },
+    {
+      "name": "Ozimek",
+      "township": "opolski",
+      "province": "opolskie",
+      "area": 3.25,
+      "people": 8807,
+      "density": 2710
+    },
+    {
+      "name": "Ozorków",
+      "township": "zgierski",
+      "province": "łódzkie",
+      "area": 15.46,
+      "people": 19685,
+      "density": 1273
+    },
+    {
+      "name": "Ożarów",
+      "township": "opatowski",
+      "province": "świętokrzyskie",
+      "area": 7.79,
+      "people": 4594,
+      "density": 590
+    },
+    {
+      "name": "Ożarów Mazowiecki",
+      "township": "warszawski zachodni",
+      "province": "mazowieckie",
+      "area": 8.13,
+      "people": 11311,
+      "density": 1391
+    },
+    {
+      "name": "Pabianice",
+      "township": "pabianicki",
+      "province": "łódzkie",
+      "area": 32.99,
+      "people": 65823,
+      "density": 1995
+    },
+    {
+      "name": "Pacanów",
+      "township": "buski",
+      "province": "świętokrzyskie",
+      "area": 7.13,
+      "people": 1118,
+      "density": 157
+    },
+    {
+      "name": "Paczków",
+      "township": "nyski",
+      "province": "opolskie",
+      "area": 6.6,
+      "people": 7600,
+      "density": 1152
+    },
+    {
+      "name": "Pajęczno",
+      "township": "pajęczański",
+      "province": "łódzkie",
+      "area": 20.23,
+      "people": 6792,
+      "density": 336
+    },
+    {
+      "name": "Pakość",
+      "township": "inowrocławski",
+      "province": "kujawsko-pomorskie",
+      "area": 3.46,
+      "people": 5744,
+      "density": 1660
+    },
+    {
+      "name": "Parczew",
+      "township": "parczewski",
+      "province": "lubelskie",
+      "area": 8.05,
+      "people": 10748,
+      "density": 1335
+    },
+    {
+      "name": "Pasłęk",
+      "township": "elbląski",
+      "province": "warmińsko-mazurskie",
+      "area": 10.63,
+      "people": 12298,
+      "density": 1157
+    },
+    {
+      "name": "Pasym",
+      "township": "szczycieński",
+      "province": "warmińsko-mazurskie",
+      "area": 15.18,
+      "people": 2549,
+      "density": 168
+    },
+    {
+      "name": "Pelplin",
+      "township": "tczewski",
+      "province": "pomorskie",
+      "area": 4.42,
+      "people": 7912,
+      "density": 1790
+    },
+    {
+      "name": "Pełczyce",
+      "township": "choszczeński",
+      "province": "zachodniopomorskie",
+      "area": 13.07,
+      "people": 2597,
+      "density": 199
+    },
+    {
+      "name": "Piaseczno",
+      "township": "piaseczyński",
+      "province": "mazowieckie",
+      "area": 16.22,
+      "people": 47660,
+      "density": 2938
+    },
+    {
+      "name": "Piaski",
+      "township": "świdnicki",
+      "province": "lubelskie",
+      "area": 8.44,
+      "people": 2598,
+      "density": 308
+    },
+    {
+      "name": "Piastów",
+      "township": "pruszkowski",
+      "province": "mazowieckie",
+      "area": 5.76,
+      "people": 22732,
+      "density": 3947
+    },
+    {
+      "name": "Piechowice",
+      "township": "jeleniogórski",
+      "province": "dolnośląskie",
+      "area": 43.22,
+      "people": 6314,
+      "density": 146
+    },
+    {
+      "name": "Piekary Śląskie",
+      "township": "Piekary Śląskie",
+      "province": "śląskie",
+      "area": 39.98,
+      "people": 55652,
+      "density": 1392
+    },
+    {
+      "name": "Pieniężno",
+      "township": "braniewski",
+      "province": "warmińsko-mazurskie",
+      "area": 3.81,
+      "people": 2802,
+      "density": 735
+    },
+    {
+      "name": "Pieńsk",
+      "township": "zgorzelecki",
+      "province": "dolnośląskie",
+      "area": 9.92,
+      "people": 5866,
+      "density": 591
+    },
+    {
+      "name": "Pierzchnica",
+      "township": "kielecki",
+      "province": "świętokrzyskie",
+      "area": 6.92,
+      "people": 1059,
+      "density": 153
+    },
+    {
+      "name": "Pieszyce",
+      "township": "dzierżoniowski",
+      "province": "dolnośląskie",
+      "area": 17.72,
+      "people": 7170,
+      "density": 405
+    },
+    {
+      "name": "Pilawa",
+      "township": "garwoliński",
+      "province": "mazowieckie",
+      "area": 6.66,
+      "people": 4557,
+      "density": 684
+    },
+    {
+      "name": "Pilica",
+      "township": "zawierciański",
+      "province": "śląskie",
+      "area": 8.22,
+      "people": 1967,
+      "density": 239
+    },
+    {
+      "name": "Pilzno",
+      "township": "dębicki",
+      "province": "podkarpackie",
+      "area": 16.04,
+      "people": 4892,
+      "density": 305
+    },
+    {
+      "name": "Piła",
+      "township": "pilski",
+      "province": "wielkopolskie",
+      "area": 102.68,
+      "people": 73791,
+      "density": 719
+    },
+    {
+      "name": "Piława Górna",
+      "township": "dzierżoniowski",
+      "province": "dolnośląskie",
+      "area": 20.93,
+      "people": 6479,
+      "density": 310
+    },
+    {
+      "name": "Pińczów",
+      "township": "pińczowski",
+      "province": "świętokrzyskie",
+      "area": 14.33,
+      "people": 10946,
+      "density": 764
+    },
+    {
+      "name": "Pionki",
+      "township": "radomski",
+      "province": "mazowieckie",
+      "area": 18.4,
+      "people": 18618,
+      "density": 1012
+    },
+    {
+      "name": "Piotrków Kujawski",
+      "township": "radziejowski",
+      "province": "kujawsko-pomorskie",
+      "area": 9.76,
+      "people": 4490,
+      "density": 460
+    },
+    {
+      "name": "Piotrków Trybunalski",
+      "township": "Piotrków Trybunalski",
+      "province": "łódzkie",
+      "area": 67.24,
+      "people": 74312,
+      "density": 1105
+    },
+    {
+      "name": "Pisz",
+      "township": "piski",
+      "province": "warmińsko-mazurskie",
+      "area": 10.08,
+      "people": 19386,
+      "density": 1923
+    },
+    {
+      "name": "Piwniczna-Zdrój",
+      "township": "nowosądecki",
+      "province": "małopolskie",
+      "area": 38.3,
+      "people": 5925,
+      "density": 155
+    },
+    {
+      "name": "Pleszew",
+      "township": "pleszewski",
+      "province": "wielkopolskie",
+      "area": 13.38,
+      "people": 17437,
+      "density": 1303
+    },
+    {
+      "name": "Płock",
+      "township": "Płock",
+      "province": "mazowieckie",
+      "area": 88.04,
+      "people": 120787,
+      "density": 1372
+    },
+    {
+      "name": "Płońsk",
+      "township": "płoński",
+      "province": "mazowieckie",
+      "area": 11.6,
+      "people": 22214,
+      "density": 1915
+    },
+    {
+      "name": "Płoty",
+      "township": "gryficki",
+      "province": "zachodniopomorskie",
+      "area": 4.12,
+      "people": 3995,
+      "density": 970
+    },
+    {
+      "name": "Pniewy",
+      "township": "szamotulski",
+      "province": "wielkopolskie",
+      "area": 9.32,
+      "people": 8037,
+      "density": 862
+    },
+    {
+      "name": "Pobiedziska",
+      "township": "poznański",
+      "province": "wielkopolskie",
+      "area": 10.24,
+      "people": 9139,
+      "density": 892
+    },
+    {
+      "name": "Poddębice",
+      "township": "poddębicki",
+      "province": "łódzkie",
+      "area": 5.87,
+      "people": 7530,
+      "density": 1283
+    },
+    {
+      "name": "Podkowa Leśna",
+      "township": "grodziski",
+      "province": "mazowieckie",
+      "area": 10.13,
+      "people": 3875,
+      "density": 383
+    },
+    {
+      "name": "Pogorzela",
+      "township": "gostyński",
+      "province": "wielkopolskie",
+      "area": 4.36,
+      "people": 2098,
+      "density": 481
+    },
+    {
+      "name": "Polanica-Zdrój",
+      "township": "kłodzki",
+      "province": "dolnośląskie",
+      "area": 17.22,
+      "people": 6381,
+      "density": 371
+    },
+    {
+      "name": "Polanów",
+      "township": "koszaliński",
+      "province": "zachodniopomorskie",
+      "area": 7.37,
+      "people": 2949,
+      "density": 400
+    },
+    {
+      "name": "Police",
+      "township": "policki",
+      "province": "zachodniopomorskie",
+      "area": 37.31,
+      "people": 32970,
+      "density": 884
+    },
+    {
+      "name": "Polkowice",
+      "township": "polkowicki",
+      "province": "dolnośląskie",
+      "area": 23.74,
+      "people": 22504,
+      "density": 948
+    },
+    {
+      "name": "Połaniec",
+      "township": "staszowski",
+      "province": "świętokrzyskie",
+      "area": 17.41,
+      "people": 8181,
+      "density": 470
+    },
+    {
+      "name": "Połczyn-Zdrój",
+      "township": "świdwiński",
+      "province": "zachodniopomorskie",
+      "area": 7.21,
+      "people": 8181,
+      "density": 1135
+    },
+    {
+      "name": "Poniatowa",
+      "township": "opolski",
+      "province": "lubelskie",
+      "area": 15.26,
+      "people": 9320,
+      "density": 611
+    },
+    {
+      "name": "Poniec",
+      "township": "gostyński",
+      "province": "wielkopolskie",
+      "area": 3.48,
+      "people": 2841,
+      "density": 816
+    },
+    {
+      "name": "Poręba",
+      "township": "zawierciański",
+      "province": "śląskie",
+      "area": 39.99,
+      "people": 8581,
+      "density": 215
+    },
+    {
+      "name": "Poznań",
+      "township": "Poznań",
+      "province": "wielkopolskie",
+      "area": 261.91,
+      "people": 538633,
+      "density": 2057
+    },
+    {
+      "name": "Prabuty",
+      "township": "kwidzyński",
+      "province": "pomorskie",
+      "area": 7.29,
+      "people": 8710,
+      "density": 1195
+    },
+    {
+      "name": "Praszka",
+      "township": "oleski",
+      "province": "opolskie",
+      "area": 9.35,
+      "people": 7724,
+      "density": 826
+    },
+    {
+      "name": "Prochowice",
+      "township": "legnicki",
+      "province": "dolnośląskie",
+      "area": 9.85,
+      "people": 3646,
+      "density": 370
+    },
+    {
+      "name": "Proszowice",
+      "township": "proszowicki",
+      "province": "małopolskie",
+      "area": 7.33,
+      "people": 6088,
+      "density": 831
+    },
+    {
+      "name": "Prószków",
+      "township": "opolski",
+      "province": "opolskie",
+      "area": 16.22,
+      "people": 2603,
+      "density": 160
+    },
+    {
+      "name": "Pruchnik",
+      "township": "jarosławski",
+      "province": "podkarpackie",
+      "area": 19.91,
+      "people": 3772,
+      "density": 189
+    },
+    {
+      "name": "Prudnik",
+      "township": "prudnicki",
+      "province": "opolskie",
+      "area": 20.5,
+      "people": 21237,
+      "density": 1036
+    },
+    {
+      "name": "Prusice",
+      "township": "trzebnicki",
+      "province": "dolnośląskie",
+      "area": 10.94,
+      "people": 2235,
+      "density": 204
+    },
+    {
+      "name": "Pruszcz Gdański",
+      "township": "gdański",
+      "province": "pomorskie",
+      "area": 16.47,
+      "people": 30468,
+      "density": 1850
+    },
+    {
+      "name": "Pruszków",
+      "township": "pruszkowski",
+      "province": "mazowieckie",
+      "area": 19.19,
+      "people": 61237,
+      "density": 3191
+    },
+    {
+      "name": "Przasnysz",
+      "township": "przasnyski",
+      "province": "mazowieckie",
+      "area": 25.16,
+      "people": 17223,
+      "density": 685
+    },
+    {
+      "name": "Przecław",
+      "township": "mielecki",
+      "province": "podkarpackie",
+      "area": 16.04,
+      "people": 1748,
+      "density": 109
+    },
+    {
+      "name": "Przedbórz",
+      "township": "radomszczański",
+      "province": "łódzkie",
+      "area": 6.08,
+      "people": 3615,
+      "density": 595
+    },
+    {
+      "name": "Przedecz",
+      "township": "kolski",
+      "province": "wielkopolskie",
+      "area": 2.98,
+      "people": 1690,
+      "density": 567
+    },
+    {
+      "name": "Przemków",
+      "township": "polkowicki",
+      "province": "dolnośląskie",
+      "area": 6.17,
+      "people": 6217,
+      "density": 1008
+    },
+    {
+      "name": "Przemyśl",
+      "township": "Przemyśl",
+      "province": "podkarpackie",
+      "area": 46.17,
+      "people": 61808,
+      "density": 1339
+    },
+    {
+      "name": "Przeworsk",
+      "township": "przeworski",
+      "province": "podkarpackie",
+      "area": 22.13,
+      "people": 15452,
+      "density": 698
+    },
+    {
+      "name": "Przysucha",
+      "township": "przysuski",
+      "province": "mazowieckie",
+      "area": 7.02,
+      "people": 5934,
+      "density": 845
+    },
+    {
+      "name": "Pszczyna",
+      "township": "pszczyński",
+      "province": "śląskie",
+      "area": 22.49,
+      "people": 25906,
+      "density": 1152
+    },
+    {
+      "name": "Pszów",
+      "township": "wodzisławski",
+      "province": "śląskie",
+      "area": 20.44,
+      "people": 14114,
+      "density": 691
+    },
+    {
+      "name": "Puck",
+      "township": "pucki",
+      "province": "pomorskie",
+      "area": 4.79,
+      "people": 11265,
+      "density": 2352
+    },
+    {
+      "name": "Puławy",
+      "township": "puławski",
+      "province": "lubelskie",
+      "area": 50.49,
+      "people": 48114,
+      "density": 953
+    },
+    {
+      "name": "Pułtusk",
+      "township": "pułtuski",
+      "province": "mazowieckie",
+      "area": 23.07,
+      "people": 19448,
+      "density": 843
+    },
+    {
+      "name": "Puszczykowo",
+      "township": "poznański",
+      "province": "wielkopolskie",
+      "area": 16.39,
+      "people": 9693,
+      "density": 591
+    },
+    {
+      "name": "Pyrzyce",
+      "township": "pyrzycki",
+      "province": "zachodniopomorskie",
+      "area": 38.79,
+      "people": 12709,
+      "density": 328
+    },
+    {
+      "name": "Pyskowice",
+      "township": "gliwicki",
+      "province": "śląskie",
+      "area": 30.89,
+      "people": 18417,
+      "density": 596
+    },
+    {
+      "name": "Pyzdry",
+      "township": "wrzesiński",
+      "province": "wielkopolskie",
+      "area": 12.16,
+      "people": 3164,
+      "density": 260
+    },
+    {
+      "name": "Rabka-Zdrój",
+      "township": "nowotarski",
+      "province": "małopolskie",
+      "area": 36.31,
+      "people": 12883,
+      "density": 355
+    },
+    {
+      "name": "Raciąż",
+      "township": "płoński",
+      "province": "mazowieckie",
+      "area": 8.4,
+      "people": 4437,
+      "density": 528
+    },
+    {
+      "name": "Racibórz",
+      "township": "raciborski",
+      "province": "śląskie",
+      "area": 75.01,
+      "people": 55189,
+      "density": 736
+    },
+    {
+      "name": "Radków",
+      "township": "kłodzki",
+      "province": "dolnośląskie",
+      "area": 15.03,
+      "people": 2427,
+      "density": 161
+    },
+    {
+      "name": "Radlin",
+      "township": "wodzisławski",
+      "province": "śląskie",
+      "area": 12.53,
+      "people": 17861,
+      "density": 1425
+    },
+    {
+      "name": "Radłów",
+      "township": "tarnowski",
+      "province": "małopolskie",
+      "area": 16.83,
+      "people": 2780,
+      "density": 165
+    },
+    {
+      "name": "Radom",
+      "township": "Radom",
+      "province": "mazowieckie",
+      "area": 111.8,
+      "people": 214566,
+      "density": 1919
+    },
+    {
+      "name": "Radomsko",
+      "township": "radomszczański",
+      "province": "łódzkie",
+      "area": 51.43,
+      "people": 46409,
+      "density": 902
+    },
+    {
+      "name": "Radomyśl Wielki",
+      "township": "mielecki",
+      "province": "podkarpackie",
+      "area": 8.79,
+      "people": 3167,
+      "density": 360
+    },
+    {
+      "name": "Radoszyce",
+      "township": "konecki",
+      "province": "świętokrzyskie",
+      "area": 17.17,
+      "people": 3217,
+      "density": 187
+    },
+    {
+      "name": "Radymno",
+      "township": "jarosławski",
+      "province": "podkarpackie",
+      "area": 13.62,
+      "people": 5335,
+      "density": 392
+    },
+    {
+      "name": "Radziejów",
+      "township": "radziejowski",
+      "province": "kujawsko-pomorskie",
+      "area": 5.69,
+      "people": 5638,
+      "density": 991
+    },
+    {
+      "name": "Radzionków",
+      "township": "tarnogórski",
+      "province": "śląskie",
+      "area": 13.2,
+      "people": 16798,
+      "density": 1273
+    },
+    {
+      "name": "Radzymin",
+      "township": "wołomiński",
+      "province": "mazowieckie",
+      "area": 23.39,
+      "people": 12644,
+      "density": 541
+    },
+    {
+      "name": "Radzyń Chełmiński",
+      "township": "grudziądzki",
+      "province": "kujawsko-pomorskie",
+      "area": 1.78,
+      "people": 1851,
+      "density": 1040
+    },
+    {
+      "name": "Radzyń Podlaski",
+      "township": "radzyński",
+      "province": "lubelskie",
+      "area": 19.31,
+      "people": 15808,
+      "density": 819
+    },
+    {
+      "name": "Rajgród",
+      "township": "grajewski",
+      "province": "podlaskie",
+      "area": 35.28,
+      "people": 1571,
+      "density": 45
+    },
+    {
+      "name": "Rakoniewice",
+      "township": "grodziski",
+      "province": "wielkopolskie",
+      "area": 3.37,
+      "people": 3571,
+      "density": 1060
+    },
+    {
+      "name": "Raszków",
+      "township": "ostrowski",
+      "province": "wielkopolskie",
+      "area": 2.05,
+      "people": 2101,
+      "density": 1025
+    },
+    {
+      "name": "Rawa Mazowiecka",
+      "township": "rawski",
+      "province": "łódzkie",
+      "area": 14.28,
+      "people": 17480,
+      "density": 1224
+    },
+    {
+      "name": "Rawicz",
+      "township": "rawicki",
+      "province": "wielkopolskie",
+      "area": 7.74,
+      "people": 20406,
+      "density": 2636
+    },
+    {
+      "name": "Recz",
+      "township": "choszczeński",
+      "province": "zachodniopomorskie",
+      "area": 12.4,
+      "people": 2930,
+      "density": 236
+    },
+    {
+      "name": "Reda",
+      "township": "wejherowski",
+      "province": "pomorskie",
+      "area": 33.46,
+      "people": 25102,
+      "density": 750
+    },
+    {
+      "name": "Rejowiec",
+      "township": "chełmski",
+      "province": "lubelskie",
+      "area": 6.5,
+      "people": 2084,
+      "density": 321
+    },
+    {
+      "name": "Rejowiec Fabryczny",
+      "township": "chełmski",
+      "province": "lubelskie",
+      "area": 14.28,
+      "people": 4396,
+      "density": 308
+    },
+    {
+      "name": "Resko",
+      "township": "łobeski",
+      "province": "zachodniopomorskie",
+      "area": 4.49,
+      "people": 4255,
+      "density": 948
+    },
+    {
+      "name": "Reszel",
+      "township": "kętrzyński",
+      "province": "warmińsko-mazurskie",
+      "area": 3.82,
+      "people": 4615,
+      "density": 1208
+    },
+    {
+      "name": "Rogoźno",
+      "township": "obornicki",
+      "province": "wielkopolskie",
+      "area": 11.24,
+      "people": 11115,
+      "density": 989
+    },
+    {
+      "name": "Ropczyce",
+      "township": "ropczycko-sędziszowski",
+      "province": "podkarpackie",
+      "area": 47.1,
+      "people": 15848,
+      "density": 336
+    },
+    {
+      "name": "Różan",
+      "township": "makowski",
+      "province": "mazowieckie",
+      "area": 6.66,
+      "people": 2755,
+      "density": 414
+    },
+    {
+      "name": "Ruciane-Nida",
+      "township": "piski",
+      "province": "warmińsko-mazurskie",
+      "area": 17.07,
+      "people": 4579,
+      "density": 268
+    },
+    {
+      "name": "Ruda Śląska",
+      "township": "Ruda Śląska",
+      "province": "śląskie",
+      "area": 77.73,
+      "people": 138578,
+      "density": 1783
+    },
+    {
+      "name": "Rudnik nad Sanem",
+      "township": "niżański",
+      "province": "podkarpackie",
+      "area": 36.6,
+      "people": 6728,
+      "density": 184
+    },
+    {
+      "name": "Rumia",
+      "township": "wejherowski",
+      "province": "pomorskie",
+      "area": 30.1,
+      "people": 48632,
+      "density": 1616
+    },
+    {
+      "name": "Rybnik",
+      "township": "Rybnik",
+      "province": "śląskie",
+      "area": 148.36,
+      "people": 139129,
+      "density": 938
+    },
+    {
+      "name": "Rychwał",
+      "township": "koniński",
+      "province": "wielkopolskie",
+      "area": 9.7,
+      "people": 2379,
+      "density": 245
+    },
+    {
+      "name": "Rydułtowy",
+      "township": "wodzisławski",
+      "province": "śląskie",
+      "area": 14.95,
+      "people": 21700,
+      "density": 1452
+    },
+    {
+      "name": "Rydzyna",
+      "township": "leszczyński",
+      "province": "wielkopolskie",
+      "area": 2.2,
+      "people": 2811,
+      "density": 1278
+    },
+    {
+      "name": "Ryglice",
+      "township": "tarnowski",
+      "province": "małopolskie",
+      "area": 25.15,
+      "people": 2831,
+      "density": 113
+    },
+    {
+      "name": "Ryki",
+      "township": "rycki",
+      "province": "lubelskie",
+      "area": 27.22,
+      "people": 9768,
+      "density": 351
+    },
+    {
+      "name": "Rymanów",
+      "township": "krośnieński",
+      "province": "podkarpackie",
+      "area": 12.39,
+      "people": 3792,
+      "density": 306
+    },
+    {
+      "name": "Ryn",
+      "township": "giżycki",
+      "province": "warmińsko-mazurskie",
+      "area": 4.14,
+      "people": 2865,
+      "density": 692
+    },
+    {
+      "name": "Rypin",
+      "township": "rypiński",
+      "province": "kujawsko-pomorskie",
+      "area": 10.96,
+      "people": 16482,
+      "density": 1504
+    },
+    {
+      "name": "Rzepin",
+      "township": "słubicki",
+      "province": "lubuskie",
+      "area": 11.42,
+      "people": 6590,
+      "density": 577
+    },
+    {
+      "name": "Rzeszów",
+      "township": "Rzeszów",
+      "province": "podkarpackie",
+      "area": 120.41,
+      "people": 189662,
+      "density": 1575
+    },
+    {
+      "name": "Rzgów",
+      "township": "łódzki wschodni",
+      "province": "łódzkie",
+      "area": 16.77,
+      "people": 3385,
+      "density": 202
+    },
+    {
+      "name": "Sandomierz",
+      "township": "sandomierski",
+      "province": "świętokrzyskie",
+      "area": 28.69,
+      "people": 23863,
+      "density": 832
+    },
+    {
+      "name": "Sanniki",
+      "township": "gostyniński",
+      "province": "mazowieckie",
+      "area": 11.76,
+      "people": 1994,
+      "density": 170
+    },
+    {
+      "name": "Sanok",
+      "township": "sanocki",
+      "province": "podkarpackie",
+      "area": 38.08,
+      "people": 37980,
+      "density": 997
+    },
+    {
+      "name": "Sejny",
+      "township": "sejneński",
+      "province": "podlaskie",
+      "area": 4.49,
+      "people": 5472,
+      "density": 1219
+    },
+    {
+      "name": "Serock",
+      "township": "legionowski",
+      "province": "mazowieckie",
+      "area": 13.43,
+      "people": 4353,
+      "density": 324
+    },
+    {
+      "name": "Sędziszów",
+      "township": "jędrzejowski",
+      "province": "świętokrzyskie",
+      "area": 7.92,
+      "people": 6494,
+      "density": 820
+    },
+    {
+      "name": "Sędziszów Małopolski",
+      "township": "ropczycko-sędziszowski",
+      "province": "podkarpackie",
+      "area": 9.96,
+      "people": 7524,
+      "density": 755
+    },
+    {
+      "name": "Sępopol",
+      "township": "bartoszycki",
+      "province": "warmińsko-mazurskie",
+      "area": 4.63,
+      "people": 1970,
+      "density": 425
+    },
+    {
+      "name": "Sępólno Krajeńskie",
+      "township": "sępoleński",
+      "province": "kujawsko-pomorskie",
+      "area": 6.55,
+      "people": 9243,
+      "density": 1411
+    },
+    {
+      "name": "Sianów",
+      "township": "koszaliński",
+      "province": "zachodniopomorskie",
+      "area": 15.88,
+      "people": 6666,
+      "density": 420
+    },
+    {
+      "name": "Siechnice",
+      "township": "wrocławski",
+      "province": "dolnośląskie",
+      "area": 15.63,
+      "people": 7410,
+      "density": 474
+    },
+    {
+      "name": "Siedlce",
+      "township": "Siedlce",
+      "province": "mazowieckie",
+      "area": 31.86,
+      "people": 77653,
+      "density": 2437
+    },
+    {
+      "name": "Siedliszcze",
+      "township": "chełmski",
+      "province": "lubelskie",
+      "area": 13.16,
+      "people": 1418,
+      "density": 108
+    },
+    {
+      "name": "Siemianowice Śląskie",
+      "township": "Siemianowice Śląskie",
+      "province": "śląskie",
+      "area": 25.5,
+      "people": 67523,
+      "density": 2648
+    },
+    {
+      "name": "Siemiatycze",
+      "township": "siemiatycki",
+      "province": "podlaskie",
+      "area": 36.25,
+      "people": 14590,
+      "density": 402
+    },
+    {
+      "name": "Sieniawa",
+      "township": "przeworski",
+      "province": "podkarpackie",
+      "area": 6.74,
+      "people": 2146,
+      "density": 318
+    },
+    {
+      "name": "Sieradz",
+      "township": "sieradzki",
+      "province": "łódzkie",
+      "area": 51.22,
+      "people": 42570,
+      "density": 831
+    },
+    {
+      "name": "Sieraków",
+      "township": "międzychodzki",
+      "province": "wielkopolskie",
+      "area": 14.08,
+      "people": 6046,
+      "density": 429
+    },
+    {
+      "name": "Sierpc",
+      "township": "sierpecki",
+      "province": "mazowieckie",
+      "area": 18.59,
+      "people": 18148,
+      "density": 976
+    },
+    {
+      "name": "Siewierz",
+      "township": "będziński",
+      "province": "śląskie",
+      "area": 38.66,
+      "people": 5520,
+      "density": 143
+    },
+    {
+      "name": "Skalbmierz",
+      "township": "kazimierski",
+      "province": "świętokrzyskie",
+      "area": 7.13,
+      "people": 1292,
+      "density": 181
+    },
+    {
+      "name": "Skała",
+      "township": "krakowski",
+      "province": "małopolskie",
+      "area": 2.97,
+      "people": 3770,
+      "density": 1269
+    },
+    {
+      "name": "Skarszewy",
+      "township": "starogardzki",
+      "province": "pomorskie",
+      "area": 10.79,
+      "people": 7103,
+      "density": 658
+    },
+    {
+      "name": "Skaryszew",
+      "township": "radomski",
+      "province": "mazowieckie",
+      "area": 27.49,
+      "people": 4375,
+      "density": 159
+    },
+    {
+      "name": "Skarżysko-Kamienna",
+      "township": "skarżyski",
+      "province": "świętokrzyskie",
+      "area": 64.39,
+      "people": 45953,
+      "density": 714
+    },
+    {
+      "name": "Skawina",
+      "township": "krakowski",
+      "province": "małopolskie",
+      "area": 20.5,
+      "people": 24325,
+      "density": 1187
+    },
+    {
+      "name": "Skępe",
+      "township": "lipnowski",
+      "province": "kujawsko-pomorskie",
+      "area": 7.48,
+      "people": 3607,
+      "density": 482
+    },
+    {
+      "name": "Skierniewice",
+      "township": "Skierniewice",
+      "province": "łódzkie",
+      "area": 34.6,
+      "people": 48308,
+      "density": 1396
+    },
+    {
+      "name": "Skoczów",
+      "township": "cieszyński",
+      "province": "śląskie",
+      "area": 9.85,
+      "people": 14504,
+      "density": 1472
+    },
+    {
+      "name": "Skoki",
+      "township": "wągrowiecki",
+      "province": "wielkopolskie",
+      "area": 11.2,
+      "people": 4314,
+      "density": 385
+    },
+    {
+      "name": "Skórcz",
+      "township": "starogardzki",
+      "province": "pomorskie",
+      "area": 3.63,
+      "people": 3609,
+      "density": 994
+    },
+    {
+      "name": "Skwierzyna",
+      "township": "międzyrzecki",
+      "province": "lubuskie",
+      "area": 35.89,
+      "people": 9669,
+      "density": 269
+    },
+    {
+      "name": "Sława",
+      "township": "wschowski",
+      "province": "lubuskie",
+      "area": 14.9,
+      "people": 4311,
+      "density": 289
+    },
+    {
+      "name": "Sławków",
+      "township": "będziński",
+      "province": "śląskie",
+      "area": 36.67,
+      "people": 7040,
+      "density": 192
+    },
+    {
+      "name": "Sławno",
+      "township": "sławieński",
+      "province": "zachodniopomorskie",
+      "area": 15.83,
+      "people": 12590,
+      "density": 795
+    },
+    {
+      "name": "Słomniki",
+      "township": "krakowski",
+      "province": "małopolskie",
+      "area": 3.43,
+      "people": 4359,
+      "density": 1271
+    },
+    {
+      "name": "Słubice",
+      "township": "słubicki",
+      "province": "lubuskie",
+      "area": 19.21,
+      "people": 16816,
+      "density": 875
+    },
+    {
+      "name": "Słupca",
+      "township": "słupecki",
+      "province": "wielkopolskie",
+      "area": 10.3,
+      "people": 13851,
+      "density": 1345
+    },
+    {
+      "name": "Słupsk",
+      "township": "Słupsk",
+      "province": "pomorskie",
+      "area": 43.15,
+      "people": 91465,
+      "density": 2120
+    },
+    {
+      "name": "Sobótka",
+      "township": "wrocławski",
+      "province": "dolnośląskie",
+      "area": 32.2,
+      "people": 6951,
+      "density": 216
+    },
+    {
+      "name": "Sochaczew",
+      "township": "sochaczewski",
+      "province": "mazowieckie",
+      "area": 26.19,
+      "people": 36790,
+      "density": 1405
+    },
+    {
+      "name": "Sokołów Małopolski",
+      "township": "rzeszowski",
+      "province": "podkarpackie",
+      "area": 15.54,
+      "people": 4133,
+      "density": 266
+    },
+    {
+      "name": "Sokołów Podlaski",
+      "township": "sokołowski",
+      "province": "mazowieckie",
+      "area": 17.51,
+      "people": 18924,
+      "density": 1081
+    },
+    {
+      "name": "Sokółka",
+      "township": "sokólski",
+      "province": "podlaskie",
+      "area": 18.59,
+      "people": 18331,
+      "density": 986
+    },
+    {
+      "name": "Solec Kujawski",
+      "township": "bydgoski",
+      "province": "kujawsko-pomorskie",
+      "area": 18.68,
+      "people": 15661,
+      "density": 838
+    },
+    {
+      "name": "Sompolno",
+      "township": "koniński",
+      "province": "wielkopolskie",
+      "area": 6.21,
+      "people": 3587,
+      "density": 578
+    },
+    {
+      "name": "Sopot",
+      "township": "Sopot",
+      "province": "pomorskie",
+      "area": 17.28,
+      "people": 36533,
+      "density": 2114
+    },
+    {
+      "name": "Sosnowiec",
+      "township": "Sosnowiec",
+      "province": "śląskie",
+      "area": 91.06,
+      "people": 204013,
+      "density": 2240
+    },
+    {
+      "name": "Sośnicowice",
+      "township": "gliwicki",
+      "province": "śląskie",
+      "area": 11.67,
+      "people": 1881,
+      "density": 161
+    },
+    {
+      "name": "Stalowa Wola",
+      "township": "stalowowolski",
+      "province": "podkarpackie",
+      "area": 82.52,
+      "people": 61903,
+      "density": 750
+    },
+    {
+      "name": "Starachowice",
+      "township": "starachowicki",
+      "province": "świętokrzyskie",
+      "area": 31.82,
+      "people": 49513,
+      "density": 1556
+    },
+    {
+      "name": "Stargard",
+      "township": "stargardzki",
+      "province": "zachodniopomorskie",
+      "area": 48.08,
+      "people": 68195,
+      "density": 1418
+    },
+    {
+      "name": "Starogard Gdański",
+      "township": "starogardzki",
+      "province": "pomorskie",
+      "area": 25.28,
+      "people": 48060,
+      "density": 1901
+    },
+    {
+      "name": "Stary Sącz",
+      "township": "nowosądecki",
+      "province": "małopolskie",
+      "area": 15.0,
+      "people": 9020,
+      "density": 601
+    },
+    {
+      "name": "Staszów",
+      "township": "staszowski",
+      "province": "świętokrzyskie",
+      "area": 26.88,
+      "people": 14942,
+      "density": 556
+    },
+    {
+      "name": "Stawiski",
+      "township": "kolneński",
+      "province": "podlaskie",
+      "area": 13.24,
+      "people": 2229,
+      "density": 168
+    },
+    {
+      "name": "Stawiszyn",
+      "township": "kaliski",
+      "province": "wielkopolskie",
+      "area": 0.99,
+      "people": 1530,
+      "density": 1545
+    },
+    {
+      "name": "Stąporków",
+      "township": "konecki",
+      "province": "świętokrzyskie",
+      "area": 10.94,
+      "people": 5754,
+      "density": 526
+    },
+    {
+      "name": "Stepnica",
+      "township": "goleniowski",
+      "province": "zachodniopomorskie",
+      "area": 3.4,
+      "people": 2478,
+      "density": 729
+    },
+    {
+      "name": "Stęszew",
+      "township": "poznański",
+      "province": "wielkopolskie",
+      "area": 5.69,
+      "people": 5952,
+      "density": 1046
+    },
+    {
+      "name": "Stoczek Łukowski",
+      "township": "łukowski",
+      "province": "lubelskie",
+      "area": 9.15,
+      "people": 2556,
+      "density": 279
+    },
+    {
+      "name": "Stopnica",
+      "township": "buski",
+      "province": "świętokrzyskie",
+      "area": 4.55,
+      "people": 1434,
+      "density": 315
+    },
+    {
+      "name": "Stronie Śląskie",
+      "township": "kłodzki",
+      "province": "dolnośląskie",
+      "area": 2.38,
+      "people": 5755,
+      "density": 2418
+    },
+    {
+      "name": "Strumień",
+      "township": "cieszyński",
+      "province": "śląskie",
+      "area": 6.29,
+      "people": 3696,
+      "density": 588
+    },
+    {
+      "name": "Stryków",
+      "township": "zgierski",
+      "province": "łódzkie",
+      "area": 8.15,
+      "people": 3493,
+      "density": 429
+    },
+    {
+      "name": "Strzegom",
+      "township": "świdnicki",
+      "province": "dolnośląskie",
+      "area": 20.49,
+      "people": 16272,
+      "density": 794
+    },
+    {
+      "name": "Strzelce Krajeńskie",
+      "township": "strzelecko-drezdenecki",
+      "province": "lubuskie",
+      "area": 5.54,
+      "people": 10012,
+      "density": 1807
+    },
+    {
+      "name": "Strzelce Opolskie",
+      "township": "strzelecki",
+      "province": "opolskie",
+      "area": 29.97,
+      "people": 18057,
+      "density": 603
+    },
+    {
+      "name": "Strzelin",
+      "township": "strzeliński",
+      "province": "dolnośląskie",
+      "area": 10.34,
+      "people": 12423,
+      "density": 1201
+    },
+    {
+      "name": "Strzelno",
+      "township": "mogileński",
+      "province": "kujawsko-pomorskie",
+      "area": 4.46,
+      "people": 5701,
+      "density": 1278
+    },
+    {
+      "name": "Strzyżów",
+      "township": "strzyżowski",
+      "province": "podkarpackie",
+      "area": 13.89,
+      "people": 8893,
+      "density": 640
+    },
+    {
+      "name": "Sucha Beskidzka",
+      "township": "suski",
+      "province": "małopolskie",
+      "area": 27.65,
+      "people": 9295,
+      "density": 336
+    },
+    {
+      "name": "Suchań",
+      "township": "stargardzki",
+      "province": "zachodniopomorskie",
+      "area": 3.57,
+      "people": 1490,
+      "density": 417
+    },
+    {
+      "name": "Suchedniów",
+      "township": "skarżyski",
+      "province": "świętokrzyskie",
+      "area": 59.4,
+      "people": 8478,
+      "density": 143
+    },
+    {
+      "name": "Suchowola",
+      "township": "sokólski",
+      "province": "podlaskie",
+      "area": 25.95,
+      "people": 2196,
+      "density": 85
+    },
+    {
+      "name": "Sulechów",
+      "township": "zielonogórski",
+      "province": "lubuskie",
+      "area": 6.88,
+      "people": 17012,
+      "density": 2473
+    },
+    {
+      "name": "Sulejów",
+      "township": "piotrkowski",
+      "province": "łódzkie",
+      "area": 26.26,
+      "people": 6226,
+      "density": 237
+    },
+    {
+      "name": "Sulejówek",
+      "township": "miński",
+      "province": "mazowieckie",
+      "area": 19.31,
+      "people": 19663,
+      "density": 1018
+    },
+    {
+      "name": "Sulęcin",
+      "township": "sulęciński",
+      "province": "lubuskie",
+      "area": 8.56,
+      "people": 10168,
+      "density": 1188
+    },
+    {
+      "name": "Sulmierzyce",
+      "township": "krotoszyński",
+      "province": "wielkopolskie",
+      "area": 29.29,
+      "people": 2899,
+      "density": 99
+    },
+    {
+      "name": "Sułkowice",
+      "township": "myślenicki",
+      "province": "małopolskie",
+      "area": 16.46,
+      "people": 6614,
+      "density": 402
+    },
+    {
+      "name": "Supraśl",
+      "township": "białostocki",
+      "province": "podlaskie",
+      "area": 5.69,
+      "people": 4621,
+      "density": 821
+    },
+    {
+      "name": "Suraż",
+      "township": "białostocki",
+      "province": "podlaskie",
+      "area": 33.86,
+      "people": 992,
+      "density": 29
+    },
+    {
+      "name": "Susz",
+      "township": "iławski",
+      "province": "warmińsko-mazurskie",
+      "area": 6.67,
+      "people": 5586,
+      "density": 837
+    },
+    {
+      "name": "Suwałki",
+      "township": "Suwałki",
+      "province": "podlaskie",
+      "area": 65.51,
+      "people": 69554,
+      "density": 1062
+    },
+    {
+      "name": "Swarzędz",
+      "township": "poznański",
+      "province": "wielkopolskie",
+      "area": 8.23,
+      "people": 30739,
+      "density": 3735
+    },
+    {
+      "name": "Syców",
+      "township": "oleśnicki",
+      "province": "dolnośląskie",
+      "area": 17.05,
+      "people": 10413,
+      "density": 611
+    },
+    {
+      "name": "Szadek",
+      "township": "zduńskowolski",
+      "province": "łódzkie",
+      "area": 17.93,
+      "people": 1957,
+      "density": 109
+    },
+    {
+      "name": "Szamocin",
+      "township": "chodzieski",
+      "province": "wielkopolskie",
+      "area": 4.67,
+      "people": 4302,
+      "density": 921
+    },
+    {
+      "name": "Szamotuły",
+      "township": "szamotulski",
+      "province": "wielkopolskie",
+      "area": 11.08,
+      "people": 18835,
+      "density": 1700
+    },
+    {
+      "name": "Szczawnica",
+      "township": "nowotarski",
+      "province": "małopolskie",
+      "area": 32.9,
+      "people": 5807,
+      "density": 177
+    },
+    {
+      "name": "Szczawno-Zdrój",
+      "township": "wałbrzyski",
+      "province": "dolnośląskie",
+      "area": 14.74,
+      "people": 5650,
+      "density": 383
+    },
+    {
+      "name": "Szczebrzeszyn",
+      "township": "zamojski",
+      "province": "lubelskie",
+      "area": 29.12,
+      "people": 5117,
+      "density": 176
+    },
+    {
+      "name": "Szczecin",
+      "township": "Szczecin",
+      "province": "zachodniopomorskie",
+      "area": 300.6,
+      "people": 403883,
+      "density": 1344
+    },
+    {
+      "name": "Szczecinek",
+      "township": "szczecinecki",
+      "province": "zachodniopomorskie",
+      "area": 48.48,
+      "people": 40292,
+      "density": 831
+    },
+    {
+      "name": "Szczekociny",
+      "township": "zawierciański",
+      "province": "śląskie",
+      "area": 18.03,
+      "people": 3679,
+      "density": 206
+    },
+    {
+      "name": "Szczucin",
+      "township": "dąbrowski",
+      "province": "małopolskie",
+      "area": 6.85,
+      "people": 4163,
+      "density": 608
+    },
+    {
+      "name": "Szczuczyn",
+      "township": "grajewski",
+      "province": "podlaskie",
+      "area": 13.23,
+      "people": 3426,
+      "density": 259
+    },
+    {
+      "name": "Szczyrk",
+      "township": "bielski",
+      "province": "śląskie",
+      "area": 39.07,
+      "people": 5699,
+      "density": 146
+    },
+    {
+      "name": "Szczytna",
+      "township": "kłodzki",
+      "province": "dolnośląskie",
+      "area": 80.38,
+      "people": 5242,
+      "density": 65
+    },
+    {
+      "name": "Szczytno",
+      "township": "szczycieński",
+      "province": "warmińsko-mazurskie",
+      "area": 10.62,
+      "people": 23500,
+      "density": 2213
+    },
+    {
+      "name": "Szepietowo",
+      "township": "wysokomazowiecki",
+      "province": "podlaskie",
+      "area": 1.96,
+      "people": 2209,
+      "density": 1127
+    },
+    {
+      "name": "Szklarska Poręba",
+      "township": "jeleniogórski",
+      "province": "dolnośląskie",
+      "area": 75.44,
+      "people": 6681,
+      "density": 89
+    },
+    {
+      "name": "Szlichtyngowa",
+      "township": "wschowski",
+      "province": "lubuskie",
+      "area": 1.55,
+      "people": 1289,
+      "density": 832
+    },
+    {
+      "name": "Szprotawa",
+      "township": "żagański",
+      "province": "lubuskie",
+      "area": 10.95,
+      "people": 11944,
+      "density": 1091
+    },
+    {
+      "name": "Sztum",
+      "township": "sztumski",
+      "province": "pomorskie",
+      "area": 4.59,
+      "people": 10127,
+      "density": 2206
+    },
+    {
+      "name": "Szubin",
+      "township": "nakielski",
+      "province": "kujawsko-pomorskie",
+      "area": 7.65,
+      "people": 9602,
+      "density": 1255
+    },
+    {
+      "name": "Szydłowiec",
+      "township": "szydłowiecki",
+      "province": "mazowieckie",
+      "area": 21.89,
+      "people": 11854,
+      "density": 542
+    },
+    {
+      "name": "Szydłów",
+      "township": "staszowski",
+      "province": "świętokrzyskie",
+      "area": 16.21,
+      "people": 1111,
+      "density": 69
+    },
+    {
+      "name": "Ścinawa",
+      "township": "lubiński",
+      "province": "dolnośląskie",
+      "area": 13.54,
+      "people": 5677,
+      "density": 419
+    },
+    {
+      "name": "Ślesin",
+      "township": "koniński",
+      "province": "wielkopolskie",
+      "area": 7.18,
+      "people": 3135,
+      "density": 437
+    },
+    {
+      "name": "Śmigiel",
+      "township": "kościański",
+      "province": "wielkopolskie",
+      "area": 5.3,
+      "people": 5719,
+      "density": 1079
+    },
+    {
+      "name": "Śrem",
+      "township": "śremski",
+      "province": "wielkopolskie",
+      "area": 12.37,
+      "people": 29845,
+      "density": 2413
+    },
+    {
+      "name": "Środa Śląska",
+      "township": "średzki",
+      "province": "dolnośląskie",
+      "area": 14.94,
+      "people": 9428,
+      "density": 631
+    },
+    {
+      "name": "Środa Wielkopolska",
+      "township": "średzki",
+      "province": "wielkopolskie",
+      "area": 21.92,
+      "people": 23162,
+      "density": 1057
+    },
+    {
+      "name": "Świątniki Górne",
+      "township": "krakowski",
+      "province": "małopolskie",
+      "area": 4.44,
+      "people": 2422,
+      "density": 545
+    },
+    {
+      "name": "Świdnica",
+      "township": "świdnicki",
+      "province": "dolnośląskie",
+      "area": 21.76,
+      "people": 57671,
+      "density": 2650
+    },
+    {
+      "name": "Świdnik",
+      "township": "świdnicki",
+      "province": "lubelskie",
+      "area": 20.35,
+      "people": 39732,
+      "density": 1952
+    },
+    {
+      "name": "Świdwin",
+      "township": "świdwiński",
+      "province": "zachodniopomorskie",
+      "area": 22.38,
+      "people": 15725,
+      "density": 703
+    },
+    {
+      "name": "Świebodzice",
+      "township": "świdnicki",
+      "province": "dolnośląskie",
+      "area": 30.43,
+      "people": 22840,
+      "density": 751
+    },
+    {
+      "name": "Świebodzin",
+      "township": "świebodziński",
+      "province": "lubuskie",
+      "area": 16.93,
+      "people": 21954,
+      "density": 1297
+    },
+    {
+      "name": "Świecie",
+      "township": "świecki",
+      "province": "kujawsko-pomorskie",
+      "area": 11.87,
+      "people": 25924,
+      "density": 2184
+    },
+    {
+      "name": "Świeradów-Zdrój",
+      "township": "lubański",
+      "province": "dolnośląskie",
+      "area": 20.72,
+      "people": 4209,
+      "density": 203
+    },
+    {
+      "name": "Świerzawa",
+      "township": "złotoryjski",
+      "province": "dolnośląskie",
+      "area": 1.76,
+      "people": 2315,
+      "density": 1315
+    },
+    {
+      "name": "Świętochłowice",
+      "township": "Świętochłowice",
+      "province": "śląskie",
+      "area": 13.31,
+      "people": 50385,
+      "density": 3785
+    },
+    {
+      "name": "Świnoujście",
+      "township": "Świnoujście",
+      "province": "zachodniopomorskie",
+      "area": 202.07,
+      "people": 41032,
+      "density": 203
+    },
+    {
+      "name": "Tarczyn",
+      "township": "piaseczyński",
+      "province": "mazowieckie",
+      "area": 5.23,
+      "people": 4105,
+      "density": 785
+    },
+    {
+      "name": "Tarnobrzeg",
+      "township": "Tarnobrzeg",
+      "province": "podkarpackie",
+      "area": 85.4,
+      "people": 47387,
+      "density": 555
+    },
+    {
+      "name": "Tarnogród",
+      "township": "biłgorajski",
+      "province": "lubelskie",
+      "area": 10.69,
+      "people": 3395,
+      "density": 318
+    },
+    {
+      "name": "Tarnowskie Góry",
+      "township": "tarnogórski",
+      "province": "śląskie",
+      "area": 83.72,
+      "people": 61262,
+      "density": 732
+    },
+    {
+      "name": "Tarnów",
+      "township": "Tarnów",
+      "province": "małopolskie",
+      "area": 72.38,
+      "people": 109650,
+      "density": 1515
+    },
+    {
+      "name": "Tczew",
+      "township": "tczewski",
+      "province": "pomorskie",
+      "area": 22.38,
+      "people": 60257,
+      "density": 2692
+    },
+    {
+      "name": "Terespol",
+      "township": "bialski",
+      "province": "lubelskie",
+      "area": 10.11,
+      "people": 5594,
+      "density": 553
+    },
+    {
+      "name": "Tłuszcz",
+      "township": "wołomiński",
+      "province": "mazowieckie",
+      "area": 7.91,
+      "people": 8127,
+      "density": 1027
+    },
+    {
+      "name": "Tolkmicko",
+      "township": "elbląski",
+      "province": "warmińsko-mazurskie",
+      "area": 2.29,
+      "people": 2719,
+      "density": 1187
+    },
+    {
+      "name": "Tomaszów Lubelski",
+      "township": "tomaszowski",
+      "province": "lubelskie",
+      "area": 13.29,
+      "people": 19365,
+      "density": 1467
+    },
+    {
+      "name": "Tomaszów Mazowiecki",
+      "township": "tomaszowski",
+      "province": "łódzkie",
+      "area": 41.3,
+      "people": 63238,
+      "density": 1531
+    },
+    {
+      "name": "Toruń",
+      "township": "Toruń",
+      "province": "kujawsko-pomorskie",
+      "area": 115.72,
+      "people": 202562,
+      "density": 1750
+    },
+    {
+      "name": "Torzym",
+      "township": "sulęciński",
+      "province": "lubuskie",
+      "area": 9.11,
+      "people": 2529,
+      "density": 278
+    },
+    {
+      "name": "Toszek",
+      "township": "gliwicki",
+      "province": "śląskie",
+      "area": 9.71,
+      "people": 3596,
+      "density": 370
+    },
+    {
+      "name": "Trzcianka",
+      "township": "czarnkowsko-trzcianecki",
+      "province": "wielkopolskie",
+      "area": 18.3,
+      "people": 17228,
+      "density": 941
+    },
+    {
+      "name": "Trzciel",
+      "township": "międzyrzecki",
+      "province": "lubuskie",
+      "area": 3.04,
+      "people": 2445,
+      "density": 804
+    },
+    {
+      "name": "Trzcińsko-Zdrój",
+      "township": "gryfiński",
+      "province": "zachodniopomorskie",
+      "area": 2.33,
+      "people": 2297,
+      "density": 986
+    },
+    {
+      "name": "Trzebiatów",
+      "township": "gryficki",
+      "province": "zachodniopomorskie",
+      "area": 10.25,
+      "people": 10025,
+      "density": 978
+    },
+    {
+      "name": "Trzebinia",
+      "township": "chrzanowski",
+      "province": "małopolskie",
+      "area": 31.94,
+      "people": 19954,
+      "density": 625
+    },
+    {
+      "name": "Trzebnica",
+      "township": "trzebnicki",
+      "province": "dolnośląskie",
+      "area": 10.61,
+      "people": 13261,
+      "density": 1250
+    },
+    {
+      "name": "Trzemeszno",
+      "township": "gnieźnieński",
+      "province": "wielkopolskie",
+      "area": 5.46,
+      "people": 7752,
+      "density": 1420
+    },
+    {
+      "name": "Tuchola",
+      "township": "tucholski",
+      "province": "kujawsko-pomorskie",
+      "area": 17.69,
+      "people": 13793,
+      "density": 780
+    },
+    {
+      "name": "Tuchów",
+      "township": "tarnowski",
+      "province": "małopolskie",
+      "area": 18.1,
+      "people": 6693,
+      "density": 370
+    },
+    {
+      "name": "Tuczno",
+      "township": "wałecki",
+      "province": "zachodniopomorskie",
+      "area": 9.21,
+      "people": 1931,
+      "density": 210
+    },
+    {
+      "name": "Tuliszków",
+      "township": "turecki",
+      "province": "wielkopolskie",
+      "area": 7.0,
+      "people": 3322,
+      "density": 475
+    },
+    {
+      "name": "Tułowice",
+      "township": "opolski",
+      "province": "opolskie",
+      "area": 9.23,
+      "people": 4000,
+      "density": 433
+    },
+    {
+      "name": "Turek",
+      "township": "turecki",
+      "province": "wielkopolskie",
+      "area": 16.17,
+      "people": 27311,
+      "density": 1689
+    },
+    {
+      "name": "Tuszyn",
+      "township": "łódzki wschodni",
+      "province": "łódzkie",
+      "area": 23.25,
+      "people": 7293,
+      "density": 314
+    },
+    {
+      "name": "Twardogóra",
+      "township": "oleśnicki",
+      "province": "dolnośląskie",
+      "area": 8.29,
+      "people": 6784,
+      "density": 818
+    },
+    {
+      "name": "Tychowo",
+      "township": "białogardzki",
+      "province": "zachodniopomorskie",
+      "area": 3.96,
+      "people": 2495,
+      "density": 630
+    },
+    {
+      "name": "Tychy",
+      "township": "Tychy",
+      "province": "śląskie",
+      "area": 81.81,
+      "people": 128211,
+      "density": 1567
+    },
+    {
+      "name": "Tyczyn",
+      "township": "rzeszowski",
+      "province": "podkarpackie",
+      "area": 9.67,
+      "people": 3805,
+      "density": 393
+    },
+    {
+      "name": "Tykocin",
+      "township": "białostocki",
+      "province": "podlaskie",
+      "area": 28.97,
+      "people": 1980,
+      "density": 68
+    },
+    {
+      "name": "Tyszowce",
+      "township": "tomaszowski",
+      "province": "lubelskie",
+      "area": 18.52,
+      "people": 2120,
+      "density": 114
+    },
+    {
+      "name": "Ujazd",
+      "township": "strzelecki",
+      "province": "opolskie",
+      "area": 14.76,
+      "people": 1770,
+      "density": 120
+    },
+    {
+      "name": "Ujście",
+      "township": "pilski",
+      "province": "wielkopolskie",
+      "area": 5.78,
+      "people": 3738,
+      "density": 647
+    },
+    {
+      "name": "Ulanów",
+      "township": "niżański",
+      "province": "podkarpackie",
+      "area": 8.2,
+      "people": 1405,
+      "density": 171
+    },
+    {
+      "name": "Uniejów",
+      "township": "poddębicki",
+      "province": "łódzkie",
+      "area": 12.23,
+      "people": 3011,
+      "density": 246
+    },
+    {
+      "name": "Urzędów",
+      "township": "kraśnicki",
+      "province": "lubelskie",
+      "area": 12.91,
+      "people": 1703,
+      "density": 132
+    },
+    {
+      "name": "Ustka",
+      "township": "słupski",
+      "province": "pomorskie",
+      "area": 10.19,
+      "people": 15709,
+      "density": 1542
+    },
+    {
+      "name": "Ustroń",
+      "township": "cieszyński",
+      "province": "śląskie",
+      "area": 59.03,
+      "people": 16108,
+      "density": 273
+    },
+    {
+      "name": "Ustrzyki Dolne",
+      "township": "bieszczadzki",
+      "province": "podkarpackie",
+      "area": 16.79,
+      "people": 9176,
+      "density": 547
+    },
+    {
+      "name": "Wadowice",
+      "township": "wadowicki",
+      "province": "małopolskie",
+      "area": 10.54,
+      "people": 18851,
+      "density": 1789
+    },
+    {
+      "name": "Wałbrzych",
+      "township": "Wałbrzych",
+      "province": "dolnośląskie",
+      "area": 84.7,
+      "people": 113621,
+      "density": 1341
+    },
+    {
+      "name": "Wałcz",
+      "township": "wałecki",
+      "province": "zachodniopomorskie",
+      "area": 38.17,
+      "people": 25533,
+      "density": 669
+    },
+    {
+      "name": "Warka",
+      "township": "grójecki",
+      "province": "mazowieckie",
+      "area": 26.77,
+      "people": 11894,
+      "density": 444
+    },
+    {
+      "name": "Warszawa",
+      "township": "Warszawa",
+      "province": "mazowieckie",
+      "area": 517.24,
+      "people": 1764615,
+      "density": 3412
+    },
+    {
+      "name": "Warta",
+      "township": "sieradzki",
+      "province": "łódzkie",
+      "area": 10.85,
+      "people": 3258,
+      "density": 300
+    },
+    {
+      "name": "Wasilków",
+      "township": "białostocki",
+      "province": "podlaskie",
+      "area": 28.26,
+      "people": 11074,
+      "density": 392
+    },
+    {
+      "name": "Wąbrzeźno",
+      "township": "wąbrzeski",
+      "province": "kujawsko-pomorskie",
+      "area": 8.53,
+      "people": 13749,
+      "density": 1612
+    },
+    {
+      "name": "Wąchock",
+      "township": "starachowicki",
+      "province": "świętokrzyskie",
+      "area": 16.02,
+      "people": 2795,
+      "density": 174
+    },
+    {
+      "name": "Wągrowiec",
+      "township": "wągrowiecki",
+      "province": "wielkopolskie",
+      "area": 17.83,
+      "people": 25607,
+      "density": 1436
+    },
+    {
+      "name": "Wąsosz",
+      "township": "górowski",
+      "province": "dolnośląskie",
+      "area": 3.24,
+      "people": 2688,
+      "density": 830
+    },
+    {
+      "name": "Wejherowo",
+      "township": "wejherowski",
+      "province": "pomorskie",
+      "area": 26.99,
+      "people": 49927,
+      "density": 1850
+    },
+    {
+      "name": "Węgliniec",
+      "township": "zgorzelecki",
+      "province": "dolnośląskie",
+      "area": 8.73,
+      "people": 2868,
+      "density": 329
+    },
+    {
+      "name": "Węgorzewo",
+      "township": "węgorzewski",
+      "province": "warmińsko-mazurskie",
+      "area": 10.88,
+      "people": 11438,
+      "density": 1051
+    },
+    {
+      "name": "Węgorzyno",
+      "township": "łobeski",
+      "province": "zachodniopomorskie",
+      "area": 6.85,
+      "people": 2865,
+      "density": 418
+    },
+    {
+      "name": "Węgrów",
+      "township": "węgrowski",
+      "province": "mazowieckie",
+      "area": 35.51,
+      "people": 12765,
+      "density": 359
+    },
+    {
+      "name": "Wiązów",
+      "township": "strzeliński",
+      "province": "dolnośląskie",
+      "area": 9.16,
+      "people": 2296,
+      "density": 251
+    },
+    {
+      "name": "Wielbark",
+      "township": "szczycieński",
+      "province": "warmińsko-mazurskie",
+      "area": 18.42,
+      "people": 3065,
+      "density": 166
+    },
+    {
+      "name": "Wieleń",
+      "township": "czarnkowsko-trzcianecki",
+      "province": "wielkopolskie",
+      "area": 4.46,
+      "people": 5988,
+      "density": 1343
+    },
+    {
+      "name": "Wielichowo",
+      "township": "grodziski",
+      "province": "wielkopolskie",
+      "area": 1.24,
+      "people": 1767,
+      "density": 1425
+    },
+    {
+      "name": "Wieliczka",
+      "township": "wielicki",
+      "province": "małopolskie",
+      "area": 13.41,
+      "people": 22946,
+      "density": 1711
+    },
+    {
+      "name": "Wieluń",
+      "township": "wieluński",
+      "province": "łódzkie",
+      "area": 16.87,
+      "people": 22794,
+      "density": 1351
+    },
+    {
+      "name": "Wieruszów",
+      "township": "wieruszowski",
+      "province": "łódzkie",
+      "area": 5.97,
+      "people": 8600,
+      "density": 1441
+    },
+    {
+      "name": "Więcbork",
+      "township": "sępoleński",
+      "province": "kujawsko-pomorskie",
+      "area": 4.31,
+      "people": 5969,
+      "density": 1385
+    },
+    {
+      "name": "Wilamowice",
+      "township": "bielski",
+      "province": "śląskie",
+      "area": 10.36,
+      "people": 3065,
+      "density": 296
+    },
+    {
+      "name": "Wisła",
+      "township": "cieszyński",
+      "province": "śląskie",
+      "area": 110.17,
+      "people": 11106,
+      "density": 101
+    },
+    {
+      "name": "Wiślica",
+      "township": "buski",
+      "province": "świętokrzyskie",
+      "area": 4.7,
+      "people": 500,
+      "density": 106
+    },
+    {
+      "name": "Witkowo",
+      "township": "gnieźnieński",
+      "province": "wielkopolskie",
+      "area": 8.31,
+      "people": 7873,
+      "density": 947
+    },
+    {
+      "name": "Witnica",
+      "township": "gorzowski",
+      "province": "lubuskie",
+      "area": 8.24,
+      "people": 6821,
+      "density": 828
+    },
+    {
+      "name": "Wleń",
+      "township": "lwówecki",
+      "province": "dolnośląskie",
+      "area": 7.22,
+      "people": 1806,
+      "density": 250
+    },
+    {
+      "name": "Władysławowo",
+      "township": "pucki",
+      "province": "pomorskie",
+      "area": 13.67,
+      "people": 10009,
+      "density": 732
+    },
+    {
+      "name": "Włocławek",
+      "township": "Włocławek",
+      "province": "kujawsko-pomorskie",
+      "area": 84.32,
+      "people": 111752,
+      "density": 1325
+    },
+    {
+      "name": "Włodawa",
+      "township": "włodawski",
+      "province": "lubelskie",
+      "area": 17.97,
+      "people": 13350,
+      "density": 743
+    },
+    {
+      "name": "Włoszczowa",
+      "township": "włoszczowski",
+      "province": "świętokrzyskie",
+      "area": 30.3,
+      "people": 10096,
+      "density": 333
+    },
+    {
+      "name": "Wodzisław Śląski",
+      "township": "wodzisławski",
+      "province": "śląskie",
+      "area": 49.51,
+      "people": 48345,
+      "density": 976
+    },
+    {
+      "name": "Wojcieszów",
+      "township": "złotoryjski",
+      "province": "dolnośląskie",
+      "area": 32.17,
+      "people": 3696,
+      "density": 115
+    },
+    {
+      "name": "Wojkowice",
+      "township": "będziński",
+      "province": "śląskie",
+      "area": 12.79,
+      "people": 8984,
+      "density": 702
+    },
+    {
+      "name": "Wojnicz",
+      "township": "tarnowski",
+      "province": "małopolskie",
+      "area": 8.5,
+      "people": 3365,
+      "density": 396
+    },
+    {
+      "name": "Wolbórz",
+      "township": "piotrkowski",
+      "province": "łódzkie",
+      "area": 15.18,
+      "people": 2336,
+      "density": 154
+    },
+    {
+      "name": "Wolbrom",
+      "township": "olkuski",
+      "province": "małopolskie",
+      "area": 10.12,
+      "people": 8686,
+      "density": 858
+    },
+    {
+      "name": "Wolin",
+      "township": "kamieński",
+      "province": "zachodniopomorskie",
+      "area": 14.47,
+      "people": 4842,
+      "density": 335
+    },
+    {
+      "name": "Wolsztyn",
+      "township": "wolsztyński",
+      "province": "wielkopolskie",
+      "area": 4.78,
+      "people": 13328,
+      "density": 2788
+    },
+    {
+      "name": "Wołczyn",
+      "township": "kluczborski",
+      "province": "opolskie",
+      "area": 7.47,
+      "people": 5958,
+      "density": 798
+    },
+    {
+      "name": "Wołomin",
+      "township": "wołomiński",
+      "province": "mazowieckie",
+      "area": 17.24,
+      "people": 37164,
+      "density": 2156
+    },
+    {
+      "name": "Wołów",
+      "township": "wołowski",
+      "province": "dolnośląskie",
+      "area": 18.54,
+      "people": 12439,
+      "density": 671
+    },
+    {
+      "name": "Woźniki",
+      "township": "lubliniecki",
+      "province": "śląskie",
+      "area": 71.01,
+      "people": 4393,
+      "density": 62
+    },
+    {
+      "name": "Wrocław",
+      "township": "Wrocław",
+      "province": "dolnośląskie",
+      "area": 292.82,
+      "people": 638586,
+      "density": 2181
+    },
+    {
+      "name": "Wronki",
+      "township": "szamotulski",
+      "province": "wielkopolskie",
+      "area": 5.81,
+      "people": 11293,
+      "density": 1944
+    },
+    {
+      "name": "Września",
+      "township": "wrzesiński",
+      "province": "wielkopolskie",
+      "area": 12.73,
+      "people": 30279,
+      "density": 2379
+    },
+    {
+      "name": "Wschowa",
+      "township": "wschowski",
+      "province": "lubuskie",
+      "area": 9.25,
+      "people": 14084,
+      "density": 1523
+    },
+    {
+      "name": "Wyrzysk",
+      "township": "pilski",
+      "province": "wielkopolskie",
+      "area": 4.12,
+      "people": 5163,
+      "density": 1253
+    },
+    {
+      "name": "Wysoka",
+      "township": "pilski",
+      "province": "wielkopolskie",
+      "area": 4.82,
+      "people": 2688,
+      "density": 558
+    },
+    {
+      "name": "Wysokie Mazowieckie",
+      "township": "wysokomazowiecki",
+      "province": "podlaskie",
+      "area": 15.24,
+      "people": 9390,
+      "density": 616
+    },
+    {
+      "name": "Wyszków",
+      "township": "wyszkowski",
+      "province": "mazowieckie",
+      "area": 20.78,
+      "people": 26965,
+      "density": 1298
+    },
+    {
+      "name": "Wyszogród",
+      "township": "płocki",
+      "province": "mazowieckie",
+      "area": 12.97,
+      "people": 2634,
+      "density": 203
+    },
+    {
+      "name": "Wyśmierzyce",
+      "township": "białobrzeski",
+      "province": "mazowieckie",
+      "area": 16.84,
+      "people": 896,
+      "density": 53
+    },
+    {
+      "name": "Zabłudów",
+      "township": "białostocki",
+      "province": "podlaskie",
+      "area": 14.3,
+      "people": 2476,
+      "density": 173
+    },
+    {
+      "name": "Zabrze",
+      "township": "Zabrze",
+      "province": "śląskie",
+      "area": 80.4,
+      "people": 174349,
+      "density": 2169
+    },
+    {
+      "name": "Zagórów",
+      "township": "słupecki",
+      "province": "wielkopolskie",
+      "area": 3.44,
+      "people": 3024,
+      "density": 879
+    },
+    {
+      "name": "Zagórz",
+      "township": "sanocki",
+      "province": "podkarpackie",
+      "area": 22.29,
+      "people": 5105,
+      "density": 229
+    },
+    {
+      "name": "Zakliczyn",
+      "township": "tarnowski",
+      "province": "małopolskie",
+      "area": 4.02,
+      "people": 1656,
+      "density": 412
+    },
+    {
+      "name": "Zaklików",
+      "township": "stalowowolski",
+      "province": "podkarpackie",
+      "area": 11.42,
+      "people": 3017,
+      "density": 264
+    },
+    {
+      "name": "Zakopane",
+      "township": "tatrzański",
+      "province": "małopolskie",
+      "area": 84.26,
+      "people": 27266,
+      "density": 324
+    },
+    {
+      "name": "Zakroczym",
+      "township": "nowodworski",
+      "province": "mazowieckie",
+      "area": 19.97,
+      "people": 3211,
+      "density": 161
+    },
+    {
+      "name": "Zalewo",
+      "township": "iławski",
+      "province": "warmińsko-mazurskie",
+      "area": 8.22,
+      "people": 2165,
+      "density": 263
+    },
+    {
+      "name": "Zambrów",
+      "township": "zambrowski",
+      "province": "podlaskie",
+      "area": 19.02,
+      "people": 22173,
+      "density": 1166
+    },
+    {
+      "name": "Zamość",
+      "township": "Zamość",
+      "province": "lubelskie",
+      "area": 30.34,
+      "people": 64354,
+      "density": 2121
+    },
+    {
+      "name": "Zator",
+      "township": "oświęcimski",
+      "province": "małopolskie",
+      "area": 11.52,
+      "people": 3691,
+      "density": 320
+    },
+    {
+      "name": "Zawadzkie",
+      "township": "strzelecki",
+      "province": "opolskie",
+      "area": 16.46,
+      "people": 7250,
+      "density": 440
+    },
+    {
+      "name": "Zawichost",
+      "township": "sandomierski",
+      "province": "świętokrzyskie",
+      "area": 20.29,
+      "people": 1793,
+      "density": 88
+    },
+    {
+      "name": "Zawidów",
+      "township": "zgorzelecki",
+      "province": "dolnośląskie",
+      "area": 6.07,
+      "people": 4232,
+      "density": 697
+    },
+    {
+      "name": "Zawiercie",
+      "township": "zawierciański",
+      "province": "śląskie",
+      "area": 85.25,
+      "people": 49908,
+      "density": 585
+    },
+    {
+      "name": "Ząbki",
+      "township": "wołomiński",
+      "province": "mazowieckie",
+      "area": 10.98,
+      "people": 35770,
+      "density": 3258
+    },
+    {
+      "name": "Ząbkowice Śląskie",
+      "township": "ząbkowicki",
+      "province": "dolnośląskie",
+      "area": 13.67,
+      "people": 15219,
+      "density": 1113
+    },
+    {
+      "name": "Zbąszynek",
+      "township": "świebodziński",
+      "province": "lubuskie",
+      "area": 3.58,
+      "people": 5042,
+      "density": 1408
+    },
+    {
+      "name": "Zbąszyń",
+      "township": "nowotomyski",
+      "province": "wielkopolskie",
+      "area": 5.42,
+      "people": 7265,
+      "density": 1340
+    },
+    {
+      "name": "Zduny",
+      "township": "krotoszyński",
+      "province": "wielkopolskie",
+      "area": 6.2,
+      "people": 4543,
+      "density": 733
+    },
+    {
+      "name": "Zduńska Wola",
+      "township": "zduńskowolski",
+      "province": "łódzkie",
+      "area": 24.57,
+      "people": 42374,
+      "density": 1725
+    },
+    {
+      "name": "Zdzieszowice",
+      "township": "krapkowicki",
+      "province": "opolskie",
+      "area": 12.35,
+      "people": 11633,
+      "density": 942
+    },
+    {
+      "name": "Zelów",
+      "township": "bełchatowski",
+      "province": "łódzkie",
+      "area": 10.75,
+      "people": 7665,
+      "density": 713
+    },
+    {
+      "name": "Zgierz",
+      "township": "zgierski",
+      "province": "łódzkie",
+      "area": 42.33,
+      "people": 56690,
+      "density": 1339
+    },
+    {
+      "name": "Zgorzelec",
+      "township": "zgorzelecki",
+      "province": "dolnośląskie",
+      "area": 15.88,
+      "people": 30738,
+      "density": 1936
+    },
+    {
+      "name": "Zielona Góra",
+      "township": "Zielona Góra",
+      "province": "lubuskie",
+      "area": 278.32,
+      "people": 139819,
+      "density": 502
+    },
+    {
+      "name": "Zielonka",
+      "township": "wołomiński",
+      "province": "mazowieckie",
+      "area": 79.48,
+      "people": 17539,
+      "density": 221
+    },
+    {
+      "name": "Ziębice",
+      "township": "ząbkowicki",
+      "province": "dolnośląskie",
+      "area": 15.07,
+      "people": 8796,
+      "density": 584
+    },
+    {
+      "name": "Złocieniec",
+      "township": "drawski",
+      "province": "zachodniopomorskie",
+      "area": 32.28,
+      "people": 13068,
+      "density": 405
+    },
+    {
+      "name": "Złoczew",
+      "township": "sieradzki",
+      "province": "łódzkie",
+      "area": 13.79,
+      "people": 3351,
+      "density": 243
+    },
+    {
+      "name": "Złotoryja",
+      "township": "złotoryjski",
+      "province": "dolnośląskie",
+      "area": 11.51,
+      "people": 15783,
+      "density": 1371
+    },
+    {
+      "name": "Złotów",
+      "township": "złotowski",
+      "province": "wielkopolskie",
+      "area": 11.58,
+      "people": 18441,
+      "density": 1592
+    },
+    {
+      "name": "Złoty Stok",
+      "township": "ząbkowicki",
+      "province": "dolnośląskie",
+      "area": 7.73,
+      "people": 2821,
+      "density": 365
+    },
+    {
+      "name": "Zwierzyniec",
+      "township": "zamojski",
+      "province": "lubelskie",
+      "area": 6.19,
+      "people": 3235,
+      "density": 523
+    },
+    {
+      "name": "Zwoleń",
+      "township": "zwoleński",
+      "province": "mazowieckie",
+      "area": 15.91,
+      "people": 7855,
+      "density": 494
+    },
+    {
+      "name": "Żabno",
+      "township": "tarnowski",
+      "province": "małopolskie",
+      "area": 11.13,
+      "people": 4248,
+      "density": 382
+    },
+    {
+      "name": "Żagań",
+      "township": "żagański",
+      "province": "lubuskie",
+      "area": 40.38,
+      "people": 26148,
+      "density": 648
+    },
+    {
+      "name": "Żarki",
+      "township": "myszkowski",
+      "province": "śląskie",
+      "area": 25.44,
+      "people": 4539,
+      "density": 178
+    },
+    {
+      "name": "Żarów",
+      "township": "świdnicki",
+      "province": "dolnośląskie",
+      "area": 7.57,
+      "people": 6811,
+      "density": 900
+    },
+    {
+      "name": "Żary",
+      "township": "żarski",
+      "province": "lubuskie",
+      "area": 33.49,
+      "people": 37907,
+      "density": 1132
+    },
+    {
+      "name": "Żelechów",
+      "township": "garwoliński",
+      "province": "mazowieckie",
+      "area": 12.13,
+      "people": 3994,
+      "density": 329
+    },
+    {
+      "name": "Żerków",
+      "township": "jarociński",
+      "province": "wielkopolskie",
+      "area": 2.16,
+      "people": 2120,
+      "density": 981
+    },
+    {
+      "name": "Żmigród",
+      "township": "trzebnicki",
+      "province": "dolnośląskie",
+      "area": 9.49,
+      "people": 6472,
+      "density": 682
+    },
+    {
+      "name": "Żnin",
+      "township": "żniński",
+      "province": "kujawsko-pomorskie",
+      "area": 8.35,
+      "people": 14041,
+      "density": 1682
+    },
+    {
+      "name": "Żory",
+      "township": "Żory",
+      "province": "śląskie",
+      "area": 64.64,
+      "people": 62243,
+      "density": 963
+    },
+    {
+      "name": "Żukowo",
+      "township": "kartuski",
+      "province": "pomorskie",
+      "area": 4.73,
+      "people": 6677,
+      "density": 1412
+    },
+    {
+      "name": "Żuromin",
+      "township": "żuromiński",
+      "province": "mazowieckie",
+      "area": 11.18,
+      "people": 8941,
+      "density": 800
+    },
+    {
+      "name": "Żychlin",
+      "township": "kutnowski",
+      "province": "łódzkie",
+      "area": 8.68,
+      "people": 8288,
+      "density": 955
+    },
+    {
+      "name": "Żyrardów",
+      "township": "żyrardowski",
+      "province": "mazowieckie",
+      "area": 14.35,
+      "people": 40243,
+      "density": 2804
+    },
+    {
+      "name": "Żywiec",
+      "township": "żywiecki",
+      "province": "śląskie",
+      "area": 50.54,
+      "people": 31560,
+      "density": 624
+    }
+ ]
