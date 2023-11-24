@@ -1,0 +1,16 @@
+#plane {
+    position: relative;
+}
+
+#circle {
+    background-color: red;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    left: 50%;
+    top: 50%;
+
+    transition-property: left, top;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
