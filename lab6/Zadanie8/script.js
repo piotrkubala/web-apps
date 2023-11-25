@@ -6,9 +6,9 @@ const nameInput = document.querySelector("#name");
 const capitalInput = document.querySelector("#capital");
 const populationInput = document.querySelector("#population");
 
-const nameSortImgButton = document.querySelector("#name-sort");
-const capitalSortImgButton = document.querySelector("#capital-sort");
-const populationSortImgButton = document.querySelector("#population-sort");
+const nameSortIButton = document.querySelector("#name-sort");
+const capitalSortIButton = document.querySelector("#capital-sort");
+const populationSortIButton = document.querySelector("#population-sort");
 
 const regionsElement = document.querySelector("#regions");
 
@@ -37,21 +37,13 @@ function filterAndSortCountriesByFieldName(fieldName, countriesList, fieldValue,
 }
 
 function processCountries() {
-    console.log("PROCESS COUNTRIES");
-
     const searchedName = nameInput.value;
     const searchedCapital = capitalInput.value;
     const searchedPopulation = populationInput.value;
 
-    const imgPathToSortDirection = {
-        "img/asc.png": "asc",
-        "img/desc.png": "desc",
-        "img/no-sort.png": "no-sort"
-    };
-
-    const sortNameOrder = imgPathToSortDirection[nameSortImgButton.src];
-    const sortCapitalOrder = imgPathToSortDirection[capitalSortImgButton.src];
-    const sortPopulationOrder = imgPathToSortDirection[populationSortImgButton.src];
+    const sortNameOrder = nameSortIButton.getAttribute("data-sort-direction");
+    const sortCapitalOrder = capitalSortIButton.getAttribute("data-sort-direction");
+    const sortPopulationOrder = populationSortIButton.getAttribute("data-sort-direction");
 
     let filteredCountries = countries;
 
@@ -87,6 +79,21 @@ function processCountries() {
     initializePagination(filteredCountriesBySubregion.length);
 }
 
+function onMaxCountriesPerPageChange() {
+    const minMaxCountriesPerPage = parseInt(maxCountriesPerPageInput.min);
+    const maxMaxCountriesPerPage = parseInt(maxCountriesPerPageInput.max);
+
+    const maxCountriesPerPage = parseInt(maxCountriesPerPageInput.value);
+
+    if (maxCountriesPerPage < minMaxCountriesPerPage) {
+        maxCountriesPerPageInput.value = minMaxCountriesPerPage;
+    } else if (maxCountriesPerPage > maxMaxCountriesPerPage) {
+        maxCountriesPerPageInput.value = maxMaxCountriesPerPage;
+    }
+
+    processCountries();
+}
+
 
 function createCountryElement(country) {
 }
@@ -110,6 +117,8 @@ function createSubregionElement(subregion) {
 
     subregionHeaderElement.appendChild(subregionNameElement);
     subregionHeaderElement.appendChild(subregionPopulationElement);
+
+    subregionElement.appendChild(subregionHeaderElement);
 
     return subregionElement;
 }
@@ -165,26 +174,37 @@ function initializePagination(subregionsCount) {
                             document.querySelector(".pagination-element"));
 }
 
-function cycleSortImage(imgElement) {
-    const imgPathToNextImgPath = {
-        "img/asc.png": "img/desc.png",
-        "img/desc.png": "img/no-sort.png",
-        "img/no-sort.png": "img/asc.png"
+function cycleSortImage(inputSortElement) {
+    const sortDirection = inputSortElement.getAttribute("data-sort-direction");
+
+    let newSortDirection = "asc";
+
+    if (sortDirection === "asc") {
+        newSortDirection = "desc";
+    } else if (sortDirection === "desc") {
+        newSortDirection = "none";
+    }
+
+    const sortDirectionToArrow = {
+        "asc": "&uarr;",
+        "desc": "&darr;",
+        "none": "&harr;"
     };
 
-    imgElement.src = imgPathToNextImgPath[imgElement.src];
+    inputSortElement.innerHTML = sortDirectionToArrow[newSortDirection];
+    inputSortElement.setAttribute("data-sort-direction", newSortDirection);
 }
 
 function initializeEvents() {
-    nameSortImgButton.addEventListener("click", () => cycleSortImage(nameSortImgButton));
-    capitalSortImgButton.addEventListener("click", () => cycleSortImage(capitalSortImgButton));
-    populationSortImgButton.addEventListener("click", () => cycleSortImage(populationSortImgButton));
+    nameSortIButton.addEventListener("click", () => cycleSortImage(nameSortIButton));
+    capitalSortIButton.addEventListener("click", () => cycleSortImage(capitalSortIButton));
+    populationSortIButton.addEventListener("click", () => cycleSortImage(populationSortIButton));
 
     nameInput.addEventListener("input", processCountries);
     capitalInput.addEventListener("input", processCountries);
     populationInput.addEventListener("input", processCountries);
 
-    maxCountriesPerPageInput.addEventListener("input", processCountries);
+    maxCountriesPerPageInput.addEventListener("input", onMaxCountriesPerPageChange);
 }
 
 
