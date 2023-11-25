@@ -56,6 +56,9 @@ function onSubmission(event) {
         alert('Wysłano formularz!');
         passwordElement.value = '';
         passwordConfirmElement.value = '';
+
+        checkPassword('');
+        updatePasswordCheckers();
     }
 }
 
