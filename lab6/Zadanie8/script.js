@@ -1,6 +1,6 @@
 let countries = [];
 
-let filteredCountriesByRegion = [];
+let filteredCountriesBySubregion = [];
 
 const nameInput = document.querySelector("#name");
 const capitalInput = document.querySelector("#capital");
@@ -49,16 +49,32 @@ function processCountries() {
     filteredCountries = filterAndSortCountriesByFieldName("capital", filteredCountries, searchedCapital, sortCapitalOrder);
     filteredCountries = filterAndSortCountriesByFieldName("population", filteredCountries, searchedPopulation, sortPopulationOrder);
 
-    const regions = [...new Set(filteredCountries.map(country => country.region))];
+    const subregions = [...new Set(filteredCountries.map(country => country.subregion))];
 
-    filteredCountriesByRegion = regions.map(region => {
+    filteredCountriesBySubregion = subregions.map(subregion => {
         return {
-            region: region,
-            countries: filteredCountries.filter(country => country.region === region)
+            subregion: subregion,
+            countries: [],
+            population: 0
         };
     });
 
-    initializePagination(filteredCountries.length);
+    const subregionToIndex = filteredCountriesBySubregion
+        .reduce((accumulator, currentValue, currentIndex) => {
+            const subregion = currentValue.subregion;
+            accumulator[subregion] = currentIndex;
+            return accumulator;
+        }, {});
+
+    filteredCountries.forEach(country => {
+        const subregionIndex = subregionToIndex[country.subregion];
+        const subregion = filteredCountriesBySubregion[subregionIndex];
+
+        subregion.countries.push(country);
+        subregion.population += country.population;
+    });
+
+    initializePagination(filteredCountriesBySubregion.length);
 }
 
 
@@ -66,16 +82,37 @@ function createCountryElement(country) {
 }
 
 
-function createRegionElement(region) {
+function createSubregionElement(subregion) {
+    const subregionElement = document.createElement("div");
+
+    subregionElement.classList = "subregion-element p-2 rounded";
+
+    const subregionHeaderElement = document.createElement("div");
+
+    subregionHeaderElement.classList = "subregion-header";
+    const subregionNameElement = document.createElement("div");
+    subregionNameElement.classList = "subregion-name";
+    console.log(subregion);
+    subregionNameElement.innerText = subregion.subregion;
+
+    const subregionPopulationElement = document.createElement("div");
+    subregionPopulationElement.classList = "subregion-population";
+    subregionPopulationElement.innerText = subregion.population;
+
+    subregionHeaderElement.appendChild(subregionNameElement);
+    subregionHeaderElement.appendChild(subregionPopulationElement);
+
+    return subregionElement;
 }
 
 
-function paginationEventHandler(event, startRegionIndex, endRegionIndex) {
+function paginationEventHandler(startRegionIndex, endRegionIndex, thisPaginationElement) {
     regionsElement.innerHTML = "";
 
     for (let i = startRegionIndex; i < endRegionIndex; i++) {
-        const regionElement = createRegionElement(filteredCountriesByRegion[i]);
-        regionsElement.appendChild(regionElement);
+        const subregionObject = filteredCountriesBySubregion[i];
+        const subregionElement = createSubregionElement(subregionObject);
+        regionsElement.appendChild(subregionElement);
     }
 
     const paginationElements = document.querySelectorAll(".pagination-element");
@@ -83,13 +120,13 @@ function paginationEventHandler(event, startRegionIndex, endRegionIndex) {
     paginationElements
         .forEach(paginationElement => paginationElement.classList.remove("pagination-active"));
 
-    this.classList.add("pagination-active");
+    thisPaginationElement.classList.add("pagination-active");
 }
 
-function initializePagination(regionsCount) {
+function initializePagination(subregionsCount) {
     const maxCountriesPerPage = maxCountriesPerPageInput.value;
 
-    const pagesCount = Math.ceil(regionsCount / maxCountriesPerPage);
+    const pagesCount = Math.ceil(subregionsCount / maxCountriesPerPage);
 
     const paginationContainer = document.querySelector("#pagination");
 
@@ -100,13 +137,13 @@ function initializePagination(regionsCount) {
 
         paginationElement.innerText = i + 1;
 
-        paginationElement.addEventListener("click", (event) =>
-            paginationEventHandler(event, i * maxCountriesPerPage, (i + 1) * maxCountriesPerPage)
+        paginationElement.addEventListener("click", () =>
+            paginationEventHandler(i * maxCountriesPerPage, (i + 1) * maxCountriesPerPage, paginationElement)
         );
         paginationContainer.appendChild(paginationElement);
     }
 
-    paginationEventHandler.call(paginationContainer.children[0], null, 0, maxCountriesPerPage);
+    paginationEventHandler(0, maxCountriesPerPage, document.querySelector(".pagination-element"));
 }
 
 function cycleSortImage(imgElement) {
@@ -141,9 +178,10 @@ function initialize() {
                     return {
                         name: `${country.name.official} (${country.name.common})`,
                         capital: country.capital?.join(", "),
-                        population: country.population,
+                        population: country.population ?? 0,
                         continents: country.continents?.join(", "),
-                        region: country.region
+                        region: country.region ?? "No region",
+                        subregion: country.subregion ?? "No subregion"
                     };
                 });
             
