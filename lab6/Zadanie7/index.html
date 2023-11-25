@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zadanie 6</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="styles.css" rel="stylesheet">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="#" class="w-100 rounded mb-4">
+                    </div>
+                    <div class="d-flex justify-content-center control-buttons">
+                        <h1 class="d-block" id="button-previous">&lt;</h1>
+                        <h1 class="d-block" id="button-next">&gt;</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="d-flex gallery flex-wrap container justify-content-center">
+                <div class="m-2 p-0 col-12 col-sm-5 col-md-3">
+                    <img src="img/img1.jpg" alt="Zdjęcie 1" class="rounded img-gallery" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </div>
+                <div class="m-2 p-0 col-12 col-sm-5 col-md-3">
+                    <img src="img/img2.jpg" alt="Zdjęcie 2" class="rounded img-gallery" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </div>
+                <div class="m-2 p-0 col-12 col-sm-5 col-md-3">
+                    <img src="img/img3.jpg" alt="Zdjęcie 3" class="rounded img-gallery" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </div>
+                <div class="m-2 p-0 col-12 col-sm-5 col-md-3">
+                    <img src="img/img4.jpg" alt="Zdjęcie 4" class="rounded img-gallery" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </div>
+                <div class="m-2 p-0 col-12 col-sm-5 col-md-3">
+                    <img src="img/img5.jpg" alt="Zdjęcie 5" class="rounded img-gallery" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </div>
+                <div class="m-2 p-0 col-12 col-sm-5 col-md-3">
+                    <img src="img/img6.jpg" alt="Zdjęcie 6" class="rounded img-gallery" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

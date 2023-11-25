@@ -1,0 +1,14 @@
+.gallery > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.gallery > div {
+    height: 30vh;
+}
+
+.control-buttons > h1 {
+    cursor: pointer;
+}
