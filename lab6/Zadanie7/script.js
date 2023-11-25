@@ -13,7 +13,7 @@ function addEvents() {
     for (let i of imagesElements.keys()) {
         const img = imagesElements[i];
 
-        img.addEventListener('click', (event) => selectImage(event, img, i));
+        img.addEventListener('click', (event) => selectImage(event, img, i + 1));
     }
 
     const prevButton = document.getElementById('button-previous');
