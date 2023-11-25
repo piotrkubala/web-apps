@@ -10,5 +10,37 @@
         <script src="script.js" defer></script>
     </head>
     <body>
+        <div class="container-fluid">
+            <nav class="row d-flex justify-content-around">
+                <div class="col-10 d-flex p-2 text-center justify-content-around align-items-center" id="pagination">
+
+                </div>
+                <div class="col-2" id="max-countries text-center align-items-center d-flex">
+                    <div>
+                        Max countries per page<br>
+                        <input type="number" name="max-countries" id="max-countries" min="10" max="300" value="20" class="w-100">
+                    </div>
+                </div>
+            </nav>
+            <main class="row">
+                <div class="container-fluid">
+                    <div class="row text-center">
+                        <div class="col-4">
+                            Name <img src="#" id="name-sort"><br>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="col-4">
+                            Capital <img src="#" id="capital-sort"><br>
+                            <input type="text" name="capital" id="capital">
+                        </div>
+                        <div class="col-4">
+                            Population <img src="#" id="population-sort"><br>
+                            <input type="text" name="population" id="population">
+                        </div>
+                    </div>
+                    <div class="container-fluid continents-list" id="regions"></div>
+                </div>
+            </main>
+        </div>
     </body>
 </html>

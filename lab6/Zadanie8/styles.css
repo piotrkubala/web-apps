@@ -1,0 +1,11 @@
+nav {
+    min-height: 6rem;
+}
+
+.pagination-element {
+    background-color: lightblue;
+}
+
+.pagination-active {
+    background-color: blue;
+}
