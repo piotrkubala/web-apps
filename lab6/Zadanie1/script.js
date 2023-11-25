@@ -56,14 +56,18 @@ function setupListeners(isBubbling) {
 
     if (counter <= 50) {
         secondDiv.addEventListener('click', processSecondDiv, !isBubbling);
+        secondDiv.style.backgroundColor = 'red';
     } else {
         secondDiv.removeEventListener('click', processSecondDiv, !isBubbling);
+        secondDiv.style.backgroundColor = 'gray';
     }
 
     if (counter <= 30) {
         thirdDiv.addEventListener('click', processThirdDiv, !isBubbling);
+        thirdDiv.style.backgroundColor = 'yellow';
     } else {
         thirdDiv.removeEventListener('click', processThirdDiv, !isBubbling);
+        thirdDiv.style.backgroundColor = 'gray';
     }
 }
 

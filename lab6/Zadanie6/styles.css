@@ -1,0 +1,13 @@
+img {
+    height: 1rem;
+}
+
+.password-input {
+    position: relative;
+}
+
+.password-input > img {
+    position: absolute;
+    right: 0.8rem;
+    top: 0.75rem;
+}
