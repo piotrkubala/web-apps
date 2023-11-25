@@ -14,9 +14,17 @@ const regionsElement = document.querySelector("#regions");
 
 const maxCountriesPerPageInput = document.querySelector("#max-countries");
 
-function filterAndSortCountriesByFieldName(fieldName, countriesList, name, sortDirection) {
-    if (name !== "") {
-        countriesList = countriesList.filter(country => country[fieldName].toLowerCase().includes(name.toLowerCase()));
+function filterAndSortCountriesByFieldName(fieldName, countriesList, fieldValue, sortDirection) {
+    const lowerCaseFieldValue = (new String(fieldValue)).toLowerCase();
+
+    if (lowerCaseFieldValue !== "") {
+        countriesList = countriesList.filter(country => {
+            if (typeof country[fieldName] === "string") {
+                return country[fieldName].toLowerCase().includes(lowerCaseFieldValue);
+            } else {
+                return country[fieldName] === fieldValue;
+            }
+        });
     }
 
     if (sortDirection === "asc") {
@@ -29,6 +37,8 @@ function filterAndSortCountriesByFieldName(fieldName, countriesList, name, sortD
 }
 
 function processCountries() {
+    console.log("PROCESS COUNTRIES");
+
     const searchedName = nameInput.value;
     const searchedCapital = capitalInput.value;
     const searchedPopulation = populationInput.value;
@@ -92,7 +102,6 @@ function createSubregionElement(subregion) {
     subregionHeaderElement.classList = "subregion-header";
     const subregionNameElement = document.createElement("div");
     subregionNameElement.classList = "subregion-name";
-    console.log(subregion);
     subregionNameElement.innerText = subregion.subregion;
 
     const subregionPopulationElement = document.createElement("div");
@@ -126,9 +135,15 @@ function paginationEventHandler(startRegionIndex, endRegionIndex, thisPagination
 function initializePagination(subregionsCount) {
     const maxCountriesPerPage = maxCountriesPerPageInput.value;
 
-    const pagesCount = Math.ceil(subregionsCount / maxCountriesPerPage);
-
     const paginationContainer = document.querySelector("#pagination");
+
+    paginationContainer.innerHTML = "";
+
+    if (subregionsCount === 0) {
+        return;
+    }
+
+    const pagesCount = Math.ceil(subregionsCount / maxCountriesPerPage);
 
     for (let i = 0; i < pagesCount; i++) {
         const paginationElement = document.createElement("div");
@@ -137,13 +152,17 @@ function initializePagination(subregionsCount) {
 
         paginationElement.innerText = i + 1;
 
+        const startRegionIndex = i * maxCountriesPerPage;
+        const endRegionIndex = Math.min((i + 1) * maxCountriesPerPage, subregionsCount);
+
         paginationElement.addEventListener("click", () =>
-            paginationEventHandler(i * maxCountriesPerPage, (i + 1) * maxCountriesPerPage, paginationElement)
+            paginationEventHandler(startRegionIndex, endRegionIndex, paginationElement)
         );
         paginationContainer.appendChild(paginationElement);
     }
 
-    paginationEventHandler(0, maxCountriesPerPage, document.querySelector(".pagination-element"));
+    paginationEventHandler(0, Math.min(maxCountriesPerPage, subregionsCount),
+                            document.querySelector(".pagination-element"));
 }
 
 function cycleSortImage(imgElement) {
@@ -177,7 +196,7 @@ function initialize() {
                 .map(country => {
                     return {
                         name: `${country.name.official} (${country.name.common})`,
-                        capital: country.capital?.join(", "),
+                        capital: country.capital?.join(", ") ?? "No capital",
                         population: country.population ?? 0,
                         continents: country.continents?.join(", "),
                         region: country.region ?? "No region",
@@ -186,6 +205,7 @@ function initialize() {
                 });
             
             processCountries();
+            initializeEvents();
         })
         .catch(error => console.log(error));
 }
