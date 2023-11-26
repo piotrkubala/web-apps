@@ -4,7 +4,8 @@ let filteredCountriesBySubregion = [];
 
 const nameInput = document.querySelector("#name");
 const capitalInput = document.querySelector("#capital");
-const populationInput = document.querySelector("#population");
+const populationInputMin = document.querySelector("#population-min");
+const populationInputMax = document.querySelector("#population-max");
 
 const nameSortIButton = document.querySelector("#name-sort");
 const capitalSortIButton = document.querySelector("#capital-sort");
@@ -17,23 +18,39 @@ const maxCountriesPerPageInput = document.querySelector("#max-countries");
 let paginationPagesCount = 0;
 let paginationActiveElementIndex = 0;
 
-function filterCountriesByFieldName(fieldName, countriesList, fieldValue) {
+function filterCountriesByStringFieldName(fieldName, countriesList, fieldValue) {
     const lowerCaseFieldValue = (new String(fieldValue)).toLowerCase();
 
     if (lowerCaseFieldValue !== "") {
-        countriesList = countriesList.filter(country => {
-            if (typeof country[fieldName] === "string") {
-                return country[fieldName].toLowerCase().includes(lowerCaseFieldValue);
-            } else {
-                return country[fieldName] === fieldValue;
-            }
-        });
+        countriesList = countriesList.filter(country => 
+            country[fieldName].toLowerCase().includes(lowerCaseFieldValue)
+        );
     }
 
     return countriesList;
 }
 
-function sortCountriesByFieldName(fieldName, countriesList, sortDirection) {
+function filterCountriesByNumberFieldName(fieldName, countriesList, minFieldValue, maxFieldValue) {
+    let minFieldValueNumber = parseInt(minFieldValue);
+    let maxFieldValueNumber = parseInt(maxFieldValue);
+
+    if (isNaN(minFieldValueNumber)) {
+        minFieldValueNumber = 0;
+    }
+
+    if (isNaN(maxFieldValueNumber)) {
+        maxFieldValueNumber = Number.MAX_SAFE_INTEGER;
+    }
+
+    countriesList = countriesList.filter(country =>
+        country[fieldName] >= minFieldValueNumber && country[fieldName] <= maxFieldValueNumber
+    );
+
+    return countriesList;
+}
+
+
+function sortCountriesByStringFieldName(fieldName, countriesList, sortDirection) {
     if (sortDirection === "asc") {
         countriesList.sort((a, b) => a[fieldName].localeCompare(b[fieldName]));
     } else if (sortDirection === "desc") {
@@ -41,10 +58,19 @@ function sortCountriesByFieldName(fieldName, countriesList, sortDirection) {
     }
 }
 
+function sortCountriesByNumberFieldName(fieldName, countriesList, sortDirection) {
+    if (sortDirection === "asc") {
+        countriesList.sort((a, b) => b[fieldName] - a[fieldName]);
+    } else if (sortDirection === "desc") {
+        countriesList.sort((a, b) => a[fieldName] - b[fieldName]);
+    }
+}
+
 function processCountries() {
     const searchedName = nameInput.value;
     const searchedCapital = capitalInput.value;
-    const searchedPopulation = populationInput.value;
+    const searchedPopulationMin = populationInputMin.value;
+    const searchedPopulationMax = populationInputMax.value;
 
     const sortNameOrder = nameSortIButton.getAttribute("data-sort-direction");
     const sortCapitalOrder = capitalSortIButton.getAttribute("data-sort-direction");
@@ -52,13 +78,14 @@ function processCountries() {
 
     let filteredCountries = countries;
 
-    filteredCountries = filterCountriesByFieldName("name", filteredCountries, searchedName);
-    filteredCountries = filterCountriesByFieldName("capital", filteredCountries, searchedCapital);
-    filteredCountries = filterCountriesByFieldName("population", filteredCountries, searchedPopulation);
+    filteredCountries = filterCountriesByStringFieldName("name", filteredCountries, searchedName);
+    filteredCountries = filterCountriesByStringFieldName("capital", filteredCountries, searchedCapital);
+    filteredCountries = filterCountriesByNumberFieldName("population", filteredCountries,
+                                                        searchedPopulationMin, searchedPopulationMax);
 
-    sortCountriesByFieldName("name", filteredCountries, sortNameOrder);
-    sortCountriesByFieldName("capital", filteredCountries, sortCapitalOrder);
-    sortCountriesByFieldName("population", filteredCountries, sortPopulationOrder);
+    sortCountriesByStringFieldName("name", filteredCountries, sortNameOrder);
+    sortCountriesByStringFieldName("capital", filteredCountries, sortCapitalOrder);
+    sortCountriesByNumberFieldName("population", filteredCountries, sortPopulationOrder);
 
     const subregions = [...new Set(filteredCountries.map(country => country.subregion))];
 
@@ -205,6 +232,8 @@ function initializePagination(subregionsCount) {
     paginationContainer.innerHTML = "";
 
     if (subregionsCount === 0) {
+        regionsElement.innerHTML = "";
+
         paginationPagesCount = 0;
         return;
     }
@@ -267,7 +296,8 @@ function initializeEvents() {
 
     nameInput.addEventListener("input", processCountries);
     capitalInput.addEventListener("input", processCountries);
-    populationInput.addEventListener("input", processCountries);
+    populationInputMin.addEventListener("input", processCountries);
+    populationInputMax.addEventListener("input", processCountries);
 
     maxCountriesPerPageInput.addEventListener("input", onMaxCountriesPerPageChange);
 }
