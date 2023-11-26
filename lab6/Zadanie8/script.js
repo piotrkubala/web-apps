@@ -16,7 +16,9 @@ const areaSortIButton = document.querySelector("#area-sort");
 
 const regionsElement = document.querySelector("#regions");
 
-const maxCountriesPerPageInput = document.querySelector("#max-countries");
+const maxRegionsPerPageInput = document.querySelector("#max-countries");
+
+let maxRegionsPerPage = 0;
 
 let paginationPagesCount = 0;
 let paginationActiveElementIndex = 0;
@@ -129,16 +131,24 @@ function processCountries() {
 }
 
 function onMaxCountriesPerPageChange() {
-    const minMaxCountriesPerPage = parseInt(maxCountriesPerPageInput.min);
-    const maxMaxCountriesPerPage = parseInt(maxCountriesPerPageInput.max);
+    const minMaxCountriesPerPage = parseInt(maxRegionsPerPageInput.min);
+    const maxMaxCountriesPerPage = parseInt(maxRegionsPerPageInput.max);
 
-    const maxCountriesPerPage = parseInt(maxCountriesPerPageInput.value);
+    const maxCountriesPerPageOrNan = parseInt(maxRegionsPerPageInput.value);
 
-    if (maxCountriesPerPage < minMaxCountriesPerPage) {
-        maxCountriesPerPageInput.value = minMaxCountriesPerPage;
-    } else if (maxCountriesPerPage > maxMaxCountriesPerPage) {
-        maxCountriesPerPageInput.value = maxMaxCountriesPerPage;
+    if (isNaN(maxCountriesPerPageOrNan)) {
+        return;
     }
+
+    let maxRegionsPerPageVal = maxCountriesPerPageOrNan;
+
+    if (maxRegionsPerPageVal < minMaxCountriesPerPage) {
+        maxRegionsPerPageInput.value = minMaxCountriesPerPage;
+    } else if (maxRegionsPerPageVal > maxMaxCountriesPerPage) {
+        maxRegionsPerPageInput.value = maxMaxCountriesPerPage;
+    }
+
+    maxRegionsPerPage = parseInt(maxRegionsPerPageInput.value);
 
     processCountries();
 }
@@ -246,13 +256,13 @@ function paginationEventHandler(startRegionIndex, endRegionIndex, thisPagination
 }
 
 function initializePagination(subregionsCount) {
-    const maxCountriesPerPage = maxCountriesPerPageInput.value;
+    const maxCountriesPerPage = maxRegionsPerPageInput.value;
 
     const paginationContainer = document.querySelector("#pagination");
 
     paginationContainer.innerHTML = "";
 
-    if (subregionsCount === 0) {
+    if (subregionsCount === 0 || maxCountriesPerPage === 0) {
         regionsElement.innerHTML = "";
 
         paginationPagesCount = 0;
@@ -323,7 +333,7 @@ function initializeEvents() {
     areaInputMin.addEventListener("input", processCountries);
     areaInputMax.addEventListener("input", processCountries);
 
-    maxCountriesPerPageInput.addEventListener("input", onMaxCountriesPerPageChange);
+    maxRegionsPerPageInput.addEventListener("input", onMaxCountriesPerPageChange);
 }
 
 
