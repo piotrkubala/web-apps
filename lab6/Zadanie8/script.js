@@ -14,6 +14,9 @@ const regionsElement = document.querySelector("#regions");
 
 const maxCountriesPerPageInput = document.querySelector("#max-countries");
 
+let paginationPagesCount = 0;
+let paginationActiveElementIndex = 0;
+
 function filterCountriesByFieldName(fieldName, countriesList, fieldValue) {
     const lowerCaseFieldValue = (new String(fieldValue)).toLowerCase();
 
@@ -175,7 +178,7 @@ function createSubregionElement(subregion, index) {
 }
 
 
-function paginationEventHandler(startRegionIndex, endRegionIndex, thisPaginationElement) {
+function paginationEventHandler(startRegionIndex, endRegionIndex, thisPaginationElement, index) {
     regionsElement.innerHTML = "";
 
     for (let i = startRegionIndex; i < endRegionIndex; i++) {
@@ -190,6 +193,8 @@ function paginationEventHandler(startRegionIndex, endRegionIndex, thisPagination
         .forEach(paginationElement => paginationElement.classList.remove("pagination-active"));
 
     thisPaginationElement.classList.add("pagination-active");
+
+    paginationActiveElementIndex = index;
 }
 
 function initializePagination(subregionsCount) {
@@ -200,10 +205,16 @@ function initializePagination(subregionsCount) {
     paginationContainer.innerHTML = "";
 
     if (subregionsCount === 0) {
+        paginationPagesCount = 0;
         return;
     }
 
     const pagesCount = Math.ceil(subregionsCount / maxCountriesPerPage);
+    
+    const paginationCountsQuotient = paginationPagesCount / pagesCount;
+    const newActiveElementIndex = paginationPagesCount === 0 ? 0 : Math.min(Math.round(paginationActiveElementIndex / paginationCountsQuotient), pagesCount - 1);
+
+    paginationPagesCount = pagesCount;
 
     for (let i = 0; i < pagesCount; i++) {
         const paginationElement = document.createElement("div");
@@ -216,13 +227,14 @@ function initializePagination(subregionsCount) {
         const endRegionIndex = Math.min((i + 1) * maxCountriesPerPage, subregionsCount);
 
         paginationElement.addEventListener("click", () =>
-            paginationEventHandler(startRegionIndex, endRegionIndex, paginationElement)
+            paginationEventHandler(startRegionIndex, endRegionIndex, paginationElement, i)
         );
         paginationContainer.appendChild(paginationElement);
-    }
 
-    paginationEventHandler(0, Math.min(maxCountriesPerPage, subregionsCount),
-                            document.querySelector(".pagination-element"));
+        if (i === newActiveElementIndex) {
+            paginationEventHandler(startRegionIndex, endRegionIndex, paginationElement, i);
+        }
+    }
 }
 
 function cycleSortImage(inputSortElement) {
