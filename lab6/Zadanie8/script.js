@@ -128,14 +128,21 @@ function createCountryElement(country) {
 }
 
 
-function createSubregionElement(subregion) {
+function createSubregionElement(subregion, index) {
+    const subregionElementId = `subregion-${index}`;
+
     const subregionElement = document.createElement("div");
 
     subregionElement.classList = "subregion-element p-2 rounded";
 
-    const subregionHeaderElement = document.createElement("div");
+    const subregionHeaderElement = document.createElement("a");
+    subregionHeaderElement.classList = "btn btn-primary subregion-header d-flex justify-content-between";
+    subregionHeaderElement.setAttribute("data-bs-toggle", "collapse");
+    subregionHeaderElement.setAttribute("href", `#${subregionElementId}`);
+    subregionHeaderElement.setAttribute("role", "button");
+    subregionHeaderElement.setAttribute("aria-expanded", "false");
+    subregionHeaderElement.setAttribute("aria-controls", subregionElementId);
 
-    subregionHeaderElement.classList = "subregion-header d-flex justify-content-between";
     const subregionNameElement = document.createElement("div");
     subregionNameElement.classList = "subregion-name col-8";
     subregionNameElement.innerText = subregion.subregion;
@@ -144,7 +151,12 @@ function createSubregionElement(subregion) {
     subregionPopulationElement.classList = "subregion-population col-4";
     subregionPopulationElement.innerText = subregion.population;
 
+    const subregionCollapsableElement = document.createElement("div");
+    subregionCollapsableElement.classList = "subregion-collapsable collapse";
+    subregionCollapsableElement.id = subregionElementId;
+
     const subregionCountriesElement = document.createElement("div");
+    subregionCountriesElement.classList = "subregion-countries card card-body";
 
     subregion.countries.forEach(country => {
         const countryElement = createCountryElement(country);
@@ -154,8 +166,10 @@ function createSubregionElement(subregion) {
     subregionHeaderElement.appendChild(subregionNameElement);
     subregionHeaderElement.appendChild(subregionPopulationElement);
 
+    subregionCollapsableElement.appendChild(subregionCountriesElement);
+
     subregionElement.appendChild(subregionHeaderElement);
-    subregionElement.appendChild(subregionCountriesElement);
+    subregionElement.appendChild(subregionCollapsableElement);
 
     return subregionElement;
 }
@@ -166,7 +180,7 @@ function paginationEventHandler(startRegionIndex, endRegionIndex, thisPagination
 
     for (let i = startRegionIndex; i < endRegionIndex; i++) {
         const subregionObject = filteredCountriesBySubregion[i];
-        const subregionElement = createSubregionElement(subregionObject);
+        const subregionElement = createSubregionElement(subregionObject, i);
         regionsElement.appendChild(subregionElement);
     }
 
