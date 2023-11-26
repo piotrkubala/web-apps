@@ -6,10 +6,13 @@ const nameInput = document.querySelector("#name");
 const capitalInput = document.querySelector("#capital");
 const populationInputMin = document.querySelector("#population-min");
 const populationInputMax = document.querySelector("#population-max");
+const areaInputMin = document.querySelector("#area-min");
+const areaInputMax = document.querySelector("#area-max");
 
 const nameSortIButton = document.querySelector("#name-sort");
 const capitalSortIButton = document.querySelector("#capital-sort");
 const populationSortIButton = document.querySelector("#population-sort");
+const areaSortIButton = document.querySelector("#area-sort");
 
 const regionsElement = document.querySelector("#regions");
 
@@ -71,10 +74,13 @@ function processCountries() {
     const searchedCapital = capitalInput.value;
     const searchedPopulationMin = populationInputMin.value;
     const searchedPopulationMax = populationInputMax.value;
+    const searchedAreaMin = areaInputMin.value;
+    const searchedAreaMax = areaInputMax.value;
 
     const sortNameOrder = nameSortIButton.getAttribute("data-sort-direction");
     const sortCapitalOrder = capitalSortIButton.getAttribute("data-sort-direction");
     const sortPopulationOrder = populationSortIButton.getAttribute("data-sort-direction");
+    const sortAreaOrder = areaSortIButton.getAttribute("data-sort-direction");
 
     let filteredCountries = countries;
 
@@ -82,10 +88,13 @@ function processCountries() {
     filteredCountries = filterCountriesByStringFieldName("capital", filteredCountries, searchedCapital);
     filteredCountries = filterCountriesByNumberFieldName("population", filteredCountries,
                                                         searchedPopulationMin, searchedPopulationMax);
+    filteredCountries = filterCountriesByNumberFieldName("area", filteredCountries,
+                                                        searchedAreaMin, searchedAreaMax);
 
     sortCountriesByStringFieldName("name", filteredCountries, sortNameOrder);
     sortCountriesByStringFieldName("capital", filteredCountries, sortCapitalOrder);
     sortCountriesByNumberFieldName("population", filteredCountries, sortPopulationOrder);
+    sortCountriesByNumberFieldName("area", filteredCountries, sortAreaOrder);
 
     const subregions = [...new Set(filteredCountries.map(country => country.subregion))];
 
@@ -93,7 +102,8 @@ function processCountries() {
         return {
             subregion: subregion,
             countries: [],
-            population: 0
+            population: 0,
+            area: 0
         };
     });
 
@@ -112,6 +122,7 @@ function processCountries() {
 
         subregion.countries.push(country);
         subregion.population += country.population;
+        subregion.area += country.area;
     });
 
     initializePagination(filteredCountriesBySubregion.length);
@@ -139,20 +150,25 @@ function createCountryElement(country) {
     countryElement.classList = "country-element p-2 rounded d-flex justify-content-between";
 
     const countryNameElement = document.createElement("div");
-    countryNameElement.classList = "country-name col-2";
+    countryNameElement.classList = "country-name col-3";
     countryNameElement.innerText = country.name;
 
     const countryCapitalElement = document.createElement("div");
-    countryCapitalElement.classList = "country-capital col-2";
+    countryCapitalElement.classList = "country-capital col-3";
     countryCapitalElement.innerText = country.capital;
 
     const countryPopulationElement = document.createElement("div");
-    countryPopulationElement.classList = "country-population col-2";
+    countryPopulationElement.classList = "country-population col-3";
     countryPopulationElement.innerText = country.population;
+
+    const countryAreaElement = document.createElement("div");
+    countryAreaElement.classList = "country-area col-3";
+    countryAreaElement.innerText = country.area;
 
     countryElement.appendChild(countryNameElement);
     countryElement.appendChild(countryCapitalElement);
     countryElement.appendChild(countryPopulationElement);
+    countryElement.appendChild(countryAreaElement);
 
     return countryElement;
 }
@@ -174,12 +190,16 @@ function createSubregionElement(subregion, index) {
     subregionHeaderElement.setAttribute("aria-controls", subregionElementId);
 
     const subregionNameElement = document.createElement("div");
-    subregionNameElement.classList = "subregion-name col-8";
+    subregionNameElement.classList = "subregion-name col-6";
     subregionNameElement.innerText = subregion.subregion;
 
     const subregionPopulationElement = document.createElement("div");
-    subregionPopulationElement.classList = "subregion-population col-4";
+    subregionPopulationElement.classList = "subregion-population col-3";
     subregionPopulationElement.innerText = subregion.population;
+
+    const subregionAreaElement = document.createElement("div");
+    subregionAreaElement.classList = "subregion-area col-3";
+    subregionAreaElement.innerText = subregion.area;
 
     const subregionCollapsableElement = document.createElement("div");
     subregionCollapsableElement.classList = "subregion-collapsable collapse";
@@ -195,6 +215,7 @@ function createSubregionElement(subregion, index) {
 
     subregionHeaderElement.appendChild(subregionNameElement);
     subregionHeaderElement.appendChild(subregionPopulationElement);
+    subregionHeaderElement.appendChild(subregionAreaElement);
 
     subregionCollapsableElement.appendChild(subregionCountriesElement);
 
@@ -293,11 +314,14 @@ function initializeEvents() {
     nameSortIButton.addEventListener("click", () => cycleSortImage(nameSortIButton));
     capitalSortIButton.addEventListener("click", () => cycleSortImage(capitalSortIButton));
     populationSortIButton.addEventListener("click", () => cycleSortImage(populationSortIButton));
+    areaSortIButton.addEventListener("click", () => cycleSortImage(areaSortIButton));
 
     nameInput.addEventListener("input", processCountries);
     capitalInput.addEventListener("input", processCountries);
     populationInputMin.addEventListener("input", processCountries);
     populationInputMax.addEventListener("input", processCountries);
+    areaInputMin.addEventListener("input", processCountries);
+    areaInputMax.addEventListener("input", processCountries);
 
     maxCountriesPerPageInput.addEventListener("input", onMaxCountriesPerPageChange);
 }
@@ -315,7 +339,8 @@ function initialize() {
                         population: country.population ?? 0,
                         continents: country.continents?.join(", "),
                         region: country.region ?? "No region",
-                        subregion: country.subregion ?? "No subregion"
+                        subregion: country.subregion ?? "No subregion",
+                        area: country.area ?? 0
                     };
                 });
             

@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-2" id="max-countries text-center align-items-center d-flex">
                     <div>
-                        Max countries per page<br>
+                        Max subregions per page<br>
                         <input type="number" name="max-countries" id="max-countries" min="2" max="99" value="4" class="w-100 form-control">
                     </div>
                 </div>
@@ -25,19 +25,26 @@
             <main class="row">
                 <div class="container-fluid">
                     <div class="row text-center">
-                        <div class="col-4">
+                        <div class="col-3">
                             Name <i id="name-sort" data-sort-direction="none">&harr;</i><br>
                             <input type="text" name="name" id="name" class="form-control">
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             Capital <i id="capital-sort" data-sort-direction="none">&harr;</i><br>
                             <input type="text" name="capital" id="capital" class="form-control">
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             Population <i id="population-sort" data-sort-direction="none">&harr;</i><br>
                             <div class="d-flex">
                                 <input type="number" name="population-min" id="population-min" class="form-control">
                                 <input type="number" name="population-max" id="population-max" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            Area <i id="area-sort" data-sort-direction="none">&harr;</i><br>
+                            <div class="d-flex">
+                                <input type="number" name="area-min" id="area-min" class="form-control">
+                                <input type="number" name="area-max" id="area-max" class="form-control">
                             </div>
                         </div>
                     </div>
