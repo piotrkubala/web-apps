@@ -279,7 +279,7 @@ function initializePagination(subregionsCount) {
     for (let i = 0; i < pagesCount; i++) {
         const paginationElement = document.createElement("div");
 
-        paginationElement.classList = "pagination-element p-2 rounded h-50";
+        paginationElement.classList = "pagination-element p-2 rounded";
 
         paginationElement.innerText = i + 1;
 
