@@ -2,6 +2,8 @@ let counter = 0;
 let shouldPropagate = true;
 let isBubblingToggle = true;
 
+const togglePropagationButton = document.querySelector('#toggle-propagation');
+
 function updateCounter(amount) {
     counter += amount;
     document.querySelector('#counter > h2').innerText = counter;
@@ -75,7 +77,8 @@ function resetCounter() {
     counter = 0;
     document.querySelector('#counter > h2').innerText = counter;
 
-    shouldPropagate = true;
+    startPropagation();
+
     isBubblingToggle = true;
 
     setupListeners(isBubblingToggle);
@@ -83,10 +86,20 @@ function resetCounter() {
 
 function stopPropagation() {
     shouldPropagate = false;
+
+    togglePropagationButton.innerText = 'Start propagation';
 }
 
 function startPropagation() {
     shouldPropagate = true;
+
+    togglePropagationButton.innerText = 'Stop propagation';
+}
+
+function togglePropagation() {
+    shouldPropagate = !shouldPropagate;
+
+    togglePropagationButton.innerText = shouldPropagate ? 'Stop propagation' : 'Start propagation';
 }
 
 function togglePropagationOrder() {
@@ -99,6 +112,6 @@ function togglePropagationOrder() {
 setupListeners(isBubblingToggle);
 
 document.querySelector('#reset').addEventListener('click', resetCounter);
-document.querySelector('#stop-propagation').addEventListener('click', stopPropagation);
-document.querySelector('#start-propagation').addEventListener('click', startPropagation);
 document.querySelector('#toggle-order').addEventListener('click', togglePropagationOrder);
+
+togglePropagationButton.addEventListener('click', togglePropagation);
