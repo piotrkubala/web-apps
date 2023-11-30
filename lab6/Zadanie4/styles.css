@@ -6,7 +6,7 @@
     background-color: red;
     width: 2.5rem;
     height: 2.5rem;
-    position: relative;
+    position: absolute;
     left: 50%;
     top: 50%;
 
