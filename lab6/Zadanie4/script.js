@@ -11,8 +11,21 @@ function processMouseClick(event) {
     event.stopPropagation();
 }
 
-function wrongClick() {
-    alert("Nie kliknięto w odpowiednim miejscu!");
+function wrongClick(event) {
+    const newElement = document.createElement("div");
+    newElement.classList.add("info-box");
+
+    newElement.style.position = "absolute";
+    newElement.style.left = event.clientX + "px";
+    newElement.style.top = event.clientY + "px";
+
+    newElement.innerText = "Nie kliknięto w odpowiednim miejscu!";
+
+    document.body.appendChild(newElement);
+
+    setTimeout(() => {
+        document.body.removeChild(newElement);
+    }, 1000);
 }
 
 planeElement.addEventListener("click", processMouseClick);
