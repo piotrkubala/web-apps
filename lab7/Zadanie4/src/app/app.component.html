@@ -1,0 +1,17 @@
+<div>
+  <h1>List przyjaciół</h1>
+  <ul>
+    <li *ngFor="let friend of friends_list">
+      <div>
+        {{ friend.name }} {{ friend.surname }}
+      </div>
+      <button (click)="toggle_hidden(friend)">{{ friend.button_text }}</button>
+      <div [hidden]="friend.hidden">
+        <div>Phone: {{ friend.phone_number }}</div>
+        <div>Email: {{ friend.email }}</div>
+      </div>
+  </ul>
+</div>
+
+
+<router-outlet></router-outlet>

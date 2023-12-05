@@ -1,0 +1,15 @@
+<div>
+  <div>
+    <h1>
+      Stylowanie dynamiczne
+    </h1>
+  </div>
+  <div>
+    <div *ngFor="let color of divColors; index as i">
+      <div [style.background-color]="color" class="div-element" (click)="onActivate(i)">
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

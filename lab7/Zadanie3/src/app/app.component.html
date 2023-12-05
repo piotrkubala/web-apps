@@ -1,0 +1,31 @@
+<div>
+  <p>{{ title }}</p>
+  <p>{{ actor_name }}</p>
+  <p>{{ actor_surname }}</p>
+</div>
+<div>
+  <label for="given_title">Title:</label>
+  <br>
+  <input type="text" [(ngModel)]="given_title">
+  <br>
+  <label for="given_name">Name:</label>
+  <br>
+  <input type="text" [(ngModel)]="given_name">
+  <br>
+  <label for="given_surname">Surname:</label>
+  <br>
+  <input type="text" [(ngModel)]="given_surname">
+  <br>
+  <button (click)="onSubmit()">Submit changes!</button>
+</div>
+<div>
+  TEST
+  <br>
+  {{ 2 + 2 }}
+  <br>
+  {{ actor_name.length }}
+  <br>
+  {{ actor_name.toUpperCase() }}
+</div>
+
+<router-outlet></router-outlet>

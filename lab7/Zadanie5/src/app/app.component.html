@@ -1,0 +1,36 @@
+<div>
+  <div>
+    Country list
+  </div>
+  <div>
+    <input type="text" [(ngModel)]="country"/>
+    <button (click)="addCountry()">Add</button>
+  </div>
+  <div>
+    <div *ngIf="countries.length === 0; then countriesBlock else noCountriesBlock"></div>
+
+    <ng-template #countriesBlock>
+      <div>
+        No favourite countries!
+      </div>
+    </ng-template>
+
+    <ng-template #noCountriesBlock>
+      <div>
+        <ol>
+          <div *ngFor="let country of countries; index as i" [style.background-color]="country.getColorName(i)">
+            <li>
+              <div>
+                {{country}}
+                <button (click)="removeCountry(i)">Remove</button>
+              </div>
+            </li>
+          </div>
+        </ol>
+      </div>
+    </ng-template>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
