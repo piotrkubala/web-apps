@@ -1,0 +1,10 @@
+<div>
+    <div *ngFor="let color of colors" [style.background-color]="color">
+        <label for="{{color}}">
+            <div class="color-selector">
+                <input type="radio" [name]="color" [value]="color" [(ngModel)]="selectedColor" id="{{color}}" (change)="changeColor()">
+                {{color}}
+            </div>
+        </label>
+    </div>
+</div>

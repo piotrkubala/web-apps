@@ -1,0 +1,8 @@
+<div>
+  <div class="colors-menu">
+    <app-child [colors]="colors" (currentColorChange)="onColorChange($event)"></app-child>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

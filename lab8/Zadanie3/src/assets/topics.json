@@ -1,0 +1,17 @@
+[
+    {
+        "name": "The Basics",
+        "shortDescription": "Core Angular basics you have to know",
+        "longDescription": "This course will teach you the basics of Angular, focused on the latest version of Angular."
+    },
+    {
+        "name": "Components",
+        "shortDescription": "Learn how to create components",
+        "longDescription": "This course will teach you how to create components in Angular and how to use them."
+    },
+    {
+        "name": "Events",
+        "shortDescription": "Learn how to handle events",
+        "longDescription": "In this chapter you will learn how to handle events in Angular."
+    }
+]

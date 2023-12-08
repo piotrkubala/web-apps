@@ -1,0 +1,7 @@
+<div>
+    <div>{{ minutesString }}:{{ secondsString }}</div>
+    <div>
+        <app-reset-clock (resetChange)="resetClock()"></app-reset-clock>
+        <app-pause-clock (clockStateChange)="toggleClock($event)"></app-pause-clock>
+    </div>
+</div>

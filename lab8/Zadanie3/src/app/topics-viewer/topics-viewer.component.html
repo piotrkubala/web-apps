@@ -1,0 +1,8 @@
+<div>
+    <div>
+        <app-topic-details [topicLongDescription]="selectedTopicLongDescription"></app-topic-details>
+    </div>
+    <div>
+        <app-topic *ngFor="let topic of readerService.topics" [topic]="topic" (learnMoreChecked)="learnMoreClicked($event)"></app-topic>
+    </div>
+</div>
