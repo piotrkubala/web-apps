@@ -1,0 +1,8 @@
+.container-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.container-flex > div {
+    margin: 1rem;
+}

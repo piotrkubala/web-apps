@@ -1,0 +1,8 @@
+<div class="container-flex">
+    <div [style.color]="colorName" [style.text-decoration]="textDecoration" (click)="productClicked()">
+        {{ shoppingItem.shoppingProduct.name }}
+    </div>
+    <div>
+        <button (click)="deleteProduct()">Usuń</button>
+    </div>
+</div>

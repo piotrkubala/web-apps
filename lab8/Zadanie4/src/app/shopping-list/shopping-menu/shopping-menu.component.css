@@ -1,0 +1,8 @@
+.centered {
+    display: flex;
+    justify-content: center   
+}
+
+.centered > * {
+    margin: 1rem;
+}

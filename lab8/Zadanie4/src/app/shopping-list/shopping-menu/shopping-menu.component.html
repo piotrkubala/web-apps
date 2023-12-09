@@ -1,0 +1,19 @@
+<div *ngIf="isMenuActive; then menuActive else menuNotActive"></div>
+
+<ng-template #menuNotActive>
+    <div class="centered">
+        <button (click)="isMenuActive = true">Dodaj</button>
+    </div>
+</ng-template>
+<ng-template #menuActive>
+    <div class="centered">
+        <button (click)="isMenuActive = false">Zamknij</button>
+    </div>
+    <div class="centered">
+        <input type="text" [(ngModel)]="newItemName">
+        <label for="isImportant">
+            <input type="checkbox" [(ngModel)]="isVeryImportant" id="isImportant">Bardzo ważne
+        </label>
+        <button (click)="addItem()">Dodaj produkt</button>
+    </div>
+</ng-template>

@@ -1,0 +1,11 @@
+<div>
+    <h1>Lista zakupów studenta PAW</h1>
+    <div>
+        <app-shopping-menu (productAdded)="addProduct($event)"></app-shopping-menu>
+    </div>
+    <div>
+        <div *ngFor="let shoppingItem of getShoppingItems()">
+            <app-product [shoppingItem]="shoppingItem" (removeProduct)="removeProduct($event)"></app-product>
+        </div>
+    </div>
+</div>
