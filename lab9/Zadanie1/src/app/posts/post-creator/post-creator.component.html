@@ -1,0 +1,12 @@
+<div>
+    <h3>Write your own post!</h3>
+    <div class="d-flex justify-content-between flex-wrap">
+        <div class="row container-fluid justify-content-between m-2">
+            <input class="col-8" type="text" [(ngModel)]="post.title" placeholder="Title">
+            <button class="col-3" (click)="addPost()">Add post</button>
+        </div>
+        <div class="row container-fluid m-2">
+            <textarea class="col-12" [(ngModel)]="post.body" placeholder="Content"></textarea>
+        </div>
+    </div>
+</div>

@@ -17,8 +17,11 @@ export class PostsServiceService {
       });
   }
 
-  postPost(post: PostDTO) {
-    this.http.post('https://jsonplaceholder.typicode.com/posts', post);
+  addPost(post: PostDTO) {
+    this.http.post('https://jsonplaceholder.typicode.com/posts', post)
+      .subscribe(() => {
+        alert('Post added!');
+      });
   }
 }
 

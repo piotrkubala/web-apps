@@ -1,5 +1,5 @@
-<div>
-    <div *ngFor="let image of imagesService.images">
+<div class="d-flex flex-wrap flex-row">
+    <div class="border w-25 text-center p-3 rounded" *ngFor="let image of imagesService.images">
         <a [routerLink]="['/photos', image.id]">
             <app-photo [image]="image" [useThumbnail]="true"></app-photo>
         </a>
