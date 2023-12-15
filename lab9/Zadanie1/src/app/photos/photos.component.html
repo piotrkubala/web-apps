@@ -1,0 +1,7 @@
+<div>
+    <div *ngFor="let image of imagesService.images">
+        <a [routerLink]="['/photos', image.id]">
+            <app-photo [image]="image" [useThumbnail]="true"></app-photo>
+        </a>
+    </div>
+</div>

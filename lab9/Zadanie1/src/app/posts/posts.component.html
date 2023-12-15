@@ -1,0 +1,7 @@
+<h2>Posty użytkowników!</h2>
+
+<div>
+    <div *ngFor="let post of postsService.posts">
+        <app-post [post]="post"></app-post>
+    </div>
+</div>

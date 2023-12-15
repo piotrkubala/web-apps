@@ -1,0 +1,13 @@
+<div>
+    <div *ngIf="useThumbnail; then thumbnail else fullSize"></div>
+
+    <ng-template #thumbnail>
+        <img [src]="image.thumbnailUrl" [alt]="image.title">
+    </ng-template>
+    <ng-template #fullSize>
+        <img [src]="image.url" [alt]="image.title">
+    </ng-template>
+
+
+    <p>{{ image.title }}</p>
+</div>
