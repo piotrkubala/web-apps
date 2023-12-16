@@ -8,11 +8,6 @@
   overflow: hidden;
 }
 
-.lowest-price {
-  border-color: red;
-
-}
-
-.highest-price {
-  border-color: green;
+.trip-component {
+  border-width: 0.5rem !important;
 }

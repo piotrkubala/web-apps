@@ -28,23 +28,11 @@ export class TripLoaderService {
     return this.trips.get(tripId);
   }
 
-  _getTripWithHighestPriceMultiplied(multiplier: number = 1): Trip | undefined {
-    let bestTrip: Trip | undefined = undefined;
-
-    this.trips.forEach((trip, _) => {
-      if (!bestTrip || trip.price * multiplier > bestTrip.price * multiplier) {
-        bestTrip = trip;
-      }
-    });
-
-    return bestTrip;
+  getHighestPrice(): number {
+    return Math.max(...Array.from(this.trips.values()).map(trip => trip.price));
   }
 
-  getTripWithHighestPrice(): Trip | undefined {
-    return this._getTripWithHighestPriceMultiplied();
-  }
-
-  getTripWithLowestPrice(): Trip | undefined {
-    return this._getTripWithHighestPriceMultiplied(-1);
+  getLowestPrice(): number {
+    return Math.min(...Array.from(this.trips.values()).map(trip => trip.price));
   }
 }

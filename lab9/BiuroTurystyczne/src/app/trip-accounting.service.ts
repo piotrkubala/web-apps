@@ -11,21 +11,20 @@ export class TripAccountingService {
   tripAccountingStates: Map<number, TripAccountingState> = new Map<number, TripAccountingState>();
 
   _refreshTripAccountingStates(): void {
-    const tripWithHighestPrice = this.tripLoaderService.getTripWithHighestPrice();
-    const tripWithLowestPrice = this.tripLoaderService.getTripWithLowestPrice();
-
-    const tripWithHighestPriceId = tripWithHighestPrice ? tripWithHighestPrice.id : -1;
-    const tripWithLowestPriceId = tripWithLowestPrice ? tripWithLowestPrice.id : -1;
+    const highestPrice = this.tripLoaderService.getHighestPrice();
+    const lowestPrice = this.tripLoaderService.getLowestPrice();
 
     this.tripAccountingStates.clear();
 
     this.tripLoaderService.trips.forEach((trip, _) => {
       this.tripAccountingStates.set(trip.id,
         new TripAccountingState(trip.reservedPlacesCount,
-                    trip.id === tripWithLowestPriceId,
-                    trip.id === tripWithHighestPriceId)
+                    trip.price === lowestPrice,
+                    trip.price === highestPrice)
       );
     });
+
+    console.log(this.tripAccountingStates);
   }
 
   constructor(private tripLoaderService: TripLoaderService) {

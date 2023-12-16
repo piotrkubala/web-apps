@@ -1,5 +1,5 @@
 <div class="border p-2 rounded m-2 trip-component" [style.background-color]="getColorByLeftPlacesCount()"
-     [class.highest-price]="isHighestPrice()" [class.lowes-price]="isLowestPrice()">
+     [class.border-success]="isHighestPrice()" [class.border-danger]="isLowestPrice()">
   <div class="d-flex justify-content-around container-fluid">
     <div class="col-6">
       <h3>{{ trip.name | uppercase }}</h3>
