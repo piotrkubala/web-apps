@@ -1,5 +1,5 @@
 <div class="container-fluid d-flex flex-row flex-wrap">
-  <div *ngFor="let trip of tripLoader.trips" class="col-4">
-    <app-trip [trip]="trip"></app-trip>
+  <div *ngFor="let trip of tripLoader.trips | keyvalue" class="col-4">
+    <app-trip [trip]="trip.value"></app-trip>
   </div>
 </div>

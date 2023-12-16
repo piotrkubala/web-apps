@@ -1,27 +1,47 @@
-<div class="border p-2 rounded m-2">
+<div class="border p-2 rounded m-2 trip-component" [style.background-color]="getColorByLeftPlacesCount()"
+     [class.highest-price]="isHighestPrice()" [class.lowes-price]="isLowestPrice()">
   <div class="d-flex justify-content-around container-fluid">
     <div class="col-6">
-      <h3>{{ trip.name }}</h3>
+      <h3>{{ trip.name | uppercase }}</h3>
     </div>
     <div class="col-3">
       <img [src]="trip.image" [alt]="trip.name" class="w-100 trip-image rounded-circle">
     </div>
   </div>
   <div>
-    <h6>Country: {{ trip.country }}</h6>
-    <p>{{ trip.description }}</p>
+    <h6>Country: {{ trip.country | uppercase }}</h6>
+    <div class="trip-description">{{ trip.description }}</div>
     <p>{{ trip.startDate }} - {{ trip.endDate }}</p>
     <p>Price: {{ trip.price }}</p>
     <p>Max count of participants: {{ trip.maxParticipants }}</p>
+    <p>Currently reserved: {{ trip.reservedPlacesCount }}</p>
+    <p>Your reservations: {{ getReservedPlacesCount() }}</p>
     <div class="container-fluid">
-      <h5 class="row">Sign up</h5>
+      <h5 class="row">Buy tickets!</h5>
       <div class="row text-center">
-        <div class="col-6">
-          <button class="btn btn-primary w-100" (click)="reservePlace()">+</button>
-        </div>
-        <div class="col-6">
-          <button class="btn btn-primary w-100" (click)="unreservePlace()">-</button>
-        </div>
+        <div *ngIf="isFullyReserved(); then fullyReserved else notFullyReserved"></div>
+        <ng-template #fullyReserved>
+          <div class="alert alert-danger col-6 m-0 p-1" role="alert">
+            Full!
+          </div>
+        </ng-template>
+        <ng-template #notFullyReserved>
+          <div class="col-6">
+            <button class="btn btn-primary w-100" (click)="reservePlace()">+</button>
+          </div>
+        </ng-template>
+
+        <div *ngIf="didUserReserve(); then didReserve else didNotReserve"></div>
+        <ng-template #didReserve>
+          <div class="col-6">
+            <button class="btn btn-primary w-100" (click)="unreservePlace()">-</button>
+          </div>
+        </ng-template>
+        <ng-template #didNotReserve>
+          <div class="col-6 alert alert-primary m-0 p-1" role="alert">
+            Reserve trip!
+          </div>
+        </ng-template>
       </div>
     </div>
   </div>

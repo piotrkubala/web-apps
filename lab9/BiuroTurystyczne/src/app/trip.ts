@@ -7,6 +7,7 @@ export interface Trip {
   price: number;
   currency: string;
   maxParticipants: number;
+  reservedPlacesCount: number;
   description: string;
   image: string;
 }
