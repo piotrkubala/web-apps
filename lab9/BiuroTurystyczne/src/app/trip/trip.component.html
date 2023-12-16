@@ -1,0 +1,28 @@
+<div class="border p-2 rounded m-2">
+  <div class="d-flex justify-content-around container-fluid">
+    <div class="col-6">
+      <h3>{{ trip.name }}</h3>
+    </div>
+    <div class="col-3">
+      <img [src]="trip.image" [alt]="trip.name" class="w-100 trip-image rounded-circle">
+    </div>
+  </div>
+  <div>
+    <h6>Country: {{ trip.country }}</h6>
+    <p>{{ trip.description }}</p>
+    <p>{{ trip.startDate }} - {{ trip.endDate }}</p>
+    <p>Price: {{ trip.price }}</p>
+    <p>Max count of participants: {{ trip.maxParticipants }}</p>
+    <div class="container-fluid">
+      <h5 class="row">Sign up</h5>
+      <div class="row text-center">
+        <div class="col-6">
+          <button class="btn btn-primary w-100" (click)="reservePlace()">+</button>
+        </div>
+        <div class="col-6">
+          <button class="btn btn-primary w-100" (click)="unreservePlace()">-</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

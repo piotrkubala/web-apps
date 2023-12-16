@@ -2,11 +2,15 @@
     <h3>Write your own post!</h3>
     <div class="d-flex justify-content-between flex-wrap">
         <div class="row container-fluid justify-content-between m-2">
-            <input class="col-8" type="text" [(ngModel)]="post.title" placeholder="Title">
-            <button class="col-3" (click)="addPost()">Add post</button>
+            <div class="col-9 p-0 mr-1">
+                <input class="col-12 form-control" type="text" [(ngModel)]="post.title" placeholder="Title">
+            </div>
+            <div class="col-3 p-0">
+                <button class="col-12 btn btn-primary" (click)="addPost()">Add post</button>
+            </div>
         </div>
         <div class="row container-fluid m-2">
-            <textarea class="col-12" [(ngModel)]="post.body" placeholder="Content"></textarea>
+            <textarea class="col-12 form-control" [(ngModel)]="post.body" placeholder="Content"></textarea>
         </div>
     </div>
 </div>
