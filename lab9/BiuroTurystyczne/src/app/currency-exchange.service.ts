@@ -58,7 +58,7 @@ export class CurrencyExchangeService {
       return (money.amountMinor / exchangeRate * 0.01).toFixed(2).toString() + " " + this.baseCurrency;
     }
 
-    return "N/A";
+    return (money.amountMinor * 0.01).toFixed(2).toString() + " " + money.currencySymbol;
   }
 }
 

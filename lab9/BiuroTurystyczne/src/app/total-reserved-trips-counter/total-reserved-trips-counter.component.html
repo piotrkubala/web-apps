@@ -1,1 +1,3 @@
-<p>total-reserved-trips-counter works!</p>
+<div class="col-12 text-center rounded p-3" [style.background-color]="getColorNameByTotalReservedTripsCount()">
+  <h2>Total reserved trips count: {{ totalReservedTripsCounterService.totalReservedTrips }}</h2>
+</div>

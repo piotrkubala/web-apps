@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { TripLoaderService} from "./trip-loader.service";
 import {TripAccountingState} from "./trip-accounting-state";
 import {Trip} from "./trip";
+import {TotalReservedTripsCounterService} from "./total-reserved-trips-counter.service";
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +26,8 @@ export class TripAccountingService {
     });
   }
 
-  constructor(private tripLoaderService: TripLoaderService) {
+  constructor(private tripLoaderService: TripLoaderService,
+              private totalReservedTripsCounterService: TotalReservedTripsCounterService) {
     this.tripLoaderService.tripsLoaded.subscribe(() => {
       this._refreshTripAccountingStates();
     });
@@ -45,6 +47,7 @@ export class TripAccountingService {
       }
 
       tripAccountingState.totalReservedPlacesCount = newReservedPlacesCount;
+      this.totalReservedTripsCounterService.updateTotalReservedTripsCount(reservedPlacesCountDelta);
       return true;
     }
     return false;
