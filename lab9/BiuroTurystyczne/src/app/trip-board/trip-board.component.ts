@@ -5,6 +5,7 @@ import {CommonModule} from "@angular/common";
 import {
   TotalReservedTripsCounterComponent
 } from "../total-reserved-trips-counter/total-reserved-trips-counter.component";
+import {TripCreatorComponent} from "./trip-creator/trip-creator.component";
 
 @Component({
   selector: 'app-trip-board',
@@ -12,7 +13,8 @@ import {
   imports: [
     TripComponent,
     CommonModule,
-    TotalReservedTripsCounterComponent
+    TotalReservedTripsCounterComponent,
+    TripCreatorComponent
   ],
   templateUrl: './trip-board.component.html',
   styleUrl: './trip-board.component.css'
