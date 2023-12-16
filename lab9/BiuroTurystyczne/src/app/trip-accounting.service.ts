@@ -19,12 +19,10 @@ export class TripAccountingService {
     this.tripLoaderService.trips.forEach((trip, _) => {
       this.tripAccountingStates.set(trip.id,
         new TripAccountingState(trip.reservedPlacesCount,
-                    trip.price === lowestPrice,
-                    trip.price === highestPrice)
+                    trip.priceMinor === lowestPrice,
+                    trip.priceMinor === highestPrice)
       );
     });
-
-    console.log(this.tripAccountingStates);
   }
 
   constructor(private tripLoaderService: TripLoaderService) {

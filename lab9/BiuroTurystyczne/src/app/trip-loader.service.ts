@@ -29,10 +29,10 @@ export class TripLoaderService {
   }
 
   getHighestPrice(): number {
-    return Math.max(...Array.from(this.trips.values()).map(trip => trip.price));
+    return Math.max(...Array.from(this.trips.values()).map(trip => trip.priceMinor));
   }
 
   getLowestPrice(): number {
-    return Math.min(...Array.from(this.trips.values()).map(trip => trip.price));
+    return Math.min(...Array.from(this.trips.values()).map(trip => trip.priceMinor));
   }
 }

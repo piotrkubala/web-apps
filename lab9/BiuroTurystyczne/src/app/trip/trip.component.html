@@ -12,7 +12,7 @@
     <h6>Country: {{ trip.country | uppercase }}</h6>
     <div class="trip-description">{{ trip.description }}</div>
     <p>{{ trip.startDate }} - {{ trip.endDate }}</p>
-    <p>Price: {{ trip.price }}</p>
+    <p>Price: {{ trip.priceMinor }}</p>
     <p>Max count of participants: {{ trip.maxParticipants }}</p>
     <p>Currently reserved: {{ trip.reservedPlacesCount }}</p>
     <p>Your reservations: {{ getReservedPlacesCount() }}</p>

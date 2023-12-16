@@ -1,0 +1,10 @@
+{
+  "/exchange": {
+    "target": "https://open.er-api.com/v6/latest/EUR",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/exchange": ""
+    }
+  }
+}

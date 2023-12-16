@@ -4,7 +4,7 @@ export interface Trip {
   country: string;
   startDate: Date;
   endDate: Date;
-  price: number;
+  priceMinor: number;
   currency: string;
   maxParticipants: number;
   reservedPlacesCount: number;

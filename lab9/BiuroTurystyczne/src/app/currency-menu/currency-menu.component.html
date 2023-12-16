@@ -1,0 +1,5 @@
+<div class="d-flex flex-row justify-content-end">
+  <div *ngFor="let currencyString of currencyExchangeService.possibleCurrencies">
+    <app-currency-option [currencyString]="currencyString"></app-currency-option>
+  </div>
+</div>
