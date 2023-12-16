@@ -1,23 +1,27 @@
-<div class="border p-2 rounded m-2 trip-component" [style.background-color]="getColorByLeftPlacesCount()"
+<div class="border p-2 rounded m-2 trip-component h-100 d-flex flex-column justify-content-between" [style.background-color]="getColorByLeftPlacesCount()"
      [class.border-danger]="isLowestPrice()" [class.border-success]="isHighestPrice()">
-  <div class="d-flex justify-content-around container-fluid">
-    <div class="col-6">
-      <h3>{{ trip.name | uppercase }}</h3>
+  <div>
+    <div class="d-flex justify-content-around container-fluid">
+      <div class="col-6">
+        <h3>{{ trip.name | uppercase }}</h3>
+      </div>
+      <div class="col-3">
+        <img [src]="trip.image" [alt]="trip.name" class="w-100 trip-image rounded-circle">
+      </div>
     </div>
-    <div class="col-3">
-      <img [src]="trip.image" [alt]="trip.name" class="w-100 trip-image rounded-circle">
+    <div class="p-4">
+      <h6>Country: {{ trip.country | uppercase }}</h6>
+      <div class="trip-description">{{ trip.description }}</div>
+      <p>{{ trip.startDate }} - {{ trip.endDate }}</p>
+      <p>Price: {{ getMoneyString() }}</p>
+      <p>Max count of participants: {{ trip.maxParticipants }}</p>
+      <p>Currently reserved: {{ trip.reservedPlacesCount }}</p>
+      <p>Your reservations: {{ getReservedPlacesCount() }}</p>
     </div>
   </div>
-  <div>
-    <h6>Country: {{ trip.country | uppercase }}</h6>
-    <div class="trip-description">{{ trip.description }}</div>
-    <p>{{ trip.startDate }} - {{ trip.endDate }}</p>
-    <p>Price: {{ getMoneyString() }}</p>
-    <p>Max count of participants: {{ trip.maxParticipants }}</p>
-    <p>Currently reserved: {{ trip.reservedPlacesCount }}</p>
-    <p>Your reservations: {{ getReservedPlacesCount() }}</p>
+  <div class="text-center">
     <div class="container-fluid">
-      <h5 class="row">Buy tickets!</h5>
+      <h5 class="text-center p-2 col-12">Buy tickets!</h5>
       <div class="row text-center">
         <div *ngIf="isFullyReserved(); then fullyReserved else notFullyReserved"></div>
         <ng-template #fullyReserved>
@@ -48,8 +52,8 @@
         </ng-template>
       </div>
     </div>
-  </div>
-  <div class="row p-2 m-1 mt-2">
-    <button class="btn btn-danger w-100" (click)="deleteTrip()">Delete</button>
+    <div class="row p-2 m-1 mt-2">
+      <button class="btn btn-danger w-100" (click)="deleteTrip()">Delete</button>
+    </div>
   </div>
 </div>
