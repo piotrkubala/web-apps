@@ -35,4 +35,14 @@ export class TripLoaderService {
   getLowestPrice(): number {
     return Math.min(...Array.from(this.trips.values()).map(trip => trip.priceMinor));
   }
+
+  deleteTrip(tripId: number): boolean {
+    if (this.trips.has(tripId)) {
+      this.trips.delete(tripId);
+      this.tripsLoaded.emit();
+
+      return true;
+    }
+    return false;
+  }
 }

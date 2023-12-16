@@ -5,6 +5,7 @@ import { TripAccountingService} from "../trip-accounting.service";
 import { Trip } from '../trip';
 import {CurrencyExchangeService} from "../currency-exchange.service";
 import {Money} from "../money";
+import {TripLoaderService} from "../trip-loader.service";
 
 @Component({
   selector: 'app-trip',
@@ -17,7 +18,8 @@ export class TripComponent {
   @Input() trip!: Trip;
 
   constructor(private tripAccountingService: TripAccountingService,
-              private currencyExchangeService: CurrencyExchangeService) {
+              private currencyExchangeService: CurrencyExchangeService,
+              private tripLoaderService: TripLoaderService) {
   }
 
   _changeReservation(reservedPlacesCountDelta: number): void {
@@ -66,5 +68,9 @@ export class TripComponent {
     return this.currencyExchangeService.getMoneyStringInBaseCurrency(
       new Money(this.trip.priceMinor, this.trip.currency)
     );
+  }
+
+  deleteTrip(): void {
+    this.tripLoaderService.deleteTrip(this.trip.id);
   }
 }

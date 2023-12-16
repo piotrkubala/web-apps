@@ -1,5 +1,5 @@
 <div class="border p-2 rounded m-2 trip-component" [style.background-color]="getColorByLeftPlacesCount()"
-     [class.border-success]="isHighestPrice()" [class.border-danger]="isLowestPrice()">
+     [class.border-danger]="isLowestPrice()" [class.border-success]="isHighestPrice()">
   <div class="d-flex justify-content-around container-fluid">
     <div class="col-6">
       <h3>{{ trip.name | uppercase }}</h3>
@@ -21,28 +21,35 @@
       <div class="row text-center">
         <div *ngIf="isFullyReserved(); then fullyReserved else notFullyReserved"></div>
         <ng-template #fullyReserved>
-          <div class="alert alert-danger col-6 m-0 p-1" role="alert">
-            Full!
+          <div class="col-6" role="alert">
+            <div class="alert alert-danger p-2 m-0">
+              Full!
+            </div>
           </div>
         </ng-template>
         <ng-template #notFullyReserved>
           <div class="col-6">
-            <button class="btn btn-primary w-100" (click)="reservePlace()">+</button>
+            <button class="btn btn-primary col-12 p-2" (click)="reservePlace()">+</button>
           </div>
         </ng-template>
 
         <div *ngIf="didUserReserve(); then didReserve else didNotReserve"></div>
         <ng-template #didReserve>
           <div class="col-6">
-            <button class="btn btn-primary w-100" (click)="unreservePlace()">-</button>
+            <button class="btn btn-primary col-12 p-2" (click)="unreservePlace()">-</button>
           </div>
         </ng-template>
         <ng-template #didNotReserve>
-          <div class="col-6 alert alert-primary m-0 p-1" role="alert">
-            Reserve trip!
+          <div class="col-6" role="alert">
+            <div class="alert alert-primary p-2 m-0">
+              Reserve trip!
+            </div>
           </div>
         </ng-template>
       </div>
     </div>
+  </div>
+  <div class="row p-2 m-1 mt-2">
+    <button class="btn btn-danger w-100" (click)="deleteTrip()">Delete</button>
   </div>
 </div>
