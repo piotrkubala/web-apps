@@ -28,7 +28,7 @@ export class CurrencyExchangeService {
   }
 
   refreshExchangeRates(): void {
-    this.http.get('/exchange', {
+    this.http.get(`/exchange/${this.baseCurrency}`, {
       headers: this.httpHeaders,
       withCredentials: false
     }).subscribe((data) => {
@@ -41,8 +41,6 @@ export class CurrencyExchangeService {
         this.possibleCurrencies.forEach(currency => {
           this.exchangeRates.set(currency, currencyRates.rates[currency]);
         });
-
-        console.log("Exchange rates refreshed");
       });
   }
 
@@ -50,8 +48,6 @@ export class CurrencyExchangeService {
     if (this.possibleCurrencies.some(c => c === currency)) {
       this.baseCurrency = currency;
       this.refreshExchangeRates();
-
-      console.log("Base currency set to " + currency);
     }
   }
 

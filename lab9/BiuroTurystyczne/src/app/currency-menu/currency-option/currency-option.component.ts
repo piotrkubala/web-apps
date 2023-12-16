@@ -18,4 +18,8 @@ export class CurrencyOptionComponent {
   selectCurrency(): void {
     this.currencyExchangeService.setBaseCurrency(this.currencyString);
   }
+
+  isSelected(): boolean {
+    return this.currencyExchangeService.baseCurrency === this.currencyString;
+  }
 }
