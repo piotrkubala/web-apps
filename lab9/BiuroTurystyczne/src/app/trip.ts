@@ -1,3 +1,5 @@
+import {Money} from "./money";
+
 export interface Trip {
   id: number;
   name: string;

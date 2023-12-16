@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Money} from "./money";
 
 @Injectable({
   providedIn: 'root'
@@ -40,6 +41,8 @@ export class CurrencyExchangeService {
         this.possibleCurrencies.forEach(currency => {
           this.exchangeRates.set(currency, currencyRates.rates[currency]);
         });
+
+        console.log("Exchange rates refreshed");
       });
   }
 
@@ -47,7 +50,19 @@ export class CurrencyExchangeService {
     if (this.possibleCurrencies.some(c => c === currency)) {
       this.baseCurrency = currency;
       this.refreshExchangeRates();
+
+      console.log("Base currency set to " + currency);
     }
+  }
+
+  getMoneyStringInBaseCurrency(money: Money): string {
+    const exchangeRate = this.exchangeRates.get(money.currencySymbol);
+
+    if (exchangeRate) {
+      return (money.amountMinor / exchangeRate * 0.01).toFixed(2).toString() + " " + this.baseCurrency;
+    }
+
+    return "N/A";
   }
 }
 

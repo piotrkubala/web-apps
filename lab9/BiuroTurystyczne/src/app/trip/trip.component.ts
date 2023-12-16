@@ -3,6 +3,8 @@ import {NgIf, UpperCasePipe} from "@angular/common";
 
 import { TripAccountingService} from "../trip-accounting.service";
 import { Trip } from '../trip';
+import {CurrencyExchangeService} from "../currency-exchange.service";
+import {Money} from "../money";
 
 @Component({
   selector: 'app-trip',
@@ -14,7 +16,8 @@ import { Trip } from '../trip';
 export class TripComponent {
   @Input() trip!: Trip;
 
-  constructor(private tripAccountingService: TripAccountingService) {
+  constructor(private tripAccountingService: TripAccountingService,
+              private currencyExchangeService: CurrencyExchangeService) {
   }
 
   _changeReservation(reservedPlacesCountDelta: number): void {
@@ -57,5 +60,11 @@ export class TripComponent {
 
   isLowestPrice(): boolean {
     return this.tripAccountingService.isLowestPrice(this.trip.id);
+  }
+
+  getMoneyString(): string {
+    return this.currencyExchangeService.getMoneyStringInBaseCurrency(
+      new Money(this.trip.priceMinor, this.trip.currency)
+    );
   }
 }

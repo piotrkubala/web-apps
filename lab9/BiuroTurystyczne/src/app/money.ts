@@ -1,3 +1,5 @@
+import {CurrencyExchangeService} from "./currency-exchange.service";
+
 export class Money {
   amountMinor: number;
   currencySymbol: string;
