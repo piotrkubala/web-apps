@@ -1,0 +1,29 @@
+<div class="p-2">
+  <div *ngIf="reservedTripExists(); then reservedTrips; else noReservedTrips"></div>
+
+  <ng-template #noReservedTrips>
+    <h4>You have no reservations!</h4>
+    <div>
+      Reserve something now!
+      <br>
+      Are you afraid of traveling?
+      <br>
+      Don't be!
+    </div>
+  </ng-template>
+
+  <ng-template #reservedTrips>
+    <h4>Your reservations: </h4>
+    <div>
+      <div *ngFor="let trip of getReservedTrips()">
+        <app-reservation [trip]="trip"></app-reservation>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h5>Total reservations: {{ getTotalReservedTripsCount() }}</h5>
+        <h5>Total price: {{ getTotalPriceString() }}</h5>
+      </div>
+    </div>
+  </ng-template>
+</div>

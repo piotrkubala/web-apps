@@ -4,6 +4,8 @@ import { TripLoaderService} from "./trip-loader.service";
 import {TripAccountingState} from "./trip-accounting-state";
 import {Trip} from "./trip";
 import {TotalReservedTripsCounterService} from "./total-reserved-trips-counter.service";
+import {Money} from "./money";
+import {CurrencyExchangeService} from "./currency-exchange.service";
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +32,8 @@ export class TripAccountingService {
   }
 
   constructor(public tripLoaderService: TripLoaderService,
-              private totalReservedTripsCounterService: TotalReservedTripsCounterService) {
+              private totalReservedTripsCounterService: TotalReservedTripsCounterService,
+              private currencyExchangeService: CurrencyExchangeService) {
     this.tripLoaderService.tripsLoaded.subscribe(() => {
       this._refreshTripAccountingStates();
     });
@@ -136,5 +139,55 @@ export class TripAccountingService {
       return tripAccountingState.rate;
     }
     return 0;
+  }
+
+  getReservedTrips(): Trip[] {
+    return Array.from(this.tripLoaderService.trips.values())
+      .filter((trip) => this.getCurrentUserReservedPlacesCount(trip.id) > 0);
+  }
+
+  getTripAccountingState(tripId: number): TripAccountingState {
+    const tripAccountingState = this.tripAccountingStates.get(tripId);
+
+    if (tripAccountingState) {
+      return tripAccountingState;
+    }
+    return new TripAccountingState(0, false, false);
+  }
+
+  getTotalReservationPriceString(tripId: number): string {
+    const tripAccountingState = this.tripAccountingStates.get(tripId);
+    const trip = this.tripLoaderService.getTrip(tripId);
+
+    if (tripAccountingState && trip) {
+      const totalPriceMinor = trip.priceMinor * tripAccountingState.totalReservedPlacesCount;
+
+      return this.currencyExchangeService.getMoneyStringInBaseCurrency(
+        new Money(totalPriceMinor, trip.currency)
+      );
+    }
+    return "";
+  }
+
+  getTotalReservationPriceForAllTripsString(): string {
+    const totalPriceMinorInBaseCurrency: number =
+      Array.from(this.tripLoaderService.trips.values())
+        .map((trip) => {
+          const tripAccountingState = this.tripAccountingStates.get(trip.id);
+
+          if (tripAccountingState) {
+            const totalPriceMinor = trip.priceMinor * tripAccountingState.totalReservedPlacesCount;
+
+            return this.currencyExchangeService.getMoneyInBaseCurrency(
+              new Money(totalPriceMinor, trip.currency)
+            ).amountMinor;
+          }
+          return 0;
+        })
+        .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+    return this.currencyExchangeService.getMoneyStringInBaseCurrency(
+      new Money(totalPriceMinorInBaseCurrency, this.currencyExchangeService.baseCurrency)
+    );
   }
 }

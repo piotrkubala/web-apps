@@ -6,6 +6,7 @@ import {
   TotalReservedTripsCounterComponent
 } from "../total-reserved-trips-counter/total-reserved-trips-counter.component";
 import {TripCreatorComponent} from "./trip-creator/trip-creator.component";
+import {ReservationSummaryComponent} from "../reservation-summary/reservation-summary.component";
 
 @Component({
   selector: 'app-trip-board',
@@ -14,7 +15,8 @@ import {TripCreatorComponent} from "./trip-creator/trip-creator.component";
     TripComponent,
     CommonModule,
     TotalReservedTripsCounterComponent,
-    TripCreatorComponent
+    TripCreatorComponent,
+    ReservationSummaryComponent
   ],
   templateUrl: './trip-board.component.html',
   styleUrl: './trip-board.component.css'

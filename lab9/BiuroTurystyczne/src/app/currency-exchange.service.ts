@@ -51,14 +51,20 @@ export class CurrencyExchangeService {
     }
   }
 
-  getMoneyStringInBaseCurrency(money: Money): string {
+  getMoneyInBaseCurrency(money: Money): Money {
     const exchangeRate = this.exchangeRates.get(money.currencySymbol);
 
     if (exchangeRate) {
-      return (money.amountMinor / exchangeRate * 0.01).toFixed(2).toString() + " " + this.baseCurrency;
+      return new Money(money.amountMinor / exchangeRate, this.baseCurrency);
     }
 
-    return (money.amountMinor * 0.01).toFixed(2).toString() + " " + money.currencySymbol;
+    return money;
+  }
+
+  getMoneyStringInBaseCurrency(money: Money): string {
+    const moneyInBaseCurrency = this.getMoneyInBaseCurrency(money);
+
+    return (moneyInBaseCurrency.amountMinor * 0.01).toFixed(2).toString() + " " + money.currencySymbol;
   }
 }
 
