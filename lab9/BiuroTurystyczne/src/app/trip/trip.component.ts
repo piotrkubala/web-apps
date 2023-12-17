@@ -77,5 +77,24 @@ export class TripComponent {
   }
 
   rateTrip(): void {
+    this.tripAccountingService.rateTrip(this.trip.id, this.rating);
+  }
+
+  wasTripRated(): boolean {
+    return this.tripAccountingService.wasTripRated(this.trip.id);
+  }
+
+  getColorByRating(): string {
+    const rating = this.tripAccountingService.getTripRating(this.trip.id);
+
+    if (rating >= 4) {
+      return "lightgreen";
+    }
+
+    if (rating <= 2) {
+      return "red";
+    }
+
+    return "white";
   }
 }

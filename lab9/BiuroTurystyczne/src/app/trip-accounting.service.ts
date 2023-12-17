@@ -119,4 +119,22 @@ export class TripAccountingService {
       tripAccountingState.rate = rate;
     }
   }
+
+  wasTripRated(tripId: number): boolean {
+    const tripAccountingState = this.tripAccountingStates.get(tripId);
+
+    if (tripAccountingState) {
+      return tripAccountingState.rate > 0;
+    }
+    return false;
+  }
+
+  getTripRating(tripId: number): number {
+    const tripAccountingState = this.tripAccountingStates.get(tripId);
+
+    if (tripAccountingState) {
+      return tripAccountingState.rate;
+    }
+    return 0;
+  }
 }
