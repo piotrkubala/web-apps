@@ -52,6 +52,25 @@
         </ng-template>
       </div>
     </div>
+    <div>
+      <form>
+        <div>
+          <label for="rating">Rate trip (5 is the best!)</label>
+        </div>
+        <div class="d-flex row p-3">
+          <div class="p-2 col-6">
+            <select class="form-control" id="rating" [(ngModel)]="rating" name="rating">
+              <option *ngFor="let rating of tripAccountingService.possibleRatingValues">
+                {{ rating }}
+              </option>
+            </select>
+          </div>
+          <div class="col-6">
+            <button class="btn btn-primary mt-2 w-100" (click)="rateTrip()">Rate</button>
+          </div>
+        </div>
+      </form>
+    </div>
     <div class="row p-2 m-1 mt-2">
       <button class="btn btn-danger w-100" (click)="deleteTrip()">Delete</button>
     </div>

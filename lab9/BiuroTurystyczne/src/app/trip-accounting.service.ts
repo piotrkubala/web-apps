@@ -10,6 +10,7 @@ import {TotalReservedTripsCounterService} from "./total-reserved-trips-counter.s
 })
 export class TripAccountingService {
   tripAccountingStates: Map<number, TripAccountingState> = new Map<number, TripAccountingState>();
+  possibleRatingValues: number[] = [1, 2, 3, 4, 5];
 
   _refreshTripAccountingStates(): void {
     const highestPrice = this.tripLoaderService.getHighestPrice();
@@ -109,5 +110,13 @@ export class TripAccountingService {
         .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
     return totalReservedTrips - totalBookedTrips;
+  }
+
+  rateTrip(tripId: number, rate: number): void {
+    const tripAccountingState = this.tripAccountingStates.get(tripId);
+
+    if (tripAccountingState) {
+      tripAccountingState.rate = rate;
+    }
   }
 }

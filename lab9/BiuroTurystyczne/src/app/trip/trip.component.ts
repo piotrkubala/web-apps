@@ -1,23 +1,25 @@
 import {Component, Input} from '@angular/core';
-import {NgIf, UpperCasePipe} from "@angular/common";
+import {NgForOf, NgIf, UpperCasePipe} from "@angular/common";
 
 import { TripAccountingService} from "../trip-accounting.service";
 import { Trip } from '../trip';
 import {CurrencyExchangeService} from "../currency-exchange.service";
 import {Money} from "../money";
 import {TripLoaderService} from "../trip-loader.service";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-trip',
   standalone: true,
-  imports: [NgIf, UpperCasePipe],
+  imports: [NgIf, UpperCasePipe, NgForOf, FormsModule],
   templateUrl: './trip.component.html',
   styleUrl: './trip.component.css'
 })
 export class TripComponent {
   @Input() trip!: Trip;
+  rating: number = 0;
 
-  constructor(private tripAccountingService: TripAccountingService,
+  constructor(public tripAccountingService: TripAccountingService,
               private currencyExchangeService: CurrencyExchangeService,
               private tripLoaderService: TripLoaderService) {
   }
@@ -72,5 +74,8 @@ export class TripComponent {
 
   deleteTrip(): void {
     this.tripLoaderService.deleteTrip(this.trip.id);
+  }
+
+  rateTrip(): void {
   }
 }
