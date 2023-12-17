@@ -10,6 +10,8 @@ import {Observable} from "rxjs";
 export class TripLoaderService {
   trips: Map<number, Trip> = new Map<number, Trip>();
   tripsLoaded: EventEmitter<void> = new EventEmitter<void>();
+  _lastId: number = 0;
+
 
   constructor(private http: HttpClient) {
      this.http.get<Trip[]>('assets/trips-definition.json')
@@ -18,10 +20,27 @@ export class TripLoaderService {
 
           data.forEach(trip => {
             this.trips.set(trip.id, trip);
+            this._lastId = Math.max(this._lastId, trip.id);
           });
 
           this.tripsLoaded.emit();
        });
+  }
+
+  getEmptyTrip(): Trip {
+    return {
+      id: 0,
+      name: '',
+      country: '',
+      startDate: '1970-01-01',
+      endDate: '1970-01-01',
+      priceMinor: 0,
+      currency: '',
+      maxParticipants: 0,
+      reservedPlacesCount: 0,
+      description: '',
+      image: ''
+    };
   }
 
   getTrip(tripId: number): Trip | undefined {
@@ -44,5 +63,14 @@ export class TripLoaderService {
       return true;
     }
     return false;
+  }
+
+  createNewTrip(trip: Trip): boolean {
+    trip.id = ++this._lastId;
+
+    this.trips.set(trip.id, trip);
+    this.tripsLoaded.emit();
+
+    return true;
   }
 }

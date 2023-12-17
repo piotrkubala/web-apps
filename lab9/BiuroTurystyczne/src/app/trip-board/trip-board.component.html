@@ -2,10 +2,10 @@
   <app-total-reserved-trips-counter></app-total-reserved-trips-counter>
 </div>
 <div class="container-fluid d-flex flex-row flex-wrap flex-grow-1 flex-fill">
-  <div *ngFor="let trip of tripLoader.trips | keyvalue" class="col-12 col-sm-6 col-md-4 py-2">
-    <app-trip [trip]="trip.value"></app-trip>
-  </div>
   <div class="col-12 col-sm-6 col-md-4 py-2">
     <app-trip-creator></app-trip-creator>
+  </div>
+  <div *ngFor="let trip of tripLoader.trips | keyvalue" class="col-12 col-sm-6 col-md-4 py-2">
+    <app-trip [trip]="trip.value"></app-trip>
   </div>
 </div>

@@ -1,1 +1,61 @@
-<p>trip-creator works!</p>
+<div class="p-2">
+  <form>
+    <h2>Create new trip!</h2>
+    <div class="form-group">
+      <label for="tripName">Trip Name</label>
+      <input name="name" type="text" class="form-control" id="tripName" placeholder="Trip Name" [(ngModel)]="trip.name">
+
+      <label for="country">Country</label>
+      <input name="country" type="text" class="form-control" id="country"
+             placeholder="Country" [(ngModel)]="trip.country">
+
+      <label for="tripDescription">Trip Description</label>
+      <textarea name="description" class="form-control" id="tripDescription"
+                rows="3" [(ngModel)]="trip.description"></textarea>
+
+      <div class="row">
+        <label for="price">Price</label>
+        <div class="col-8">
+          <input name="price" type="number" class="form-control" id="price"
+                 placeholder="Price" min="0" step="0.01" [(ngModel)]="price">
+        </div>
+        <div class="col-4 text-center">
+          <select name="currency" class="form-control" id="currency" [(ngModel)]="trip.currency">
+            <option *ngFor="let currency of currencyExchangeService.possibleCurrencies" [value]="currency">
+              {{currency}}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <label for="startDate">Start Date</label>
+        <div>
+          <input name="startDate" type="date" class="form-control" id="startDate"
+                 placeholder="Start Date" [(ngModel)]="startDateString">
+        </div>
+        <label for="endDate">End Date</label>
+        <div>
+          <input name="endDate" type="date" class="form-control" id="endDate"
+                 placeholder="End Date" [(ngModel)]="endDateString">
+        </div>
+      </div>
+      <div class="row">
+        <label for="maxPeople">Maximum Count of Participants</label>
+        <div>
+          <input name="maxParticipants" type="number" class="form-control" id="maxPeople"
+                 placeholder="Maximum Count of Participants" min="0" step="1" [(ngModel)]="trip.maxParticipants">
+        </div>
+      </div>
+      <div class="row">
+        <label for="image-url">Image URL</label>
+        <div>
+          <input name="image" type="text" class="form-control" id="image-url"
+                 placeholder="Image URL" [(ngModel)]="trip.image">
+        </div>
+      </div>
+      <div class="row p-2">
+        <button type="submit" class="btn btn-primary" (click)="createTrip()">Create Trip</button>
+      </div>
+    </div>
+  </form>
+</div>

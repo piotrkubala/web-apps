@@ -16,6 +16,7 @@ export class TripAccountingService {
     const lowestPrice = this.tripLoaderService.getLowestPrice();
 
     this.tripAccountingStates.clear();
+    this.totalReservedTripsCounterService.resetTotalReservedTripsCount();
 
     this.tripLoaderService.trips.forEach((trip, _) => {
       this.tripAccountingStates.set(trip.id,
@@ -23,10 +24,11 @@ export class TripAccountingService {
                     trip.priceMinor === lowestPrice,
                     trip.priceMinor === highestPrice)
       );
+      this.totalReservedTripsCounterService.updateTotalReservedTripsCount(trip.reservedPlacesCount);
     });
   }
 
-  constructor(private tripLoaderService: TripLoaderService,
+  constructor(public tripLoaderService: TripLoaderService,
               private totalReservedTripsCounterService: TotalReservedTripsCounterService) {
     this.tripLoaderService.tripsLoaded.subscribe(() => {
       this._refreshTripAccountingStates();
@@ -93,5 +95,19 @@ export class TripAccountingService {
       return tripAccountingState.isLowestPrice;
     }
     return false;
+  }
+
+  calculateTotalReservedTripsForCurrentUser(): number {
+    let totalReservedTrips =
+      Array.from(this.tripAccountingStates.values())
+        .map((tripAccountingState) => tripAccountingState.totalReservedPlacesCount)
+        .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+    let totalBookedTrips =
+      Array.from(this.tripLoaderService.trips.values())
+        .map((trip) => trip.reservedPlacesCount)
+        .reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+    return totalReservedTrips - totalBookedTrips;
   }
 }

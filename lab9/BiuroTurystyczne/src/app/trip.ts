@@ -1,11 +1,9 @@
-import {Money} from "./money";
-
 export interface Trip {
   id: number;
   name: string;
   country: string;
-  startDate: Date;
-  endDate: Date;
+  startDate: string;
+  endDate: string;
   priceMinor: number;
   currency: string;
   maxParticipants: number;
