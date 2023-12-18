@@ -33,4 +33,15 @@ export class ShoppingBasketComponent {
   isBasketEmpty(): boolean {
     return this.tripAccountingService.getReservedTrips().length === 0;
   }
+
+  buySelected(): void {
+  }
+
+  getTotalPriceForAllTripsString(): string {
+    return this.tripAccountingService.getTotalReservationPriceForAllTripsString();
+  }
+
+  getTotalPriceForSelectedTripsString(): string {
+    return this.tripAccountingService.getTotalReservationPriceForAllTripsString(true);
+  }
 }

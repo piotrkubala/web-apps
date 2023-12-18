@@ -26,9 +26,23 @@
       </div>
     </div>
   </div>
-  <div class="col-2">
-    <button class="btn btn-danger" (click)="reserveMorePlaces()">+</button>
-    <button class="btn btn-danger" (click)="reserveLessPlaces()">-</button>
-    <button class="btn btn-danger" (click)="removeFromBasket()">Remove</button>
+  <div class="col-2 d-flex flex-column justify-content-around">
+    <div class="m-2">
+      <button class="btn btn-success w-100" (click)="reserveMorePlaces()">+</button>
+    </div>
+    <div class="m-2">
+      <button class="btn btn-info w-100" (click)="reserveLessPlaces()">-</button>
+    </div>
+    <div class="m-2">
+      <button class="btn btn-danger w-100" (click)="removeFromBasket()">Remove</button>
+    </div>
+    <div>
+      <div>
+        <label for="buy-now" class="form-check-label">Buy this item now!</label>
+      </div>
+      <div>
+        <input id="buy-now" type="checkbox" [(ngModel)]="tripAccountingState.selectedToBeBought" class="form-check-input">
+      </div>
+    </div>
   </div>
 </div>

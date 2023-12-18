@@ -190,13 +190,17 @@ export class TripAccountingService {
     return "";
   }
 
-  getTotalReservationPriceForAllTripsString(): string {
+  getTotalReservationPriceForAllTripsString(onlySelected: boolean = false): string {
     const totalPriceMinorInBaseCurrency: number =
       Array.from(this.tripLoaderService.trips.values())
         .map((trip) => {
           const tripAccountingState = this.tripAccountingStates.get(trip.id);
 
           if (tripAccountingState) {
+            if (onlySelected && !tripAccountingState.selectedToBeBought) {
+              return 0;
+            }
+
             const totalPriceMinor = trip.priceMinor * tripAccountingState.totalReservedPlacesCount;
 
             return this.currencyExchangeService.getMoneyInBaseCurrency(

@@ -2,11 +2,14 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Trip} from "../../trip";
 import {TripAccountingState} from "../../trip-accounting-state";
 import {TripAccountingService} from "../../trip-accounting.service";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-basket-item',
   standalone: true,
-  imports: [],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './basket-item.component.html',
   styleUrl: './basket-item.component.css'
 })
