@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Money} from "./money";
 
@@ -6,6 +6,8 @@ import {Money} from "./money";
   providedIn: 'root'
 })
 export class CurrencyExchangeService {
+  baseCurrencyChanged: EventEmitter<void> = new EventEmitter<void>();
+
   exchangeRates: Map<string, number> = new Map<string, number>();
   baseCurrency: string = "EUR";
 
@@ -41,6 +43,8 @@ export class CurrencyExchangeService {
         this.possibleCurrencies.forEach(currency => {
           this.exchangeRates.set(currency, currencyRates.rates[currency]);
         });
+
+        this.baseCurrencyChanged.emit();
       });
   }
 

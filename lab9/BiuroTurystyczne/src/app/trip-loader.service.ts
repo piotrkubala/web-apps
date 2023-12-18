@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 import { Trip } from './trip';
 import {Observable} from "rxjs";
+import {CurrencyExchangeService} from "./currency-exchange.service";
+import {Money} from "./money";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +15,8 @@ export class TripLoaderService {
   _lastId: number = 0;
 
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private currencyExchangeService: CurrencyExchangeService) {
      this.http.get<Trip[]>('assets/trips-definition.json')
        .subscribe(data => {
           this.trips.clear();
@@ -47,12 +50,20 @@ export class TripLoaderService {
     return this.trips.get(tripId);
   }
 
+  getAllPricesInBaseCurrency(): number[] {
+    return Array.from(this.trips.values()).map(trip => {
+      return this.currencyExchangeService.getMoneyInBaseCurrency(
+        new Money(trip.priceMinor, trip.currency)
+      ).amountMinor;
+    });
+  }
+
   getHighestPrice(): number {
-    return Math.max(...Array.from(this.trips.values()).map(trip => trip.priceMinor));
+    return Math.max(...this.getAllPricesInBaseCurrency());
   }
 
   getLowestPrice(): number {
-    return Math.min(...Array.from(this.trips.values()).map(trip => trip.priceMinor));
+    return Math.min(...this.getAllPricesInBaseCurrency());
   }
 
   deleteTrip(tripId: number): boolean {
@@ -72,5 +83,23 @@ export class TripLoaderService {
     this.tripsLoaded.emit();
 
     return true;
+  }
+
+  getAllUniqueCountriesSorted(): string[] {
+    return Array.from(
+      new Set(Array.from(this.trips.values())
+        .map((trip) => trip.country))
+        .values()
+    ).sort();
+  }
+
+  getEarliestDate(): Date {
+    return new Date(Math.min(...Array.from(this.trips.values())
+      .map((trip) => new Date(trip.startDate).getTime())));
+  }
+
+  getLatestDate(): Date {
+    return new Date(Math.max(...Array.from(this.trips.values())
+      .map((trip) => new Date(trip.endDate).getTime())));
   }
 }
