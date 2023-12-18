@@ -25,6 +25,8 @@ export class TripAccountingService {
       .filter((tripId) => !newTripIds.has(tripId));
     const addedTripIds = Array.from(newTripIds.values())
       .filter((tripId) => !oldTripIds.has(tripId));
+    const notChangedTripIds = Array.from(newTripIds.values())
+      .filter((tripId) => oldTripIds.has(tripId));
 
     removedTripIds.forEach((tripId) => {
       const tripAccountingState = this.tripAccountingStates.get(tripId);
@@ -48,6 +50,16 @@ export class TripAccountingService {
         );
 
         this.totalReservedTripsCounterService.updateTotalReservedTripsCount(trip.reservedPlacesCount);
+      }
+    });
+
+    notChangedTripIds.forEach((tripId) => {
+const tripAccountingState = this.tripAccountingStates.get(tripId);
+      const trip = this.tripLoaderService.getTrip(tripId);
+
+      if (tripAccountingState && trip) {
+        tripAccountingState.isLowestPrice = trip.priceMinor === lowestPrice;
+        tripAccountingState.isHighestPrice = trip.priceMinor === highestPrice;
       }
     });
   }
@@ -218,5 +230,9 @@ export class TripAccountingService {
 
   unreserveAllThisUserPlaces(tripId: number): void {
     this.changeReservation(tripId, -this.getCurrentUserReservedPlacesCount(tripId));
+  }
+
+  buyAllSelectedTrips(): void {
+
   }
 }

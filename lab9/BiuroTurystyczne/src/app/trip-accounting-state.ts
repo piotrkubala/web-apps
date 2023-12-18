@@ -5,7 +5,7 @@ export class TripAccountingState {
   isLowestPrice: boolean;
   isHighestPrice: boolean;
 
-  selectedToBeBought: boolean = false;
+  selectedToBeBought: boolean = true;
 
   constructor(totalReservedPlacesCount: number, isLowestPrice: boolean, isHighestPrice: boolean) {
     this.totalReservedPlacesCount = totalReservedPlacesCount;
