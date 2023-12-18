@@ -18,16 +18,37 @@ export class TripAccountingService {
     const highestPrice = this.tripLoaderService.getHighestPrice();
     const lowestPrice = this.tripLoaderService.getLowestPrice();
 
-    this.tripAccountingStates.clear();
-    this.totalReservedTripsCounterService.resetTotalReservedTripsCount();
+    const oldTripIds = new Set<number>(this.tripAccountingStates.keys());
+    const newTripIds = new Set<number>(this.tripLoaderService.trips.keys());
 
-    this.tripLoaderService.trips.forEach((trip, _) => {
-      this.tripAccountingStates.set(trip.id,
-        new TripAccountingState(trip.reservedPlacesCount,
-                    trip.priceMinor === lowestPrice,
-                    trip.priceMinor === highestPrice)
-      );
-      this.totalReservedTripsCounterService.updateTotalReservedTripsCount(trip.reservedPlacesCount);
+    const removedTripIds = Array.from(oldTripIds.values())
+      .filter((tripId) => !newTripIds.has(tripId));
+    const addedTripIds = Array.from(newTripIds.values())
+      .filter((tripId) => !oldTripIds.has(tripId));
+
+    removedTripIds.forEach((tripId) => {
+      const tripAccountingState = this.tripAccountingStates.get(tripId);
+
+      this.tripAccountingStates.delete(tripId);
+
+      if (tripAccountingState) {
+        this.totalReservedTripsCounterService
+          .updateTotalReservedTripsCount(-tripAccountingState.totalReservedPlacesCount);
+      }
+    });
+
+    addedTripIds.forEach((tripId) => {
+      const trip = this.tripLoaderService.getTrip(tripId);
+
+      if (trip) {
+        this.tripAccountingStates.set(tripId,
+          new TripAccountingState(trip.reservedPlacesCount,
+                      trip.priceMinor === lowestPrice,
+                      trip.priceMinor === highestPrice)
+        );
+
+        this.totalReservedTripsCounterService.updateTotalReservedTripsCount(trip.reservedPlacesCount);
+      }
     });
   }
 
