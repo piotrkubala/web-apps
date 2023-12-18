@@ -211,4 +211,8 @@ export class TripAccountingService {
       new Money(totalPriceMinorInBaseCurrency, this.currencyExchangeService.baseCurrency)
     );
   }
+
+  unreserveAllThisUserPlaces(tripId: number): void {
+    this.changeReservation(tripId, -this.getCurrentUserReservedPlacesCount(tripId));
+  }
 }

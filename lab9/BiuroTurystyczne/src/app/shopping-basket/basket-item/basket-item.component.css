@@ -1,0 +1,14 @@
+.basket-image {
+  overflow: hidden;
+  max-height: 20rem;
+}
+
+.basket-image > img {
+  height: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.item-description {
+  text-align: justify;
+}

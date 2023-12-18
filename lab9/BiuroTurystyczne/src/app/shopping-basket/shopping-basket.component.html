@@ -1,1 +1,18 @@
-<p>shopping-basket works!</p>
+<div class="text-center">
+  <div *ngIf="isBasketEmpty(); then basketEmpty else basketNotEmpty"></div>
+  <ng-template #basketEmpty>
+    <h2>
+      Your basket is empty!
+      <br>
+      <a routerLink="/trip-board" routerLinkActive="true" class="btn btn-primary">
+        Go shopping!
+      </a>
+    </h2>
+  </ng-template>
+  <ng-template #basketNotEmpty>
+    <h2>Buy now!</h2>
+    <div>
+      <app-basket-item *ngFor="let trip of getReservedTrips()" [trip]="trip"></app-basket-item>
+    </div>
+  </ng-template>
+</div>

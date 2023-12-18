@@ -1,0 +1,34 @@
+<div class="border rounded m-1 d-flex flex-row">
+  <div class="col-5 basket-image text-start d-flex flex-row justify-content-start">
+    <img [src]="trip.image" [alt]="trip.name" class="img-fluid rounded">
+  </div>
+  <div class="col-5 text-start p-2 d-flex flex-column justify-content-between">
+    <div>
+      <div>
+        Name: {{ trip.name }}
+      </div>
+      <div>
+        Destination: {{ trip.country }}
+      </div>
+      <div>
+        Date: {{ trip.startDate }} - {{ trip.endDate }}
+      </div>
+    </div>
+    <div class="item-description">
+      {{ trip.description }}
+    </div>
+    <div>
+      <div>
+        Count: {{ getReservationCount() }}
+      </div>
+      <div>
+        Cost: {{ getTotalPriceString() }}
+      </div>
+    </div>
+  </div>
+  <div class="col-2">
+    <button class="btn btn-danger" (click)="reserveMorePlaces()">+</button>
+    <button class="btn btn-danger" (click)="reserveLessPlaces()">-</button>
+    <button class="btn btn-danger" (click)="removeFromBasket()">Remove</button>
+  </div>
+</div>
