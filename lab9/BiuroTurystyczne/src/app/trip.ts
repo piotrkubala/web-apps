@@ -10,4 +10,6 @@ export interface Trip {
   reservedPlacesCount: number;
   description: string;
   image: string;
+  averageRating: number;
+  countOfRatings: number;
 }

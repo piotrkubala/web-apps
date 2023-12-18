@@ -8,6 +8,7 @@ import {
 import {TripCreatorComponent} from "./trip-creator/trip-creator.component";
 import {ReservationSummaryComponent} from "../reservation-summary/reservation-summary.component";
 import {TripFilterComponent} from "./trip-filter/trip-filter.component";
+import {TripFilterPipe} from "../trip-filter.pipe";
 
 @Component({
   selector: 'app-trip-board',
@@ -18,7 +19,8 @@ import {TripFilterComponent} from "./trip-filter/trip-filter.component";
     TotalReservedTripsCounterComponent,
     TripCreatorComponent,
     ReservationSummaryComponent,
-    TripFilterComponent
+    TripFilterComponent,
+    TripFilterPipe
   ],
   templateUrl: './trip-board.component.html',
   styleUrl: './trip-board.component.css'
