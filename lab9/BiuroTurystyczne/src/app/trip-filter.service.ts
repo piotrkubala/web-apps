@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {TripAccountingService} from "./trip-accounting.service";
 import {TripLoaderService} from "./trip-loader.service";
 import {CurrencyExchangeService} from "./currency-exchange.service";
@@ -9,6 +9,8 @@ import {Money} from "./money";
   providedIn: 'root'
 })
 export class TripFilterService {
+  filterChanged: EventEmitter<void> = new EventEmitter<void>();
+
   possibleCountries: string[] = [];
   possibleMinPrice: number = 0;
   possibleMaxPrice: number = 0;
@@ -81,6 +83,14 @@ export class TripFilterService {
     this.ratings.set(rating, !this.ratings.get(rating));
   }
 
+  onFilterChanged(): void {
+    this.filterChanged.emit();
+  }
+
+  resetFilter(): void {
+    this._refreshRanges();
+  }
+
   check(trip: Trip): boolean {
     const tripPriceInBaseCurrency = this.currencyExchangeService.getMoneyInBaseCurrency(
       new Money(trip.priceMinor, trip.currency)
@@ -93,7 +103,10 @@ export class TripFilterService {
 
     const tripRating = trip.averageRating;
 
-    if (tripPriceInBaseCurrency < this.minPrice || tripPriceInBaseCurrency > this.maxPrice) {
+    const minPriceMinor = this.minPrice * 100;
+    const maxPriceMinor = this.maxPrice * 100;
+
+    if (tripPriceInBaseCurrency < minPriceMinor || tripPriceInBaseCurrency > maxPriceMinor) {
       return false;
     }
 
@@ -105,9 +118,8 @@ export class TripFilterService {
       return false;
     }
 
-    return Array.from(this.ratings.keys())
-      .some((rating) => {
-        return Math.abs(rating - tripRating) <= 0.5
-      });
+    return tripRating === 0 ||
+      Array.from(this.ratings.keys())
+      .some((rating) => Math.abs(rating - tripRating) <= 0.5);
   }
 }

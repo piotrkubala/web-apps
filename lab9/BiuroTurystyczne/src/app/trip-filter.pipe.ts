@@ -11,7 +11,7 @@ export class TripFilterPipe implements PipeTransform {
   constructor(private tripFilterService: TripFilterService) {
   }
 
-  transform(trips: KeyValue<number, Trip>[]): KeyValue<number, Trip>[] {
+  transform(trips: KeyValue<number, Trip>[], refreshState: boolean): KeyValue<number, Trip>[] {
     return trips.filter((trip) => {
       return this.tripFilterService.check(trip.value);
     });

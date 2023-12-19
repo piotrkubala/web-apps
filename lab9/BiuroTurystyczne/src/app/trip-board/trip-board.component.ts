@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, NgZone} from '@angular/core';
 import {TripLoaderService} from "../trip-loader.service";
 import {TripComponent} from "../trip/trip.component";
 import {CommonModule} from "@angular/common";
@@ -9,6 +9,7 @@ import {TripCreatorComponent} from "./trip-creator/trip-creator.component";
 import {ReservationSummaryComponent} from "../reservation-summary/reservation-summary.component";
 import {TripFilterComponent} from "./trip-filter/trip-filter.component";
 import {TripFilterPipe} from "../trip-filter.pipe";
+import {TripFilterService} from "../trip-filter.service";
 
 @Component({
   selector: 'app-trip-board',
@@ -26,9 +27,11 @@ import {TripFilterPipe} from "../trip-filter.pipe";
   styleUrl: './trip-board.component.css'
 })
 export class TripBoardComponent {
-  tripLoader: TripLoaderService;
+  refreshState: boolean = false;
 
-  constructor(tripLoader: TripLoaderService) {
-    this.tripLoader = tripLoader;
+  constructor(public tripLoader: TripLoaderService, private tripFilterService: TripFilterService) {
+    this.tripFilterService.filterChanged.subscribe(() => {
+      this.refreshState = !this.refreshState;
+    });
   }
 }

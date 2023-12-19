@@ -7,7 +7,7 @@
     <app-reservation-summary></app-reservation-summary>
   </div>
   <div class="col-10 container-fluid d-flex flex-row flex-wrap flex-grow-1 flex-fill">
-    <div *ngFor="let trip of tripLoader.trips | keyvalue | tripFilter" class="col-12 col-sm-6 col-md-4 py-2">
+    <div *ngFor="let trip of tripLoader.trips | keyvalue | tripFilter: refreshState" class="col-12 col-sm-6 col-md-4 py-2">
       <app-trip [trip]="trip.value"></app-trip>
     </div>
   </div>
