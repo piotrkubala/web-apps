@@ -1,1 +1,15 @@
-<p>shopping-history works!</p>
+<div>
+  <h2>Your shopping history</h2>
+
+  <div>
+    <div *ngIf="isShoppingHistoryEmpty(); then emptyHistory else historyItems"></div>
+    <ng-template #emptyHistory>
+      <p>There are no items in your shopping history</p>
+    </ng-template>
+    <ng-template #historyItems>
+      <div *ngFor="let shoppingItem of shoppingHistoryService.shoppingHistoryItems">
+        <app-shopping-item [shoppingHistoryItem]="shoppingItem"></app-shopping-item>
+      </div>
+    </ng-template>
+  </div>
+</div>

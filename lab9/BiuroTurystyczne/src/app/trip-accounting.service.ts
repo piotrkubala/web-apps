@@ -228,11 +228,30 @@ const tripAccountingState = this.tripAccountingStates.get(tripId);
     );
   }
 
+  getSelectedTrips(): Trip[] {
+    return Array.from(this.tripLoaderService.trips.values())
+      .filter((trip) => {
+        const tripAccountingState = this.tripAccountingStates.get(trip.id);
+
+        if (tripAccountingState) {
+          return tripAccountingState.selectedToBeBought;
+        }
+        return false;
+      });
+  }
+
   unreserveAllThisUserPlaces(tripId: number): void {
     this.changeReservation(tripId, -this.getCurrentUserReservedPlacesCount(tripId));
   }
 
-  buyAllSelectedTrips(): void {
+  markCurrentUserReservedPlacesAsBought(tripId: number): void {
+    const trip = this.tripLoaderService.getTrip(tripId);
+    const tripAccountingState = this.tripAccountingStates.get(tripId);
+    const reservedPlacesCount = this.getCurrentUserReservedPlacesCount(tripId);
 
+    if (trip && tripAccountingState) {
+      trip.reservedPlacesCount = tripAccountingState.totalReservedPlacesCount;
+      this.totalReservedTripsCounterService.updateTotalReservedTripsCount(-reservedPlacesCount);
+    }
   }
 }

@@ -68,7 +68,7 @@ export class CurrencyExchangeService {
   getMoneyStringInBaseCurrency(money: Money): string {
     const moneyInBaseCurrency = this.getMoneyInBaseCurrency(money);
 
-    return (moneyInBaseCurrency.amountMinor * 0.01).toFixed(2).toString() + " " + money.currencySymbol;
+    return (moneyInBaseCurrency.amountMinor * 0.01).toFixed(2).toString() + " " + this.baseCurrency;
   }
 }
 

@@ -6,6 +6,7 @@ import {BasketItemComponent} from "./basket-item/basket-item.component";
 import {Trip} from "../trip";
 import {NgForOf, NgIf} from "@angular/common";
 import {RouterLink, RouterLinkActive} from "@angular/router";
+import {ShoppingHistoryService} from "../shopping-history.service";
 
 @Component({
   selector: 'app-shopping-basket',
@@ -23,7 +24,8 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
 export class ShoppingBasketComponent {
   constructor(private tripAccountingService: TripAccountingService,
               private currencyExchangeService: CurrencyExchangeService,
-              private tripLoaderService: TripLoaderService) {
+              private tripLoaderService: TripLoaderService,
+              private shoppingHistoryService: ShoppingHistoryService) {
   }
 
   getReservedTrips(): Trip[] {
@@ -35,6 +37,8 @@ export class ShoppingBasketComponent {
   }
 
   buySelected(): void {
+    const selectedTrips = this.tripAccountingService.getSelectedTrips();
+    this.shoppingHistoryService.buyTrips(selectedTrips);
   }
 
   getTotalPriceForAllTripsString(): string {
