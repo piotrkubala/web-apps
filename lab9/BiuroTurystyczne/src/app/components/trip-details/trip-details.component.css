@@ -6,3 +6,7 @@
   aspect-ratio: 16/9;
   object-fit: cover;
 }
+
+.map-container {
+  min-height: 30rem;
+}

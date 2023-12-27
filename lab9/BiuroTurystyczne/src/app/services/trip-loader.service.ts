@@ -12,8 +12,8 @@ import {Money} from "../utilities/money";
 export class TripLoaderService {
   trips: Map<number, Trip> = new Map<number, Trip>();
   tripsLoaded: EventEmitter<void> = new EventEmitter<void>();
+  wereTripsLoaded: boolean = false;
   _lastId: number = 0;
-
 
   constructor(private http: HttpClient,
               private currencyExchangeService: CurrencyExchangeService) {
@@ -26,6 +26,7 @@ export class TripLoaderService {
             this._lastId = Math.max(this._lastId, trip.id);
           });
 
+          this.wereTripsLoaded = true;
           this.tripsLoaded.emit();
        });
   }
@@ -45,7 +46,9 @@ export class TripLoaderService {
       image: '',
       averageRating: 0,
       countOfRatings: 0,
-      osmUrl: '#'
+      latitude: 0,
+      longitude: 0,
+      zoom: 1
     };
   }
 
