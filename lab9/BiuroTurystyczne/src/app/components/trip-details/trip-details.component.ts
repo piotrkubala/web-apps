@@ -47,6 +47,7 @@ export class TripDetailsComponent {
 
   onMapReady(map: Leaflet.Map): void {
     this.map = map;
+    this.loadTrip();
   }
 
   constructor(private currencyExchangeService: CurrencyExchangeService,

@@ -31,9 +31,9 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Notre-Dame_de_Paris%2C_4_October_2017.jpg",
     "averageRating": 4.5,
     "reviewsCount": 2,
-    "latitude": 0,
-    "longitude": 0,
-    "zoom": 1
+    "latitude": 48.86161,
+    "longitude": 2.33409,
+    "zoom": 15
   },
   {
     "id": 2,
@@ -49,9 +49,9 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Palace_of_Westminster%2C_London_-_Feb_2007.jpg",
     "averageRating": 0,
     "reviewsCount": 0,
-    "latitude": 0,
-    "longitude": 0,
-    "zoom": 1
+    "latitude": 51.5007,
+    "longitude": -0.12721,
+    "zoom": 15
   },
   {
     "id": 3,
@@ -67,9 +67,9 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Reichstagsgeb%C3%A4ude_von_Westen.jpg",
     "averageRating": 0,
     "reviewsCount": 0,
-    "latitude": 0,
-    "longitude": 0,
-    "zoom": 1
+    "latitude": 52.51883,
+    "longitude": 13.37607,
+    "zoom": 14
   },
   {
     "id": 4,
@@ -85,9 +85,9 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Madrid_-_Sky_Bar_360%C2%BA_%28Hotel_Riu_Plaza_Espa%C3%B1a%29%2C_vistas_19.jpg",
     "averageRating": 0,
     "reviewsCount": 0,
-    "latitude": 0,
-    "longitude": 0,
-    "zoom": 1
+    "latitude": 40.41691,
+    "longitude": -3.70431,
+    "zoom": 14
   },
   {
     "id": 5,
@@ -103,9 +103,9 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/The_Acropolis_from_Mount_Lycabettus_on_October_5%2C_2019_%28cropped%29.jpg",
     "averageRating": 0,
     "reviewsCount": 0,
-    "latitude": 0,
-    "longitude": 0,
-    "zoom": 1
+    "latitude": 37.99131,
+    "longitude": 23.70827,
+    "zoom": 15
   },
   {
     "id": 6,
@@ -121,9 +121,9 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png",
     "averageRating": 0,
     "reviewsCount": 0,
-    "latitude": 0,
-    "longitude": 0,
-    "zoom": 1
+    "latitude": 52.14730,
+    "longitude": 5.24415,
+    "zoom": 15
   },
   {
     "id": 7,
@@ -139,9 +139,9 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Prague_%286365119737%29.jpg",
     "averageRating": 0,
     "reviewsCount": 0,
-    "latitude": 0,
-    "longitude": 0,
-    "zoom": 1
+    "latitude": 50.09267,
+    "longitude": 14.41805,
+    "zoom": 14
   },
   {
     "id": 8,
@@ -157,9 +157,9 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/60/Budapest_Hungarian_Parliament_%2831363963556%29.jpg",
     "averageRating": 0,
     "reviewsCount": 0,
-    "latitude": 0,
-    "longitude": 0,
-    "zoom": 1
+    "latitude": 47.5002,
+    "longitude": 19.0307,
+    "zoom": 14
   },
   {
     "id": 9,
@@ -175,9 +175,9 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Wien_-_Stephansdom_%281%29.JPG",
     "averageRating": 0,
     "reviewsCount": 0,
-    "latitude": 0,
-    "longitude": 0,
-    "zoom": 1
+    "latitude": 48.20818,
+    "longitude": 16.37233,
+    "zoom": 14
   },
   {
     "id": 10,
@@ -193,9 +193,9 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Grand_Place_Bruselas_2.jpg",
     "averageRating": 0,
     "reviewsCount": 0,
-    "latitude": 0,
-    "longitude": 0,
-    "zoom": 1
+    "latitude": 50.8387,
+    "longitude": 4.3753,
+    "zoom": 15
   },
   {
     "id": 11,
@@ -211,9 +211,9 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Lisbon_%2836831596786%29_%28cropped%29.jpg/2560px-Lisbon_%2836831596786%29_%28cropped%29.jpg",
     "averageRating": 0,
     "reviewsCount": 0,
-    "latitude": 0,
-    "longitude": 0,
-    "zoom": 1
+    "latitude": 39.606,
+    "longitude": -9.229,
+    "zoom": 15
   },
   {
     "id": 12,
@@ -229,8 +229,8 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Ulica_Targowa_w_Warszawie_2019b.jpg",
     "averageRating": 0,
     "reviewsCount": 0,
-    "latitude": 0,
-    "longitude": 0,
-    "zoom": 1
+    "latitude": 53.094,
+    "longitude": 20.918,
+    "zoom": 15
   }
 ]
