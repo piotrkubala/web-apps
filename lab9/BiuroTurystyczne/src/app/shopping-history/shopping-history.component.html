@@ -1,15 +1,57 @@
 <div>
-  <h2>Your shopping history</h2>
-
   <div>
-    <div *ngIf="isShoppingHistoryEmpty(); then emptyHistory else historyItems"></div>
-    <ng-template #emptyHistory>
-      <p>There are no items in your shopping history</p>
-    </ng-template>
-    <ng-template #historyItems>
-      <div *ngFor="let shoppingItem of shoppingHistoryService.shoppingHistoryItems">
-        <app-shopping-item [shoppingHistoryItem]="shoppingItem"></app-shopping-item>
-      </div>
-    </ng-template>
+    <h2>Your shopping history</h2>
+
+    <div>
+      <div *ngIf="isShoppingHistoryEmpty(); then emptyHistory else historyItems"></div>
+      <ng-template #emptyHistory>
+        <p>There are no items in your shopping history</p>
+      </ng-template>
+      <ng-template #historyItems>
+        <div>
+          Filter:
+          <div class="d-flex flex-row">
+            <div class="col-3 m-1">
+              <button (click)="filterVisibleByStatus(null)" class="btn btn-info w-100">
+                All
+              </button>
+            </div>
+            <div class="col-3 m-1">
+              <button (click)="filterVisibleByStatus(HistoryItemState.BeforeDeparture)" class="btn btn-info w-100">
+                Before departure
+              </button>
+            </div>
+            <div class="col-3 m-1">
+              <button (click)="filterVisibleByStatus(HistoryItemState.DuringTrip)" class="btn btn-info w-100">
+                Active
+              </button>
+            </div>
+            <div class="col-3 m-1">
+              <button (click)="filterVisibleByStatus(HistoryItemState.Ended)" class="btn btn-info w-100">
+                Completed
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
+          Sorting:
+          <div class="d-flex flex-row">
+            <div class="col-6 m-1">
+              <button (click)="setSortingOrder(true)" class="btn btn-info w-100">Ascending</button>
+            </div>
+            <div class="col-6 m-1">
+              <button (click)="setSortingOrder(false)" class="btn btn-info w-100">Descending</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div *ngFor="let shoppingItem of shoppingHistoryService.shoppingHistoryItems
+          | historyFilter : statusFilter : isSortingAscending">
+            <app-shopping-item [shoppingHistoryItem]="shoppingItem"></app-shopping-item>
+          </div>
+        </div>
+      </ng-template>
+    </div>
   </div>
 </div>
