@@ -12,4 +12,5 @@ export interface Trip {
   image: string;
   averageRating: number;
   countOfRatings: number;
+  osmUrl: string;
 }

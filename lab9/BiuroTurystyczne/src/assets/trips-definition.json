@@ -12,7 +12,8 @@
     "description": "A trip to Rome during the summer",
     "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Rom_Colosseum_Sept_2021_3.jpg",
     "averageRating": 4.5,
-    "reviewsCount": 2
+    "reviewsCount": 2,
+    "osmUrl": "https://www.openstreetmap.org/directions?from=&to=41.91495%2C12.47957#map=18/41.91503/12.47956"
   },
   {
     "id": 1,
@@ -27,7 +28,8 @@
     "description": "Haven't you ever wandered how would it be like to visit Paris? This trip during which we will visit the Eiffel Tower and the Louvre will help you find out the answer.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Notre-Dame_de_Paris%2C_4_October_2017.jpg",
     "averageRating": 4.5,
-    "reviewsCount": 2
+    "reviewsCount": 2,
+    "osmUrl": "#"
   },
   {
     "id": 2,
@@ -42,7 +44,8 @@
     "description": "A trip to London which allows you to visit the Buckingham Palace and the Big Ben, among other things. It will inevitably rain, but that's part of the british experience.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Palace_of_Westminster%2C_London_-_Feb_2007.jpg",
     "averageRating": 0,
-    "reviewsCount": 0
+    "reviewsCount": 0,
+    "osmUrl": "#"
   },
   {
     "id": 3,
@@ -57,7 +60,8 @@
     "description": "Unforgettable trip to Berlin, where you will be able to visit the Brandenburg Gate and the Reichstag. It will be a great experience, especially if you like beer.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Reichstagsgeb%C3%A4ude_von_Westen.jpg",
     "averageRating": 0,
-    "reviewsCount": 0
+    "reviewsCount": 0,
+    "osmUrl": "#"
   },
   {
     "id": 4,
@@ -72,7 +76,8 @@
     "description": "A trip to Madrid, where you will be able to visit the Royal Palace and the Prado Museum. It will be a great experience, especially if you like tapas.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Madrid_-_Sky_Bar_360%C2%BA_%28Hotel_Riu_Plaza_Espa%C3%B1a%29%2C_vistas_19.jpg",
     "averageRating": 0,
-    "reviewsCount": 0
+    "reviewsCount": 0,
+    "osmUrl": "#"
   },
   {
     "id": 5,
@@ -87,7 +92,8 @@
     "description": "A trip to Athens, where you will be able to visit the Acropolis and the Parthenon. It will be a great experience, especially if you like gyros.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/The_Acropolis_from_Mount_Lycabettus_on_October_5%2C_2019_%28cropped%29.jpg",
     "averageRating": 0,
-    "reviewsCount": 0
+    "reviewsCount": 0,
+    "osmUrl": "#"
   },
   {
     "id": 6,
@@ -102,7 +108,8 @@
     "description": "Amsterdam is a city of freedom, where you will be able to visit the Van Gogh Museum and the Rijksmuseum and Spinoza's house. Every philosopher's dream.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png",
     "averageRating": 0,
-    "reviewsCount": 0
+    "reviewsCount": 0,
+    "osmUrl": "#"
   },
   {
     "id": 7,
@@ -117,7 +124,8 @@
     "description": "A trip to Prague, where you will be able to visit the Charles Bridge and the Prague Castle. It will be a great experience, especially if you like beer.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Prague_%286365119737%29.jpg",
     "averageRating": 0,
-    "reviewsCount": 0
+    "reviewsCount": 0,
+    "osmUrl": "#"
   },
   {
     "id": 8,
@@ -132,7 +140,8 @@
     "description": "A trip to Budapest, where you will be able to visit the Buda Castle and the Hungarian Parliament Building. You will have a chance to talk to Viktor Orbán.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/60/Budapest_Hungarian_Parliament_%2831363963556%29.jpg",
     "averageRating": 0,
-    "reviewsCount": 0
+    "reviewsCount": 0,
+    "osmUrl": "#"
   },
   {
     "id": 9,
@@ -147,7 +156,8 @@
     "description": "A trip to Vienna, where you will be able to visit the Schönbrunn Palace and the Hofburg. It will be a great experience, especially if you like beer.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Wien_-_Stephansdom_%281%29.JPG",
     "averageRating": 0,
-    "reviewsCount": 0
+    "reviewsCount": 0,
+    "osmUrl": "#"
   },
   {
     "id": 10,
@@ -162,7 +172,8 @@
     "description": "A trip to Brussels, where you will be able to visit the Grand Place and the Atomium. It will be a great experience, especially if you like beer.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Grand_Place_Bruselas_2.jpg",
     "averageRating": 0,
-    "reviewsCount": 0
+    "reviewsCount": 0,
+    "osmUrl": "#"
   },
   {
     "id": 11,
@@ -177,7 +188,8 @@
     "description": "A trip to Lisbon, where you will be able to visit the Belém Tower and the Jerónimos Monastery. It will be a great experience, especially if you like beer.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Lisbon_%2836831596786%29_%28cropped%29.jpg/2560px-Lisbon_%2836831596786%29_%28cropped%29.jpg",
     "averageRating": 0,
-    "reviewsCount": 0
+    "reviewsCount": 0,
+    "osmUrl": "#"
   },
   {
     "id": 12,
@@ -192,6 +204,7 @@
     "description": "Have you ever felt sad? This trip to Warsaw will make you feel even sadder. You will be able to visit the Warsaw Uprising Museum and the Palace of Culture and Science. You will talk to the locals and realize how sad they are.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Ulica_Targowa_w_Warszawie_2019b.jpg",
     "averageRating": 0,
-    "reviewsCount": 0
+    "reviewsCount": 0,
+    "osmUrl": "#"
   }
 ]

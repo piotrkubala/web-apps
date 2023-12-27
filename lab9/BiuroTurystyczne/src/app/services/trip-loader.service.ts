@@ -44,7 +44,8 @@ export class TripLoaderService {
       description: '',
       image: '',
       averageRating: 0,
-      countOfRatings: 0
+      countOfRatings: 0,
+      osmUrl: '#'
     };
   }
 

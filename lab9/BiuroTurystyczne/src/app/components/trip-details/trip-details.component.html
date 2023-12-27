@@ -1,0 +1,23 @@
+<div>
+  <div class="d-flex flex-row">
+    <div class="p-4 col-5">
+      <h3>Country: {{ trip.country | uppercase }}</h3>
+      <div class="trip-description">{{ trip.description }}</div>
+      <p>{{ trip.startDate }} - {{ trip.endDate }}</p>
+      <p>Price: {{ getMoneyString() }}</p>
+      <p>Max count of participants: {{ trip.maxParticipants }}</p>
+      <p>Currently reserved: {{ trip.reservedPlacesCount }}</p>
+      <p>Your reservations: {{ getReservedPlacesCount() }}</p>
+      <div>
+        <app-trip-evaluator [trip]="trip"></app-trip-evaluator>
+        <app-trip-reserver [trip]="trip"></app-trip-reserver>
+      </div>
+    </div>
+    <div class="p-4 col-7">
+      <img [src]="trip.image" class="img-fluid rounded trip-image" [alt]="trip.name">
+    </div>
+  </div>
+  <div>
+    <iframe [src]="trip.osmUrl" width="100%" height="500px" style="border:0" allowfullscreen title="Target"></iframe>
+  </div>
+</div>

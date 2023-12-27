@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <h5 class="text-center p-2 col-12">Buy tickets!</h5>
+  <div class="row text-center">
+    <div *ngIf="isFullyReserved(); then fullyReserved else notFullyReserved"></div>
+    <ng-template #fullyReserved>
+      <div class="col-6" role="alert">
+        <div class="alert alert-danger p-2 m-0">
+          Full!
+        </div>
+      </div>
+    </ng-template>
+    <ng-template #notFullyReserved>
+      <div class="col-6">
+        <button class="btn btn-primary col-12 p-2" (click)="reservePlace()">+</button>
+      </div>
+    </ng-template>
+
+    <div *ngIf="didUserReserve(); then didReserve else didNotReserve"></div>
+    <ng-template #didReserve>
+      <div class="col-6">
+        <button class="btn btn-primary col-12 p-2" (click)="unreservePlace()">-</button>
+      </div>
+    </ng-template>
+    <ng-template #didNotReserve>
+      <div class="col-6" role="alert">
+        <div class="alert alert-primary p-2 m-0">
+          Reserve trip!
+        </div>
+      </div>
+    </ng-template>
+  </div>
+</div>

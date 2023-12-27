@@ -1,0 +1,8 @@
+.trip-description {
+  text-align: justify;
+}
+
+.trip-image {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
