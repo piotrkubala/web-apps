@@ -5,7 +5,7 @@
       Destination:
       <div *ngFor="let country of tripFilterService.possibleCountries">
         <label [for]="country" class="checkbox-inline">
-          <input type="checkbox" [id]="country" name="countries"
+          <input type="checkbox" [id]="country" name="countries" class="form-check-input"
                  (change)="tripFilterService.toggleCountry(country); tripFilterService.onFilterChanged()"
                  [checked]="tripFilterService.isCountrySelected(country)">
           {{country}}
@@ -15,13 +15,13 @@
     <div>
       <div>
         Minimum price:
-        <input type="number" [(ngModel)]="tripFilterService.minPrice"
+        <input type="number" [(ngModel)]="tripFilterService.minPrice" class="form-control"
                [min]="tripFilterService.possibleMinPrice" [max]="tripFilterService.maxPrice" step="0.01"
                 (change)="tripFilterService.onFilterChanged()">
       </div>
       <div>
         Maximum price:
-        <input type="number" [(ngModel)]="tripFilterService.maxPrice"
+        <input type="number" [(ngModel)]="tripFilterService.maxPrice" class="form-control"
                [min]="tripFilterService.minPrice" [max]="tripFilterService.possibleMaxPrice" step="0.01"
                (change)="tripFilterService.onFilterChanged()">
       </div>
@@ -29,13 +29,13 @@
     <div>
       <div>
         Minimum start date:
-        <input type="date" [(ngModel)]="tripFilterService.minStartDate"
+        <input type="date" [(ngModel)]="tripFilterService.minStartDate" class="form-control"
                [min]="tripFilterService.earliestDate" [max]="tripFilterService.maxStartDate"
                (change)="tripFilterService.onFilterChanged()">
       </div>
       <div>
         Maximum start date:
-        <input type="date" [(ngModel)]="tripFilterService.maxStartDate"
+        <input type="date" [(ngModel)]="tripFilterService.maxStartDate" class="form-control"
                [min]="tripFilterService.minStartDate" [max]="tripFilterService.latestDate"
                (change)="tripFilterService.onFilterChanged()">
       </div>
@@ -45,7 +45,7 @@
       <div class="d-flex flex-wrap">
         <div *ngFor="let rating of tripFilterService.possibleRatings" class="border rounded m-1 p-1">
           <label [for]="rating" class="checkbox-inline">
-            <input type="checkbox" [id]="rating" name="ratings"
+            <input type="checkbox" [id]="rating" name="ratings" class="form-check-input"
                    (change)="tripFilterService.toggleRating(rating); tripFilterService.onFilterChanged()"
                    [checked]="tripFilterService.isRatingSelected(rating)">
             {{rating}}

@@ -4,7 +4,6 @@
 <div class="d-flex">
   <div class="col-2">
     <app-trip-filter></app-trip-filter>
-    <app-reservation-summary></app-reservation-summary>
   </div>
   <div class="col-10 container-fluid d-flex flex-row flex-wrap flex-grow-1 flex-fill">
     <div *ngFor="let trip of tripLoader.trips | keyvalue | tripFilter: refreshState" class="col-12 col-sm-6 col-md-4 py-2">
