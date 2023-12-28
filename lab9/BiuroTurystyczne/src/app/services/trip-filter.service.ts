@@ -68,7 +68,7 @@ export class TripFilterService {
   }
 
   isCountrySelected(country: string): boolean {
-    return this.countries.get(country) || false;
+    return this.countries.get(country) ?? false;
   }
 
   toggleCountry(country: string): void {
@@ -76,7 +76,7 @@ export class TripFilterService {
   }
 
   isRatingSelected(rating: number): boolean {
-    return this.ratings.get(rating) || false;
+    return this.ratings.get(rating) ?? false;
   }
 
   toggleRating(rating: number): void {
@@ -119,7 +119,9 @@ export class TripFilterService {
     }
 
     return tripRating === 0 ||
-      Array.from(this.ratings.keys())
-      .some((rating) => Math.abs(rating - tripRating) <= 0.5);
+      Array.from(this.ratings.entries())
+        .filter((value, rating) => value[1])
+        .map((value) => value[0])
+        .some((rating) => Math.abs(rating - tripRating) <= 0.5);
   }
 }

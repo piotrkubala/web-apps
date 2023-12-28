@@ -1,12 +1,37 @@
 <div class="container-fluid text-center">
-  <app-total-reserved-trips-counter></app-total-reserved-trips-counter>
+  <div>
+    <app-total-reserved-trips-counter></app-total-reserved-trips-counter>
+  </div>
+  <div>
+    <form class="d-flex flex-row justify-content-center">
+      <div class="p-1">
+        Items per page:
+      </div>
+      <div *ngFor="let itemsPerPageOption of itemsPerPageOptions" class="p-1">
+        <label for="items-per-page-{{itemsPerPageOption}}">{{itemsPerPageOption}}</label>
+        <input type="radio" name="items-per-page" id="items-per-page-{{itemsPerPageOption}}"
+               [checked]="itemsPerPageOption === itemsPerPage" [value]="itemsPerPageOption"
+               [(ngModel)]="itemsPerPage" (change)="sanitizePageNumber()">
+      </div>
+    </form>
+  </div>
+  <div class="controls-box">
+    <pagination-controls  [maxSize]="9" [directionLinks]="true"
+                          [responsive]="true" previousLabel="Previous"
+                          nextLabel="Next" screenReaderPaginationLabel="Pagination"
+                          screenReaderPageLabel="page" screenReaderCurrentLabel="You're on page"
+                          (pageChange)="pageChanged($event)" class="w-100">
+    </pagination-controls>
+  </div>
 </div>
 <div class="d-flex">
   <div class="col-2">
     <app-trip-filter></app-trip-filter>
   </div>
   <div class="col-10 container-fluid d-flex flex-row flex-wrap flex-grow-1 flex-fill">
-    <div *ngFor="let trip of tripLoader.trips | keyvalue | tripFilter: refreshState" class="col-12 col-sm-6 col-md-4 py-2">
+    <div *ngFor="let trip of tripLoader.trips | keyvalue | tripFilter: refreshState |
+          paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage}"
+         class="col-12 col-sm-6 col-md-4 py-2">
       <app-trip [trip]="trip.value"></app-trip>
     </div>
   </div>

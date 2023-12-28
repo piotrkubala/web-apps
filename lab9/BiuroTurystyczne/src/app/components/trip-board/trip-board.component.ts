@@ -10,6 +10,8 @@ import {ReservationSummaryComponent} from "../reservation-summary/reservation-su
 import {TripFilterComponent} from "./trip-filter/trip-filter.component";
 import {TripFilterPipe} from "../../pipes/trip-filter.pipe";
 import {TripFilterService} from "../../services/trip-filter.service";
+import {NgxPaginationModule} from "ngx-pagination";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-trip-board',
@@ -21,17 +23,33 @@ import {TripFilterService} from "../../services/trip-filter.service";
     TripCreatorComponent,
     ReservationSummaryComponent,
     TripFilterComponent,
-    TripFilterPipe
+    TripFilterPipe,
+    NgxPaginationModule,
+    FormsModule
   ],
   templateUrl: './trip-board.component.html',
   styleUrl: './trip-board.component.css'
 })
 export class TripBoardComponent {
   refreshState: boolean = false;
+  itemsPerPage: number = 6;
+  currentPage: number = 1;
+
+  itemsPerPageOptions: number[] = [2, 3, 4, 6, 8, 10, 20, 50, 100];
 
   constructor(public tripLoader: TripLoaderService, private tripFilterService: TripFilterService) {
     this.tripFilterService.filterChanged.subscribe(() => {
       this.refreshState = !this.refreshState;
     });
+  }
+
+  pageChanged(page: number) {
+    this.currentPage = page;
+  }
+
+  sanitizePageNumber(): void {
+    const countOfPages = Math.ceil(this.tripLoader.trips.size / this.itemsPerPage);
+
+    this.currentPage = Math.min(this.currentPage, countOfPages);
   }
 }
