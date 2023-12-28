@@ -27,17 +27,17 @@ export class ShoppingItemComponent implements OnInit {
   }
 
   getTripPurchaseDate(): string {
-    return this.tripLoaderService.dateToString(this.shoppingHistoryItem.timeOfPurchase);
+    return TripLoaderService.dateToString(this.shoppingHistoryItem.timeOfPurchase);
   }
 
   getTripStartDate(): string {
     const startDate = new Date(this.shoppingHistoryItem.trip.startDate);
-    return this.tripLoaderService.dateToString(startDate);
+    return TripLoaderService.dateToString(startDate);
   }
 
   getTripEndDate(): string {
     const endDate = new Date(this.shoppingHistoryItem.trip.endDate);
-    return this.tripLoaderService.dateToString(endDate);
+    return TripLoaderService.dateToString(endDate);
   }
 
   getTripPrice(): string {

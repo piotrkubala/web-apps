@@ -110,28 +110,6 @@ export class TripLoaderService {
       .map((trip) => new Date(trip.endDate).getTime())));
   }
 
-  dateToString(date: Date): string {
-    const formatterYear = new Intl.DateTimeFormat('en-GB', {
-      year: 'numeric'
-    });
-    const formatterMonth = new Intl.DateTimeFormat('en-GB', {
-      month: '2-digit'
-    });
-    const formatterDay = new Intl.DateTimeFormat('en-GB', {
-      day: '2-digit'
-    });
-
-    if (date === undefined || date.toString() === 'Invalid Date') {
-      return '1970-01-01';
-    }
-
-    const yearString = formatterYear.format(date);
-    const monthString = formatterMonth.format(date);
-    const dayString = formatterDay.format(date);
-
-    return `${yearString}-${monthString}-${dayString}`;
-  }
-
   getRating(tripId: number): number {
     return this.trips.get(tripId)?.averageRating ?? 0;
   }
@@ -159,5 +137,28 @@ export class TripLoaderService {
 
       trip.countOfRatings--;
     }
+  }
+
+
+  static dateToString(date: Date): string {
+    const formatterYear = new Intl.DateTimeFormat('en-GB', {
+      year: 'numeric'
+    });
+    const formatterMonth = new Intl.DateTimeFormat('en-GB', {
+      month: '2-digit'
+    });
+    const formatterDay = new Intl.DateTimeFormat('en-GB', {
+      day: '2-digit'
+    });
+
+    if (date === undefined || date.toString() === 'Invalid Date') {
+      return '1970-01-01';
+    }
+
+    const yearString = formatterYear.format(date);
+    const monthString = formatterMonth.format(date);
+    const dayString = formatterDay.format(date);
+
+    return `${yearString}-${monthString}-${dayString}`;
   }
 }

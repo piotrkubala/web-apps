@@ -36,8 +36,8 @@ export class TripFilterService {
   _refreshRanges(): void {
     this.possibleRatings = this.tripAccountingService.possibleRatingValues;
     this.possibleCountries = this.tripLoaderService.getAllUniqueCountriesSorted();
-    this.earliestDate = this.tripLoaderService.dateToString(this.tripLoaderService.getEarliestDate());
-    this.latestDate = this.tripLoaderService.dateToString(this.tripLoaderService.getLatestDate());
+    this.earliestDate = TripLoaderService.dateToString(this.tripLoaderService.getEarliestDate());
+    this.latestDate = TripLoaderService.dateToString(this.tripLoaderService.getLatestDate());
 
     this.possibleCountries.forEach((country) => {
       this.countries.set(country, true);

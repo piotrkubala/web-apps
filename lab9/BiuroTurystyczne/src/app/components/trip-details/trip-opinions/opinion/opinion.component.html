@@ -1,0 +1,14 @@
+<div>
+  <div>
+    <h3>{{ opinion.title }}</h3>
+  </div>
+  <div>
+    <p>{{ opinion.content }}</p>
+  </div>
+  <div>
+    <h5>Written by {{ opinion.username }}, {{ opinion.opinionCreationDate }}</h5>
+  </div>
+  <div *ngIf="opinion.dateOfPurchase">
+    <h5>Trip purchased on {{ opinion.dateOfPurchase }}</h5>
+  </div>
+</div>

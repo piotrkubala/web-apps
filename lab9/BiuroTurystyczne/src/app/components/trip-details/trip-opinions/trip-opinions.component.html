@@ -1,1 +1,33 @@
-<p>trip-opinions works!</p>
+<div>
+  <form>
+    <h3>Your opinion:</h3>
+    <div class="p-1">
+      <label for="opinion-title">Title:</label>
+      <input type="text" name="opinionTitle" placeholder="Title" [(ngModel)]="createdOpinion.title"
+             minlength="5" maxlength="50" class="form-control" id="opinion-title">
+    </div>
+    <div class="p-1">
+      <label for="opinion-content">Text:</label>
+      <textarea name="opinionText" placeholder="Text" minlength="51" [(ngModel)]="createdOpinion.content"
+                maxlength="499" class="form-control opinion-content" id="opinion-content"></textarea>
+    </div>
+    <div class="p-1 d-flex flex-row">
+      <div class="col-6 d-flex flex-row justify-content-start">
+        <label for="opinion-date" class="col-3">Date of purchase (optional):</label>
+        <div class="w-100">
+          <input type="date" name="dateOfPurchase" placeholder="Date of purchase"
+                 [(ngModel)]="createdOpinion.dateOfPurchase" class="form-control w-100" id="opinion-date">
+        </div>
+      </div>
+      <div class="col-6">
+        <input type="submit" name="submitOpinion" value="Submit" class="form-control btn btn-primary w-100"
+               (click)="createOpinion()">
+      </div>
+    </div>
+  </form>
+  <div>
+    <div *ngFor="let opinion of tripOpinionsService.opinions">
+      <app-opinion [opinion]="opinion"></app-opinion>
+    </div>
+  </div>
+</div>

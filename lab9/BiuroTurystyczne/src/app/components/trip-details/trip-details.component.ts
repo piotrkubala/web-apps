@@ -11,6 +11,7 @@ import {MapLeafletsService} from "../../services/map-leaflets.service";
 import * as Leaflet from "leaflet";
 import {LeafletModule} from "@asymmetrik/ngx-leaflet";
 import {TripCarouselComponent} from "./trip-carousel/trip-carousel.component";
+import {TripOpinionsComponent} from "./trip-opinions/trip-opinions.component";
 
 @Component({
   selector: 'app-trip-details',
@@ -20,7 +21,8 @@ import {TripCarouselComponent} from "./trip-carousel/trip-carousel.component";
     TripEvaluatorComponent,
     TripReserverComponent,
     LeafletModule,
-    TripCarouselComponent
+    TripCarouselComponent,
+    TripOpinionsComponent
   ],
   templateUrl: './trip-details.component.html',
   styleUrl: './trip-details.component.css'
