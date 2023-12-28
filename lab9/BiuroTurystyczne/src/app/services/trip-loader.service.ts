@@ -48,7 +48,8 @@ export class TripLoaderService {
       countOfRatings: 0,
       latitude: 0,
       longitude: 0,
-      zoom: 1
+      zoom: 1,
+      tripPhotos: []
     };
   }
 

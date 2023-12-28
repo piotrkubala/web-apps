@@ -15,7 +15,12 @@
     "reviewsCount": 2,
     "latitude": 41.91498,
     "longitude": 12.47952,
-    "zoom": 15
+    "zoom": 15,
+    "tripPhotos": [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Trevi_Fountain_-_Roma.jpg/1280px-Trevi_Fountain_-_Roma.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pantheon_Rom_1_cropped.jpg/1280px-Pantheon_Rom_1_cropped.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Roma-_Altare_della_Patria_%28Piazza_Venezia%29_-_52347399654_%28cropped%29.jpg/1280px-Roma-_Altare_della_Patria_%28Piazza_Venezia%29_-_52347399654_%28cropped%29.jpg"
+    ]
   },
   {
     "id": 1,
@@ -33,7 +38,8 @@
     "reviewsCount": 2,
     "latitude": 48.86161,
     "longitude": 2.33409,
-    "zoom": 15
+    "zoom": 15,
+    "tripPhotos": []
   },
   {
     "id": 2,
@@ -51,7 +57,8 @@
     "reviewsCount": 0,
     "latitude": 51.5007,
     "longitude": -0.12721,
-    "zoom": 15
+    "zoom": 15,
+    "tripPhotos": []
   },
   {
     "id": 3,
@@ -69,7 +76,8 @@
     "reviewsCount": 0,
     "latitude": 52.51883,
     "longitude": 13.37607,
-    "zoom": 14
+    "zoom": 14,
+    "tripPhotos": []
   },
   {
     "id": 4,
@@ -87,7 +95,8 @@
     "reviewsCount": 0,
     "latitude": 40.41691,
     "longitude": -3.70431,
-    "zoom": 14
+    "zoom": 14,
+    "tripPhotos": []
   },
   {
     "id": 5,
@@ -105,7 +114,8 @@
     "reviewsCount": 0,
     "latitude": 37.99131,
     "longitude": 23.70827,
-    "zoom": 15
+    "zoom": 15,
+    "tripPhotos": []
   },
   {
     "id": 6,
@@ -123,7 +133,8 @@
     "reviewsCount": 0,
     "latitude": 52.14730,
     "longitude": 5.24415,
-    "zoom": 15
+    "zoom": 15,
+    "tripPhotos": []
   },
   {
     "id": 7,
@@ -141,7 +152,8 @@
     "reviewsCount": 0,
     "latitude": 50.09267,
     "longitude": 14.41805,
-    "zoom": 14
+    "zoom": 14,
+    "tripPhotos": []
   },
   {
     "id": 8,
@@ -159,7 +171,8 @@
     "reviewsCount": 0,
     "latitude": 47.5002,
     "longitude": 19.0307,
-    "zoom": 14
+    "zoom": 14,
+    "tripPhotos": []
   },
   {
     "id": 9,
@@ -177,7 +190,8 @@
     "reviewsCount": 0,
     "latitude": 48.20818,
     "longitude": 16.37233,
-    "zoom": 14
+    "zoom": 14,
+    "tripPhotos": []
   },
   {
     "id": 10,
@@ -195,7 +209,8 @@
     "reviewsCount": 0,
     "latitude": 50.8387,
     "longitude": 4.3753,
-    "zoom": 15
+    "zoom": 15,
+    "tripPhotos": []
   },
   {
     "id": 11,
@@ -213,7 +228,8 @@
     "reviewsCount": 0,
     "latitude": 39.606,
     "longitude": -9.229,
-    "zoom": 15
+    "zoom": 15,
+    "tripPhotos": []
   },
   {
     "id": 12,
@@ -231,6 +247,7 @@
     "reviewsCount": 0,
     "latitude": 53.094,
     "longitude": 20.918,
-    "zoom": 15
+    "zoom": 15,
+    "tripPhotos": []
   }
 ]

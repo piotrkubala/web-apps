@@ -15,4 +15,5 @@ export interface Trip {
   latitude: number;
   longitude: number;
   zoom: number;
+  tripPhotos: string[];
 }

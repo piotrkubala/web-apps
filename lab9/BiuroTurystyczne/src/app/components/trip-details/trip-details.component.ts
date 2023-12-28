@@ -10,6 +10,7 @@ import {TripReserverComponent} from "../trip-reserver/trip-reserver.component";
 import {MapLeafletsService} from "../../services/map-leaflets.service";
 import * as Leaflet from "leaflet";
 import {LeafletModule} from "@asymmetrik/ngx-leaflet";
+import {TripCarouselComponent} from "./trip-carousel/trip-carousel.component";
 
 @Component({
   selector: 'app-trip-details',
@@ -18,7 +19,8 @@ import {LeafletModule} from "@asymmetrik/ngx-leaflet";
     UpperCasePipe,
     TripEvaluatorComponent,
     TripReserverComponent,
-    LeafletModule
+    LeafletModule,
+    TripCarouselComponent
   ],
   templateUrl: './trip-details.component.html',
   styleUrl: './trip-details.component.css'

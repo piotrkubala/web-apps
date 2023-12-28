@@ -8,5 +8,10 @@
 }
 
 .map-container {
+  height: 100%;
   min-height: 30rem;
+}
+
+.map-box {
+  overflow: hidden;
 }
