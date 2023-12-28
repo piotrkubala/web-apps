@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {UpperCasePipe} from "@angular/common";
 import {Trip} from "../../utilities/trip";
 import {Money} from "../../utilities/money";

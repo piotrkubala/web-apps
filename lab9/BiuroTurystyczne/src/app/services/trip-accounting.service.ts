@@ -152,7 +152,17 @@ const tripAccountingState = this.tripAccountingStates.get(tripId);
     const tripAccountingState = this.tripAccountingStates.get(tripId);
 
     if (tripAccountingState) {
+      const oldRate = tripAccountingState.rate;
+
       tripAccountingState.rate = rate;
+
+      if (oldRate !== 0) {
+        this.tripLoaderService.removeOneRating(tripId, oldRate);
+      }
+
+      if (rate !== 0) {
+        this.tripLoaderService.updateRating(tripId, rate);
+      }
     }
   }
 

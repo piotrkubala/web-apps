@@ -131,4 +131,33 @@ export class TripLoaderService {
 
     return `${yearString}-${monthString}-${dayString}`;
   }
+
+  getRating(tripId: number): number {
+    return this.trips.get(tripId)?.averageRating ?? 0;
+  }
+
+  getCountOfRatings(tripId: number): number {
+    return this.trips.get(tripId)?.countOfRatings ?? 0;
+  }
+
+  updateRating(tripId: number, rating: number): void {
+    const trip = this.trips.get(tripId);
+    if (trip) {
+      trip.averageRating = (trip.averageRating * trip.countOfRatings + rating) / (trip.countOfRatings + 1);
+      trip.countOfRatings++;
+    }
+  }
+
+  removeOneRating(tripId: number, rating: number): void {
+    const trip = this.trips.get(tripId);
+    if (trip) {
+      if (trip.countOfRatings === 1) {
+        trip.averageRating = 0;
+      } else {
+        trip.averageRating = (trip.averageRating * trip.countOfRatings - rating) / (trip.countOfRatings - 1);
+      }
+
+      trip.countOfRatings--;
+    }
+  }
 }
