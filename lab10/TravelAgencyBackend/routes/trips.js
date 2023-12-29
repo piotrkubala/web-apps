@@ -44,4 +44,20 @@ router.post('/trips/', async (req, res, next) => {
     });
 });
 
+router.delete('/trips/:id', async (req, res, next) => {
+    const tripId = parseInt(req.params.id);
+
+    mongoDbDatabasePromise.then((mongoDbDatabase) => {
+        const collection = mongoDbDatabase.collection('trips');
+        collection.deleteOne({id: tripId}).then((result) => {
+            res.json(result.acknowledged);
+        }).catch((error) => {
+            res.sendStatus(500);
+            res.json({
+                message: "Error occurred during delete"
+            });
+        });
+    });
+});
+
 module.exports = router;

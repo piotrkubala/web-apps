@@ -1,8 +1,9 @@
 import {EventEmitter, Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { environment } from '../../environments/environment';
+
 import { Trip } from '../utilities/trip';
-import {Observable} from "rxjs";
 import {CurrencyExchangeService} from "./currency-exchange.service";
 import {Money} from "../utilities/money";
 
@@ -15,20 +16,26 @@ export class TripLoaderService {
   wereTripsLoaded: boolean = false;
   _lastId: number = 0;
 
+  triggerTripsLoad(): void {
+    const url: string = environment.backend.url + '/trips/';
+
+    this.http.get<Trip[]>(url)
+      .subscribe(data => {
+        this.trips.clear();
+
+        data.forEach(trip => {
+          this.trips.set(trip.id, trip);
+          this._lastId = Math.max(this._lastId, trip.id);
+        });
+
+        this.wereTripsLoaded = true;
+        this.tripsLoaded.emit();
+      });
+  }
+
   constructor(private http: HttpClient,
               private currencyExchangeService: CurrencyExchangeService) {
-     this.http.get<Trip[]>('assets/trips-definition.json')
-       .subscribe(data => {
-          this.trips.clear();
-
-          data.forEach(trip => {
-            this.trips.set(trip.id, trip);
-            this._lastId = Math.max(this._lastId, trip.id);
-          });
-
-          this.wereTripsLoaded = true;
-          this.tripsLoaded.emit();
-       });
+    this.triggerTripsLoad();
   }
 
   getEmptyTrip(): Trip {

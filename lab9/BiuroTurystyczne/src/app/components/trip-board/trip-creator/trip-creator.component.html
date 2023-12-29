@@ -53,6 +53,16 @@
                  placeholder="Image URL" [(ngModel)]="trip.image">
         </div>
       </div>
+      <div class="row">
+        <h4>Position: {{ getMapPositionString() }}</h4>
+        <div class="col-6 p-2 rounded map-box w-100 rounded">
+          <div class="map-container w-100" leaflet [leafletOptions]="options"
+               [(leafletCenter)]="mapPosition" [(leafletZoom)]="mapZoom"
+               (leafletMapMoveEnd)="onMapMoveEnd($event)"
+               (leafletMapReady)="onMapReady($event)">
+          </div>
+        </div>
+      </div>
       <div class="row p-2">
         <button type="submit" class="btn btn-primary" (click)="createTrip()">Create Trip</button>
       </div>
