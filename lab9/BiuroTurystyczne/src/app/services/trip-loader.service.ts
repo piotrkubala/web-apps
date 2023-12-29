@@ -82,8 +82,10 @@ export class TripLoaderService {
 
   deleteTrip(tripId: number): boolean {
     if (this.trips.has(tripId)) {
-      this.trips.delete(tripId);
-      this.tripsLoaded.emit();
+      this.http.delete(environment.backend.url + '/trips/' + tripId).subscribe(() => {
+        this.trips.delete(tripId);
+        this.tripsLoaded.emit();
+      });
 
       return true;
     }
@@ -93,8 +95,10 @@ export class TripLoaderService {
   createNewTrip(trip: Trip): boolean {
     trip.id = ++this._lastId;
 
-    this.trips.set(trip.id, trip);
-    this.tripsLoaded.emit();
+    this.http.post(environment.backend.url + '/trips/', trip).subscribe(() => {
+      this.trips.set(trip.id, trip);
+      this.tripsLoaded.emit();
+    });
 
     return true;
   }

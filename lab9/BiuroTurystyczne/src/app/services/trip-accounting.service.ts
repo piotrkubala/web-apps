@@ -54,7 +54,7 @@ export class TripAccountingService {
     });
 
     notChangedTripIds.forEach((tripId) => {
-const tripAccountingState = this.tripAccountingStates.get(tripId);
+      const tripAccountingState = this.tripAccountingStates.get(tripId);
       const trip = this.tripLoaderService.getTrip(tripId);
 
       if (tripAccountingState && trip) {

@@ -131,6 +131,7 @@ export class TripCreatorComponent {
   onMapMoveEnd(_: LeafletEvent): void {
     this.trip.latitude = this.mapPosition.lat;
     this.trip.longitude = this.mapPosition.lng;
+    this.trip.zoom = this.mapZoom;
 
     this.marker.setLatLng(this.mapPosition);
   }
