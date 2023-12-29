@@ -63,6 +63,20 @@
           </div>
         </div>
       </div>
+      <div>
+        <div *ngFor="let tripPhotoUrl of trip.tripPhotos; index as i" class="p-2 d-flex flex-row justify-content-between">
+          <div class="m-1">
+            {{ tripPhotoUrl }}
+          </div>
+          <div class="m-1">
+            <button type="button" class="btn btn-danger btn-sm" (click)="removeTripPhoto(i)">Remove</button>
+          </div>
+        </div>
+        <div>
+          <input name="tripPhotoUrl" type="text" class="form-control" id="newTripPhotoUrl"
+                 placeholder="Trip Photo URL" [(ngModel)]="newTripPhotoUrl" (change)="onNewTripPhotoUrlChange()">
+        </div>
+      </div>
       <div class="row p-2">
         <button type="submit" class="btn btn-primary" (click)="createTrip()">Create Trip</button>
       </div>

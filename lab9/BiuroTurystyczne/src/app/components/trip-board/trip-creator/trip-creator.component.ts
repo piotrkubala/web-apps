@@ -27,6 +27,8 @@ export class TripCreatorComponent {
   startDateString: string = '';
   endDateString: string = '';
 
+  newTripPhotoUrl: string = '';
+
   map: Leaflet.Map | undefined;
   options: Leaflet.MapOptions;
   mapPosition: Leaflet.LatLng = Leaflet.latLng(0, 0);
@@ -152,5 +154,25 @@ export class TripCreatorComponent {
     const longitudeString = `${longitudeDegrees}°${longitudeMinutes}'${longitudeSeconds}"${longitudeDirection}`;
 
     return `${latitudeString} ${longitudeString}`;
+  }
+
+  removeTripPhoto(index: number): void {
+    this.trip.tripPhotos.splice(index, 1);
+  }
+
+  onNewTripPhotoUrlChange(): void {
+    if (this.newTripPhotoUrl === '') {
+      return;
+    }
+
+    try {
+      new URL(this.newTripPhotoUrl);
+
+      this.trip.tripPhotos.push(this.newTripPhotoUrl);
+      this.newTripPhotoUrl = '';
+    } catch (_) {
+      alert('Image must be a valid URL');
+      return;
+    }
   }
 }
