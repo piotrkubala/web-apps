@@ -7,6 +7,8 @@ let logger = require('morgan');
 const indexRouter = require('./routes/index');
 
 require('./routes/trips');
+require('./routes/history');
+require('./routes/opinions');
 
 const port = 5123;
 const app = express();
