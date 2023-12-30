@@ -95,9 +95,17 @@ export class TripLoaderService {
   createNewTrip(trip: Trip): boolean {
     trip.id = ++this._lastId;
 
-    this.http.post(environment.backend.url + '/trips/', trip).subscribe(() => {
-      this.trips.set(trip.id, trip);
-      this.tripsLoaded.emit();
+    this.http.post(environment.backend.url + '/trips/', trip).subscribe((response) => {
+      try {
+        const tripResponse = response as {
+          newTripId: number
+        };
+
+        this.trips.set(tripResponse.newTripId, trip);
+        this.tripsLoaded.emit();
+      } catch (e) {
+        console.error(e);
+      }
     });
 
     return true;

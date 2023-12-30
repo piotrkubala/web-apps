@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import {TripOpinion} from "../utilities/trip-opinion";
+import {HttpClient} from "@angular/common/http";
+
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +10,18 @@ import {TripOpinion} from "../utilities/trip-opinion";
 export class TripOpinionsService {
   opinions: TripOpinion[] = [];
 
-  constructor() {}
+  triggerOpinionsLoad(): void {
+    const url: string = environment.backend.url + '/opinions/';
+
+    this.http.get<TripOpinion[]>(url)
+      .subscribe(data => {
+        this.opinions = data;
+      });
+  }
+
+  constructor(private http: HttpClient) {
+    this.triggerOpinionsLoad();
+  }
 
   validateOpinion(opinion: TripOpinion): string {
     if (opinion.title.length < 5) {
@@ -47,7 +61,13 @@ export class TripOpinionsService {
       return validationMessage;
     }
 
-    this.opinions.push(opinion);
+    const url: string = environment.backend.url + '/opinions/';
+
+    opinion.username = "test_user";
+
+    this.http.post(url, opinion).subscribe(() => {
+      this.opinions.push(opinion);
+    })
 
     return '';
   }

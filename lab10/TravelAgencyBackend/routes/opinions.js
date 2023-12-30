@@ -3,6 +3,16 @@ let createError = require('http-errors');
 const mongoDbDatabasePromise = require("../utilities/database");
 const router = require('./index');
 
+router.get('/opinions/', async (req, res, next) => {
+    mongoDbDatabasePromise.then((mongoDbDatabase) => {
+        const collection = mongoDbDatabase.collection('opinions');
+
+        collection.find().toArray().then((opinions) => {
+            res.json(opinions);
+        });
+    });
+});
+
 router.get('/opinions/:tripid', async (req, res, next) => {
     const tripId = parseInt(req.params.tripid);
 

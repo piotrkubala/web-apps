@@ -33,12 +33,26 @@ router.post('/trips/', async (req, res, next) => {
 
     mongoDbDatabasePromise.then((mongoDbDatabase) => {
         const collection = mongoDbDatabase.collection('trips');
-        collection.insertOne(newTrip).then((result) => {
-            res.json(result.acknowledged);
-        }).catch((error) => {
-            res.sendStatus(500);
-            res.json({
-                message: "Error occurred during insert"
+
+        collection.aggregate([{
+            $group: {
+                _id: null,
+                maxId: {
+                    $max: "$id"
+                }
+            }
+        }]).toArray().then((resultMaxId) => {
+            newTrip.id = resultMaxId[0].maxId + 1;
+
+            collection.insertOne(newTrip).then((result) => {
+                res.json({
+                    newTripId: newTrip.id
+                });
+            }).catch((error) => {
+                res.sendStatus(500);
+                res.json({
+                    message: "Error occurred during insert"
+                });
             });
         });
     });

@@ -19,7 +19,6 @@ export class ShoppingItemComponent implements OnInit {
   tripAccountingState!: TripAccountingState;
 
   constructor(private tripAccountingService: TripAccountingService,
-              private tripLoaderService: TripLoaderService,
               private currencyExchangeService: CurrencyExchangeService) {}
 
   ngOnInit(): void {
@@ -27,7 +26,7 @@ export class ShoppingItemComponent implements OnInit {
   }
 
   getTripPurchaseDate(): string {
-    return TripLoaderService.dateToString(this.shoppingHistoryItem.timeOfPurchase);
+    return TripLoaderService.dateToString(this.shoppingHistoryItem.getTimeOfPurchaseDate());
   }
 
   getTripStartDate(): string {
@@ -51,7 +50,7 @@ export class ShoppingItemComponent implements OnInit {
   }
 
   getTripStatusName(): string {
-    const tripStatus = this.shoppingHistoryItem.currentTripState;
+    const tripStatus = this.shoppingHistoryItem.getCurrentTripState();
     switch (tripStatus) {
       case HistoryItemState.BeforeDeparture:
         return "Before departure";
@@ -63,7 +62,7 @@ export class ShoppingItemComponent implements OnInit {
   }
 
   getTripStatusColor(): string {
-    const tripStatus = this.shoppingHistoryItem.currentTripState;
+    const tripStatus = this.shoppingHistoryItem.getCurrentTripState();
     switch (tripStatus) {
       case HistoryItemState.BeforeDeparture:
         return "yellow";
