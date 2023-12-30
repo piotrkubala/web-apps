@@ -82,7 +82,9 @@ export class TripLoaderService {
 
   deleteTrip(tripId: number): boolean {
     if (this.trips.has(tripId)) {
-      this.http.delete(environment.backend.url + '/trips/' + tripId).subscribe(() => {
+      const url = environment.backend.url + '/trips/' + tripId;
+
+      this.http.delete(url).subscribe(() => {
         this.trips.delete(tripId);
         this.tripsLoaded.emit();
       });
@@ -140,24 +142,36 @@ export class TripLoaderService {
   updateRating(tripId: number, rating: number): void {
     const trip = this.trips.get(tripId);
     if (trip) {
-      trip.averageRating = (trip.averageRating * trip.countOfRatings + rating) / (trip.countOfRatings + 1);
-      trip.countOfRatings++;
+      const url = environment.backend.url + '/rating/';
+
+      this.http.put(url, {
+        username: 'test_user',
+        tripId: tripId,
+        rating: rating
+      }).subscribe(() => {
+        trip.averageRating = (trip.averageRating * trip.countOfRatings + rating) / (trip.countOfRatings + 1);
+        trip.countOfRatings++;
+      });
     }
   }
 
   removeOneRating(tripId: number, rating: number): void {
     const trip = this.trips.get(tripId);
     if (trip) {
-      if (trip.countOfRatings === 1) {
-        trip.averageRating = 0;
-      } else {
-        trip.averageRating = (trip.averageRating * trip.countOfRatings - rating) / (trip.countOfRatings - 1);
-      }
+      const username = 'test_user';
+      const url = environment.backend.url + `/rating/${tripId}/${username}`;
 
-      trip.countOfRatings--;
+      this.http.delete(url).subscribe(() => {
+        if (trip.countOfRatings === 1) {
+          trip.averageRating = 0;
+        } else {
+          trip.averageRating = (trip.averageRating * trip.countOfRatings - rating) / (trip.countOfRatings - 1);
+        }
+
+        trip.countOfRatings--;
+      });
     }
   }
-
 
   static dateToString(date: Date): string {
     const formatterYear = new Intl.DateTimeFormat('en-GB', {

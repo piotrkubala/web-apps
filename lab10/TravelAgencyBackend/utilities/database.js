@@ -18,4 +18,4 @@ async function getMongoDbDatabasePromise() {
 
 const mongoDbDatabasePromise = getMongoDbDatabasePromise();
 
-module.exports = mongoDbDatabasePromise;
+module.exports = {mongoDbDatabasePromise, mongoDbClient};

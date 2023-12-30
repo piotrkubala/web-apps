@@ -6,6 +6,8 @@ import {Trip} from "../utilities/trip";
 import {TotalReservedTripsCounterService} from "./total-reserved-trips-counter.service";
 import {Money} from "../utilities/money";
 import {CurrencyExchangeService} from "./currency-exchange.service";
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +16,23 @@ export class TripAccountingService {
   tripAccountingStates: Map<number, TripAccountingState> = new Map<number, TripAccountingState>();
   possibleRatingValues: number[] = [1, 2, 3, 4, 5];
 
-  _refreshTripAccountingStates(): void {
+  private _loadThisUserRatings(): void {
+    const username = 'test_user';
+
+    const url = environment.backend.url + '/rating/' + username;
+
+    this.http.get<{tripId: number, rate: number, username: string}[]>(url).subscribe(ratings => {
+      ratings.forEach(rating => {
+        const tripAccountingState = this.tripAccountingStates.get(rating.tripId);
+
+        if (tripAccountingState) {
+          tripAccountingState.rate = rating.rate;
+        }
+      });
+    });
+  }
+
+  private _refreshTripAccountingStates(): void {
     const highestPrice = this.tripLoaderService.getHighestPrice();
     const lowestPrice = this.tripLoaderService.getLowestPrice();
 
@@ -62,11 +80,14 @@ export class TripAccountingService {
         tripAccountingState.isHighestPrice = trip.priceMinor === highestPrice;
       }
     });
+
+    this._loadThisUserRatings();
   }
 
   constructor(public tripLoaderService: TripLoaderService,
               private totalReservedTripsCounterService: TotalReservedTripsCounterService,
-              private currencyExchangeService: CurrencyExchangeService) {
+              private currencyExchangeService: CurrencyExchangeService,
+              private http: HttpClient) {
     this.tripLoaderService.tripsLoaded.subscribe(() => {
       this._refreshTripAccountingStates();
     });

@@ -10,6 +10,7 @@ const indexRouter = require('./routes/index');
 require('./routes/trips');
 require('./routes/history');
 require('./routes/opinions');
+require('./routes/rating');
 
 const port = 5123;
 const app = express();

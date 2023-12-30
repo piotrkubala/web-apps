@@ -1,6 +1,6 @@
 const express = require('express');
 let createError = require('http-errors');
-const mongoDbDatabasePromise = require("../utilities/database");
+const {mongoDbDatabasePromise, mongoDbClient} = require("../utilities/database");
 const router = require('./index');
 
 router.get('/opinions/', async (req, res, next) => {
