@@ -22,6 +22,12 @@ export class TripEvaluatorComponent {
 
   constructor(public tripAccountingService: TripAccountingService,
               private tripLoaderService: TripLoaderService) {
+
+    this.tripAccountingService.thisUserRatingsLoaded.subscribe(() => {
+      if (this.trip && this.wasTripRated()) {
+        this.ratingString = this.tripAccountingService.getTripRating(this.trip.id).toString();
+      }
+    });
   }
 
   rateTrip(): void {

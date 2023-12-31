@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 
 import { TripLoaderService} from "./trip-loader.service";
 import {TripAccountingState} from "../utilities/trip-accounting-state";
@@ -13,6 +13,8 @@ import {environment} from "../../environments/environment";
   providedIn: 'root'
 })
 export class TripAccountingService {
+  thisUserRatingsLoaded: EventEmitter<void> = new EventEmitter<void>();
+
   tripAccountingStates: Map<number, TripAccountingState> = new Map<number, TripAccountingState>();
   possibleRatingValues: number[] = [1, 2, 3, 4, 5];
 
@@ -21,14 +23,16 @@ export class TripAccountingService {
 
     const url = environment.backend.url + '/rating/' + username;
 
-    this.http.get<{tripId: number, rate: number, username: string}[]>(url).subscribe(ratings => {
+    this.http.get<{tripId: number, rating: number, username: string}[]>(url).subscribe(ratings => {
       ratings.forEach(rating => {
         const tripAccountingState = this.tripAccountingStates.get(rating.tripId);
 
         if (tripAccountingState) {
-          tripAccountingState.rate = rating.rate;
+          tripAccountingState.rate = rating.rating;
         }
       });
+
+      this.thisUserRatingsLoaded.emit();
     });
   }
 
@@ -178,7 +182,7 @@ export class TripAccountingService {
       tripAccountingState.rate = rate;
 
       if (oldRate !== 0) {
-        this.tripLoaderService.removeOneRating(tripId, oldRate);
+        this.tripLoaderService.removeOneRatingLocally(tripId, oldRate);
       }
 
       if (rate !== 0) {

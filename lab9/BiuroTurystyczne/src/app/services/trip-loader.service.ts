@@ -155,6 +155,19 @@ export class TripLoaderService {
     }
   }
 
+  removeOneRatingLocally(tripId: number, rating: number): void {
+    const trip = this.trips.get(tripId);
+    if (trip) {
+      if (trip.countOfRatings === 1) {
+        trip.averageRating = 0;
+      } else {
+        trip.averageRating = (trip.averageRating * trip.countOfRatings - rating) / (trip.countOfRatings - 1);
+      }
+
+      trip.countOfRatings--;
+    }
+  }
+
   removeOneRating(tripId: number, rating: number): void {
     const trip = this.trips.get(tripId);
     if (trip) {
@@ -162,13 +175,7 @@ export class TripLoaderService {
       const url = environment.backend.url + `/rating/${tripId}/${username}`;
 
       this.http.delete(url).subscribe(() => {
-        if (trip.countOfRatings === 1) {
-          trip.averageRating = 0;
-        } else {
-          trip.averageRating = (trip.averageRating * trip.countOfRatings - rating) / (trip.countOfRatings - 1);
-        }
-
-        trip.countOfRatings--;
+        this.removeOneRatingLocally(tripId, rating);
       });
     }
   }
