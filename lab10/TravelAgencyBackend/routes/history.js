@@ -20,7 +20,6 @@ router.post('/history/', async (req, res, next) => {
 
     mongoDbDatabasePromise.then(async (mongoDbDatabase) => {
         const session = mongoDbClient.startSession();
-        session.startTransaction();
 
         try {
             await session.withTransaction(async () => {
@@ -38,12 +37,14 @@ router.post('/history/', async (req, res, next) => {
                 await collectionTrips.updateOne({id: newHistoryItem.trip.id},
                 {$set: {reservedPlacesCount: newReservedPlaces}}, {session: session});
                 await collectionHistory.insertOne(newHistoryItem, {session: session});
+
+                res.json({
+                    message: "History updated"
+                });
             });
         } catch (error) {
+            console.log(error);
             res.sendStatus(500);
-            res.json({
-                message: "Error occurred during insert"
-            });
         } finally {
             await session.endSession();
         }

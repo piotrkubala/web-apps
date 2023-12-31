@@ -65,13 +65,14 @@ export class TripAccountingService {
       const trip = this.tripLoaderService.getTrip(tripId);
 
       if (trip) {
-        this.tripAccountingStates.set(tripId,
-          new TripAccountingState(trip.reservedPlacesCount,
-                      trip.priceMinor === lowestPrice,
-                      trip.priceMinor === highestPrice)
-        );
+        const tripAccountingState =
+          new TripAccountingState(
+            trip.reservedPlacesCount,
+            trip.priceMinor === lowestPrice,
+            trip.priceMinor === highestPrice
+          );
 
-        this.totalReservedTripsCounterService.updateTotalReservedTripsCount(trip.reservedPlacesCount);
+        this.tripAccountingStates.set(tripId, tripAccountingState);
       }
     });
 
