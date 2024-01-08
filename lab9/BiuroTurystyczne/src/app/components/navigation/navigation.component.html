@@ -1,48 +1,62 @@
 <header class="container-fluid">
   <nav class="navbar navbar-default">
-    <div class="d-flex justify-content-around text-center container-fluid">
-      <div class="col-1 p-1">
-        <a routerLink="/" routerLinkActive="true" class="btn btn-info w-100">
-          Home
-        </a>
-      </div>
-      <div class="col-1 p-1">
-        <a routerLink="/trip-board" routerLinkActive="true" class="btn btn-info w-100">
-          Trips
-        </a>
-      </div>
-      <div class="col-1 p-1">
-        <a routerLink="/creator" routerLinkActive="true" class="btn btn-info w-100">
-          Creator
-        </a>
-      </div>
-      <div class="col-1 p-1">
-        <a routerLink="/shopping-basket" routerLinkActive="true" class="btn btn-info w-100">
-          Shopping Basket
-        </a>
-      </div>
-      <div class="col-1 p-1">
-        <a routerLink="/history" routerLinkActive="true" class="btn btn-info w-100">
-          History
-        </a>
-      </div>
-      <div class="col-4 p-1">
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-            Reservations
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li class="dropdown-item">
-              <div class="row">
-                <app-reservation-summary></app-reservation-summary>
-              </div>
-            </li>
-          </ul>
+    <div class="text-center container-fluid">
+      <div class="d-flex flex-row container-fluid justify-content-around">
+        <div class="col-2 p-1">
+          <a routerLink="/" routerLinkActive="true" class="btn btn-info w-100">
+            Home
+          </a>
+        </div>
+        <div class="col-2 p-1">
+          <a routerLink="/trip-board" routerLinkActive="true" class="btn btn-info w-100">
+            Trips
+          </a>
+        </div>
+        <div class="col-2 p-1">
+          <a routerLink="/creator" routerLinkActive="true" class="btn btn-info w-100">
+            Creator
+          </a>
+        </div>
+        <div class="col-2 p-1">
+          <a routerLink="/shopping-basket" routerLinkActive="true" class="btn btn-info w-100">
+            Shopping Basket
+          </a>
+        </div>
+        <div class="col-2 p-1">
+          <a routerLink="/history" routerLinkActive="true" class="btn btn-info w-100">
+            History
+          </a>
+        </div>
+        <div class="col-1 p-1">
+          <a routerLink="/login" routerLinkActive="true" class="btn btn-success w-100">
+            Login
+          </a>
+        </div>
+        <div class="col-1 p-1">
+          <a routerLink="/register" routerLinkActive="true" class="btn btn-success w-100">
+            Register
+          </a>
         </div>
       </div>
-      <div class="col-3 p-1 rounded border">
-        <app-currency-menu></app-currency-menu>
+      <div class="d-flex flex-row container-fluid justify-content-around">
+        <div class="col-5 p-1">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+              Reservations
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li class="dropdown-item">
+                <div class="row">
+                  <app-reservation-summary></app-reservation-summary>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-7 p-1 rounded border">
+          <app-currency-menu></app-currency-menu>
+        </div>
       </div>
     </div>
   </nav>

@@ -11,6 +11,7 @@ require('./routes/trips');
 require('./routes/history');
 require('./routes/opinions');
 require('./routes/rating');
+require('./routes/user');
 
 const port = 5123;
 const app = express();

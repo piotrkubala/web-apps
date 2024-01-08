@@ -5,6 +5,8 @@ import {TripCreatorComponent} from "./components/trip-board/trip-creator/trip-cr
 import {ShoppingHistoryComponent} from "./components/shopping-history/shopping-history.component";
 import {ShoppingBasketComponent} from "./components/shopping-basket/shopping-basket.component";
 import {TripDetailsComponent} from "./components/trip-details/trip-details.component";
+import {LoginComponent} from "./components/login/login.component";
+import {RegisterComponent} from "./components/register/register.component";
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,5 +15,7 @@ export const routes: Routes = [
   { path: 'creator', component: TripCreatorComponent },
   { path: 'shopping-basket', component: ShoppingBasketComponent },
   { path: 'history', component: ShoppingHistoryComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: '**', redirectTo: '' }
 ];
