@@ -8,7 +8,7 @@ import {catchError, tap} from "rxjs";
   providedIn: 'root'
 })
 export class UserService {
-  onUserLoggedIn: EventEmitter<void> = new EventEmitter<void>();
+  onUserStatusChanged: EventEmitter<void> = new EventEmitter<void>();
 
   user: User | null = null;
 
@@ -49,10 +49,41 @@ export class UserService {
       .pipe(
         tap(_ => {
           alert('Registration successful!');
-          this.onUserLoggedIn.emit();
+          this.onUserStatusChanged.emit();
         }),
         catchError(_ => {
           alert('Registration failed!');
+          return [];
+        })
+      )
+      .subscribe();
+  }
+
+  login(username: string, password: string): void {
+    const isUsernameValid = this.validateUsername(username);
+    const isPasswordValid = this.validatePassword(password);
+
+    if (!(isUsernameValid && isPasswordValid)) {
+      alert('Invalid input!');
+      return;
+    }
+
+    const url = environment.backend.url + '/login/';
+
+    interface LoginResponse {
+      user: User;
+      token: string;
+    }
+
+    this.http.post<LoginResponse>(url, {username, password})
+      .pipe(
+        tap(response => {
+          alert('Login successful!');
+          this.user = new User(response.user.username, response.user.email, "");
+          this.onUserStatusChanged.emit();
+        }),
+        catchError(_ => {
+          alert('Login failed!');
           return [];
         })
       )

@@ -1,1 +1,20 @@
-<p>login works!</p>
+<div>
+  <h3>Login!</h3>
+  <form>
+    <div>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" class="form-control" [(ngModel)]="username"
+             [class.bg-danger]="!isUsernameValid() && username.length > 0">
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password"
+              [class.bg-danger]="!isPasswordValid() && password.length > 0">
+    </div>
+    <div class="mt-2">
+      <button type="submit" class="btn btn-primary form-control" (click)="login()">
+        Login!
+      </button>
+    </div>
+  </form>
+</div>

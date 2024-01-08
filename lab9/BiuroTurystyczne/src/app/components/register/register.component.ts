@@ -19,7 +19,7 @@ export class RegisterComponent {
   repeatedPassword: string = '';
 
   constructor(public userService: UserService) {
-    this.userService.onUserLoggedIn
+    this.userService.onUserStatusChanged
       .subscribe(() => {
         this.clear();
       });
