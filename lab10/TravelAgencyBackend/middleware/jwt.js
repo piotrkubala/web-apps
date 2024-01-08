@@ -60,7 +60,9 @@ function universalVerify(fieldName) {
             }
 
             req.user = payload.user;
-            req.userGroups = payload.userGroups;
+            req.permissions = new Set(payload.userGroups.flatMap((userGroup) =>
+                userGroup.permissions)
+            );
 
             next();
         });
@@ -72,6 +74,8 @@ const verifyRefreshToken = universalVerify('Refresh');
 
 module.exports = {
     generateToken,
+    verifyToken,
+    verifyRefreshToken,
     JWT_EXPIRATION_TIME_SECONDS,
     JWT_REFRESH_EXPIRATION_TIME_SECONDS
 };

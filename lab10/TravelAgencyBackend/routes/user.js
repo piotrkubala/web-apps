@@ -1,13 +1,20 @@
 const express = require('express');
 const createError = require('http-errors');
 const bcrypt = require('bcrypt');
+const {verify} = require("jsonwebtoken");
+
 const {mongoDbDatabasePromise, mongoDbClient} = require("../utilities/database");
 const router = require('./index');
 const {
     generateToken,
+    verifyRefreshToken,
     JWT_EXPIRATION_TIME_SECONDS,
-    JWT_REFRESH_EXPIRATION_TIME_SECONDS
+    JWT_REFRESH_EXPIRATION_TIME_SECONDS, verifyToken
 } = require("../middleware/jwt");
+const {
+    canListUsers,
+    canRefreshToken
+} = require("../middleware/permissions");
 
 router.post('/register/', async (req, res, next) => {
     const newUser = req.body;
@@ -65,6 +72,32 @@ router.post('/register/', async (req, res, next) => {
         });
 });
 
+function generateTokensAndResolve(res, user) {
+    const token = generateToken(user);
+    const refreshToken = generateToken(user, JWT_REFRESH_EXPIRATION_TIME_SECONDS, 'refresh_token');
+
+    if (!token || !refreshToken) {
+        res.status(500)
+            .json({
+                message: "Error occurred during token generation"
+            });
+        return;
+    }
+
+    res.cookie('Authorization', token, {
+            httpOnly: true,
+            maxAge: JWT_EXPIRATION_TIME_SECONDS * 1000
+        })
+        .cookie('Refresh', refreshToken, {
+            httpOnly: true,
+            maxAge: JWT_REFRESH_EXPIRATION_TIME_SECONDS * 1000
+        })
+        .json({
+            username: user.username,
+            email: user.email
+        });
+}
+
 router.post('/login/', async (req, res, next) => {
     const authenticationData = req.body;
 
@@ -99,27 +132,33 @@ router.post('/login/', async (req, res, next) => {
         return;
     }
 
-    const token = await generateToken(user);
-    const refreshToken = await generateToken(user, JWT_REFRESH_EXPIRATION_TIME_SECONDS, 'refresh_token');
+    generateTokensAndResolve(res, user);
+});
 
-    if (!token || !refreshToken) {
-        res.status(500)
-            .json({
-                message: "Error occurred during token generation"
-            });
+router.post('/token-refresher/', verifyRefreshToken, canRefreshToken,
+    async (req, res, next) => {
+
+    const user = req.user;
+    const canBeRefreshed = 'refresh_token' in req.permissions;
+
+    if (!canBeRefreshed) {
+        res.sendStatus(403);
         return;
     }
 
-    res.cookie('Authorization', token, {
-            httpOnly: true,
-            maxAge: JWT_EXPIRATION_TIME_SECONDS * 1000
-        })
-        .cookie('Refresh', refreshToken, {
-            httpOnly: true,
-            maxAge: JWT_REFRESH_EXPIRATION_TIME_SECONDS * 1000
-        })
-        .json({
-            username: user.username,
-            email: user.email
-        });
+    generateTokensAndResolve(res, user);
+});
+
+router.get('/users/', verifyToken, canListUsers,
+    async (req, res, next) => {
+
+    const mongoDbDatabase = await mongoDbDatabasePromise;
+    const usersCollection = mongoDbDatabase.collection('users');
+
+    const users = await usersCollection.find().map((user) => {
+        delete user.passwordHash;
+        return user;
+    }).toArray();
+
+    res.json(users);
 });
