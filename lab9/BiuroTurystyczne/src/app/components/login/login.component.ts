@@ -17,6 +17,9 @@ export class LoginComponent {
   password: string = '';
 
   constructor(public userService: UserService) {
+    this.userService.onUserStatusChanged.subscribe(() => {
+      this.clear();
+    });
   }
 
   isUsernameValid(): boolean {
@@ -28,7 +31,7 @@ export class LoginComponent {
   }
 
   login() {
-
+    this.userService.login(this.username, this.password);
   }
 
   clear() {

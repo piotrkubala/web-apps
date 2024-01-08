@@ -7,25 +7,27 @@ const JWT_SECRET = crypto.randomBytes(64).toString('hex');
 const JWT_EXPIRATION_TIME_SECONDS = 60 * 5;
 const JWT_REFRESH_EXPIRATION_TIME_SECONDS = 60 * 60;
 
-async function generateToken(user){
+async function generateToken(user, refreshTimeSeconds = JWT_EXPIRATION_TIME_SECONDS, name = 'access_token'){
     try {
         const mongoDbDatabase = await mongoDbDatabasePromise;
 
         const userGroupsCollection = mongoDbDatabase.collection('userGroups');
 
-        const userGroupsIds = userGroupsCollection.find({username: user.username})
+        const userGroupsIds = await userGroupsCollection.find({username: user.username})
             .map((userGroup) => userGroup.id)
             .toArray();
-        const userGroups = userGroupsCollection.find({id: {$in: userGroupsIds}})
+
+        const userGroups = await userGroupsCollection.find({id: {$in: userGroupsIds}})
             .toArray();
 
         const payload = {
+            name: name,
             user: user,
             userGroups: userGroups
         };
 
         return jwt.sign(payload, JWT_SECRET, {
-            expiresIn: JWT_EXPIRATION_TIME_SECONDS
+            expiresIn: refreshTimeSeconds
         });
     } catch (error) {
         console.log(error);
@@ -34,34 +36,39 @@ async function generateToken(user){
     return null;
 }
 
-async function verifyToken(req, res, next){
-    const authHeader = req.headers['authorization'];
-    const tokenList = authHeader?.split(' ');
+function universalVerify(fieldName) {
+    return (req, res, next) => {
+        const authHeader = req.headers['authorization'];
+        const tokenList = authHeader?.split(' ');
 
-    if (tokenList == null || tokenList.length !== 2) {
-        res.sendStatus(401);
-        return;
-    }
-
-    const token = tokenList[1];
-
-    if (token == null) {
-        res.sendStatus(401);
-        return;
-    }
-
-    jwt.verify(token, JWT_SECRET, (error, payload) => {
-        if (error) {
+        if (tokenList == null || tokenList.length !== 2) {
             res.sendStatus(401);
             return;
         }
 
-        req.user = payload.user;
-        req.userGroups = payload.userGroups;
+        const token = tokenList[1];
 
-        next();
-    });
+        if (token == null) {
+            res.sendStatus(401);
+            return;
+        }
+
+        jwt.verify(token, JWT_SECRET, (error, payload) => {
+            if (error) {
+                res.sendStatus(401);
+                return;
+            }
+
+            req.user = payload.user;
+            req.userGroups = payload.userGroups;
+
+            next();
+        });
+    }
 }
+
+const verifyToken = universalVerify('Authorization');
+const verifyRefreshToken = universalVerify('Refresh');
 
 module.exports = {
     generateToken,

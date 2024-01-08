@@ -100,15 +100,24 @@ router.post('/login/', async (req, res, next) => {
     }
 
     const token = await generateToken(user);
+    const refreshToken = await generateToken(user, JWT_REFRESH_EXPIRATION_TIME_SECONDS, 'refresh_token');
 
-    console.log(token);
+    if (!token || !refreshToken) {
+        res.status(500)
+            .json({
+                message: "Error occurred during token generation"
+            });
+        return;
+    }
 
     res.cookie('Authorization', token, {
-        httpOnly: true,
-        maxAge: JWT_EXPIRATION_TIME_SECONDS * 1000
-    });
-
-    res.status(200)
+            httpOnly: true,
+            maxAge: JWT_EXPIRATION_TIME_SECONDS * 1000
+        })
+        .cookie('Refresh', refreshToken, {
+            httpOnly: true,
+            maxAge: JWT_REFRESH_EXPIRATION_TIME_SECONDS * 1000
+        })
         .json({
             username: user.username,
             email: user.email

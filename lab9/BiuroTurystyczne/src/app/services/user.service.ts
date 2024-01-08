@@ -47,16 +47,15 @@ export class UserService {
 
     this.http.post(url, user)
       .pipe(
-        tap(_ => {
-          alert('Registration successful!');
-          this.onUserStatusChanged.emit();
-        }),
         catchError(_ => {
           alert('Registration failed!');
           return [];
         })
       )
-      .subscribe();
+      .subscribe(_ => {
+        alert('Registration successful!');
+        this.onUserStatusChanged.emit();
+      });
   }
 
   login(username: string, password: string): void {
@@ -77,16 +76,15 @@ export class UserService {
 
     this.http.post<LoginResponse>(url, {username, password})
       .pipe(
-        tap(response => {
-          alert('Login successful!');
-          this.user = new User(response.user.username, response.user.email, "");
-          this.onUserStatusChanged.emit();
-        }),
         catchError(_ => {
           alert('Login failed!');
           return [];
         })
       )
-      .subscribe();
+      .subscribe(response => {
+        alert('Login successful!');
+        this.user = new User(response.user.username, response.user.email, "");
+        this.onUserStatusChanged.emit();
+      });
   }
 }
