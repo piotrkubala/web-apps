@@ -69,14 +69,17 @@ export class UserService {
     }
 
     try {
-      const payload = jwtDecode<JwtUserPayload>(token);
+      const payload = jwtDecode<any>(token);
+      const userPayload = payload.user as JwtUserPayload;
+      const userGroups = payload.userGroups as Group[];
 
-      if (!payload) {
+      if (!userPayload) {
         return false;
       }
 
-      this.userGroups = payload.groups;
-      this.user = new User(payload.username, payload.email, "");
+      this.userGroups = userGroups;
+      this.user = new User(userPayload.username, userPayload.email, "");
+
       this.onUserStatusChanged.emit();
 
       return true;
