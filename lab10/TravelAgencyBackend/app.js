@@ -14,9 +14,19 @@ require('./routes/rating');
 require('./routes/user');
 
 const port = 5123;
+
+const clientPort = 4200;
+const domain = 'localhost';
+
 const app = express();
 
-app.use(cors())
+const corsOption = {
+  origin: `http://${domain}:${clientPort}`,
+  credentials: true
+};
+
+app.use(cors(corsOption));
+//app.use(cors());
 
 app.use(logger('dev'));
 app.use(express.json());

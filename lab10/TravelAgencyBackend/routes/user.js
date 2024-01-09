@@ -43,6 +43,7 @@ router.post('/register/', async (req, res, next) => {
 
     const mongoDbDatabase = await mongoDbDatabasePromise;
     const usersCollection = mongoDbDatabase.collection('users');
+    const userGroupsCollection = mongoDbDatabase.collection('usergroups');
 
     const userByUsername = await usersCollection.findOne({username: newUser.username});
     const userByEmail = await usersCollection.findOne({email: newUser.email});
@@ -58,12 +59,18 @@ router.post('/register/', async (req, res, next) => {
     const passwordSalt = await bcrypt.genSalt(10);
     const passwordHash = await bcrypt.hash(newUser.password, passwordSalt);
 
+    const userGroupToInsert = {
+        username: newUser.username,
+        groupName: 'default'
+    };
+
     const userToInsert = {
         username: newUser.username,
         email: newUser.email,
         passwordHash: passwordHash
     };
 
+    await userGroupsCollection.insertOne(userGroupToInsert);
     await usersCollection.insertOne(userToInsert);
 
     res.status(200)
@@ -72,9 +79,9 @@ router.post('/register/', async (req, res, next) => {
         });
 });
 
-function generateTokensAndResolve(res, user) {
-    const token = generateToken(user);
-    const refreshToken = generateToken(user, JWT_REFRESH_EXPIRATION_TIME_SECONDS, 'refresh_token');
+async function generateTokensAndResolve(res, user) {
+    const token = await generateToken(user);
+    const refreshToken = await generateToken(user, JWT_REFRESH_EXPIRATION_TIME_SECONDS, 'refresh_token');
 
     if (!token || !refreshToken) {
         res.status(500)
@@ -85,11 +92,13 @@ function generateTokensAndResolve(res, user) {
     }
 
     res.cookie('Authorization', token, {
-            httpOnly: true,
+            secure: false,
+            sameSite: 'strict',
             maxAge: JWT_EXPIRATION_TIME_SECONDS * 1000
         })
         .cookie('Refresh', refreshToken, {
-            httpOnly: true,
+            secure: false,
+            sameSite: 'strict',
             maxAge: JWT_REFRESH_EXPIRATION_TIME_SECONDS * 1000
         })
         .json({
@@ -132,7 +141,7 @@ router.post('/login/', async (req, res, next) => {
         return;
     }
 
-    generateTokensAndResolve(res, user);
+    await generateTokensAndResolve(res, user);
 });
 
 router.post('/token-refresher/', verifyRefreshToken, canRefreshToken,
@@ -146,7 +155,7 @@ router.post('/token-refresher/', verifyRefreshToken, canRefreshToken,
         return;
     }
 
-    generateTokensAndResolve(res, user);
+    await generateTokensAndResolve(res, user);
 });
 
 router.get('/users/', verifyToken, canListUsers,

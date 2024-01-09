@@ -11,13 +11,14 @@ async function generateToken(user, refreshTimeSeconds = JWT_EXPIRATION_TIME_SECO
     try {
         const mongoDbDatabase = await mongoDbDatabasePromise;
 
-        const userGroupsCollection = mongoDbDatabase.collection('userGroups');
+        const userGroupsCollection = mongoDbDatabase.collection('usergroups');
+        const groupsCollection = mongoDbDatabase.collection('groups');
 
-        const userGroupsIds = await userGroupsCollection.find({username: user.username})
-            .map((userGroup) => userGroup.id)
+        const userGroupsNames = await userGroupsCollection.find({username: user.username})
+            .map((userGroup) => userGroup.groupName)
             .toArray();
 
-        const userGroups = await userGroupsCollection.find({id: {$in: userGroupsIds}})
+        const userGroups = await groupsCollection.find({name: {$in: userGroupsNames}})
             .toArray();
 
         const payload = {

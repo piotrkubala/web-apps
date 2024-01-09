@@ -3,6 +3,14 @@ import {User} from "../utilities/user";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {catchError, tap} from "rxjs";
+import {CookieService} from "ngx-cookie-service";
+import {Group} from "../utilities/group";
+import { jwtDecode, JwtPayload } from 'jwt-decode'
+
+interface LoginRefreshResponse {
+  username: string;
+  email: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +19,10 @@ export class UserService {
   onUserStatusChanged: EventEmitter<void> = new EventEmitter<void>();
 
   user: User | null = null;
+  userGroups: Group[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+              private cookieService: CookieService) {}
 
   validateUsername(username: string): boolean {
     const usernameRegex = /^[a-zA-Z0-9]{3,20}$/;
@@ -30,6 +40,66 @@ export class UserService {
     const passwordRegex = /^[a-zA-Z0-9]{6,20}$/;
 
     return passwordRegex.test(password);
+  }
+
+  isUserLoggedIn(): boolean {
+    return this.cookieService.check('Authorization');
+  }
+
+  logout(): void {
+    if (this.cookieService.check('Authorization')) {
+      this.cookieService.delete('Authorization', '/');
+
+      this.user = null;
+      this.onUserStatusChanged.emit();
+    }
+  }
+
+  private setLoginState(response: LoginRefreshResponse): boolean {
+    interface JwtUserPayload {
+      username: string;
+      email: string;
+      groups: Group[];
+    }
+
+    const token = this.cookieService.get('Authorization');
+
+    if (!token) {
+      return false;
+    }
+
+    try {
+      const payload = jwtDecode<JwtUserPayload>(token);
+
+      if (!payload) {
+        return false;
+      }
+
+      this.userGroups = payload.groups;
+      this.user = new User(payload.username, payload.email, "");
+      this.onUserStatusChanged.emit();
+
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  refreshSession(): void {
+    const url = environment.backend.url + '/token-refresher/';
+
+    this.http.post<LoginRefreshResponse>(url, {}, {
+      withCredentials: true
+    })
+      .pipe(
+        catchError(_ => {
+          this.logout();
+          return [];
+        })
+      )
+      .subscribe(response => {
+        this.setLoginState(response);
+      });
   }
 
   register(user: User, repeatedPassword: string): void {
@@ -69,22 +139,21 @@ export class UserService {
 
     const url = environment.backend.url + '/login/';
 
-    interface LoginResponse {
-      user: User;
-      token: string;
-    }
-
-    this.http.post<LoginResponse>(url, {username, password})
-      .pipe(
+    this.http.post<LoginRefreshResponse>(url, {username, password},
+      {
+        withCredentials: true
+      }).pipe(
         catchError(_ => {
           alert('Login failed!');
           return [];
         })
       )
       .subscribe(response => {
-        alert('Login successful!');
-        this.user = new User(response.user.username, response.user.email, "");
-        this.onUserStatusChanged.emit();
+        if(this.setLoginState(response)) {
+          alert('Login successful!');
+        } else {
+          alert('Login failed!');
+        }
       });
   }
 }

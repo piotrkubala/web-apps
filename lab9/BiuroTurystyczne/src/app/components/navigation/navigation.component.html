@@ -27,16 +27,29 @@
             History
           </a>
         </div>
-        <div class="col-1 p-1">
-          <a routerLink="/login" routerLinkActive="true" class="btn btn-success w-100">
-            Login
-          </a>
-        </div>
-        <div class="col-1 p-1">
-          <a routerLink="/register" routerLinkActive="true" class="btn btn-success w-100">
-            Register
-          </a>
-        </div>
+
+        <div *ngIf="isUserLoggedIn(); then loggedIn else loggedOut"></div>
+
+        <ng-template #loggedIn>
+          <div class="col-1 p-1">
+            Logged in as: {{ getUsername() }}
+          </div>
+          <div>
+            <button class="btn btn-danger w-100" (click)="logout()">Logout</button>
+          </div>
+        </ng-template>
+        <ng-template #loggedOut>
+          <div class="col-1 p-1">
+            <a routerLink="/register" routerLinkActive="true" class="btn btn-success w-100">
+              Register
+            </a>
+          </div>
+          <div class="col-1 p-1">
+            <a routerLink="/login" routerLinkActive="true" class="btn btn-success w-100">
+              Login
+            </a>
+          </div>
+        </ng-template>
       </div>
       <div class="d-flex flex-row container-fluid justify-content-around">
         <div class="col-5 p-1">
