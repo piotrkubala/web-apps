@@ -14,17 +14,24 @@
         </div>
 
         <div *ngIf="isUserManager(); then manager"></div>
-
         <ng-template #manager>
           <div class="col-2 p-1">
             <a routerLink="/creator" routerLinkActive="true" class="btn btn-info w-100">
               Creator
+            </a>8
+          </div>
+        </ng-template>
+
+        <div *ngIf="isUserAdmin(); then admin"></div>
+        <ng-template #admin>
+          <div class="col-2 p-1">
+            <a routerLink="/admin-panel" routerLinkActive="true" class="btn btn-info w-100">
+              Admin Panel
             </a>
           </div>
         </ng-template>
 
         <div *ngIf="isUserNormal(); then normal"></div>
-
         <ng-template #normal>
           <div class="col-2 p-1">
             <a routerLink="/shopping-basket" routerLinkActive="true" class="btn btn-info w-100">
@@ -39,7 +46,6 @@
         </ng-template>
 
         <div *ngIf="isUserLoggedIn(); then loggedIn else loggedOut"></div>
-
         <ng-template #loggedIn>
           <div class="col-1 p-1">
             Logged in as: {{ getUsername() }}

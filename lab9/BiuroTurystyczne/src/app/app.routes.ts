@@ -11,6 +11,8 @@ import {isManagerGuard} from "./guards/is-manager.guard";
 import {isNormalUserGuard} from "./guards/is-normal-user.guard";
 import {isLoggedInGuard} from "./guards/is-logged-in.guard";
 import {isNotLoggedInGuard} from "./guards/is-not-logged-in.guard";
+import {AdminPanelComponent} from "./components/admin-panel/admin-panel.component";
+import {isAdminGuard} from "./guards/is-admin.guard";
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,5 +23,6 @@ export const routes: Routes = [
   { path: 'history', component: ShoppingHistoryComponent, canActivate: [isNormalUserGuard] },
   { path: 'login', component: LoginComponent, canActivate: [isNotLoggedInGuard] },
   { path: 'register', component: RegisterComponent, canActivate: [isNotLoggedInGuard] },
+  { path: 'admin-panel', component: AdminPanelComponent, canActivate: [isAdminGuard] },
   { path: '**', redirectTo: '' }
 ];

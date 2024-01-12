@@ -1,0 +1,19 @@
+<div class="container-fluid text-center">
+  <div>
+    <h3>Users: </h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>e-mail</th>
+          <th>Ban</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userService.allUsers">
+          <app-user [user]="user"></app-user>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

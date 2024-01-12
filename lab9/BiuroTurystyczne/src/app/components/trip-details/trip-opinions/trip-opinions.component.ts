@@ -27,7 +27,7 @@ export class TripOpinionsComponent {
 
   constructor(public tripOpinionsService: TripOpinionsService,
               private tripLoaderService: TripLoaderService,
-              private userService: UserService,
+              public userService: UserService,
               public shoppingHistoryService: ShoppingHistoryService) {
     this.createdOpinion = new TripOpinion(-1);
 

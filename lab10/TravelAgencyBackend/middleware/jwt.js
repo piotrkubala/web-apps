@@ -39,8 +39,9 @@ async function generateToken(user, refreshTimeSeconds = JWT_EXPIRATION_TIME_SECO
 
 function universalVerify(fieldName) {
     return (req, res, next) => {
-        const authHeader = req.headers['authorization'];
-        const tokenList = authHeader?.split(' ');
+        const cookieHeader = req.headers['Cookie'] ?? req.headers['cookie'];
+        const authHeader = cookieHeader?.split('; ').find((cookie) => cookie.startsWith(fieldName));
+        const tokenList = authHeader?.split('=');
 
         if (tokenList == null || tokenList.length !== 2) {
             res.sendStatus(401);
@@ -48,7 +49,6 @@ function universalVerify(fieldName) {
         }
 
         const token = tokenList[1];
-
         if (token == null) {
             res.sendStatus(401);
             return;

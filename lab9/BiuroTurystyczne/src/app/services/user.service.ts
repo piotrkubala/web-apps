@@ -17,10 +17,13 @@ interface LoginRefreshResponse {
 })
 export class UserService {
   onUserStatusChanged: EventEmitter<void> = new EventEmitter<void>();
+  onAllUsersChanged: EventEmitter<void> = new EventEmitter<void>();
 
   user: User | null = null;
   userGroups: Group[] = [];
   tokenExpirationDate: Date | null = null;
+
+  allUsers: User[] = [];
 
   constructor(private http: HttpClient,
               private cookieService: CookieService) {}
@@ -85,6 +88,7 @@ export class UserService {
       this.user = null
       this.userGroups = [];
       this.tokenExpirationDate = null;
+      this.allUsers = [];
 
       this.onUserStatusChanged.emit();
     }
@@ -189,10 +193,30 @@ export class UserService {
       )
       .subscribe(response => {
         if(this.setLoginState(response)) {
+          if (this.isAdmin()) {
+            this.getAllUsers();
+          }
+
           alert('Login successful!');
         } else {
           alert('Login failed!');
         }
       });
+  }
+
+  getAllUsers(): void {
+    const url = environment.backend.url + '/users/';
+
+    this.http.get<User[]>(url, {
+      withCredentials: true
+    }).pipe(
+      catchError(_ => {
+        alert('Failed to get users!');
+        return [];
+      })
+    ).subscribe(users => {
+      this.allUsers = users;
+      this.onAllUsersChanged.emit();
+    });
   }
 }
