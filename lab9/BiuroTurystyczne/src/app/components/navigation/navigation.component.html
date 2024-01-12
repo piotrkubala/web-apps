@@ -12,21 +12,31 @@
             Trips
           </a>
         </div>
-        <div class="col-2 p-1">
-          <a routerLink="/creator" routerLinkActive="true" class="btn btn-info w-100">
-            Creator
-          </a>
-        </div>
-        <div class="col-2 p-1">
-          <a routerLink="/shopping-basket" routerLinkActive="true" class="btn btn-info w-100">
-            Shopping Basket
-          </a>
-        </div>
-        <div class="col-2 p-1">
-          <a routerLink="/history" routerLinkActive="true" class="btn btn-info w-100">
-            History
-          </a>
-        </div>
+
+        <div *ngIf="isUserManager(); then manager"></div>
+
+        <ng-template #manager>
+          <div class="col-2 p-1">
+            <a routerLink="/creator" routerLinkActive="true" class="btn btn-info w-100">
+              Creator
+            </a>
+          </div>
+        </ng-template>
+
+        <div *ngIf="isUserNormal(); then normal"></div>
+
+        <ng-template #normal>
+          <div class="col-2 p-1">
+            <a routerLink="/shopping-basket" routerLinkActive="true" class="btn btn-info w-100">
+              Shopping Basket
+            </a>
+          </div>
+          <div class="col-2 p-1">
+            <a routerLink="/history" routerLinkActive="true" class="btn btn-info w-100">
+              History
+            </a>
+          </div>
+        </ng-template>
 
         <div *ngIf="isUserLoggedIn(); then loggedIn else loggedOut"></div>
 
@@ -53,19 +63,23 @@
       </div>
       <div class="d-flex flex-row container-fluid justify-content-around">
         <div class="col-5 p-1">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-              Reservations
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li class="dropdown-item">
-                <div class="row">
-                  <app-reservation-summary></app-reservation-summary>
-                </div>
-              </li>
-            </ul>
-          </div>
+
+          <div *ngIf="isUserNormal(); then normalUser"></div>
+          <ng-template #normalUser>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                Reservations
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li class="dropdown-item">
+                  <div class="row">
+                    <app-reservation-summary></app-reservation-summary>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </ng-template>
         </div>
         <div class="col-7 p-1 rounded border">
           <app-currency-menu></app-currency-menu>

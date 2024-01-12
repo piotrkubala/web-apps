@@ -20,6 +20,7 @@ export class UserService {
 
   user: User | null = null;
   userGroups: Group[] = [];
+  tokenExpirationDate: Date | null = null;
 
   constructor(private http: HttpClient,
               private cookieService: CookieService) {}
@@ -46,11 +47,45 @@ export class UserService {
     return this.cookieService.check('Authorization');
   }
 
+  isTokenValid(): boolean {
+    if (!this.tokenExpirationDate) {
+      return false;
+    }
+
+    return this.tokenExpirationDate > new Date();
+  }
+
+  hasPermission(permission: string): boolean {
+    return this?.userGroups
+      .some(group =>
+        group.permissions.some(userPermission => userPermission === permission)
+      ) ?? false;
+  }
+
+  canRefreshToken(): boolean {
+    return this.hasPermission('refresh_token');
+  }
+
+  isNormalUser(): boolean {
+    return this.hasPermission('normal_user');
+  }
+
+  isManager(): boolean {
+    return this.hasPermission('manager');
+  }
+
+  isAdmin(): boolean {
+    return this.hasPermission('admin');
+  }
+
   logout(): void {
     if (this.cookieService.check('Authorization')) {
       this.cookieService.delete('Authorization', '/');
 
-      this.user = null;
+      this.user = null
+      this.userGroups = [];
+      this.tokenExpirationDate = null;
+
       this.onUserStatusChanged.emit();
     }
   }
@@ -79,6 +114,7 @@ export class UserService {
 
       this.userGroups = userGroups;
       this.user = new User(userPayload.username, userPayload.email, "");
+      this.tokenExpirationDate = new Date(payload.exp * 1000);
 
       this.onUserStatusChanged.emit();
 

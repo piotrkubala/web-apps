@@ -3,9 +3,11 @@ import {TripOpinionsService} from "../../../services/trip-opinions.service";
 import {TripOpinion} from "../../../utilities/trip-opinion";
 import {FormsModule} from "@angular/forms";
 import {Trip} from "../../../utilities/trip";
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
 import {OpinionComponent} from "./opinion/opinion.component";
 import {TripLoaderService} from "../../../services/trip-loader.service";
+import {UserService} from "../../../services/user.service";
+import {ShoppingHistoryService} from "../../../services/shopping-history.service";
 
 @Component({
   selector: 'app-trip-opinions',
@@ -13,7 +15,8 @@ import {TripLoaderService} from "../../../services/trip-loader.service";
   imports: [
     FormsModule,
     NgForOf,
-    OpinionComponent
+    OpinionComponent,
+    NgIf
   ],
   templateUrl: './trip-opinions.component.html',
   styleUrl: './trip-opinions.component.css'
@@ -23,7 +26,9 @@ export class TripOpinionsComponent {
   createdOpinion: TripOpinion;
 
   constructor(public tripOpinionsService: TripOpinionsService,
-              private tripLoaderService: TripLoaderService) {
+              private tripLoaderService: TripLoaderService,
+              private userService: UserService,
+              public shoppingHistoryService: ShoppingHistoryService) {
     this.createdOpinion = new TripOpinion(-1);
 
     this.tripLoaderService.tripsLoaded.subscribe(() => {

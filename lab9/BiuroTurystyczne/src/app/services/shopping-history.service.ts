@@ -62,4 +62,9 @@ export class ShoppingHistoryService {
   isShoppingHistoryEmpty(): boolean {
     return this.shoppingHistoryItems.length === 0;
   }
+
+  wasTripBoughtById(tripId: number): boolean {
+    return this.shoppingHistoryItems
+      .some(shoppingHistoryItem => shoppingHistoryItem.trip.id === tripId);
+  }
 }

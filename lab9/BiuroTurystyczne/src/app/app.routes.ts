@@ -7,15 +7,19 @@ import {ShoppingBasketComponent} from "./components/shopping-basket/shopping-bas
 import {TripDetailsComponent} from "./components/trip-details/trip-details.component";
 import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
+import {isManagerGuard} from "./guards/is-manager.guard";
+import {isNormalUserGuard} from "./guards/is-normal-user.guard";
+import {isLoggedInGuard} from "./guards/is-logged-in.guard";
+import {isNotLoggedInGuard} from "./guards/is-not-logged-in.guard";
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'trip-board', component: TripBoardComponent },
-  { path: 'trips/:id', component: TripDetailsComponent },
-  { path: 'creator', component: TripCreatorComponent },
-  { path: 'shopping-basket', component: ShoppingBasketComponent },
-  { path: 'history', component: ShoppingHistoryComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
+  { path: 'trips/:id', component: TripDetailsComponent, canActivate: [isNormalUserGuard] },
+  { path: 'creator', component: TripCreatorComponent, canActivate: [isManagerGuard] },
+  { path: 'shopping-basket', component: ShoppingBasketComponent, canActivate: [isNormalUserGuard] },
+  { path: 'history', component: ShoppingHistoryComponent, canActivate: [isNormalUserGuard] },
+  { path: 'login', component: LoginComponent, canActivate: [isNotLoggedInGuard] },
+  { path: 'register', component: RegisterComponent, canActivate: [isNotLoggedInGuard] },
   { path: '**', redirectTo: '' }
 ];

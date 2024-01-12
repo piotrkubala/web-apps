@@ -9,6 +9,7 @@ import {TripLoaderService} from "../../services/trip-loader.service";
 import {FormsModule} from "@angular/forms";
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {TripReserverComponent} from "../trip-reserver/trip-reserver.component";
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-trip',
@@ -22,7 +23,8 @@ export class TripComponent {
 
   constructor(public tripAccountingService: TripAccountingService,
               private currencyExchangeService: CurrencyExchangeService,
-              private tripLoaderService: TripLoaderService) {
+              private tripLoaderService: TripLoaderService,
+              public userService: UserService) {
   }
 
   getColorByLeftPlacesCount(): string {

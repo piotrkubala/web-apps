@@ -4,6 +4,7 @@ import {NgForOf, NgIf} from "@angular/common";
 import {TripAccountingService} from "../../services/trip-accounting.service";
 import {Trip} from "../../utilities/trip";
 import {TripLoaderService} from "../../services/trip-loader.service";
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-trip-evaluator',
@@ -21,7 +22,8 @@ export class TripEvaluatorComponent {
   ratingString: string = "0";
 
   constructor(public tripAccountingService: TripAccountingService,
-              private tripLoaderService: TripLoaderService) {
+              private tripLoaderService: TripLoaderService,
+              public userService: UserService) {
 
     this.tripAccountingService.thisUserRatingsLoaded.subscribe(() => {
       if (this.trip && this.wasTripRated()) {

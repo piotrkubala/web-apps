@@ -25,6 +25,18 @@ export class NavigationComponent {
     return this.userService.isUserLoggedIn();
   }
 
+  isUserAdmin(): boolean {
+    return this.userService.isAdmin();
+  }
+
+  isUserManager(): boolean {
+    return this.userService.isManager();
+  }
+
+  isUserNormal(): boolean {
+    return this.userService.isNormalUser();
+  }
+
   getUsername(): string {
     return this.userService.user?.username ?? '';
   }

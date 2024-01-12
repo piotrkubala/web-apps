@@ -22,9 +22,16 @@
     </div>
   </div>
   <div class="text-center">
-    <app-trip-reserver [trip]="trip"></app-trip-reserver>
-    <div class="row p-2 m-1 mt-2">
-      <button class="btn btn-danger w-100" (click)="deleteTrip()">Delete</button>
-    </div>
+    <div *ngIf="userService.isNormalUser(); then normalUser"></div>
+    <ng-template #normalUser>
+      <app-trip-reserver [trip]="trip"></app-trip-reserver>
+    </ng-template>
+
+    <div *ngIf="userService.isManager(); then manager"></div>
+    <ng-template #manager>
+      <div class="row p-2 m-1 mt-2">
+        <button class="btn btn-danger w-100" (click)="deleteTrip()">Delete</button>
+      </div>
+    </ng-template>
   </div>
 </div>

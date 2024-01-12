@@ -1,5 +1,5 @@
 <div>
-  <form>
+  <form *ngIf="shoppingHistoryService.wasTripBoughtById(trip.id)">
     <h3>Your opinion:</h3>
     <div class="p-1">
       <label for="opinion-title">Title:</label>
