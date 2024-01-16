@@ -1,7 +1,7 @@
 <div class="container-fluid text-center">
   <div>
     <h3>Users: </h3>
-    <table>
+    <table class="col-12">
       <thead>
         <tr>
           <th>Username</th>
@@ -10,9 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let user of userService.allUsers">
-          <app-user [user]="user"></app-user>
-        </tr>
+          <app-user *ngFor="let user of userService.allUsers" [user]="user" class="d-table-row"></app-user>
       </tbody>
     </table>
   </div>

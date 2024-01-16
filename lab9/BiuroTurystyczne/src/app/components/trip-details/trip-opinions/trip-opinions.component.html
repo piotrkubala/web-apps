@@ -1,5 +1,5 @@
 <div>
-  <form *ngIf="shoppingHistoryService.wasTripBoughtById(trip.id) || userService.isManager()">
+  <form *ngIf="shoppingHistoryService.wasTripBoughtById(trip.id) || userService.canAlwaysAddOpinion()">
     <h3>Your opinion:</h3>
     <div class="p-1">
       <label for="opinion-title">Title:</label>

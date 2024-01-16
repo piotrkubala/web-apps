@@ -1,6 +1,6 @@
 <div>
   <div class="d-flex flex-row">
-    <div class="p-4 col-5">
+    <div class="p-4 col-md-5 col-12">
       <h3>Country: {{ trip.country | uppercase }}</h3>
       <div class="trip-description">{{ trip.description }}</div>
       <p>{{ trip.startDate }} - {{ trip.endDate }}</p>
@@ -13,15 +13,15 @@
         <app-trip-reserver [trip]="trip"></app-trip-reserver>
       </div>
     </div>
-    <div class="p-4 col-7">
+    <div class="p-4 col-md-7 col-12">
       <img [src]="trip.image" class="img-fluid rounded trip-image" [alt]="trip.name">
     </div>
   </div>
-  <div class="m-1 d-flex flex-row">
-    <div class="col-6 p-2">
+  <div class="m-1 d-flex flex-md-row container-fluid flex-column">
+    <div class="col-md-6 col-12 p-2">
       <app-trip-carousel [trip]="trip"></app-trip-carousel>
     </div>
-    <div class="col-6 p-2 rounded map-box">
+    <div class="col-md-6 col-12 p-2 rounded map-box">
       <div class="map-container" leaflet [leafletOptions]="options" (leafletMapReady)="onMapReady($event)">
       </div>
     </div>

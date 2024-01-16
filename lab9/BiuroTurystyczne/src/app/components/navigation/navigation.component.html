@@ -1,74 +1,80 @@
 <header class="container-fluid">
   <nav class="navbar navbar-default">
     <div class="text-center container-fluid">
-      <div class="d-flex flex-row container-fluid justify-content-around">
-        <div class="col-2 p-1">
-          <a routerLink="/" routerLinkActive="true" class="btn btn-info w-100">
-            Home
-          </a>
+      <div class="d-flex flex-row container-fluid justify-content-between">
+        <div class="d-flex flex-row container-fluid justify-content-around flex-wrap">
+          <div class="col-5 col-md-3 p-1">
+            <a routerLink="/" routerLinkActive="true" class="btn btn-info w-100">
+              Home
+            </a>
+          </div>
+          <div class="col-5 col-md-3 p-1">
+            <a routerLink="/trip-board" routerLinkActive="true" class="btn btn-info w-100">
+              Trips
+            </a>
+          </div>
+
+          <div *ngIf="isUserManager(); then manager"></div>
+          <ng-template #manager>
+            <div class="col-5 col-md-3 p-1">
+              <a routerLink="/creator" routerLinkActive="true" class="btn btn-info w-100">
+                Creator
+              </a>
+            </div>
+          </ng-template>
+
+          <div *ngIf="isUserAdmin(); then admin"></div>
+          <ng-template #admin>
+            <div class="col-5 col-md-3 p-1">
+              <a routerLink="/admin-panel" routerLinkActive="true" class="btn btn-info w-100">
+                Admin Panel
+              </a>
+            </div>
+          </ng-template>
+
+          <div *ngIf="isUserNormal(); then normal"></div>
+          <ng-template #normal>
+            <div class="col-5 col-md-3 p-1">
+              <a routerLink="/shopping-basket" routerLinkActive="true" class="btn btn-info w-100">
+                Shopping Basket
+              </a>
+            </div>
+            <div class="col-5 col-md-3 p-1">
+              <a routerLink="/history" routerLinkActive="true" class="btn btn-info w-100">
+                History
+              </a>
+            </div>
+          </ng-template>
         </div>
-        <div class="col-2 p-1">
-          <a routerLink="/trip-board" routerLinkActive="true" class="btn btn-info w-100">
-            Trips
-          </a>
+
+        <div class="text-center d-flex flex-column col-3 container-fluid align-items-end">
+          <div *ngIf="isUserLoggedIn(); then loggedIn else loggedOut"></div>
+          <ng-template #loggedIn>
+            <div class="w-100 p-2">
+              <div>
+                Logged in as: {{ getUsername() }}
+              </div>
+            </div>
+            <div class="w-100 p-1">
+              <button class="btn btn-danger w-100" (click)="logout()">Logout</button>
+            </div>
+          </ng-template>
+          <ng-template #loggedOut>
+            <div class="w-100 p-1">
+              <a routerLink="/register" routerLinkActive="true" class="btn btn-success w-100">
+                Register
+              </a>
+            </div>
+            <div class="w-100 p-1">
+              <a routerLink="/login" routerLinkActive="true" class="btn btn-success w-100">
+                Login
+              </a>
+            </div>
+          </ng-template>
         </div>
-
-        <div *ngIf="isUserManager(); then manager"></div>
-        <ng-template #manager>
-          <div class="col-2 p-1">
-            <a routerLink="/creator" routerLinkActive="true" class="btn btn-info w-100">
-              Creator
-            </a>8
-          </div>
-        </ng-template>
-
-        <div *ngIf="isUserAdmin(); then admin"></div>
-        <ng-template #admin>
-          <div class="col-2 p-1">
-            <a routerLink="/admin-panel" routerLinkActive="true" class="btn btn-info w-100">
-              Admin Panel
-            </a>
-          </div>
-        </ng-template>
-
-        <div *ngIf="isUserNormal(); then normal"></div>
-        <ng-template #normal>
-          <div class="col-2 p-1">
-            <a routerLink="/shopping-basket" routerLinkActive="true" class="btn btn-info w-100">
-              Shopping Basket
-            </a>
-          </div>
-          <div class="col-2 p-1">
-            <a routerLink="/history" routerLinkActive="true" class="btn btn-info w-100">
-              History
-            </a>
-          </div>
-        </ng-template>
-
-        <div *ngIf="isUserLoggedIn(); then loggedIn else loggedOut"></div>
-        <ng-template #loggedIn>
-          <div class="col-1 p-1">
-            Logged in as: {{ getUsername() }}
-          </div>
-          <div>
-            <button class="btn btn-danger w-100" (click)="logout()">Logout</button>
-          </div>
-        </ng-template>
-        <ng-template #loggedOut>
-          <div class="col-1 p-1">
-            <a routerLink="/register" routerLinkActive="true" class="btn btn-success w-100">
-              Register
-            </a>
-          </div>
-          <div class="col-1 p-1">
-            <a routerLink="/login" routerLinkActive="true" class="btn btn-success w-100">
-              Login
-            </a>
-          </div>
-        </ng-template>
       </div>
-      <div class="d-flex flex-row container-fluid justify-content-around">
-        <div class="col-5 p-1">
+      <div class="d-flex flex-md-row flex-column container-fluid justify-content-around">
+        <div class="col-md-5 col-12 p-1">
 
           <div *ngIf="isUserNormal(); then normalUser"></div>
           <ng-template #normalUser>
@@ -87,7 +93,7 @@
             </div>
           </ng-template>
         </div>
-        <div class="col-7 p-1 rounded border">
+        <div class="col-12 col-md-7 p-1 rounded border">
           <app-currency-menu></app-currency-menu>
         </div>
       </div>

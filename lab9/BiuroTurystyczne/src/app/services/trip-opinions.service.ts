@@ -3,6 +3,8 @@ import {TripOpinion} from "../utilities/trip-opinion";
 import {HttpClient} from "@angular/common/http";
 
 import { environment } from '../../environments/environment';
+import {UserService} from "./user.service";
+import {ShoppingHistoryService} from "./shopping-history.service";
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +21,9 @@ export class TripOpinionsService {
       });
   }
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private userService: UserService,
+              private shoppingHistoryService: ShoppingHistoryService) {
     this.triggerOpinionsLoad();
   }
 
@@ -55,6 +59,10 @@ export class TripOpinionsService {
   }
 
   createOpinion(opinion: TripOpinion): string {
+    if (!this.shoppingHistoryService.wasTripBoughtById(opinion.tripId)) {
+      return 'Trip was not bought';
+    }
+
     const validationMessage = this.validateOpinion(opinion);
 
     if (validationMessage.length > 0) {

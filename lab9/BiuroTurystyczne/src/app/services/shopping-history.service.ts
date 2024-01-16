@@ -4,6 +4,7 @@ import {TripAccountingService} from "./trip-accounting.service";
 import {Trip} from "../utilities/trip";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
+import {UserService} from "./user.service";
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +13,10 @@ export class ShoppingHistoryService {
   onShoppingHistoryChanged: EventEmitter<void> = new EventEmitter<void>();
   shoppingHistoryItems: ShoppingHistoryItem[] = [];
 
-  /* TODO: get username from auth service */
-  username: string = 'test_user';
+  username: string = "test_user";
 
   triggerHistoryUpdate(): void {
+    this.username = this.userService.user?.username ?? "test_user";
     const url = environment.backend.url + '/history/' + this.username;
 
     this.http.get<ShoppingHistoryItemInterface[]>(url).subscribe(shoppingHistoryItems => {
@@ -32,8 +33,13 @@ export class ShoppingHistoryService {
   }
 
   constructor(private tripAccountingService: TripAccountingService,
-              private http: HttpClient) {
+              private http: HttpClient,
+              private userService: UserService) {
     this.triggerHistoryUpdate();
+
+    this.userService.onUserStatusChanged.subscribe(() => {
+      this.triggerHistoryUpdate();
+    });
   }
 
   buyTrip(trip: Trip): void {

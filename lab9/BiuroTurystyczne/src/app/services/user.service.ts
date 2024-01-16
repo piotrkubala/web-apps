@@ -69,6 +69,14 @@ export class UserService {
     return this.hasPermission('refresh_token');
   }
 
+  canAlwaysAddOpinion(): boolean {
+    return this.hasPermission('always_add_opinion');
+  }
+
+  canModifyOffers(): boolean {
+    return this.hasPermission('modify_offer');
+  }
+
   isNormalUser(): boolean {
     return this.hasPermission('normal_user');
   }

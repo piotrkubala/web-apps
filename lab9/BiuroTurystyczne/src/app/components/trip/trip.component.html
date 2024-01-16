@@ -27,8 +27,8 @@
       <app-trip-reserver [trip]="trip"></app-trip-reserver>
     </ng-template>
 
-    <div *ngIf="userService.isManager(); then manager"></div>
-    <ng-template #manager>
+    <div *ngIf="userService.canModifyOffers(); then canModifyOffer"></div>
+    <ng-template #canModifyOffer>
       <div class="row p-2 m-1 mt-2">
         <button class="btn btn-danger w-100" (click)="deleteTrip()">Delete</button>
       </div>
