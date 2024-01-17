@@ -8,6 +8,7 @@ import {Money} from "../utilities/money";
 import {CurrencyExchangeService} from "./currency-exchange.service";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
+import {UserService} from "./user.service";
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,7 @@ export class TripAccountingService {
   possibleRatingValues: number[] = [1, 2, 3, 4, 5];
 
   private _loadThisUserRatings(): void {
-    const username = 'test_user';
+    const username = this.userService.user?.username ?? "test_user";
 
     const url = environment.backend.url + '/rating/' + username;
 
@@ -92,7 +93,8 @@ export class TripAccountingService {
   constructor(public tripLoaderService: TripLoaderService,
               private totalReservedTripsCounterService: TotalReservedTripsCounterService,
               private currencyExchangeService: CurrencyExchangeService,
-              private http: HttpClient) {
+              private http: HttpClient,
+              private userService: UserService) {
     this.tripLoaderService.tripsLoaded.subscribe(() => {
       this._refreshTripAccountingStates();
     });
@@ -229,7 +231,7 @@ export class TripAccountingService {
     const trip = this.tripLoaderService.getTrip(tripId);
 
     if (tripAccountingState && trip) {
-      const totalPriceMinor = trip.priceMinor * tripAccountingState.totalReservedPlacesCount;
+      const totalPriceMinor = trip.priceMinor * this.getCurrentUserReservedPlacesCount(tripId);
 
       return this.currencyExchangeService.getMoneyStringInBaseCurrency(
         new Money(totalPriceMinor, trip.currency)
@@ -249,7 +251,7 @@ export class TripAccountingService {
               return 0;
             }
 
-            const totalPriceMinor = trip.priceMinor * tripAccountingState.totalReservedPlacesCount;
+            const totalPriceMinor = trip.priceMinor * this.getCurrentUserReservedPlacesCount(trip.id);
 
             return this.currencyExchangeService.getMoneyInBaseCurrency(
               new Money(totalPriceMinor, trip.currency)
