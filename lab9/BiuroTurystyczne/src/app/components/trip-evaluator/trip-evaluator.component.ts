@@ -5,6 +5,7 @@ import {TripAccountingService} from "../../services/trip-accounting.service";
 import {Trip} from "../../utilities/trip";
 import {TripLoaderService} from "../../services/trip-loader.service";
 import {UserService} from "../../services/user.service";
+import {ShoppingHistoryService} from "../../services/shopping-history.service";
 
 @Component({
   selector: 'app-trip-evaluator',
@@ -23,7 +24,8 @@ export class TripEvaluatorComponent {
 
   constructor(public tripAccountingService: TripAccountingService,
               private tripLoaderService: TripLoaderService,
-              public userService: UserService) {
+              public userService: UserService,
+              private shoppingHistoryService: ShoppingHistoryService) {
 
     this.tripAccountingService.thisUserRatingsLoaded.subscribe(() => {
       if (this.trip && this.wasTripRated()) {
@@ -39,6 +41,10 @@ export class TripEvaluatorComponent {
 
   wasTripRated(): boolean {
     return this.tripAccountingService.wasTripRated(this.trip.id);
+  }
+
+  wasTripBought(): boolean {
+    return this.shoppingHistoryService.wasTripBoughtById(this.trip.id);
   }
 
   getColorByRating(): string {

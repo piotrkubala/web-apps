@@ -9,6 +9,8 @@ import {CurrencyExchangeService} from "./currency-exchange.service";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {UserService} from "./user.service";
+import {ShoppingHistoryService} from "./shopping-history.service";
+import {ShoppingHistoryItem} from "../utilities/shopping-history-item";
 
 @Injectable({
   providedIn: 'root'
@@ -94,7 +96,8 @@ export class TripAccountingService {
               private totalReservedTripsCounterService: TotalReservedTripsCounterService,
               private currencyExchangeService: CurrencyExchangeService,
               private http: HttpClient,
-              private userService: UserService) {
+              private userService: UserService,
+              private shoppingHistoryService: ShoppingHistoryService) {
     this.tripLoaderService.tripsLoaded.subscribe(() => {
       this._refreshTripAccountingStates();
     });
@@ -176,7 +179,35 @@ export class TripAccountingService {
     return totalReservedTrips - totalBookedTrips;
   }
 
+  buyTrip(trip: Trip): void {
+    const countOfTickets = this.getCurrentUserReservedPlacesCount(trip.id);
+
+    if (countOfTickets === 0) {
+      return;
+    }
+
+    const username = this.userService.user?.username ?? "test_user";
+
+    const url = environment.backend.url + '/history/';
+    const newShoppingHistoryItem =
+      new ShoppingHistoryItem(username, trip, countOfTickets, new Date().toISOString());
+
+    this.http.post(url, newShoppingHistoryItem).subscribe(() => {
+      this.markCurrentUserReservedPlacesAsBought(trip.id);
+
+      this.shoppingHistoryService.addShoppingHistoryItem(newShoppingHistoryItem);
+    });
+  }
+
+  buyTrips(trips: Trip[]): void {
+    trips.forEach(trip => this.buyTrip(trip));
+  }
+
   rateTrip(tripId: number, rate: number): void {
+    if(!this.shoppingHistoryService.wasTripBoughtById(tripId)) {
+      return;
+    }
+
     const tripAccountingState = this.tripAccountingStates.get(tripId);
 
     if (tripAccountingState) {

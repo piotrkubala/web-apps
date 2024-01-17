@@ -32,9 +32,8 @@ export class ShoppingHistoryService {
     });
   }
 
-  constructor(private tripAccountingService: TripAccountingService,
-              private http: HttpClient,
-              private userService: UserService) {
+  constructor(private userService: UserService,
+              private http: HttpClient) {
     this.triggerHistoryUpdate();
 
     this.userService.onUserStatusChanged.subscribe(() => {
@@ -42,27 +41,9 @@ export class ShoppingHistoryService {
     });
   }
 
-  buyTrip(trip: Trip): void {
-    const countOfTickets = this.tripAccountingService.getCurrentUserReservedPlacesCount(trip.id);
-
-    if (countOfTickets === 0) {
-      return;
-    }
-
-    const url = environment.backend.url + '/history/';
-    const newShoppingHistoryItem =
-      new ShoppingHistoryItem(this.username, trip, countOfTickets, new Date().toISOString());
-
-    this.http.post(url, newShoppingHistoryItem).subscribe(() => {
-      this.shoppingHistoryItems.push(newShoppingHistoryItem);
-      this.tripAccountingService.markCurrentUserReservedPlacesAsBought(trip.id);
-
-      this.onShoppingHistoryChanged.emit();
-    });
-  }
-
-  buyTrips(trips: Trip[]): void {
-    trips.forEach(trip => this.buyTrip(trip));
+  addShoppingHistoryItem(shoppingHistoryItem: ShoppingHistoryItem): void {
+    this.shoppingHistoryItems.push(shoppingHistoryItem);
+    this.onShoppingHistoryChanged.emit();
   }
 
   isShoppingHistoryEmpty(): boolean {

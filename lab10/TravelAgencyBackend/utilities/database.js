@@ -12,8 +12,16 @@ const mongoDbClient = new MongoClient(mongoDbUri, {
 });
 
 async function getMongoDbDatabasePromise() {
-    await mongoDbClient.connect();
-    return mongoDbClient.db(dbName);
+    while(true) {
+        try {
+            await mongoDbClient.connect();
+            return mongoDbClient.db(dbName);
+        } catch(error) {
+            console.log("Error occurred during connecting to database. Retrying in 5 seconds...");
+            console.log(error);
+            await new Promise((resolve) => setTimeout(resolve, 5000));
+        }
+    }
 }
 
 const mongoDbDatabasePromise = getMongoDbDatabasePromise();

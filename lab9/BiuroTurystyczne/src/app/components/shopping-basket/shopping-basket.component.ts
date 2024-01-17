@@ -22,10 +22,7 @@ import {ShoppingHistoryService} from "../../services/shopping-history.service";
   styleUrl: './shopping-basket.component.css'
 })
 export class ShoppingBasketComponent {
-  constructor(private tripAccountingService: TripAccountingService,
-              private currencyExchangeService: CurrencyExchangeService,
-              private tripLoaderService: TripLoaderService,
-              private shoppingHistoryService: ShoppingHistoryService) {
+  constructor(private tripAccountingService: TripAccountingService) {
   }
 
   getReservedTrips(): Trip[] {
@@ -38,7 +35,7 @@ export class ShoppingBasketComponent {
 
   buySelected(): void {
     const selectedTrips = this.tripAccountingService.getSelectedTrips();
-    this.shoppingHistoryService.buyTrips(selectedTrips);
+    this.tripAccountingService.buyTrips(selectedTrips);
   }
 
   getTotalPriceForAllTripsString(): string {
