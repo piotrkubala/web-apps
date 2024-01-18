@@ -323,4 +323,13 @@ export class TripAccountingService {
       this.totalReservedTripsCounterService.updateTotalReservedTripsCount(-reservedPlacesCount);
     }
   }
+
+  getTotalReservedPlacesCount(tripId: number): number {
+    const tripAccountingState = this.tripAccountingStates.get(tripId);
+
+    if (tripAccountingState) {
+      return tripAccountingState.totalReservedPlacesCount;
+    }
+    return 0;
+  }
 }
