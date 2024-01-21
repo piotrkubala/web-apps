@@ -5,7 +5,7 @@ import {environment} from "../../environments/environment";
 import {catchError, tap} from "rxjs";
 import {CookieService} from "ngx-cookie-service";
 import {Group} from "../utilities/group";
-import { jwtDecode, JwtPayload } from 'jwt-decode'
+import { jwtDecode, JwtPayload } from 'jwt-decode';
 
 interface LoginRefreshResponse {
   username: string;

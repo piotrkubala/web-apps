@@ -22,7 +22,11 @@ export class ShoppingHistoryComponent {
   isSortingAscending = true;
   statusFilter: HistoryItemState | null = null;
 
-  constructor(public shoppingHistoryService: ShoppingHistoryService) {}
+  constructor(public shoppingHistoryService: ShoppingHistoryService) {
+    this.shoppingHistoryService.onShoppingHistoryChanged.subscribe(() => {
+      this.isSortingAscending = this.isSortingAscending ?? true;
+    });
+  }
 
   isShoppingHistoryEmpty() {
     return this.shoppingHistoryService.isShoppingHistoryEmpty();
@@ -34,5 +38,9 @@ export class ShoppingHistoryComponent {
 
   setSortingOrder(isAscending: boolean) {
     this.isSortingAscending = isAscending;
+  }
+
+  getShoppingHistoryItems() {
+    return this.shoppingHistoryService.shoppingHistoryItems;
   }
 }

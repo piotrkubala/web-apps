@@ -31,8 +31,6 @@ export class TripComponent {
     const leftPlacesCount = this.trip.maxParticipants
       - this.tripAccountingService.getTotalReservedPlacesCount(this.trip.id);
 
-    console.log(leftPlacesCount);
-
     if (leftPlacesCount <= 3) {
       return "lightcoral";
     }

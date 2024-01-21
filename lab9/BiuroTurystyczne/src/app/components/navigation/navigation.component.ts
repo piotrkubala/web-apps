@@ -4,6 +4,8 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
 import {ReservationSummaryComponent} from "../reservation-summary/reservation-summary.component";
 import {UserService} from "../../services/user.service";
 import {NgIf} from "@angular/common";
+import {ShoppingHistoryService} from "../../services/shopping-history.service";
+import {TripAccountingService} from "../../services/trip-accounting.service";
 
 @Component({
   selector: 'app-navigation',
@@ -19,7 +21,8 @@ import {NgIf} from "@angular/common";
   styleUrl: './navigation.component.css'
 })
 export class NavigationComponent {
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService,
+              private tripAccountingService: TripAccountingService) {}
 
   isUserLoggedIn(): boolean {
     return this.userService.isUserLoggedIn();
@@ -43,5 +46,11 @@ export class NavigationComponent {
 
   logout(): void {
     this.userService.logout();
+
+    const reservedTrips = this.tripAccountingService.getReservedTrips();
+
+    reservedTrips.forEach(trip => {
+      this.tripAccountingService.unreserveAllThisUserPlaces(trip.id);
+    });
   }
 }

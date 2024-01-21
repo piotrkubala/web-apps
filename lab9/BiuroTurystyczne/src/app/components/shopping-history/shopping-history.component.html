@@ -46,7 +46,7 @@
         </div>
 
         <div>
-          <div *ngFor="let shoppingItem of shoppingHistoryService.shoppingHistoryItems
+          <div *ngFor="let shoppingItem of getShoppingHistoryItems()
           | historyFilter : statusFilter : isSortingAscending">
             <app-shopping-item [shoppingHistoryItem]="shoppingItem"></app-shopping-item>
           </div>
